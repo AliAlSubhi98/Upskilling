@@ -1,0 +1,74 @@
+site_name: Upskilling Journey
+site_description: My curated documentation and technical roadmap for backend, DevOps, system design, and beyond.
+site_url: https://alialsubhi98.github.io/Upskilling/
+repo_url: https://github.com/AliAlSubhi98/Upskilling
+repo_name: Ali AlSubhi
+edit_uri: edit/main/upskilling_docs/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections         # Left sidebar nav grouping
+    - navigation.indexes          # Folder-based section landing pages
+    - content.code.copy           # Copy button on code blocks
+#    - content.action.edit         # "Edit this page" on GitHub
+    - content.tabs.link           # Tabs with direct links
+    - search.highlight            # Highlights search terms
+    - search.share                # Shareable search results
+
+  palette:
+    - scheme: default
+      primary: blue
+      accent: deep purple
+    - scheme: slate
+      primary: blue
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Git & GitHub: topics/Git-GitHub.md
+  - Project Management: topics/Project-Management.md
+  - Communication & Collaboration: topics/Communication-Collaboration.md
+  - Documentation: topics/Documentation.md
+  - Containers & Orchestration: topics/Containers-Orchestration.md
+  - Linux: topics/Linux.md
+  - CI/CD: topics/CI-CD.md
+  - Observability: topics/Observability.md
+  - Redundancy & DR: topics/Redundancy-DR.md
+  - Networking: topics/Networking.md
+  - Code + Design Patterns: topics/Code-Design-Patterns.md
+  - Databases: topics/Databases.md
+  - System Design: topics/System-Design.md
+  - Security: topics/Security.md
+  - API: topics/API.md
+  - Authentication & Authorization: topics/Auth.md
+  - Testing: topics/Testing.md
+  - Deployment Guide: topics/Deployment.md
+
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - footnotes
+  - tables
+  - pymdownx.extra
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+
+plugins:
+  - search
+  # - git-revision-date-localized:
+  #     fallback_to_build_date: true
