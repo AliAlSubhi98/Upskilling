@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://alialsubhi98.github.io/Upskilling/topics/Testing/">
+        <link rel="canonical" href="https://alialsubhi98.github.io/Upskilling/topics/Deployment/">
       
       
-        <link rel="prev" href="../Auth/">
+        <link rel="prev" href="../Testing/">
       
-      
-        <link rel="next" href="../Deployment/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Testing - Upskilling Journey</title>
+        <title>Deployment Guide - Upskilling Journey</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#testing" class="md-skip">
+        <a href="#github-pages-deployment-guide-using-mkdocs" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Testing
+              Deployment Guide
             
           </span>
         </div>
@@ -630,6 +628,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -647,7 +667,7 @@
   
   
   <span class="md-ellipsis">
-    Testing
+    Deployment Guide
     
   </span>
   
@@ -660,7 +680,7 @@
   
   
   <span class="md-ellipsis">
-    Testing
+    Deployment Guide
     
   </span>
   
@@ -683,63 +703,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#level-1-testing-fundamentals" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 1: Testing Fundamentals
+      ✅ Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-2-integration-api-testing" class="md-nav__link">
+  <a href="#1-project-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 2: Integration &amp; API Testing
+      🏗️ 1. Project Structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-3-end-to-end-ui-testing" class="md-nav__link">
+  <a href="#2-mkdocsyml-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 3: End-to-End &amp; UI Testing
+      ⚙️ 2. mkdocs.yml Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-4-performance-security-testing" class="md-nav__link">
+  <a href="#3-initial-deployment-to-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 4: Performance &amp; Security Testing
+      🚀 3. Initial Deployment to GitHub Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 3. Initial Deployment to GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-a-initialize-and-push-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step A: Initialize and Push Repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-b-build-the-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step B: Build the Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-c-deploy-to-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step C: Deploy to GitHub Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-enable-github-pages-in-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 4. Enable GitHub Pages in Repository
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-5-test-strategy-automation-at-scale" class="md-nav__link">
+  <a href="#5-how-to-update-the-docs" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 5: Test Strategy &amp; Automation at Scale
+      ✏️ 5. How to Update the Docs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#optional-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
-      Resources
+      🧼 Optional Cleanup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#personal-notes" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Personal Notes
+      🛡️ Best Practices
     </span>
   </a>
   
@@ -749,28 +811,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Deployment/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Deployment Guide
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -802,63 +842,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#level-1-testing-fundamentals" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 1: Testing Fundamentals
+      ✅ Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-2-integration-api-testing" class="md-nav__link">
+  <a href="#1-project-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 2: Integration &amp; API Testing
+      🏗️ 1. Project Structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-3-end-to-end-ui-testing" class="md-nav__link">
+  <a href="#2-mkdocsyml-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 3: End-to-End &amp; UI Testing
+      ⚙️ 2. mkdocs.yml Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-4-performance-security-testing" class="md-nav__link">
+  <a href="#3-initial-deployment-to-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 4: Performance &amp; Security Testing
+      🚀 3. Initial Deployment to GitHub Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 3. Initial Deployment to GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-a-initialize-and-push-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step A: Initialize and Push Repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-b-build-the-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step B: Build the Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-c-deploy-to-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step C: Deploy to GitHub Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-enable-github-pages-in-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 4. Enable GitHub Pages in Repository
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-5-test-strategy-automation-at-scale" class="md-nav__link">
+  <a href="#5-how-to-update-the-docs" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 5: Test Strategy &amp; Automation at Scale
+      ✏️ 5. How to Update the Docs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#optional-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
-      Resources
+      🧼 Optional Cleanup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#personal-notes" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Personal Notes
+      🛡️ Best Practices
     </span>
   </a>
   
@@ -883,63 +965,137 @@
   
 
 
-<h1 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> Confidently test and validate software.</p>
-<p><strong>Current Level:</strong> Level 1</p>
+<h1 id="github-pages-deployment-guide-using-mkdocs">🚀 GitHub Pages Deployment Guide using MkDocs<a class="headerlink" href="#github-pages-deployment-guide-using-mkdocs" title="Permanent link">&para;</a></h1>
+<p>This guide walks you through:
+1. Initial setup
+2. Deploying to GitHub Pages
+3. Updating content
+4. Best practices</p>
 <hr />
-<h2 id="level-1-testing-fundamentals">Level 1: Testing Fundamentals<a class="headerlink" href="#level-1-testing-fundamentals" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">✅ Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Unit tests, assertions, test runners, code coverage</li>
-<li><strong>Tools:</strong> JUnit, pytest, Go test, Jest</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Write unit tests for core logic</li>
-<li>[ ] Use assertions to validate behavior</li>
-<li>[ ] Measure code coverage</li>
+<li>Python ≥ 3.7 installed</li>
+<li>Git installed and configured</li>
+<li>A GitHub repository (public or GitHub Pro if private)</li>
+<li>MkDocs and Material theme installed</li>
 </ul>
-<h2 id="level-2-integration-api-testing">Level 2: Integration &amp; API Testing<a class="headerlink" href="#level-2-integration-api-testing" title="Permanent link">&para;</a></h2>
+<p>Install requirements:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</code></pre></div>
+<p>Optional plugins (recommended):</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-git-revision-date-localized
+</code></pre></div>
+<hr />
+<h2 id="1-project-structure">🏗️ 1. Project Structure<a class="headerlink" href="#1-project-structure" title="Permanent link">&para;</a></h2>
+<p>Your repo structure should look like this:</p>
+<div class="highlight"><pre><span></span><code>Upskilling/
+├── docs/
+│   ├── index.md
+│   ├── topics/
+│   │   ├── Git-GitHub.md
+│   │   ├── CI-CD.md
+├── mkdocs.yml
+</code></pre></div>
+<hr />
+<h2 id="2-mkdocsyml-example">⚙️ 2. <code>mkdocs.yml</code> Example<a class="headerlink" href="#2-mkdocsyml-example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upskilling Journey</span>
+<span class="nt">site_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My curated docs for backend, DevOps, system design &amp; beyond.</span>
+<span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://AliAlSubhi98.github.io/Upskilling/</span>
+<span class="nt">repo_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/AliAlSubhi98/Upskilling</span>
+<span class="nt">repo_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GitHub</span>
+
+<span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+<span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.sections</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.indexes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.copy</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.action.edit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search.highlight</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search.share</span>
+<span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">      </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">      </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deep purple</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span>
+<span class="w">      </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue</span>
+<span class="w">      </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deep purple</span>
+<span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/weather-night</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Switch to dark mode</span>
+<span class="w">  </span><span class="nt">icon</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/github</span>
+
+<span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Git &amp; GitHub</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">topics/Git-GitHub.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">CI/CD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">topics/CI-CD.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Deployment Guide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment.md</span>
+
+<span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">toc</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">permalink</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">codehilite</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
+
+<span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+<span class="w">  </span><span class="c1"># Optional if installed</span>
+<span class="w">  </span><span class="c1"># - git-revision-date-localized:</span>
+<span class="w">  </span><span class="c1">#     fallback_to_build_date: true</span>
+</code></pre></div>
+<hr />
+<h2 id="3-initial-deployment-to-github-pages">🚀 3. Initial Deployment to GitHub Pages<a class="headerlink" href="#3-initial-deployment-to-github-pages" title="Permanent link">&para;</a></h2>
+<h3 id="step-a-initialize-and-push-repo">Step A: Initialize and Push Repo<a class="headerlink" href="#step-a-initialize-and-push-repo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/AliAlSubhi98/Upskilling.git
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<h3 id="step-b-build-the-site">Step B: Build the Site<a class="headerlink" href="#step-b-build-the-site" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build
+</code></pre></div>
+<h3 id="step-c-deploy-to-github-pages">Step C: Deploy to GitHub Pages<a class="headerlink" href="#step-c-deploy-to-github-pages" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<p>You will be prompted for GitHub credentials. Use a <a href="https://github.com/settings/tokens">personal access token (PAT)</a> instead of password.</p>
+<hr />
+<h2 id="4-enable-github-pages-in-repository">🌐 4. Enable GitHub Pages in Repository<a class="headerlink" href="#4-enable-github-pages-in-repository" title="Permanent link">&para;</a></h2>
+<p>Go to:
+<code>https://github.com/AliAlSubhi98/Upskilling/settings/pages</code></p>
 <ul>
-<li><strong>Competencies:</strong> Integration tests, API tests, mocking, test data</li>
-<li><strong>Tools:</strong> Postman, Supertest, WireMock, test containers</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Write integration tests for components</li>
-<li>[ ] Test APIs with Postman or similar tools</li>
-<li>[ ] Use mocks/stubs for dependencies</li>
-</ul>
-<h2 id="level-3-end-to-end-ui-testing">Level 3: End-to-End &amp; UI Testing<a class="headerlink" href="#level-3-end-to-end-ui-testing" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Competencies:</strong> E2E tests, UI automation, cross-browser/device</li>
-<li><strong>Tools:</strong> Selenium, Cypress, Playwright</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Automate E2E tests for user flows</li>
-<li>[ ] Run tests across browsers/devices</li>
-<li>[ ] Integrate E2E tests into CI/CD</li>
-</ul>
-<h2 id="level-4-performance-security-testing">Level 4: Performance &amp; Security Testing<a class="headerlink" href="#level-4-performance-security-testing" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Competencies:</strong> Load testing, fuzzing, vulnerability scanning</li>
-<li><strong>Tools:</strong> JMeter, k6, OWASP ZAP, Burp Suite</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Run load/performance tests</li>
-<li>[ ] Fuzz inputs for robustness</li>
-<li>[ ] Scan for security vulnerabilities</li>
-</ul>
-<h2 id="level-5-test-strategy-automation-at-scale">Level 5: Test Strategy &amp; Automation at Scale<a class="headerlink" href="#level-5-test-strategy-automation-at-scale" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Competencies:</strong> Test strategy, flaky test management, test data at scale</li>
-<li><strong>Tools:</strong> Test orchestration tools, cloud test platforms</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Define a test strategy for a large project</li>
-<li>[ ] Manage flaky tests and test data</li>
-<li>[ ] Use cloud platforms for test automation</li>
+<li><strong>Source</strong>: Select <code>gh-pages</code> branch</li>
+<li><strong>Directory</strong>: <code>/ (root)</code></li>
+<li>Save ✅</li>
 </ul>
 <hr />
-<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<h2 id="5-how-to-update-the-docs">✏️ 5. How to Update the Docs<a class="headerlink" href="#5-how-to-update-the-docs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Edit or add Markdown files under <code>docs/</code></li>
+<li>Run:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build
+mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<ol>
+<li>Changes will appear live at the GitHub Pages URL.</li>
+</ol>
+<hr />
+<h2 id="optional-cleanup">🧼 Optional Cleanup<a class="headerlink" href="#optional-cleanup" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build<span class="w"> </span>--clean
+mkdocs<span class="w"> </span>serve<span class="w">  </span><span class="c1"># for local preview</span>
+</code></pre></div>
+<hr />
+<h2 id="best-practices">🛡️ Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://kentcdodds.com/blog/the-testing-trophy">Testing Trophy by Kent C. Dodds</a></li>
-<li><a href="https://owasp.org/www-project-web-security-testing-guide/">OWASP Testing Guide</a></li>
-<li><a href="https://github.com/TheJambo/awesome-testing">Awesome Testing</a></li>
+<li>Commit changes regularly</li>
+<li>Use clear folder structure (<code>docs/topics/...</code>)</li>
+<li>Don't push <code>site/</code></li>
+<li>Add <code>site/</code> to <code>.gitignore</code></li>
+<li>Store secrets in <code>.env</code> and ignore them</li>
 </ul>
-<h2 id="personal-notes">Personal Notes<a class="headerlink" href="#personal-notes" title="Permanent link">&para;</a></h2>
 
 
 
