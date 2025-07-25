@@ -6,45 +6,45 @@
 
 ---
 
-## Level 1: Testing Fundamentals
-- **Competencies:** Unit tests, assertions, test runners, code coverage
-- **Tools:** JUnit, pytest, Go test, Jest
+## Level 1: Basic Testing
+- **Competencies:** Understand the role of testing in Golang, write basic unit tests using the built-in testing package with table-driven tests, apply the arrange–act–assert pattern and use sub-tests, measure code coverage using `go test -cover`.
+- **Tools:** Go’s built-in testing package, `go test` command, basic assertion methods, optional use of Testify/assert
 - **Checklist:**
-  - [ ] Write unit tests for core logic
-  - [ ] Use assertions to validate behavior
-  - [ ] Measure code coverage
+  - [ ] Write unit tests for simple utility functions
+  - [ ] Create table-driven tests covering various edge cases
+  - [ ] Configure and review code coverage reports using `go test -cover`
 
-## Level 2: Integration & API Testing
-- **Competencies:** Integration tests, API tests, mocking, test data
-- **Tools:** Postman, Supertest, WireMock, test containers
+## Level 2: Intermediate Testing
+- **Competencies:** Develop integration tests for backend services (e.g., REST API handlers), test HTTP endpoints using `net/http/httptest`, use dependency injection to mock dependencies, start incorporating tests into CI.
+- **Tools:** `httptest`, Testify/mock or GoMock, in-memory databases or test containers, GitHub Actions
 - **Checklist:**
-  - [ ] Write integration tests for components
-  - [ ] Test APIs with Postman or similar tools
-  - [ ] Use mocks/stubs for dependencies
+  - [ ] Write integration tests for REST API endpoints and verify HTTP responses
+  - [ ] Use mocks to simulate external services
+  - [ ] Integrate tests into a CI pipeline with automated coverage reporting
 
-## Level 3: End-to-End & UI Testing
-- **Competencies:** E2E tests, UI automation, cross-browser/device
-- **Tools:** Selenium, Cypress, Playwright
+## Level 3: Advanced Testing
+- **Competencies:** Implement table-driven tests for complex logic and concurrency, write benchmarks for backend performance, simulate load and detect race conditions, test middleware and error handling.
+- **Tools:** `go test -race`, Go benchmarking, advanced Testify, GoMock or similar
 - **Checklist:**
-  - [ ] Automate E2E tests for user flows
-  - [ ] Run tests across browsers/devices
-  - [ ] Integrate E2E tests into CI/CD
+  - [ ] Develop benchmarks for high-traffic API endpoints
+  - [ ] Write tests that simulate concurrent requests and identify race conditions
+  - [ ] Test custom middleware and simulate error scenarios
 
-## Level 4: Performance & Security Testing
-- **Competencies:** Load testing, fuzzing, vulnerability scanning
-- **Tools:** JMeter, k6, OWASP ZAP, Burp Suite
+## Level 4: Expert Testing
+- **Competencies:** Design end-to-end tests for distributed systems, use Docker-based test environments, verify async processing and inter-service communication.
+- **Tools:** Docker, Docker Compose, testcontainers-go, integration frameworks, CI with multi-container support
 - **Checklist:**
-  - [ ] Run load/performance tests
-  - [ ] Fuzz inputs for robustness
-  - [ ] Scan for security vulnerabilities
+  - [ ] Build an end-to-end test suite using Docker
+  - [ ] Simulate async processing and verify results
+  - [ ] Integrate comprehensive E2E tests within CI/CD
 
-## Level 5: Test Strategy & Automation at Scale
-- **Competencies:** Test strategy, flaky test management, test data at scale
-- **Tools:** Test orchestration tools, cloud test platforms
+## Level 5: Master Testing
+- **Competencies:** Architect load and performance tests for Golang backends, integrate security/static analysis, apply chaos testing to assess resilience, mentor others on scalable testing.
+- **Tools:** Go benchmarks, Vegeta, chaos tools, `golangci-lint`, CI/CD with performance dashboards
 - **Checklist:**
-  - [ ] Define a test strategy for a large project
-  - [ ] Manage flaky tests and test data
-  - [ ] Use cloud platforms for test automation
+  - [ ] Develop load testing for real-world stress scenarios
+  - [ ] Incorporate automated security and static analysis into CI
+  - [ ] Lead testing optimization and mentoring initiatives
 
 ---
 
