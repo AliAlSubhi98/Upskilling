@@ -1,56 +1,127 @@
 # System Design
 
-**Goal:** Architect scalable and robust systems.
+**Goal:** Master the design of scalable, reliable, and maintainable systems.
 
 **Current Level:** Level 1
 
 ---
 
 ## Level 1: System Design Fundamentals
-- **Competencies:** Client-server, monolith vs microservices, basic API design, load balancing, caching
-- **Tools:** Swagger, Postman, NGINX, Redis
+- **Competencies:**
+  - Client-server architecture
+  - Monolith vs microservices
+  - Basic API design
+  - Load balancing
+  - Caching
+  - Database selection
+- **Key Tools & Practices:**
+  - API documentation tools (Swagger, OpenAPI)
+  - Infrastructure diagrams
+  - HTTP clients (Postman, cURL)
+  - Resource estimation
+  - Vertical vs. horizontal scaling
 - **Checklist:**
-  - [ ] Design a simple client-server system
-  - [ ] Add caching to improve performance
-  - [ ] Use Swagger or Postman to document/test APIs
+  - [ ] Design a URL shortener service
+  - [ ] Design a notification system
+  - [ ] Implement a rate limiter
+  - [ ] Map out data flow diagrams for existing services
 
 ## Level 2: Architecture Patterns & Styles
-- **Competencies:** Microservices, SOA, layered/event-driven/hexagonal architectures, BFF, CQRS basics
-- **Tools:** API gateways, C4 diagrams, event modeling tools
+- **Competencies:**
+  - Microservices vs. SOA
+  - Layered architecture
+  - Event-driven architecture
+  - Hexagonal/clean/onion architectures
+  - BFF pattern
+  - CQRS basics
+  - Shared-nothing architecture
+- **Key Tools & Practices:**
+  - API gateways
+  - Diagram tools (C4 model)
+  - Event modeling
+  - Contract testing
+  - API versioning strategies
+  - Interface segregation
+  - Bounded contexts
 - **Checklist:**
   - [ ] Design a system using hexagonal architecture
-  - [ ] Implement a BFF for multiple clients
+  - [ ] Implement a BFF for mobile and web clients
   - [ ] Create an event-driven workflow
+  - [ ] Redesign a monolith toward service boundaries
 
 ## Level 3: Distributed Systems
-- **Competencies:** Distributed transactions, CQRS, event sourcing, Sagas, idempotency, partitioning
-- **Tools:** Kafka, Redis, Jaeger, Zipkin
+- **Competencies:**
+  - Distributed transactions
+  - CQRS & Event Sourcing
+  - Saga pattern
+  - Advanced message processing
+  - Consistent hashing
+  - Distributed caching
+  - Idempotency
+- **Key Tools & Practices:**
+  - Kafka for event streaming
+  - Redis/Memcached for distributed caching
+  - Distributed tracing (Jaeger, Zipkin)
+  - Optimistic concurrency control
+  - Backward/forward compatibility
+  - Data partitioning strategies
 - **Checklist:**
-  - [ ] Design a payment system with Sagas
+  - [ ] Design a payment system with Saga pattern
   - [ ] Implement event sourcing for auditing
-  - [ ] Partition data for scalability
+  - [ ] Design a distributed file storage system
+  - [ ] Create a real-time analytics pipeline
 
 ## Level 4: Large-Scale System Design
-- **Competencies:** Sharding, replication, CDN, geospatial, rate limiting, search, streaming
-- **Tools:** CDN, sharding tools, search engines, Bloom filters
+- **Competencies:**
+  - Sharding strategies
+  - Replication patterns
+  - Content delivery
+  - Geospatial systems
+  - Rate limiting at scale
+  - Search architecture
+  - Streaming
+- **Key Tools & Practices:**
+  - Database sharding techniques
+  - CDN optimization
+  - Vector/similarity search
+  - Bloom filters
+  - Geospatial indexes
+  - Adaptive throttling
+  - Distributed consensus (Raft, Paxos)
 - **Checklist:**
   - [ ] Design a social media feed system
+  - [ ] Create a recommendation engine
+  - [ ] Design a large-scale chat application
   - [ ] Implement a distributed search engine
-  - [ ] Use a CDN for content delivery
 
 ## Level 5: Enterprise Architecture
-- **Competencies:** Multi-region, global consistency, DR, custom distributed algorithms, migrations
-- **Tools:** Multi-region DBs, global load balancers, chaos engineering tools
+- **Competencies:**
+  - Multi-region architectures
+  - Global data consistency
+  - Cross-region traffic
+  - Disaster recovery
+  - Custom distributed algorithms
+  - Platform design
+  - Migration strategies
+- **Key Tools & Practices:**
+  - Multi-region database solutions
+  - Global load balancing
+  - Chaos engineering
+  - Site reliability engineering
+  - Cost optimization
+  - Data sovereignty patterns
+  - Service mesh at scale
 - **Checklist:**
   - [ ] Design a global e-commerce platform
-  - [ ] Implement active-active region architecture
-  - [ ] Plan a zero-downtime migration
+  - [ ] Implement multi-region active-active architecture
+  - [ ] Create an internal service deployment platform
+  - [ ] Design zero-downtime system migration
 
 ---
 
 ## Resources
-- [System Design Primer](https://github.com/donnemartin/system-design-primer)
-- [Grokking the System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview)
+- [System Design Primer (GitHub)](https://github.com/donnemartin/system-design-primer)
+- [Designing Data-Intensive Applications by Martin Kleppmann](https://dataintensive.net/)
 - [Awesome Scalability](https://github.com/binhnguyennus/awesome-scalability)
 
 ## Personal Notes
