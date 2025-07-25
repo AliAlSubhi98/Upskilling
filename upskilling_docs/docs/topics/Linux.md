@@ -1,56 +1,56 @@
 # Linux
 
-**Goal:** Become a confident Linux user and administrator.
+**Goal:** Gain proficiency in Linux command-line tools, server management, virtualization, and automation.
 
 **Current Level:** Level 1
 
 ---
 
-## Level 1: Linux Basics
-- **Competencies:** Basic shell commands, file navigation, permissions
-- **Tools:** Bash, zsh, ls, cd, cp, mv, rm, chmod, chown
+## Level 1: Linux CLI Basics
+- **Competencies:** Navigation, File Management, Permissions, Users & Groups
+- **Commands:** `cd`, `ls`, `cp`, `mv`, `rm`, `chmod`, `chown`, `pwd`, `touch`, `cat`, `nano`, `sudo`, `man`
 - **Checklist:**
-  - [ ] Navigate directories and list files
-  - [ ] Copy, move, and delete files
-  - [ ] Change file permissions and ownership
+  - [ ] Navigate through directories and list files with different options
+  - [ ] Modify file permissions using chmod and chown
+  - [ ] Create and manage users with useradd and passwd
 
-## Level 2: Scripting & Package Management
-- **Competencies:** Shell scripting, environment variables, package managers
-- **Tools:** Bash scripting, apt, yum, brew, nano, vim
+## Level 2: Package Management & Basic Scripting
+- **Competencies:** Installing & Managing Software, Basic Shell Scripting, WSL
+- **Commands:** `apt`, `yum`, `dnf`, `pacman`, `yay`, bash scripting, WSL
 - **Checklist:**
-  - [ ] Write a basic shell script
-  - [ ] Install and update packages
-  - [ ] Edit files with nano or vim
+  - [ ] Install and manage software using package managers
+  - [ ] Set up and configure WSL on Windows
+  - [ ] Write a basic Bash script for automating repetitive tasks
 
-## Level 3: Processes & Networking
-- **Competencies:** Process management, system monitoring, networking basics
-- **Tools:** ps, top, htop, netstat, ifconfig, systemctl
+## Level 3: Process Management & Networking
+- **Competencies:** System Performance, Networking, Server Management
+- **Commands:** `top`, `htop`, `ps`, `kill`, `netstat`, `ifconfig`, `systemctl`, `journalctl`, `crontab`
 - **Checklist:**
-  - [ ] Monitor running processes
-  - [ ] Start and stop system services
-  - [ ] Check network interfaces and open ports
+  - [ ] Monitor system performance using top/htop
+  - [ ] Kill or prioritize processes using nice/renice
+  - [ ] Set up and manage system services using systemctl
 
-## Level 4: Advanced Administration
-- **Competencies:** Users/groups, cron jobs, disk management, SSH
-- **Tools:** useradd, groupadd, crontab, df, du, ssh, scp
+## Level 4: Virtualization, Containerization & Security
+- **Competencies:** Docker, Firewall, SSH, System Hardening
+- **Commands:** VirtualBox, KVM, Docker, SSH, `iptables`, `ufw`, `fail2ban`
 - **Checklist:**
-  - [ ] Manage users and groups
-  - [ ] Schedule tasks with cron
-  - [ ] Use SSH and SCP for remote access and file transfer
+  - [ ] Deploy and manage virtual machines using KVM or VirtualBox
+  - [ ] Set up and secure an SSH server
+  - [ ] Configure firewall rules using iptables or ufw
 
-## Level 5: Security & Automation
-- **Competencies:** Hardening, firewalls, automation, troubleshooting
-- **Tools:** ufw, iptables, fail2ban, Ansible, log files
+## Level 5: Advanced System Administration & Automation
+- **Competencies:** Kernel Compilation, Infrastructure as Code, Large-Scale Automation
+- **Commands:** `systemd`, Ansible, Terraform, CI/CD, Kubernetes, Custom Kernels
 - **Checklist:**
-  - [ ] Configure a firewall (ufw or iptables)
-  - [ ] Automate tasks with Ansible or scripts
-  - [ ] Troubleshoot and analyze system logs
+  - [ ] Compile and run a custom Linux kernel
+  - [ ] Automate server setup using Ansible or Terraform
+  - [ ] Optimize a large-scale Linux deployment
 
 ---
 
 ## Resources
 - [Linux Journey](https://linuxjourney.com/)
-- [The Linux Command Line Book](https://linuxcommand.org/tlcl.php)
-- [Explainshell](https://explainshell.com/)
+- [The Linux Command Line Book](https://linuxcommand.org/)
+- [DigitalOcean Tutorials](https://www.digitalocean.com/community/tutorials)
 
 ## Personal Notes
