@@ -1,63 +1,64 @@
 # Security
 
-**Goal:** Build and maintain secure systems.
+**Goal:** Build secure systems with strong development and operational practices.
 
 **Current Level:** Level 1
 
 ---
 
 ## Level 1: Basic Security
-- **Competencies:** HTTPS, input validation, password storage, secrets management
-- **Tools:** Let's Encrypt, bcrypt, .env files
+- **Competencies:** Understand and apply essential security practices to reduce obvious risks.
+- **Tools:** Let's Encrypt, bcrypt, `.env` files, basic linters
 - **Checklist:**
-  - [ ] Enable HTTPS with valid TLS cert
-  - [ ] Validate user input
-  - [ ] Store passwords securely (e.g., bcrypt)
-  - [ ] No secrets in code/repos
+  - [ ] HTTPS enabled (with valid TLS cert)
+  - [ ] Input validation (e.g., using basic html.EscapeString, etc.)
+  - [ ] Secure password storage (e.g., bcrypt)
+  - [ ] No secrets or credentials in code/repos
 
 ## Level 2: Secure Development Practices
-- **Competencies:** OWASP Top 10, RBAC, rate limiting, dependency scanning
-- **Tools:** ZAP, Snyk, Dependabot, Vault
+- **Competencies:** Develop with security in mind and address common OWASP risks.
+- **Tools:** Go’s security best practices, CSRF, ZAP, Snyk, Dependabot, HashiCorp Vault
 - **Checklist:**
-  - [ ] Protect against OWASP Top 10
-  - [ ] Implement RBAC
-  - [ ] Set up rate limiting
-  - [ ] Use a secrets management system
-  - [ ] Scan dependencies for vulnerabilities
+  - [ ] Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)
+  - [ ] Role-based access control (RBAC)
+  - [ ] Rate limiting / brute-force protection
+  - [ ] Secrets management system in place (e.g., Vault or SSM)
+  - [ ] Dependency vulnerability scanning
 
-## Level 3: Threat Modeling & Secure SDLC
-- **Competencies:** Threat modeling, SAST/DAST, centralized auth, auditing
-- **Tools:** Keycloak, OPA, GoSec, ZAP
+## Level 3: App Layer Threat Modeling & Secure SDLC
+- **Competencies:** Build software with security embedded in the design and lifecycle.
+- **Tools:** Keycloak, OPA, Gosec, OWASP ZAP, GitHub Actions security scans
 - **Checklist:**
-  - [ ] Perform threat modeling
-  - [ ] Integrate security testing in CI/CD
-  - [ ] Use centralized auth (OAuth2, OIDC)
-  - [ ] Log/audit sensitive operations
+  - [ ] Threat modeling done per service (e.g., STRIDE, DFD)
+  - [ ] Security testing integrated in CI/CD (SAST, DAST)
+  - [ ] Centralized authentication/authorization (OAuth2, OIDC, Keycloak)
+  - [ ] Logging/auditing of sensitive operations
+  - [ ] Input/output encoding via secure libraries
 
 ## Level 4: Continuous Security & Monitoring
-- **Competencies:** Log aggregation, alerting, WAF, token security, incident response
-- **Tools:** Loki, Grafana, Cloudflare WAF, Falco
+- **Competencies:** Detect and respond to threats in real-time, minimize attack window.
+- **Tools:** Loki/Grafana, Alertmanager, Cloudflare WAF, Falco, Prometheus, JWT/mTLS
 - **Checklist:**
-  - [ ] Aggregate logs centrally
-  - [ ] Set up real-time alerting
-  - [ ] Use a WAF
-  - [ ] Implement token expiry/rotation
-  - [ ] Document security incidents
+  - [ ] Centralized log aggregation (e.g., ELK/Promtail)
+  - [ ] Real-time alerting on anomalies and abuse patterns
+  - [ ] Web Application Firewall (WAF) in place
+  - [ ] API security tokens with expiry, rotation (JWT, mTLS)
+  - [ ] Security incidents documented and practiced (playbooks)
 
-## Level 5: Zero Trust & Offensive Readiness
-- **Competencies:** Zero Trust, red teaming, secrets rotation, anomaly detection
-- **Tools:** Istio, Tailscale, OPA, Burp Suite
+## Level 5: Zero Trust + Offensive Readiness
+- **Competencies:** Architect systems assuming compromise; proactively test and defend.
+- **Tools:** Istio, Tailscale, OPA/Rego, Casbin, Burp Suite, SecurityScorecard, GCP/AWS Identity-Aware Proxy
 - **Checklist:**
-  - [ ] Architect for Zero Trust
-  - [ ] Run penetration tests
-  - [ ] Automate secrets rotation
-  - [ ] Use AI/ML for anomaly detection
+  - [ ] Zero Trust architecture (identity-aware proxies, least privilege)
+  - [ ] Bug bounty / red teaming / penetration testing pipeline
+  - [ ] Secrets rotation automation + Just-in-Time access for any sensitive systems
+  - [ ] AI/ML anomaly detection for usage & traffic using security tools and monitoring tools
 
 ---
 
 ## Resources
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [Google Security Blog](https://security.googleblog.com/)
-- [SecurityScorecard Blog](https://securityscorecard.com/blog)
+- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
+- [Go Security Best Practices](https://securego.dev/)
+- [GitHub Security Features](https://docs.github.com/en/code-security)
 
 ## Personal Notes
