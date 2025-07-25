@@ -1,56 +1,57 @@
 # Observability
 
-**Goal:** Monitor and troubleshoot systems effectively.
+**Goal:** Gain complete visibility into system health using logs, metrics, and traces.
 
 **Current Level:** Level 1
 
 ---
 
-## Level 1: Monitoring Basics
-- **Competencies:** Uptime checks, basic metrics, simple dashboards
-- **Tools:** UptimeRobot, Grafana, Prometheus, basic logging
+## Level 1: Monitoring & Logging Basics
+- **Competencies:** Log Analysis, Metrics Collection, Understanding Alerts
+- **Tools:** Log Files, Syslog, journalctl, top, htop
 - **Checklist:**
-  - [ ] Set up uptime monitoring for a service
-  - [ ] Create a simple dashboard for key metrics
-  - [ ] Collect and view basic logs
+  - [ ] Collect logs from a running application using journalctl or tail -f
+  - [ ] Use htop or top to monitor real-time system performance
+  - [ ] Configure basic alerts for server uptime
 
-## Level 2: Application Metrics & Alerts
-- **Competencies:** Custom metrics, alerting, log aggregation
-- **Tools:** Prometheus, Alertmanager, Loki, ELK stack
+## Level 2: Advanced Logging & Metrics Collection
+- **Competencies:** Centralized Logging, Structured Logs, Metrics Dashboards
+- **Tools:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Fluentd
 - **Checklist:**
-  - [ ] Instrument code with custom metrics
-  - [ ] Set up alerts for error conditions
-  - [ ] Aggregate logs from multiple services
+  - [ ] Set up an ELK Stack and aggregate logs from multiple sources
+  - [ ] Create a Prometheus-based metrics dashboard
+  - [ ] Implement structured logging with JSON
 
-## Level 3: Distributed Tracing & SLOs
-- **Competencies:** Tracing, service maps, SLOs, error budgets
-- **Tools:** Jaeger, Zipkin, OpenTelemetry, Sentry
+## Level 3: Distributed Tracing & Centralized Monitoring
+- **Competencies:** OpenTelemetry, Jaeger, Log Aggregation, Alerting
+- **Tools:** OpenTelemetry (Otel), Jaeger, Grafana, Loki
 - **Checklist:**
-  - [ ] Implement distributed tracing
-  - [ ] Define and track service level objectives (SLOs)
-  - [ ] Use error budgets to guide reliability work
+  - [ ] Integrate Jaeger for distributed tracing in a microservices system
+  - [ ] Set up Grafana with Loki for real-time log visualization
+  - [ ] Configure log aggregation across multiple services
 
-## Level 4: Advanced Observability & Automation
-- **Competencies:** Automated remediation, anomaly detection, runbooks
-- **Tools:** PagerDuty, Opsgenie, ML-based alerting
+## Level 4: Full Observability Stack & Incident Response
+- **Competencies:** Service Health, Tracing Pipelines, SLA Monitoring
+- **Tools:** PagerDuty, Sentry, OpenTracing, Prometheus Alerts, Thanos
 - **Checklist:**
-  - [ ] Set up automated incident response
-  - [ ] Use anomaly detection for alerts
-  - [ ] Maintain runbooks for common issues
+  - [ ] Implement a full observability stack with tracing, logs, and metrics
+  - [ ] Configure alerts with Prometheus & PagerDuty
+  - [ ] Handle a live incident and create a postmortem report
 
-## Level 5: Observability at Scale
-- **Competencies:** Multi-region, high-cardinality data, custom pipelines
-- **Tools:** Thanos, Cortex, custom observability platforms
+## Level 5: Enterprise Observability & AI-Based Monitoring
+- **Competencies:** Machine Learning for Anomaly Detection, Large-Scale Tracing, Automated Infrastructure Health
+- **Tools:** AI-Based Anomaly Detection, Kubernetes Observability, Cortex, New Relic, Datadog
 - **Checklist:**
-  - [ ] Aggregate metrics/logs across regions
-  - [ ] Handle high-cardinality data efficiently
-  - [ ] Build custom observability pipelines
+  - [ ] Automate log analysis using AI-based anomaly detection
+  - [ ] Deploy observability for a large-scale Kubernetes cluster
+  - [ ] Implement self-healing infrastructure monitoring
 
 ---
 
 ## Resources
 - [Prometheus Docs](https://prometheus.io/docs/)
-- [Grafana Labs Tutorials](https://grafana.com/tutorials/)
+- [Grafana Labs](https://grafana.com/)
 - [OpenTelemetry](https://opentelemetry.io/)
+- [ELK Stack Guide](https://www.elastic.co/what-is/elk-stack)
 
-## Personal Notes 
+## Personal Notes

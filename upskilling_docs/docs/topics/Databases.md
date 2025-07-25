@@ -6,7 +6,7 @@
 
 ---
 
-## Level 1: Database Fundamentals
+##   Level 1: Database Fundamentals
 - **Competencies:** Relational vs NoSQL, basic CRUD, simple queries
 - **Tools:** SQLite, MySQL, MongoDB, psql
 - **Checklist:**
