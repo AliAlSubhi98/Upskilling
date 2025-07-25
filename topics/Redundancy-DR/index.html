@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#redundancy-dr" class="md-skip">
+        <a href="#redundancy-disaster-recovery" class="md-skip">
           Skip to content
         </a>
       
@@ -263,6 +263,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Upskilling-Matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Skills Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -276,10 +298,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -292,8 +314,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Upskilling Topics
           </label>
@@ -540,9 +562,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#level-1-backup-basics" class="md-nav__link">
+  <a href="#level-1-basic-backup" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 1: Backup Basics
+      Level 1: Basic Backup
     </span>
   </a>
   
@@ -558,27 +580,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-3-disaster-recovery-planning" class="md-nav__link">
+  <a href="#level-3-ha-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 3: Disaster Recovery Planning
+      Level 3: HA (High Availability)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-4-high-availability-replication" class="md-nav__link">
+  <a href="#level-4-geo-redundancy-dr-planning" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 4: High Availability &amp; Replication
+      Level 4: Geo-Redundancy &amp; DR Planning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-5-enterprise-resilience" class="md-nav__link">
+  <a href="#level-5-fully-automated-self-healing-multi-region-active-active" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 5: Enterprise Resilience
+      Level 5: Fully Automated Self-Healing &amp; Multi-Region Active-Active
     </span>
   </a>
   
@@ -851,9 +873,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#level-1-backup-basics" class="md-nav__link">
+  <a href="#level-1-basic-backup" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 1: Backup Basics
+      Level 1: Basic Backup
     </span>
   </a>
   
@@ -869,27 +891,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-3-disaster-recovery-planning" class="md-nav__link">
+  <a href="#level-3-ha-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 3: Disaster Recovery Planning
+      Level 3: HA (High Availability)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-4-high-availability-replication" class="md-nav__link">
+  <a href="#level-4-geo-redundancy-dr-planning" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 4: High Availability &amp; Replication
+      Level 4: Geo-Redundancy &amp; DR Planning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-5-enterprise-resilience" class="md-nav__link">
+  <a href="#level-5-fully-automated-self-healing-multi-region-active-active" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 5: Enterprise Resilience
+      Level 5: Fully Automated Self-Healing &amp; Multi-Region Active-Active
     </span>
   </a>
   
@@ -932,61 +954,64 @@
   
 
 
-<h1 id="redundancy-dr">Redundancy &amp; DR<a class="headerlink" href="#redundancy-dr" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> Ensure system reliability and disaster recovery.</p>
+<h1 id="redundancy-disaster-recovery">Redundancy &amp; Disaster Recovery<a class="headerlink" href="#redundancy-disaster-recovery" title="Permanent link">&para;</a></h1>
+<p><strong>Goal:</strong> Build resilient systems with backup, high availability, and automated recovery strategies.</p>
 <p><strong>Current Level:</strong> Level 1</p>
 <hr />
-<h2 id="level-1-backup-basics">Level 1: Backup Basics<a class="headerlink" href="#level-1-backup-basics" title="Permanent link">&para;</a></h2>
+<h2 id="level-1-basic-backup">Level 1: Basic Backup<a class="headerlink" href="#level-1-basic-backup" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Manual backups, basic restore, local redundancy</li>
-<li><strong>Tools:</strong> rsync, tar, cloud storage (Google Drive, Dropbox)</li>
+<li><strong>Competencies:</strong> Minimum viable protection from data loss.</li>
+<li><strong>Tools:</strong> <code>pg_dump</code>, cron jobs, rsync, simple S3 uploads, any backup tool</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Perform a manual backup of important data</li>
-<li>[ ] Restore data from a backup</li>
-<li>[ ] Use local redundancy (RAID1, mirrored disks)</li>
+<li>[ ] Perform basic backup using any tool</li>
 </ul>
 <h2 id="level-2-automated-backups-monitoring">Level 2: Automated Backups &amp; Monitoring<a class="headerlink" href="#level-2-automated-backups-monitoring" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Scheduled backups, backup monitoring, offsite storage</li>
-<li><strong>Tools:</strong> cron, backup scripts, AWS S3, backup monitoring tools</li>
+<li><strong>Competencies:</strong> Improved reliability and observability.</li>
+<li><strong>Tools:</strong> pgBackRest, barman, restic, Prometheus + Alertmanager</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Schedule automated backups</li>
-<li>[ ] Monitor backup success/failure</li>
-<li>[ ] Store backups offsite or in the cloud</li>
+<li>[ ] Scheduled, incremental backups (e.g., WAL archiving for PostgreSQL)</li>
+<li>[ ] Monitoring backup success/failure (alerts if missed)</li>
+<li>[ ] Backup encryption and retention policy</li>
+<li>[ ] Manual restore plan tested occasionally</li>
 </ul>
-<h2 id="level-3-disaster-recovery-planning">Level 3: Disaster Recovery Planning<a class="headerlink" href="#level-3-disaster-recovery-planning" title="Permanent link">&para;</a></h2>
+<h2 id="level-3-ha-high-availability">Level 3: HA (High Availability)<a class="headerlink" href="#level-3-ha-high-availability" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> DR plans, RTO/RPO, failover testing</li>
-<li><strong>Tools:</strong> DR runbooks, failover scripts, cloud DR tools</li>
+<li><strong>Competencies:</strong> Avoid downtime with minimal data loss (RPO, RTO ~ minutes)</li>
+<li><strong>Tools:</strong> PostgreSQL replication, Patroni, HAProxy, etcd, Ansible</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Create a disaster recovery plan</li>
-<li>[ ] Define RTO (Recovery Time Objective) and RPO (Recovery Point Objective)</li>
-<li>[ ] Test failover and recovery procedures</li>
+<li>[ ] Hot standby or streaming replication</li>
+<li>[ ] Automated failover (e.g., Patroni, repmgr)</li>
+<li>[ ] Load balancer or service discovery for DB connection routing</li>
+<li>[ ] Configuration and infrastructure as code</li>
 </ul>
-<h2 id="level-4-high-availability-replication">Level 4: High Availability &amp; Replication<a class="headerlink" href="#level-4-high-availability-replication" title="Permanent link">&para;</a></h2>
+<h2 id="level-4-geo-redundancy-dr-planning">Level 4: Geo-Redundancy &amp; DR Planning<a class="headerlink" href="#level-4-geo-redundancy-dr-planning" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Active/passive, active/active, replication, load balancing</li>
-<li><strong>Tools:</strong> HAProxy, database replication, cloud load balancers</li>
+<li><strong>Competencies:</strong> Survive full region failures</li>
+<li><strong>Tools:</strong> Logical replication, pglogical, Citus, DNS failover</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Set up high availability for a service</li>
-<li>[ ] Implement database replication</li>
-<li>[ ] Use load balancing for redundancy</li>
+<li>[ ] Cross-region replication (async or cascaded)</li>
+<li>[ ] Automated DNS failover (Route53, Cloudflare, etc.)</li>
+<li>[ ] Regular DR drills (simulate failure + restore)</li>
+<li>[ ] RTO &amp; RPO defined and measured</li>
+<li>[ ] App layer aware of region failover</li>
 </ul>
-<h2 id="level-5-enterprise-resilience">Level 5: Enterprise Resilience<a class="headerlink" href="#level-5-enterprise-resilience" title="Permanent link">&para;</a></h2>
+<h2 id="level-5-fully-automated-self-healing-multi-region-active-active">Level 5: Fully Automated Self-Healing &amp; Multi-Region Active-Active<a class="headerlink" href="#level-5-fully-automated-self-healing-multi-region-active-active" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Multi-region, chaos engineering, automated DR</li>
-<li><strong>Tools:</strong> Chaos Monkey, multi-region cloud, automated failover</li>
+<li><strong>Competencies:</strong> Always-on, resilient, self-healing infrastructure</li>
+<li><strong>Tools:</strong> Citus, Kubernetes, Vault, Service Mesh, GitOps, Terraform</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Design for multi-region redundancy</li>
-<li>[ ] Practice chaos engineering to test resilience</li>
-<li>[ ] Automate disaster recovery processes</li>
+<li>[ ] Multi-region active-active setup (e.g., sharded or conflict-resolved)</li>
+<li>[ ] Infrastructure self-heals on failure (k8s, operators)</li>
+<li>[ ] Continuous backup + PITR (Point-in-Time Recovery)</li>
+<li>[ ] Infrastructure &amp; DB schema versioned (e.g., GitOps)</li>
 </ul>
 <hr />
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads/welcome.html">AWS Disaster Recovery Whitepaper</a></li>
-<li><a href="https://sre.google/sre-book/disaster-recovery/">Google SRE Book - Chapter 12: Disaster Recovery</a></li>
-<li><a href="https://www.backblaze.com/blog/the-3-2-1-backup-strategy/">Backblaze Blog: Backup Strategies</a></li>
+<li><a href="https://www.postgresql.org/docs/current/high-availability.html">PostgreSQL High Availability Guide</a></li>
+<li><a href="https://aws.amazon.com/disaster-recovery/">Disaster Recovery Planning by AWS</a></li>
+<li><a href="https://docs.citusdata.com/en/latest/">Citus Multi-Node Docs</a></li>
 </ul>
 <h2 id="personal-notes">Personal Notes<a class="headerlink" href="#personal-notes" title="Permanent link">&para;</a></h2>
 

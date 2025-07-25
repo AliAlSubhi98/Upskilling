@@ -263,6 +263,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Upskilling-Matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Skills Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -276,10 +298,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -292,8 +314,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Upskilling Topics
           </label>
@@ -673,9 +695,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-3-threat-modeling-secure-sdlc" class="md-nav__link">
+  <a href="#level-3-app-layer-threat-modeling-secure-sdlc" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 3: Threat Modeling &amp; Secure SDLC
+      Level 3: App Layer Threat Modeling &amp; Secure SDLC
     </span>
   </a>
   
@@ -693,7 +715,7 @@
         <li class="md-nav__item">
   <a href="#level-5-zero-trust-offensive-readiness" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 5: Zero Trust &amp; Offensive Readiness
+      Level 5: Zero Trust + Offensive Readiness
     </span>
   </a>
   
@@ -869,9 +891,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#level-3-threat-modeling-secure-sdlc" class="md-nav__link">
+  <a href="#level-3-app-layer-threat-modeling-secure-sdlc" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 3: Threat Modeling &amp; Secure SDLC
+      Level 3: App Layer Threat Modeling &amp; Secure SDLC
     </span>
   </a>
   
@@ -889,7 +911,7 @@
         <li class="md-nav__item">
   <a href="#level-5-zero-trust-offensive-readiness" class="md-nav__link">
     <span class="md-ellipsis">
-      Level 5: Zero Trust &amp; Offensive Readiness
+      Level 5: Zero Trust + Offensive Readiness
     </span>
   </a>
   
@@ -933,67 +955,68 @@
 
 
 <h1 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> Build and maintain secure systems.</p>
+<p><strong>Goal:</strong> Build secure systems with strong development and operational practices.</p>
 <p><strong>Current Level:</strong> Level 1</p>
 <hr />
 <h2 id="level-1-basic-security">Level 1: Basic Security<a class="headerlink" href="#level-1-basic-security" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> HTTPS, input validation, password storage, secrets management</li>
-<li><strong>Tools:</strong> Let's Encrypt, bcrypt, .env files</li>
+<li><strong>Competencies:</strong> Understand and apply essential security practices to reduce obvious risks.</li>
+<li><strong>Tools:</strong> Let's Encrypt, bcrypt, <code>.env</code> files, basic linters</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Enable HTTPS with valid TLS cert</li>
-<li>[ ] Validate user input</li>
-<li>[ ] Store passwords securely (e.g., bcrypt)</li>
-<li>[ ] No secrets in code/repos</li>
+<li>[ ] HTTPS enabled (with valid TLS cert)</li>
+<li>[ ] Input validation (e.g., using basic html.EscapeString, etc.)</li>
+<li>[ ] Secure password storage (e.g., bcrypt)</li>
+<li>[ ] No secrets or credentials in code/repos</li>
 </ul>
 <h2 id="level-2-secure-development-practices">Level 2: Secure Development Practices<a class="headerlink" href="#level-2-secure-development-practices" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> OWASP Top 10, RBAC, rate limiting, dependency scanning</li>
-<li><strong>Tools:</strong> ZAP, Snyk, Dependabot, Vault</li>
+<li><strong>Competencies:</strong> Develop with security in mind and address common OWASP risks.</li>
+<li><strong>Tools:</strong> Go’s security best practices, CSRF, ZAP, Snyk, Dependabot, HashiCorp Vault</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Protect against OWASP Top 10</li>
-<li>[ ] Implement RBAC</li>
-<li>[ ] Set up rate limiting</li>
-<li>[ ] Use a secrets management system</li>
-<li>[ ] Scan dependencies for vulnerabilities</li>
+<li>[ ] Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)</li>
+<li>[ ] Role-based access control (RBAC)</li>
+<li>[ ] Rate limiting / brute-force protection</li>
+<li>[ ] Secrets management system in place (e.g., Vault or SSM)</li>
+<li>[ ] Dependency vulnerability scanning</li>
 </ul>
-<h2 id="level-3-threat-modeling-secure-sdlc">Level 3: Threat Modeling &amp; Secure SDLC<a class="headerlink" href="#level-3-threat-modeling-secure-sdlc" title="Permanent link">&para;</a></h2>
+<h2 id="level-3-app-layer-threat-modeling-secure-sdlc">Level 3: App Layer Threat Modeling &amp; Secure SDLC<a class="headerlink" href="#level-3-app-layer-threat-modeling-secure-sdlc" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Threat modeling, SAST/DAST, centralized auth, auditing</li>
-<li><strong>Tools:</strong> Keycloak, OPA, GoSec, ZAP</li>
+<li><strong>Competencies:</strong> Build software with security embedded in the design and lifecycle.</li>
+<li><strong>Tools:</strong> Keycloak, OPA, Gosec, OWASP ZAP, GitHub Actions security scans</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Perform threat modeling</li>
-<li>[ ] Integrate security testing in CI/CD</li>
-<li>[ ] Use centralized auth (OAuth2, OIDC)</li>
-<li>[ ] Log/audit sensitive operations</li>
+<li>[ ] Threat modeling done per service (e.g., STRIDE, DFD)</li>
+<li>[ ] Security testing integrated in CI/CD (SAST, DAST)</li>
+<li>[ ] Centralized authentication/authorization (OAuth2, OIDC, Keycloak)</li>
+<li>[ ] Logging/auditing of sensitive operations</li>
+<li>[ ] Input/output encoding via secure libraries</li>
 </ul>
 <h2 id="level-4-continuous-security-monitoring">Level 4: Continuous Security &amp; Monitoring<a class="headerlink" href="#level-4-continuous-security-monitoring" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Log aggregation, alerting, WAF, token security, incident response</li>
-<li><strong>Tools:</strong> Loki, Grafana, Cloudflare WAF, Falco</li>
+<li><strong>Competencies:</strong> Detect and respond to threats in real-time, minimize attack window.</li>
+<li><strong>Tools:</strong> Loki/Grafana, Alertmanager, Cloudflare WAF, Falco, Prometheus, JWT/mTLS</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Aggregate logs centrally</li>
-<li>[ ] Set up real-time alerting</li>
-<li>[ ] Use a WAF</li>
-<li>[ ] Implement token expiry/rotation</li>
-<li>[ ] Document security incidents</li>
+<li>[ ] Centralized log aggregation (e.g., ELK/Promtail)</li>
+<li>[ ] Real-time alerting on anomalies and abuse patterns</li>
+<li>[ ] Web Application Firewall (WAF) in place</li>
+<li>[ ] API security tokens with expiry, rotation (JWT, mTLS)</li>
+<li>[ ] Security incidents documented and practiced (playbooks)</li>
 </ul>
-<h2 id="level-5-zero-trust-offensive-readiness">Level 5: Zero Trust &amp; Offensive Readiness<a class="headerlink" href="#level-5-zero-trust-offensive-readiness" title="Permanent link">&para;</a></h2>
+<h2 id="level-5-zero-trust-offensive-readiness">Level 5: Zero Trust + Offensive Readiness<a class="headerlink" href="#level-5-zero-trust-offensive-readiness" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Zero Trust, red teaming, secrets rotation, anomaly detection</li>
-<li><strong>Tools:</strong> Istio, Tailscale, OPA, Burp Suite</li>
+<li><strong>Competencies:</strong> Architect systems assuming compromise; proactively test and defend.</li>
+<li><strong>Tools:</strong> Istio, Tailscale, OPA/Rego, Casbin, Burp Suite, SecurityScorecard, GCP/AWS Identity-Aware Proxy</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Architect for Zero Trust</li>
-<li>[ ] Run penetration tests</li>
-<li>[ ] Automate secrets rotation</li>
-<li>[ ] Use AI/ML for anomaly detection</li>
+<li>[ ] Zero Trust architecture (identity-aware proxies, least privilege)</li>
+<li>[ ] Bug bounty / red teaming / penetration testing pipeline</li>
+<li>[ ] Secrets rotation automation + Just-in-Time access for any sensitive systems</li>
+<li>[ ] AI/ML anomaly detection for usage &amp; traffic using security tools and monitoring tools</li>
 </ul>
 <hr />
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
-<li><a href="https://security.googleblog.com/">Google Security Blog</a></li>
-<li><a href="https://securityscorecard.com/blog">SecurityScorecard Blog</a></li>
+<li><a href="https://owasp.org/www-project-top-ten/">OWASP Top Ten</a></li>
+<li><a href="https://securego.dev/">Go Security Best Practices</a></li>
+<li><a href="https://docs.github.com/en/code-security">GitHub Security Features</a></li>
 </ul>
 <h2 id="personal-notes">Personal Notes<a class="headerlink" href="#personal-notes" title="Permanent link">&para;</a></h2>
 

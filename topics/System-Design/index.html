@@ -263,6 +263,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Upskilling-Matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Skills Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -276,10 +298,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -292,8 +314,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Upskilling Topics
           </label>
@@ -933,59 +955,130 @@
 
 
 <h1 id="system-design">System Design<a class="headerlink" href="#system-design" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> Architect scalable and robust systems.</p>
+<p><strong>Goal:</strong> Master the design of scalable, reliable, and maintainable systems.</p>
 <p><strong>Current Level:</strong> Level 1</p>
 <hr />
 <h2 id="level-1-system-design-fundamentals">Level 1: System Design Fundamentals<a class="headerlink" href="#level-1-system-design-fundamentals" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Client-server, monolith vs microservices, basic API design, load balancing, caching</li>
-<li><strong>Tools:</strong> Swagger, Postman, NGINX, Redis</li>
+<li><strong>Competencies:</strong></li>
+<li>Client-server architecture</li>
+<li>Monolith vs microservices</li>
+<li>Basic API design</li>
+<li>Load balancing</li>
+<li>Caching</li>
+<li>Database selection</li>
+<li><strong>Key Tools &amp; Practices:</strong></li>
+<li>API documentation tools (Swagger, OpenAPI)</li>
+<li>Infrastructure diagrams</li>
+<li>HTTP clients (Postman, cURL)</li>
+<li>Resource estimation</li>
+<li>Vertical vs. horizontal scaling</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Design a simple client-server system</li>
-<li>[ ] Add caching to improve performance</li>
-<li>[ ] Use Swagger or Postman to document/test APIs</li>
+<li>[ ] Design a URL shortener service</li>
+<li>[ ] Design a notification system</li>
+<li>[ ] Implement a rate limiter</li>
+<li>[ ] Map out data flow diagrams for existing services</li>
 </ul>
 <h2 id="level-2-architecture-patterns-styles">Level 2: Architecture Patterns &amp; Styles<a class="headerlink" href="#level-2-architecture-patterns-styles" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Microservices, SOA, layered/event-driven/hexagonal architectures, BFF, CQRS basics</li>
-<li><strong>Tools:</strong> API gateways, C4 diagrams, event modeling tools</li>
+<li><strong>Competencies:</strong></li>
+<li>Microservices vs. SOA</li>
+<li>Layered architecture</li>
+<li>Event-driven architecture</li>
+<li>Hexagonal/clean/onion architectures</li>
+<li>BFF pattern</li>
+<li>CQRS basics</li>
+<li>Shared-nothing architecture</li>
+<li><strong>Key Tools &amp; Practices:</strong></li>
+<li>API gateways</li>
+<li>Diagram tools (C4 model)</li>
+<li>Event modeling</li>
+<li>Contract testing</li>
+<li>API versioning strategies</li>
+<li>Interface segregation</li>
+<li>Bounded contexts</li>
 <li><strong>Checklist:</strong></li>
 <li>[ ] Design a system using hexagonal architecture</li>
-<li>[ ] Implement a BFF for multiple clients</li>
+<li>[ ] Implement a BFF for mobile and web clients</li>
 <li>[ ] Create an event-driven workflow</li>
+<li>[ ] Redesign a monolith toward service boundaries</li>
 </ul>
 <h2 id="level-3-distributed-systems">Level 3: Distributed Systems<a class="headerlink" href="#level-3-distributed-systems" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Distributed transactions, CQRS, event sourcing, Sagas, idempotency, partitioning</li>
-<li><strong>Tools:</strong> Kafka, Redis, Jaeger, Zipkin</li>
+<li><strong>Competencies:</strong></li>
+<li>Distributed transactions</li>
+<li>CQRS &amp; Event Sourcing</li>
+<li>Saga pattern</li>
+<li>Advanced message processing</li>
+<li>Consistent hashing</li>
+<li>Distributed caching</li>
+<li>Idempotency</li>
+<li><strong>Key Tools &amp; Practices:</strong></li>
+<li>Kafka for event streaming</li>
+<li>Redis/Memcached for distributed caching</li>
+<li>Distributed tracing (Jaeger, Zipkin)</li>
+<li>Optimistic concurrency control</li>
+<li>Backward/forward compatibility</li>
+<li>Data partitioning strategies</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Design a payment system with Sagas</li>
+<li>[ ] Design a payment system with Saga pattern</li>
 <li>[ ] Implement event sourcing for auditing</li>
-<li>[ ] Partition data for scalability</li>
+<li>[ ] Design a distributed file storage system</li>
+<li>[ ] Create a real-time analytics pipeline</li>
 </ul>
 <h2 id="level-4-large-scale-system-design">Level 4: Large-Scale System Design<a class="headerlink" href="#level-4-large-scale-system-design" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Sharding, replication, CDN, geospatial, rate limiting, search, streaming</li>
-<li><strong>Tools:</strong> CDN, sharding tools, search engines, Bloom filters</li>
+<li><strong>Competencies:</strong></li>
+<li>Sharding strategies</li>
+<li>Replication patterns</li>
+<li>Content delivery</li>
+<li>Geospatial systems</li>
+<li>Rate limiting at scale</li>
+<li>Search architecture</li>
+<li>Streaming</li>
+<li><strong>Key Tools &amp; Practices:</strong></li>
+<li>Database sharding techniques</li>
+<li>CDN optimization</li>
+<li>Vector/similarity search</li>
+<li>Bloom filters</li>
+<li>Geospatial indexes</li>
+<li>Adaptive throttling</li>
+<li>Distributed consensus (Raft, Paxos)</li>
 <li><strong>Checklist:</strong></li>
 <li>[ ] Design a social media feed system</li>
+<li>[ ] Create a recommendation engine</li>
+<li>[ ] Design a large-scale chat application</li>
 <li>[ ] Implement a distributed search engine</li>
-<li>[ ] Use a CDN for content delivery</li>
 </ul>
 <h2 id="level-5-enterprise-architecture">Level 5: Enterprise Architecture<a class="headerlink" href="#level-5-enterprise-architecture" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Competencies:</strong> Multi-region, global consistency, DR, custom distributed algorithms, migrations</li>
-<li><strong>Tools:</strong> Multi-region DBs, global load balancers, chaos engineering tools</li>
+<li><strong>Competencies:</strong></li>
+<li>Multi-region architectures</li>
+<li>Global data consistency</li>
+<li>Cross-region traffic</li>
+<li>Disaster recovery</li>
+<li>Custom distributed algorithms</li>
+<li>Platform design</li>
+<li>Migration strategies</li>
+<li><strong>Key Tools &amp; Practices:</strong></li>
+<li>Multi-region database solutions</li>
+<li>Global load balancing</li>
+<li>Chaos engineering</li>
+<li>Site reliability engineering</li>
+<li>Cost optimization</li>
+<li>Data sovereignty patterns</li>
+<li>Service mesh at scale</li>
 <li><strong>Checklist:</strong></li>
 <li>[ ] Design a global e-commerce platform</li>
-<li>[ ] Implement active-active region architecture</li>
-<li>[ ] Plan a zero-downtime migration</li>
+<li>[ ] Implement multi-region active-active architecture</li>
+<li>[ ] Create an internal service deployment platform</li>
+<li>[ ] Design zero-downtime system migration</li>
 </ul>
 <hr />
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/donnemartin/system-design-primer">System Design Primer</a></li>
-<li><a href="https://www.educative.io/courses/grokking-the-system-design-interview">Grokking the System Design Interview</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer">System Design Primer (GitHub)</a></li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications by Martin Kleppmann</a></li>
 <li><a href="https://github.com/binhnguyennus/awesome-scalability">Awesome Scalability</a></li>
 </ul>
 <h2 id="personal-notes">Personal Notes<a class="headerlink" href="#personal-notes" title="Permanent link">&para;</a></h2>
