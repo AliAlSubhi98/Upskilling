@@ -1,4 +1,3 @@
-
 # 🚀 GitHub Pages Deployment Guide using MkDocs
 
 This guide walks you through:
@@ -169,3 +168,54 @@ mkdocs serve  # for local preview
 - Add `site/` to `.gitignore`
 - Store secrets in `.env` and ignore them
 
+## 🛠️ Common Error: Address Already in Use
+
+If you get this error while running:
+
+```bash
+mkdocs serve
+```
+
+And it returns something like:
+
+```bash
+OSError: [Errno 48] Address already in use
+```
+
+This means another process is using the default port `8000`. You have two ways to solve this:
+
+---
+
+### ✅ Option 1: Kill the Process Using the Port
+
+Run the following to find the process ID:
+
+```bash
+lsof -i :8000
+```
+
+Then kill it:
+
+```bash
+kill -9 <PID>
+```
+
+Replace `<PID>` with the actual Process ID from the output.
+
+Example:
+
+```bash
+kill -9 12345
+```
+
+---
+
+### ✅ Option 2: Use a Different Port
+
+If you don’t want to kill the running process, simply use another port:
+
+```bash
+mkdocs serve -a 127.0.0.1:8001
+```
+
+This tells MkDocs to run locally on port `8001` instead.
