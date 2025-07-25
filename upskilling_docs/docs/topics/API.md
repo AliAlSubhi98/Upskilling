@@ -1,56 +1,85 @@
 # API
 
-**Goal:** Design and implement robust APIs.
+**Goal:** Build robust and evolvable APIs using REST, GraphQL, and gRPC.
 
 **Current Level:** Level 1
 
 ---
 
-## Level 1: API Basics
-- **Competencies:** REST fundamentals, CRUD, status codes, documentation
-- **Tools:** Postman, Swagger, curl
-- **Checklist:**
-  - [ ] Build a simple REST API
-  - [ ] Use correct HTTP status codes
-  - [ ] Document endpoints with Swagger/OpenAPI
+## Level 1: Basic REST APIs
+- **Competencies:**
+  - Build basic REST APIs (CRUD)
+  - Understand HTTP methods and status codes
+  - Call APIs using Postman or curl
+- **Key Tools & Practices:**
+  - Express, Gin, Fastify, Postman, Swagger UI
+  - Basic routers and controllers
+- **Challenges to Master:**
+  - Misusing status codes
+  - Forgetting to validate input
+  - Missing response formats
 
-## Level 2: Advanced REST & Versioning
-- **Competencies:** Filtering, pagination, versioning, error handling
-- **Tools:** OpenAPI, API gateways, error tracking tools
-- **Checklist:**
-  - [ ] Add filtering and pagination to endpoints
-  - [ ] Implement API versioning
-  - [ ] Standardize error responses
+## Level 2: REST Best Practices
+- **Competencies:**
+  - Apply REST principles (versioning, pagination, filtering)
+  - Write consistent endpoints
+  - Use OpenAPI or Swagger
+- **Key Tools & Practices:**
+  - Routing libraries
+  - OpenAPI/Swagger generators
+  - Request validation libraries
+- **Challenges to Master:**
+  - Designing intuitive endpoints
+  - Managing breaking changes
+  - Handling validation consistently
 
-## Level 3: Security & Auth
-- **Competencies:** Auth, rate limiting, CORS, input validation
-- **Tools:** JWT, OAuth2, API keys, CORS middleware
-- **Checklist:**
-  - [ ] Secure endpoints with JWT or API keys
-  - [ ] Set up CORS policies
-  - [ ] Validate and sanitize input
+## Level 3: GraphQL & gRPC
+- **Competencies:**
+  - Build GraphQL schemas and resolvers
+  - Use gRPC with Protobuf
+  - Understand streaming and schema evolution
+- **Key Tools & Practices:**
+  - Apollo Server, gqlgen, gRPC, Protobuf
+  - Code generation tools
+- **Challenges to Master:**
+  - N+1 queries in GraphQL
+  - Versioning proto files
+  - Handling streaming clients
 
-## Level 4: API Gateways & Monitoring
-- **Competencies:** API gateways, analytics, monitoring, caching
-- **Tools:** Kong, Apigee, Prometheus, Redis
-- **Checklist:**
-  - [ ] Deploy an API gateway
-  - [ ] Monitor API usage and errors
-  - [ ] Cache responses for performance
+## Level 4: API Security & Gateway Integration
+- **Competencies:**
+  - Secure APIs (JWT, OAuth2)
+  - Apply rate limiting and request throttling
+  - Integrate with API gateways
+- **Key Tools & Practices:**
+  - Keycloak, JWT libraries
+  - API Gateways (Kong, NGINX, Envoy)
+  - Rate limiter middlewares
+- **Challenges to Master:**
+  - Token expiration & refresh
+  - Enforcing scope-based access
+  - Detecting abuse patterns
 
-## Level 5: GraphQL & Event-Driven APIs
-- **Competencies:** GraphQL, webhooks, async/event-driven APIs, gRPC
-- **Tools:** Apollo, gRPC, webhook tools
-- **Checklist:**
-  - [ ] Build a GraphQL or gRPC API
-  - [ ] Implement webhooks for async events
-  - [ ] Design an event-driven API
+## Level 5: Federated & Evolvable APIs
+- **Competencies:**
+  - Federate APIs using GraphQL or gateways
+  - Manage multi-team APIs with clear ownership
+  - Design evolvable APIs
+- **Key Tools & Practices:**
+  - Apollo Federation
+  - gRPC Gateway
+  - Schema registry tools
+- **Challenges to Master:**
+  - Coordinating breaking changes across teams
+  - Managing shared types and versioning
+  - Preventing over-fetching or under-fetching
 
 ---
 
 ## Resources
 - [RESTful API Design](https://restfulapi.net/)
-- [OpenAPI Specification](https://swagger.io/specification/)
-- [Postman Learning Center](https://learning.postman.com/)
+- [GraphQL Docs](https://graphql.org/learn/)
+- [gRPC Docs](https://grpc.io/docs/)
+- [API Security Best Practices](https://owasp.org/www-project-api-security/)
 
 ## Personal Notes
