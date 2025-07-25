@@ -32,7 +32,7 @@
 
 ## Level 4: Enterprise GitOps & Security
 - **Competencies:** Protected Branches, Signed Commits, CI/CD, LFS, GitHub Actions
-- **Commands:** `git commit -S`, git lfs, GitHub Actions, Protected Branch Policies
+- **Commands:** `git commit -S`, `git lfs`, GitHub Actions, Protected Branch Policies
 - **Checklist:**
   - [ ] Enforce signed commits for security
   - [ ] Set up GitHub Actions for automated testing
