@@ -1,56 +1,56 @@
 # Project Management
 
-**Goal:** Understand and apply project management basics for developers.
+**Goal:** Manage development tasks efficiently using modern project management and agile practices.
 
 **Current Level:** Level 1
 
 ---
 
-## Level 1: Fundamentals
-- **Competencies:** Task breakdown, basic prioritization, time tracking
-- **Tools:** Trello, Jira, Asana, GitHub Projects
+## Level 1: Fundamentals of Task Management
+- **Competencies:** Task Breakdown, Prioritization, Time Tracking, Status Updates
+- **Tools:** Jira, Trello, GitHub Issues, Kanban Boards, Eisenhower Matrix, Pomodoro
 - **Checklist:**
-  - [ ] Break down a feature into tasks
-  - [ ] Prioritize tasks for a sprint
-  - [ ] Track progress using a project board
+  - [ ] Break down a user story into smaller actionable tasks
+  - [ ] Use Eisenhower Matrix to prioritize urgent vs. important tasks
+  - [ ] Track time spent on development tasks
 
-## Level 2: Team Communication & Status
-- **Competencies:** Basic team communication, standups, asynchronous updates
-- **Tools:** Slack, Teams, Email, Standup bots
+## Level 2: Sprint Planning & Task Complexity
+- **Competencies:** Estimations, Task Assignment, Workload Balancing, Team Collaboration
+- **Tools:** Sprint Planning, Story Points, Planning Poker, MoSCoW Prioritization
 - **Checklist:**
-  - [ ] Participate in daily standups
-  - [ ] Provide asynchronous status updates
-  - [ ] Use a team chat tool for collaboration
+  - [ ] Estimate tasks using story points and Planning Poker
+  - [ ] Identify task complexity and break it down
+  - [ ] Balance task assignments across a team of developers
 
-## Level 3: Feedback & Retrospectives
-- **Competencies:** Writing clear PRs, giving & receiving feedback, meeting etiquette
-- **Tools:** GitHub/GitLab PRs, Confluence, Google Docs
+## Level 3: Risk & Dependency Management
+- **Competencies:** Handling Blockers, Backlog Grooming, Agile Metrics
+- **Tools:** Burndown Charts, Lead Time, Cycle Time, RAID Log
 - **Checklist:**
-  - [ ] Write a clear pull request description
-  - [ ] Give constructive feedback in code reviews
-  - [ ] Participate in a sprint retrospective
+  - [ ] Identify and document task dependencies
+  - [ ] Handle a blocker that delays sprint completion
+  - [ ] Use Cycle Time and Lead Time to improve task efficiency
 
-## Level 4: Estimation & Planning
-- **Competencies:** Risk management, dependency handling, backlog grooming, advanced estimation
-- **Tools:** Planning poker, Jira advanced features, Gantt charts
+## Level 4: Scaling Agile & Release Planning
+- **Competencies:** CI/CD Pipelines, Deployment Planning, Cross-Team Collaboration
+- **Tools:** Release Cycles, Feature Flags, Trunk-Based Development, Roadmaps
 - **Checklist:**
-  - [ ] Estimate tasks using story points or time
-  - [ ] Identify and manage dependencies
-  - [ ] Groom the backlog for an upcoming sprint
+  - [ ] Plan a feature release with milestones
+  - [ ] Coordinate between backend, frontend, and QA teams
+  - [ ] Use feature flags for incremental releases
 
-## Level 5: Leadership & Strategy
-- **Competencies:** Strategic roadmaps, metrics-driven decisions, developer advocacy
-- **Tools:** Roadmap tools, OKRs, KPI dashboards
+## Level 5: Engineering Leadership & Strategic Planning
+- **Competencies:** Scaling Agile, Large-Scale Sprint Planning, Data-Driven Decision Making
+- **Tools:** OKRs, DORA Metrics, SPACE Framework, Cumulative Flow Diagrams
 - **Checklist:**
-  - [ ] Contribute to a team or project roadmap
-  - [ ] Use metrics to drive process improvements
-  - [ ] Advocate for developer best practices
+  - [ ] Design a quarterly roadmap for an engineering team
+  - [ ] Optimize team workflow using DORA Metrics
+  - [ ] Define and improve developer experience metrics
 
 ---
 
 ## Resources
-- [Atlassian Agile Coach](https://www.atlassian.com/agile)
-- [Scrum Guide](https://scrumguides.org/)
-- [Trello Getting Started](https://trello.com/guide)
+- [Jira Software Guide](https://www.atlassian.com/software/jira)
+- [Agile Estimation Techniques](https://www.mountaingoatsoftware.com/agile/planning)
+- [DORA DevOps Metrics](https://www.devops-research.com/research.html)
 
 ## Personal Notes
