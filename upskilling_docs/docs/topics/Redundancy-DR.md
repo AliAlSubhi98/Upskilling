@@ -1,56 +1,59 @@
-# Redundancy & DR
+# Redundancy & Disaster Recovery
 
-**Goal:** Ensure system reliability and disaster recovery.
+**Goal:** Build resilient systems with backup, high availability, and automated recovery strategies.
 
 **Current Level:** Level 1
 
 ---
 
-## Level 1: Backup Basics
-- **Competencies:** Manual backups, basic restore, local redundancy
-- **Tools:** rsync, tar, cloud storage (Google Drive, Dropbox)
+## Level 1: Basic Backup
+- **Competencies:** Minimum viable protection from data loss.
+- **Tools:** `pg_dump`, cron jobs, rsync, simple S3 uploads, any backup tool
 - **Checklist:**
-  - [ ] Perform a manual backup of important data
-  - [ ] Restore data from a backup
-  - [ ] Use local redundancy (RAID1, mirrored disks)
+  - [ ] Perform basic backup using any tool
 
 ## Level 2: Automated Backups & Monitoring
-- **Competencies:** Scheduled backups, backup monitoring, offsite storage
-- **Tools:** cron, backup scripts, AWS S3, backup monitoring tools
+- **Competencies:** Improved reliability and observability.
+- **Tools:** pgBackRest, barman, restic, Prometheus + Alertmanager
 - **Checklist:**
-  - [ ] Schedule automated backups
-  - [ ] Monitor backup success/failure
-  - [ ] Store backups offsite or in the cloud
+  - [ ] Scheduled, incremental backups (e.g., WAL archiving for PostgreSQL)
+  - [ ] Monitoring backup success/failure (alerts if missed)
+  - [ ] Backup encryption and retention policy
+  - [ ] Manual restore plan tested occasionally
 
-## Level 3: Disaster Recovery Planning
-- **Competencies:** DR plans, RTO/RPO, failover testing
-- **Tools:** DR runbooks, failover scripts, cloud DR tools
+## Level 3: HA (High Availability)
+- **Competencies:** Avoid downtime with minimal data loss (RPO, RTO ~ minutes)
+- **Tools:** PostgreSQL replication, Patroni, HAProxy, etcd, Ansible
 - **Checklist:**
-  - [ ] Create a disaster recovery plan
-  - [ ] Define RTO (Recovery Time Objective) and RPO (Recovery Point Objective)
-  - [ ] Test failover and recovery procedures
+  - [ ] Hot standby or streaming replication
+  - [ ] Automated failover (e.g., Patroni, repmgr)
+  - [ ] Load balancer or service discovery for DB connection routing
+  - [ ] Configuration and infrastructure as code
 
-## Level 4: High Availability & Replication
-- **Competencies:** Active/passive, active/active, replication, load balancing
-- **Tools:** HAProxy, database replication, cloud load balancers
+## Level 4: Geo-Redundancy & DR Planning
+- **Competencies:** Survive full region failures
+- **Tools:** Logical replication, pglogical, Citus, DNS failover
 - **Checklist:**
-  - [ ] Set up high availability for a service
-  - [ ] Implement database replication
-  - [ ] Use load balancing for redundancy
+  - [ ] Cross-region replication (async or cascaded)
+  - [ ] Automated DNS failover (Route53, Cloudflare, etc.)
+  - [ ] Regular DR drills (simulate failure + restore)
+  - [ ] RTO & RPO defined and measured
+  - [ ] App layer aware of region failover
 
-## Level 5: Enterprise Resilience
-- **Competencies:** Multi-region, chaos engineering, automated DR
-- **Tools:** Chaos Monkey, multi-region cloud, automated failover
+## Level 5: Fully Automated Self-Healing & Multi-Region Active-Active
+- **Competencies:** Always-on, resilient, self-healing infrastructure
+- **Tools:** Citus, Kubernetes, Vault, Service Mesh, GitOps, Terraform
 - **Checklist:**
-  - [ ] Design for multi-region redundancy
-  - [ ] Practice chaos engineering to test resilience
-  - [ ] Automate disaster recovery processes
+  - [ ] Multi-region active-active setup (e.g., sharded or conflict-resolved)
+  - [ ] Infrastructure self-heals on failure (k8s, operators)
+  - [ ] Continuous backup + PITR (Point-in-Time Recovery)
+  - [ ] Infrastructure & DB schema versioned (e.g., GitOps)
 
 ---
 
 ## Resources
-- [AWS Disaster Recovery Whitepaper](https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads/welcome.html)
-- [Google SRE Book - Chapter 12: Disaster Recovery](https://sre.google/sre-book/disaster-recovery/)
-- [Backblaze Blog: Backup Strategies](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/)
+- [PostgreSQL High Availability Guide](https://www.postgresql.org/docs/current/high-availability.html)
+- [Disaster Recovery Planning by AWS](https://aws.amazon.com/disaster-recovery/)
+- [Citus Multi-Node Docs](https://docs.citusdata.com/en/latest/)
 
 ## Personal Notes
