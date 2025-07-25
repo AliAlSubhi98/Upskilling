@@ -876,6 +876,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#common-error-address-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Common Error: Address Already in Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Common Error: Address Already in Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-kill-the-process-using-the-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Option 1: Kill the Process Using the Port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-use-a-different-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Option 2: Use a Different Port
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1012,6 +1045,39 @@
       🛡️ Best Practices
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-address-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Common Error: Address Already in Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Common Error: Address Already in Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-kill-the-process-using-the-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Option 1: Kill the Process Using the Port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-use-a-different-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Option 2: Use a Different Port
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1165,6 +1231,32 @@ mkdocs<span class="w"> </span>serve<span class="w">  </span><span class="c1"># f
 <li>Add <code>site/</code> to <code>.gitignore</code></li>
 <li>Store secrets in <code>.env</code> and ignore them</li>
 </ul>
+<h2 id="common-error-address-already-in-use">🛠️ Common Error: Address Already in Use<a class="headerlink" href="#common-error-address-already-in-use" title="Permanent link">&para;</a></h2>
+<p>If you get this error while running:</p>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<p>And it returns something like:</p>
+<div class="highlight"><pre><span></span><code>OSError:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">48</span><span class="o">]</span><span class="w"> </span>Address<span class="w"> </span>already<span class="w"> </span><span class="k">in</span><span class="w"> </span>use
+</code></pre></div>
+<p>This means another process is using the default port <code>8000</code>. You have two ways to solve this:</p>
+<hr />
+<h3 id="option-1-kill-the-process-using-the-port">✅ Option 1: Kill the Process Using the Port<a class="headerlink" href="#option-1-kill-the-process-using-the-port" title="Permanent link">&para;</a></h3>
+<p>Run the following to find the process ID:</p>
+<div class="highlight"><pre><span></span><code>lsof<span class="w"> </span>-i<span class="w"> </span>:8000
+</code></pre></div>
+<p>Then kill it:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;PID&gt;
+</code></pre></div>
+<p>Replace <code>&lt;PID&gt;</code> with the actual Process ID from the output.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">12345</span>
+</code></pre></div>
+<hr />
+<h3 id="option-2-use-a-different-port">✅ Option 2: Use a Different Port<a class="headerlink" href="#option-2-use-a-different-port" title="Permanent link">&para;</a></h3>
+<p>If you don’t want to kill the running process, simply use another port:</p>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve<span class="w"> </span>-a<span class="w"> </span><span class="m">127</span>.0.0.1:8001
+</code></pre></div>
+<p>This tells MkDocs to run locally on port <code>8001</code> instead.</p>
 
 
 
