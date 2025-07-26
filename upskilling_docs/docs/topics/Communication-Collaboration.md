@@ -53,4 +53,31 @@
 - [Atlassian Team Playbook](https://www.atlassian.com/team-playbook)
 - [Google re:Work - Guide: Understand Team Effectiveness](https://rework.withgoogle.com/guides/understanding-team-effectiveness/steps/introduction/)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic Communication"
+    **Status:** Planned  
+    **Focus:** Team communication, standups, async updates  
+    **Next Task:** Improve daily standup and documentation practices
+
+??? note "Level 2: Effective Collaboration"
+    **Status:** Planned  
+    **Focus:** Clear PRs, giving/receiving feedback, meeting etiquette
+
+??? note "Level 3: Cross-Team Skills"
+    **Status:** Planned  
+    **Focus:** Client collaboration, conflict resolution
+
+??? note "Level 4: Knowledge Sharing"
+    **Status:** Planned  
+    **Focus:** Mentorship, public speaking, documentation mastery
+
+??? note "Level 5: Leadership Communication"
+    **Status:** Planned  
+    **Focus:** Technical writing, developer advocacy
+
+---
+
 ## Personal Notes

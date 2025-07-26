@@ -56,4 +56,31 @@
 - [Disaster Recovery Planning by AWS](https://aws.amazon.com/disaster-recovery/)
 - [Citus Multi-Node Docs](https://docs.citusdata.com/en/latest/)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic Backup"
+    **Status:** Planned  
+    **Focus:** Basic backup strategies and recovery procedures  
+    **Next Task:** Implement basic backup and recovery for a database
+
+??? note "Level 2: Automated Backups"
+    **Status:** Planned  
+    **Focus:** Automated backups and monitoring
+
+??? note "Level 3: High Availability"
+    **Status:** Planned  
+    **Focus:** HA system design and implementation
+
+??? note "Level 4: Disaster Recovery"
+    **Status:** Planned  
+    **Focus:** DR planning and testing
+
+??? note "Level 5: Self-Healing Systems"
+    **Status:** Planned  
+    **Focus:** Self-healing, multi-region active-active
+
+---
+
 ## Personal Notes

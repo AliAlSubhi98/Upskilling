@@ -91,7 +91,7 @@
 
 ## Personal Notes
 
-??? info "Note #1: Level 2 – Branching & Merging"
+??? info "Note #1: Level 2 – Branching & Merging (26-07-2024)"
     To achieve **Level 2: Branching & Merging**, I followed these steps:
 
     **1. Create a feature branch**

@@ -53,4 +53,31 @@
 - [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [Awesome Testing](https://github.com/TheJambo/awesome-testing)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Unit Testing Basics"
+    **Status:** Planned  
+    **Focus:** Unit testing, table-driven tests, coverage  
+    **Next Task:** Write comprehensive unit tests for a sample project
+
+??? note "Level 2: Integration Testing"
+    **Status:** Planned  
+    **Focus:** Integration tests, HTTP simulation, CI integration
+
+??? note "Level 3: Advanced Testing"
+    **Status:** Planned  
+    **Focus:** Complex tests, benchmarks, middleware testing
+
+??? note "Level 4: End-to-End Testing"
+    **Status:** Planned  
+    **Focus:** E2E tests, container-based integration
+
+??? note "Level 5: Enterprise Testing"
+    **Status:** Planned  
+    **Focus:** Performance, security, chaos testing
+
+---
+
 ## Personal Notes

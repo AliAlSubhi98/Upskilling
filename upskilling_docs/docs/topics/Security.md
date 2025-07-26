@@ -61,4 +61,31 @@
 - [Go Security Best Practices](https://securego.dev/)
 - [GitHub Security Features](https://docs.github.com/en/code-security)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic Security Practices"
+    **Status:** Planned  
+    **Focus:** Authentication, authorization, input validation  
+    **Next Task:** Implement basic security practices in a sample application
+
+??? note "Level 2: Secure Development"
+    **Status:** Planned  
+    **Focus:** Secure coding practices, dependency scanning
+
+??? note "Level 3: Application Security"
+    **Status:** Planned  
+    **Focus:** Threat modeling, secure SDLC
+
+??? note "Level 4: Security Operations"
+    **Status:** Planned  
+    **Focus:** Continuous security monitoring, incident response
+
+??? note "Level 5: Advanced Security"
+    **Status:** Planned  
+    **Focus:** Zero trust architecture, offensive security readiness
+
+---
+
 ## Personal Notes

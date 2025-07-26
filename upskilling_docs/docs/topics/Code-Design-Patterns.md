@@ -70,4 +70,31 @@
 - [SOLID Principles](https://medium.com/@joecocker/solid-principles-in-programming-2ea8724c5e52)
 - [LeetCode Practice](https://leetcode.com)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Core Programming"
+    **Status:** Planned  
+    **Focus:** Language features, data structures, idiomatic code  
+    **Next Task:** Master basic data structures and concurrent programming
+
+??? note "Level 2: Design Patterns"
+    **Status:** Planned  
+    **Focus:** Design patterns, clean code, modularity
+
+??? note "Level 3: Advanced Algorithms"
+    **Status:** Planned  
+    **Focus:** Advanced problem solving, LeetCode Medium+
+
+??? note "Level 4: Technical Leadership"
+    **Status:** Planned  
+    **Focus:** Code quality reviews, long-term maintainability
+
+??? note "Level 5: Architecture Leadership"
+    **Status:** Planned  
+    **Focus:** Org-wide architecture and best practices
+
+---
+
 ## Personal Notes

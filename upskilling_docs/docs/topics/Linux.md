@@ -53,4 +53,33 @@
 - [The Linux Command Line Book](https://linuxcommand.org/)
 - [DigitalOcean Tutorials](https://www.digitalocean.com/community/tutorials)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: CLI Basics"
+    **Status:** Planned  
+    **Focus:** Navigation, permissions, basic file operations  
+    **Commands:** `ls`, `cd`, `mkdir`, `chmod`, `chown`, `grep`, `find`  
+    **Next Task:** Master basic file system navigation and permissions
+
+??? note "Level 2: System Administration"
+    **Status:** Planned  
+    **Focus:** Package managers, shell scripting, system monitoring  
+    **Commands:** `apt`, `yum`, `systemctl`, `cron`, `top`, `htop`
+
+??? note "Level 3: Advanced Administration"
+    **Status:** Planned  
+    **Focus:** Process management, server management, automation
+
+??? note "Level 4: Virtualization & Security"
+    **Status:** Planned  
+    **Focus:** VMs, containers, security hardening
+
+??? note "Level 5: Kernel & Infrastructure"
+    **Status:** Planned  
+    **Focus:** Kernel customization, infrastructure as code
+
+---
+
 ## Personal Notes

@@ -53,4 +53,34 @@
 - [Kubernetes Docs](https://kubernetes.io/docs/)
 - [Awesome Kubernetes](https://github.com/ramitsurana/awesome-kubernetes)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Docker Basics"
+    **Status:** Planned  
+    **Focus:** Install, Pull, Run, Stop Containers, Volumes, Networks, Docker Compose  
+    **Commands:** `docker run`, `docker ps`, `docker stop`, `docker rm`, `docker volume`, `docker network`  
+    **Next Task:** Run first Docker container with a simple web app
+
+??? note "Level 2: Advanced Docker"
+    **Status:** Planned  
+    **Focus:** Multi-Container Apps, Storage, Container Registries  
+    **Commands:** `docker push`, `docker tag`, `docker build`, `docker inspect`
+
+??? note "Level 3: Container Orchestration"
+    **Status:** Planned  
+    **Focus:** Kubernetes Basics, Docker Swarm, Helm  
+    **Commands:** `kubectl apply`, `kubectl get pods`, `kubectl logs`
+
+??? note "Level 4: Kubernetes Advanced"
+    **Status:** Planned  
+    **Focus:** Scaling, Security, Monitoring, Service Mesh
+
+??? note "Level 5: Enterprise Kubernetes"
+    **Status:** Planned  
+    **Focus:** Multi-Cluster, Operators, Virtualization, Performance Tuning
+
+---
+
 ## Personal Notes
