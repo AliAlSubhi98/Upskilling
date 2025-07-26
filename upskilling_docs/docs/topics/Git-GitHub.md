@@ -19,7 +19,7 @@
 - **Commands:** `git branch`, `git checkout -b`, `git rebase`, `git merge`, `git cherry-pick`, GitHub PRs
 - **Checklist:**
     - [x] Create feature branches and merge using both merge and rebase
-    - [ ] Resolve complex merge conflicts
+    - [x] Resolve complex merge conflicts
     - [ ] Use git cherry-pick to selectively move commits across branches
 
 ## Level 3: Commit History & Recovery
@@ -66,10 +66,13 @@
     - [Commit History - GitHub Push Example](https://github.com/your-repo/example-commit)
 
 ??? info "Level 2: Branching & Merging"
-    **Status:**  Completed  
+    **Status:**  In Progress (2/3 completed)  
     **Focus:** Fast-Forward, Rebasing, Merge Conflicts, PRs  
     **Evidence:**  
     - [Feature Branching Walkthrough](https://github.com/your-repo/feature-branch-example)
+    - **Merge Conflict Resolution** (Completed 27-07-2024): Successfully resolved complex conflicts across multiple file sections
+    
+    **Next:** Git cherry-pick exercise
 
 ??? warning "Level 3: Commit History & Recovery"
     **Status:**  In Progress  
@@ -130,4 +133,49 @@
     - Optionally click "Delete branch"
     ```
 
+??? info "Note #2: Level 2 – Merge Conflict Resolution (27-07-2024)"
+    **Exercise Overview:** Practiced resolving complex merge conflicts across multiple file sections.
+
+    **Scenario Created:**
+    - Created conflicting changes in `practice-file.md` across multiple sections
+    - Main branch: Production configuration (MySQL, enhanced features)
+    - Feature branch: Development configuration (PostgreSQL, basic features)
+
+    **Resolution Process:**
+    ```bash
+    # 1. Attempt merge (creates conflict)
+    git merge main
+    # Output: CONFLICT (add/add): Merge conflict in practice-file.md
+
+    # 2. Examine conflict markers
+    # <<<<<<< HEAD (current branch)
+    # ======= (separator)
+    # >>>>>>> main (incoming branch)
+
+    # 3. Resolve by combining best of both versions
+    # - Combined introduction text
+    # - Added both production and development configurations
+    # - Merged feature lists
+    # - Created comprehensive notes section
+
+    # 4. Complete the merge
+    git add practice-file.md
+    git commit -m "Resolve merge conflicts: combine dev and production features"
+    ```
+
+    **Skills Practiced:**
+    ```bash
+    - Understanding conflict markers
+    - Strategic conflict resolution (combining vs. choosing)
+    - Maintaining clean repository after practice
+    - Professional merge commit messages
+    ```
+
+    **Key Learnings:**
+    ```bash
+    - Complex conflicts can be resolved by combining both versions intelligently
+    - Always clean up practice files to keep repository organized
+    - Document the resolution strategy in commit messages
+    ```
+    
 ---
