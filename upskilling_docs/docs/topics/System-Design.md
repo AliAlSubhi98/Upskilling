@@ -124,4 +124,31 @@
 - [Designing Data-Intensive Applications by Martin Kleppmann](https://dataintensive.net/)
 - [Awesome Scalability](https://github.com/binhnguyennus/awesome-scalability)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic Architecture"
+    **Status:** Planned  
+    **Focus:** Monolith vs microservices, load balancing, caching  
+    **Next Task:** Design a simple web application architecture
+
+??? note "Level 2: Design Patterns"
+    **Status:** Planned  
+    **Focus:** Architecture patterns, CQRS, BFF, shared-nothing
+
+??? note "Level 3: Distributed Systems"
+    **Status:** Planned  
+    **Focus:** Distributed systems, saga, event sourcing
+
+??? note "Level 4: Advanced Systems"
+    **Status:** Planned  
+    **Focus:** Sharding, geospatial, streaming systems
+
+??? note "Level 5: Global Scale"
+    **Status:** Planned  
+    **Focus:** Multi-region, global consistency, custom algorithms
+
+---
+
 ## Personal Notes

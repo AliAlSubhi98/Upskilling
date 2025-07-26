@@ -82,4 +82,33 @@
 - [gRPC Docs](https://grpc.io/docs/)
 - [API Security Best Practices](https://owasp.org/www-project-api-security/)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic REST APIs"
+    **Status:** Planned  
+    **Focus:** Build basic REST APIs (CRUD), HTTP methods and status codes  
+    **Tools:** Express, Gin, Fastify, Postman, Swagger UI  
+    **Next Task:** Build first CRUD API with proper status codes
+
+??? note "Level 2: REST Best Practices"
+    **Status:** Planned  
+    **Focus:** REST principles (versioning, pagination, filtering)  
+    **Tools:** OpenAPI/Swagger generators, Request validation libraries
+
+??? note "Level 3: GraphQL & gRPC"
+    **Status:** Planned  
+    **Focus:** GraphQL schemas and resolvers, gRPC with Protobuf
+
+??? note "Level 4: API Security & Gateway Integration"
+    **Status:** Planned  
+    **Focus:** Secure APIs (JWT, OAuth2), rate limiting, API gateways
+
+??? note "Level 5: Federated & Evolvable APIs"
+    **Status:** Planned  
+    **Focus:** Federate APIs, multi-team APIs, design evolvable APIs
+
+---
+
 ## Personal Notes

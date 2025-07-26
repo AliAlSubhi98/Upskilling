@@ -88,4 +88,31 @@
 - [AWS VPC Concepts](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
 - [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Network Fundamentals"
+    **Status:** Planned  
+    **Focus:** OSI model, TCP/IP, subnets, HTTP, ping, traceroute  
+    **Next Task:** Master basic networking concepts and troubleshooting
+
+??? note "Level 2: Network Services"
+    **Status:** Planned  
+    **Focus:** DNS, load balancing, VPN, proxy
+
+??? note "Level 3: Advanced Networking"
+    **Status:** Planned  
+    **Focus:** SSL/TLS, API gateways, SDN, VPC/subnet
+
+??? note "Level 4: Container Networking"
+    **Status:** Planned  
+    **Focus:** K8s network models, service mesh, zero trust
+
+??? note "Level 5: Enterprise Networking"
+    **Status:** Planned  
+    **Focus:** Multi-cloud, custom protocols, global traffic management
+
+---
+
 ## Personal Notes

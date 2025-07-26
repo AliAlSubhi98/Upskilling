@@ -53,4 +53,31 @@
 - [Agile Estimation Techniques](https://www.mountaingoatsoftware.com/agile/planning)
 - [DORA DevOps Metrics](https://www.devops-research.com/research.html)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic Project Management"
+    **Status:** Planned  
+    **Focus:** Task breakdown, prioritization, time tracking  
+    **Next Task:** Practice basic project planning and task estimation
+
+??? note "Level 2: Agile Practices"
+    **Status:** Planned  
+    **Focus:** Sprint planning, story points, team collaboration
+
+??? note "Level 3: Advanced Planning"
+    **Status:** Planned  
+    **Focus:** Risk management, dependency handling, backlog grooming
+
+??? note "Level 4: Cross-Team Leadership"
+    **Status:** Planned  
+    **Focus:** Cross-team collaboration, release planning
+
+??? note "Level 5: Engineering Leadership"
+    **Status:** Planned  
+    **Focus:** Large-scale planning, metrics-driven decisions
+
+---
+
 ## Personal Notes

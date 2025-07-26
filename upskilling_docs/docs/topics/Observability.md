@@ -54,4 +54,31 @@
 - [OpenTelemetry](https://opentelemetry.io/)
 - [ELK Stack Guide](https://www.elastic.co/what-is/elk-stack)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic Observability"
+    **Status:** Planned  
+    **Focus:** Logging, metrics, application monitoring  
+    **Next Task:** Set up basic logging and metrics collection
+
+??? note "Level 2: Centralized Monitoring"
+    **Status:** Planned  
+    **Focus:** Centralized logging, ELK stack, Prometheus
+
+??? note "Level 3: Full Stack Observability"
+    **Status:** Planned  
+    **Focus:** Full observability stack, OpenTelemetry, alerting
+
+??? note "Level 4: Advanced Monitoring"
+    **Status:** Planned  
+    **Focus:** AI-based monitoring, infrastructure health automation
+
+??? note "Level 5: Enterprise Observability"
+    **Status:** Planned  
+    **Focus:** Complete observability strategy across systems
+
+---
+
 ## Personal Notes

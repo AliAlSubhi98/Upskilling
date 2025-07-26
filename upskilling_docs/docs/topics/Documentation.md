@@ -53,4 +53,31 @@
 - [Diátaxis Documentation Framework](https://diataxis.fr/)
 - [Write the Docs Community](https://www.writethedocs.org/)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Basic Documentation"
+    **Status:** Planned  
+    **Focus:** READMEs, basic technical writing  
+    **Next Task:** Write comprehensive README for a project
+
+??? note "Level 2: Structured Documentation"
+    **Status:** Planned  
+    **Focus:** API docs, user guides, knowledge bases
+
+??? note "Level 3: Advanced Documentation"
+    **Status:** Planned  
+    **Focus:** Documentation as code, automated generation
+
+??? note "Level 4: Documentation Systems"
+    **Status:** Planned  
+    **Focus:** Team documentation standards, governance
+
+??? note "Level 5: Documentation Leadership"
+    **Status:** Planned  
+    **Focus:** Org-wide documentation strategy and culture
+
+---
+
 ## Personal Notes

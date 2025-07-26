@@ -82,4 +82,31 @@
 - [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 - [Keycloak Docs](https://www.keycloak.org/documentation)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Authentication Basics"
+    **Status:** Planned  
+    **Focus:** Auth vs AuthZ, cookies, sessions, hashing  
+    **Next Task:** Implement basic session-based authentication
+
+??? note "Level 2: Session Management"
+    **Status:** Planned  
+    **Focus:** Session management, RBAC implementation
+
+??? note "Level 3: Modern Auth"
+    **Status:** Planned  
+    **Focus:** JWT, OAuth2, scopes
+
+??? note "Level 4: Enterprise Auth"
+    **Status:** Planned  
+    **Focus:** SSO, OAuth2, MFA, protocols
+
+??? note "Level 5: Advanced Security"
+    **Status:** Planned  
+    **Focus:** Passwordless, WebAuthn, zero-trust, logging
+
+---
+
 ## Personal Notes

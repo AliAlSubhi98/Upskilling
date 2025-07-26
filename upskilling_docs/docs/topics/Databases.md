@@ -59,4 +59,33 @@
 - [Elasticsearch Guide](https://www.elastic.co/guide/)
 - [Qdrant Docs](https://qdrant.tech/documentation/)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: Fundamentals"
+    **Status:** Planned  
+    **Focus:** SQL basics, Redis commands, Elasticsearch DSL, Qdrant insert/query  
+    **Tools:** PostgreSQL, MS SQL, Oracle, Redis, Elasticsearch, Qdrant  
+    **Next Task:** Start with basic CRUD operations in SQL
+
+??? note "Level 2: Schema Design"
+    **Status:** Planned  
+    **Focus:** Normalization, indexing, analyzers, Redis eviction, Qdrant collection config  
+    **Tools:** B-tree/GiST/GIN, EXPLAIN ANALYZE, Elastic mappings
+
+??? note "Level 3: Advanced Usage"
+    **Status:** Planned  
+    **Focus:** SQL functions, CTEs, triggers, Elastic aggregations/scripts
+
+??? note "Level 4: Operational Architecture"
+    **Status:** Planned  
+    **Focus:** Replica design, shard tuning, cache patterns
+
+??? note "Level 5: Distributed DBs"
+    **Status:** Planned  
+    **Focus:** Geo-distribution, failover, hybrid search, alerting
+
+---
+
 ## Personal Notes

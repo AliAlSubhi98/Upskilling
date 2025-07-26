@@ -54,4 +54,31 @@
 - [ArgoCD Docs](https://argo-cd.readthedocs.io/)
 - [Tekton Pipelines](https://tekton.dev/)
 
+---
+
+## Progress & Evidence
+
+??? note "Level 1: CI/CD Basics"
+    **Status:** Planned  
+    **Focus:** Basics of CI/CD, GitHub Actions, YAML pipelines  
+    **Next Task:** Set up first GitHub Actions workflow
+
+??? note "Level 2: Automated Testing & Deployment"
+    **Status:** Planned  
+    **Focus:** Automated testing, deployment pipelines
+
+??? note "Level 3: Secure Pipelines"
+    **Status:** Planned  
+    **Focus:** Secure CI/CD pipelines, Terraform (optional)
+
+??? note "Level 4: Multi-Environment Pipelines"
+    **Status:** Planned  
+    **Focus:** Multi-environment pipelines, self-hosted runners
+
+??? note "Level 5: Enterprise CI/CD"
+    **Status:** Planned  
+    **Focus:** Enterprise CI/CD, full infrastructure automation
+
+---
+
 ## Personal Notes
