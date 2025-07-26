@@ -959,57 +959,57 @@
 <p><strong>Current Level:</strong> Level 1</p>
 <hr />
 <h2 id="level-1-basic-security">Level 1: Basic Security<a class="headerlink" href="#level-1-basic-security" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Understand and apply essential security practices to reduce obvious risks.</li>
 <li><strong>Tools:</strong> Let's Encrypt, bcrypt, <code>.env</code> files, basic linters</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] HTTPS enabled (with valid TLS cert)</li>
-<li>[ ] Input validation (e.g., using basic html.EscapeString, etc.)</li>
-<li>[ ] Secure password storage (e.g., bcrypt)</li>
-<li>[ ] No secrets or credentials in code/repos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> HTTPS enabled (with valid TLS cert)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Input validation (e.g., using basic html.EscapeString, etc.)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Secure password storage (e.g., bcrypt)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No secrets or credentials in code/repos</li>
 </ul>
 <h2 id="level-2-secure-development-practices">Level 2: Secure Development Practices<a class="headerlink" href="#level-2-secure-development-practices" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Develop with security in mind and address common OWASP risks.</li>
 <li><strong>Tools:</strong> Go’s security best practices, CSRF, ZAP, Snyk, Dependabot, HashiCorp Vault</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)</li>
-<li>[ ] Role-based access control (RBAC)</li>
-<li>[ ] Rate limiting / brute-force protection</li>
-<li>[ ] Secrets management system in place (e.g., Vault or SSM)</li>
-<li>[ ] Dependency vulnerability scanning</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Role-based access control (RBAC)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Rate limiting / brute-force protection</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Secrets management system in place (e.g., Vault or SSM)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Dependency vulnerability scanning</li>
 </ul>
 <h2 id="level-3-app-layer-threat-modeling-secure-sdlc">Level 3: App Layer Threat Modeling &amp; Secure SDLC<a class="headerlink" href="#level-3-app-layer-threat-modeling-secure-sdlc" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Build software with security embedded in the design and lifecycle.</li>
 <li><strong>Tools:</strong> Keycloak, OPA, Gosec, OWASP ZAP, GitHub Actions security scans</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Threat modeling done per service (e.g., STRIDE, DFD)</li>
-<li>[ ] Security testing integrated in CI/CD (SAST, DAST)</li>
-<li>[ ] Centralized authentication/authorization (OAuth2, OIDC, Keycloak)</li>
-<li>[ ] Logging/auditing of sensitive operations</li>
-<li>[ ] Input/output encoding via secure libraries</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Threat modeling done per service (e.g., STRIDE, DFD)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security testing integrated in CI/CD (SAST, DAST)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Centralized authentication/authorization (OAuth2, OIDC, Keycloak)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Logging/auditing of sensitive operations</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Input/output encoding via secure libraries</li>
 </ul>
 <h2 id="level-4-continuous-security-monitoring">Level 4: Continuous Security &amp; Monitoring<a class="headerlink" href="#level-4-continuous-security-monitoring" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Detect and respond to threats in real-time, minimize attack window.</li>
 <li><strong>Tools:</strong> Loki/Grafana, Alertmanager, Cloudflare WAF, Falco, Prometheus, JWT/mTLS</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Centralized log aggregation (e.g., ELK/Promtail)</li>
-<li>[ ] Real-time alerting on anomalies and abuse patterns</li>
-<li>[ ] Web Application Firewall (WAF) in place</li>
-<li>[ ] API security tokens with expiry, rotation (JWT, mTLS)</li>
-<li>[ ] Security incidents documented and practiced (playbooks)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Centralized log aggregation (e.g., ELK/Promtail)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Real-time alerting on anomalies and abuse patterns</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Web Application Firewall (WAF) in place</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> API security tokens with expiry, rotation (JWT, mTLS)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security incidents documented and practiced (playbooks)</li>
 </ul>
 <h2 id="level-5-zero-trust-offensive-readiness">Level 5: Zero Trust + Offensive Readiness<a class="headerlink" href="#level-5-zero-trust-offensive-readiness" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Architect systems assuming compromise; proactively test and defend.</li>
 <li><strong>Tools:</strong> Istio, Tailscale, OPA/Rego, Casbin, Burp Suite, SecurityScorecard, GCP/AWS Identity-Aware Proxy</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Zero Trust architecture (identity-aware proxies, least privilege)</li>
-<li>[ ] Bug bounty / red teaming / penetration testing pipeline</li>
-<li>[ ] Secrets rotation automation + Just-in-Time access for any sensitive systems</li>
-<li>[ ] AI/ML anomaly detection for usage &amp; traffic using security tools and monitoring tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zero Trust architecture (identity-aware proxies, least privilege)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Bug bounty / red teaming / penetration testing pipeline</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Secrets rotation automation + Just-in-Time access for any sensitive systems</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AI/ML anomaly detection for usage &amp; traffic using security tools and monitoring tools</li>
 </ul>
 <hr />
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>

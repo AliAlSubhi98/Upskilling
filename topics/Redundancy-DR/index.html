@@ -959,52 +959,52 @@
 <p><strong>Current Level:</strong> Level 1</p>
 <hr />
 <h2 id="level-1-basic-backup">Level 1: Basic Backup<a class="headerlink" href="#level-1-basic-backup" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Minimum viable protection from data loss.</li>
 <li><strong>Tools:</strong> <code>pg_dump</code>, cron jobs, rsync, simple S3 uploads, any backup tool</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Perform basic backup using any tool</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Perform basic backup using any tool</li>
 </ul>
 <h2 id="level-2-automated-backups-monitoring">Level 2: Automated Backups &amp; Monitoring<a class="headerlink" href="#level-2-automated-backups-monitoring" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Improved reliability and observability.</li>
 <li><strong>Tools:</strong> pgBackRest, barman, restic, Prometheus + Alertmanager</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Scheduled, incremental backups (e.g., WAL archiving for PostgreSQL)</li>
-<li>[ ] Monitoring backup success/failure (alerts if missed)</li>
-<li>[ ] Backup encryption and retention policy</li>
-<li>[ ] Manual restore plan tested occasionally</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Scheduled, incremental backups (e.g., WAL archiving for PostgreSQL)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Monitoring backup success/failure (alerts if missed)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Backup encryption and retention policy</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Manual restore plan tested occasionally</li>
 </ul>
 <h2 id="level-3-ha-high-availability">Level 3: HA (High Availability)<a class="headerlink" href="#level-3-ha-high-availability" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Avoid downtime with minimal data loss (RPO, RTO ~ minutes)</li>
 <li><strong>Tools:</strong> PostgreSQL replication, Patroni, HAProxy, etcd, Ansible</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Hot standby or streaming replication</li>
-<li>[ ] Automated failover (e.g., Patroni, repmgr)</li>
-<li>[ ] Load balancer or service discovery for DB connection routing</li>
-<li>[ ] Configuration and infrastructure as code</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Hot standby or streaming replication</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Automated failover (e.g., Patroni, repmgr)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Load balancer or service discovery for DB connection routing</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Configuration and infrastructure as code</li>
 </ul>
 <h2 id="level-4-geo-redundancy-dr-planning">Level 4: Geo-Redundancy &amp; DR Planning<a class="headerlink" href="#level-4-geo-redundancy-dr-planning" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Survive full region failures</li>
 <li><strong>Tools:</strong> Logical replication, pglogical, Citus, DNS failover</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Cross-region replication (async or cascaded)</li>
-<li>[ ] Automated DNS failover (Route53, Cloudflare, etc.)</li>
-<li>[ ] Regular DR drills (simulate failure + restore)</li>
-<li>[ ] RTO &amp; RPO defined and measured</li>
-<li>[ ] App layer aware of region failover</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cross-region replication (async or cascaded)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Automated DNS failover (Route53, Cloudflare, etc.)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Regular DR drills (simulate failure + restore)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RTO &amp; RPO defined and measured</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> App layer aware of region failover</li>
 </ul>
 <h2 id="level-5-fully-automated-self-healing-multi-region-active-active">Level 5: Fully Automated Self-Healing &amp; Multi-Region Active-Active<a class="headerlink" href="#level-5-fully-automated-self-healing-multi-region-active-active" title="Permanent link">&para;</a></h2>
-<ul>
+<ul class="task-list">
 <li><strong>Competencies:</strong> Always-on, resilient, self-healing infrastructure</li>
 <li><strong>Tools:</strong> Citus, Kubernetes, Vault, Service Mesh, GitOps, Terraform</li>
 <li><strong>Checklist:</strong></li>
-<li>[ ] Multi-region active-active setup (e.g., sharded or conflict-resolved)</li>
-<li>[ ] Infrastructure self-heals on failure (k8s, operators)</li>
-<li>[ ] Continuous backup + PITR (Point-in-Time Recovery)</li>
-<li>[ ] Infrastructure &amp; DB schema versioned (e.g., GitOps)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Multi-region active-active setup (e.g., sharded or conflict-resolved)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Infrastructure self-heals on failure (k8s, operators)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Continuous backup + PITR (Point-in-Time Recovery)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Infrastructure &amp; DB schema versioned (e.g., GitOps)</li>
 </ul>
 <hr />
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>

@@ -432,6 +432,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#progress-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progress &amp; Evidence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#personal-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Personal Notes
@@ -927,6 +936,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#progress-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progress &amp; Evidence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#personal-notes" class="md-nav__link">
     <span class="md-ellipsis">
       Personal Notes
@@ -962,46 +980,56 @@
 <ul>
 <li><strong>Competencies:</strong> Init, Clone, Add, Commit, Push, Pull, Branching</li>
 <li><strong>Commands:</strong> <code>git init</code>, <code>git clone</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, <code>.gitignore</code></li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Create a new repo and push to GitHub</li>
-<li>[ ] Clone a repo and make your first commit</li>
-<li>[ ] Use .gitignore to exclude files</li>
+<li><strong>Checklist:</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create a new repo and push to GitHub</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Clone a repo and make your first commit</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Use .gitignore to exclude files</li>
+</ul>
+</li>
 </ul>
 <h2 id="level-2-advanced-branching-merging">Level 2: Advanced Branching &amp; Merging<a class="headerlink" href="#level-2-advanced-branching-merging" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Competencies:</strong> Fast-Forward Merges, Three-Way Merges, Rebasing, Merge Conflicts, PRs</li>
 <li><strong>Commands:</strong> <code>git branch</code>, <code>git checkout -b</code>, <code>git rebase</code>, <code>git merge</code>, <code>git cherry-pick</code>, GitHub PRs</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Create feature branches and merge using both merge and rebase</li>
-<li>[ ] Resolve complex merge conflicts</li>
-<li>[ ] Use git cherry-pick to selectively move commits across branches</li>
+<li><strong>Checklist:</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create feature branches and merge using both merge and rebase</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Resolve complex merge conflicts</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use git cherry-pick to selectively move commits across branches</li>
+</ul>
+</li>
 </ul>
 <h2 id="level-3-commit-history-recovery">Level 3: Commit History &amp; Recovery<a class="headerlink" href="#level-3-commit-history-recovery" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Competencies:</strong> Reflog, Reset, Revert, Bisect, Tagging</li>
 <li><strong>Commands:</strong> <code>git reflog</code>, <code>git reset --hard</code>, <code>git revert</code>, <code>git bisect</code>, <code>git tag</code></li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Recover lost commits using reflog</li>
-<li>[ ] Use git bisect to find a bug in commit history</li>
-<li>[ ] Reset changes safely without losing work</li>
+<li><strong>Checklist:</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Recover lost commits using reflog</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use git bisect to find a bug in commit history</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Reset changes safely without losing work</li>
+</ul>
+</li>
 </ul>
 <h2 id="level-4-enterprise-gitops-security">Level 4: Enterprise GitOps &amp; Security<a class="headerlink" href="#level-4-enterprise-gitops-security" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Competencies:</strong> Protected Branches, Signed Commits, CI/CD, LFS, GitHub Actions</li>
 <li><strong>Commands:</strong> <code>git commit -S</code>, <code>git lfs</code>, GitHub Actions, Protected Branch Policies</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Enforce signed commits for security</li>
-<li>[ ] Set up GitHub Actions for automated testing</li>
-<li>[ ] Implement branch protection rules to enforce workflow policies</li>
+<li><strong>Checklist:</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Enforce signed commits for security</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Set up GitHub Actions for automated testing</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Implement branch protection rules to enforce workflow policies</li>
+</ul>
+</li>
 </ul>
 <h2 id="level-5-deep-git-internals-large-scale-gitops">Level 5: Deep Git Internals &amp; Large-Scale GitOps<a class="headerlink" href="#level-5-deep-git-internals-large-scale-gitops" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Competencies:</strong> Custom Hooks, Packfiles, GitHub API, Large Repos</li>
 <li><strong>Commands:</strong> <code>git fsck</code>, <code>git worktree</code>, <code>git gc</code>, <code>git filter-branch</code>, GitHub API</li>
-<li><strong>Checklist:</strong></li>
-<li>[ ] Optimize a large repository using git gc and repack</li>
-<li>[ ] Write a custom Git hook for automated commit checks</li>
-<li>[ ] Use the GitHub GraphQL API to automate repo management</li>
+<li><strong>Checklist:</strong><ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Optimize a large repository using git gc and repack</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Write a custom Git hook for automated commit checks</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use the GitHub GraphQL API to automate repo management</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
@@ -1010,7 +1038,76 @@
 <li><a href="https://docs.github.com/en">GitHub Docs</a></li>
 <li><a href="https://www.atlassian.com/git/tutorials">Atlassian Git Tutorials</a></li>
 </ul>
+<hr />
+<h2 id="progress-evidence">Progress &amp; Evidence<a class="headerlink" href="#progress-evidence" title="Permanent link">&para;</a></h2>
+<details class="info">
+<summary>Level 1: Git Basics</summary>
+<p><strong>Status:</strong>  Completed<br />
+<strong>Focus:</strong> Init, Clone, Add, Commit, Push, Pull, Branching<br />
+<strong>Commands Practiced:</strong><br />
+<code>git init</code>, <code>git clone</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, <code>.gitignore</code><br />
+<strong>Evidence:</strong><br />
+- <a href="https://github.com/your-repo/example-commit">Commit History - GitHub Push Example</a></p>
+</details>
+<details class="info">
+<summary>Level 2: Branching &amp; Merging</summary>
+<p><strong>Status:</strong>  Completed<br />
+<strong>Focus:</strong> Fast-Forward, Rebasing, Merge Conflicts, PRs<br />
+<strong>Evidence:</strong><br />
+- <a href="https://github.com/your-repo/feature-branch-example">Feature Branching Walkthrough</a></p>
+</details>
+<details class="warning">
+<summary>Level 3: Commit History &amp; Recovery</summary>
+<p><strong>Status:</strong>  In Progress<br />
+<strong>Focus:</strong> <code>git reflog</code>, <code>git reset</code>, <code>git revert</code>, <code>git bisect</code><br />
+<strong>Next Task:</strong> Recover deleted commit and document reflog use</p>
+</details>
+<details class="note">
+<summary>Level 4: GitOps &amp; Security</summary>
+<p><strong>Status:</strong>  Planned<br />
+<strong>Focus:</strong> CI/CD, Signed Commits, LFS, Protected Branches</p>
+</details>
+<details class="note">
+<summary>Level 5: Git Internals &amp; Automation</summary>
+<p><strong>Status:</strong>  Planned<br />
+<strong>Focus:</strong> Hooks, Packfiles, GitHub API, Performance</p>
+</details>
+<hr />
 <h2 id="personal-notes">Personal Notes<a class="headerlink" href="#personal-notes" title="Permanent link">&para;</a></h2>
+<details class="info">
+<summary>Note #1: Level 2 – Branching &amp; Merging</summary>
+<p>To achieve <strong>Level 2: Branching &amp; Merging</strong>, I followed these steps:</p>
+<p><strong>1. Create a feature branch</strong>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/advanced-branching
+</code></pre></div></p>
+<p><strong>2. Make changes and commit</strong>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update Git-GitHub.md with Level 2 notes&quot;</span>
+</code></pre></div></p>
+<p><strong>3. Rebase onto <code>main</code></strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Switch to main</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+
+<span class="c1"># Pull the latest changes</span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># Switch back to your feature branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>feature/advanced-branching
+
+<span class="c1"># Rebase onto latest main</span>
+git<span class="w"> </span>rebase<span class="w"> </span>main
+</code></pre></div></p>
+<p><strong>4. Push the branch and create a Pull Request</strong>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/advanced-branching
+</code></pre></div></p>
+<p><strong>5. Merge Pull Request</strong>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Open<span class="w"> </span>your<span class="w"> </span>PR<span class="w"> </span>on<span class="w"> </span>GitHub
+-<span class="w"> </span>Click<span class="w"> </span><span class="s2">&quot;Merge pull request&quot;</span>
+-<span class="w"> </span>Confirm<span class="w"> </span>with<span class="w"> </span><span class="s2">&quot;Confirm merge&quot;</span>
+-<span class="w"> </span>Optionally<span class="w"> </span>click<span class="w"> </span><span class="s2">&quot;Delete branch&quot;</span>
+</code></pre></div></p>
+</details>
+<hr />
 
 
 
