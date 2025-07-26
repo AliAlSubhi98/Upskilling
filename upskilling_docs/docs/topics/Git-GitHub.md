@@ -55,10 +55,6 @@
 
 ---
 
-## Personal Notes
-
----
-
 ## Progress & Evidence
 
 ??? info "Level 1: Git Basics"
@@ -87,3 +83,28 @@
 ??? note "Level 5: Git Internals & Automation"
     **Status:**  Planned  
     **Focus:** Hooks, Packfiles, GitHub API, Performance
+
+---
+
+## Personal Notes
+
+######  Note # 1 : Level 2: Branching & Merging
+    To achive the Level 2: Branching & Merging
+    I type this changes to rebase the main branch
+    1- Create feature branch -> git checkout -b feature/advanced-branching
+    2- Make Changes and Commit -> git add .
+                               -> git commit -m "Update Git-GitHub.md with Level 2 notes"
+    3- Rebase onto main ->Steps:
+                            Switch to main:
+                            git checkout main
+                            
+                            Pull the latest changes:
+                            git pull origin main
+                            
+                            Switch back to your feature branch:
+                            git checkout feature/advanced-branching
+                            
+                            Rebase your branch onto the latest main:
+                            git rebase main
+
+---
