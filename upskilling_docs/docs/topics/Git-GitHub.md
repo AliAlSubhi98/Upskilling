@@ -88,23 +88,46 @@
 
 ## Personal Notes
 
-######  Note # 1 : Level 2: Branching & Merging
-    To achive the Level 2: Branching & Merging
-    I type this changes to rebase the main branch
-    1- Create feature branch -> git checkout -b feature/advanced-branching
-    2- Make Changes and Commit -> git add .
-                               -> git commit -m "Update Git-GitHub.md with Level 2 notes"
-    3- Rebase onto main ->Steps:
-                            Switch to main:
-                            git checkout main
-                            
-                            Pull the latest changes:
-                            git pull origin main
-                            
-                            Switch back to your feature branch:
-                            git checkout feature/advanced-branching
-                            
-                            Rebase your branch onto the latest main:
-                            git rebase main
+??? info "Note #1: Level 2 – Branching & Merging"
+    To achieve **Level 2: Branching & Merging**, I followed these steps:
+
+    **1. Create a feature branch**
+    ```bash
+    git checkout -b feature/advanced-branching
+    ```
+
+    **2. Make changes and commit**
+    ```bash
+    git add .
+    git commit -m "Update Git-GitHub.md with Level 2 notes"
+    ```
+
+    **3. Rebase onto `main`**
+    ```bash
+    # Switch to main
+    git checkout main
+
+    # Pull the latest changes
+    git pull origin main
+
+    # Switch back to your feature branch
+    git checkout feature/advanced-branching
+
+    # Rebase onto latest main
+    git rebase main
+    ```
+
+    **4. Push the branch and create a Pull Request**
+    ```bash
+    git push origin feature/advanced-branching
+    ```
+
+    **5. Merge Pull Request**
+    ```bash
+    - Open your PR on GitHub
+    - Click "Merge pull request"
+    - Confirm with "Confirm merge"
+    - Optionally click "Delete branch"
+    ```
 
 ---
