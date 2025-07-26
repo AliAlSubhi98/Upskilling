@@ -993,7 +993,7 @@
 <li><strong>Commands:</strong> <code>git branch</code>, <code>git checkout -b</code>, <code>git rebase</code>, <code>git merge</code>, <code>git cherry-pick</code>, GitHub PRs</li>
 <li><strong>Checklist:</strong><ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create feature branches and merge using both merge and rebase</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Resolve complex merge conflicts</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Resolve complex merge conflicts</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use git cherry-pick to selectively move commits across branches</li>
 </ul>
 </li>
@@ -1051,10 +1051,12 @@
 </details>
 <details class="info">
 <summary>Level 2: Branching &amp; Merging</summary>
-<p><strong>Status:</strong>  Completed<br />
+<p><strong>Status:</strong>  In Progress (2/3 completed)<br />
 <strong>Focus:</strong> Fast-Forward, Rebasing, Merge Conflicts, PRs<br />
 <strong>Evidence:</strong><br />
-- <a href="https://github.com/your-repo/feature-branch-example">Feature Branching Walkthrough</a></p>
+- <a href="https://github.com/your-repo/feature-branch-example">Feature Branching Walkthrough</a>
+- <strong>Merge Conflict Resolution</strong> (Completed 27-07-2024): Successfully resolved complex conflicts across multiple file sections</p>
+<p><strong>Next:</strong> Git cherry-pick exercise</p>
 </details>
 <details class="warning">
 <summary>Level 3: Commit History &amp; Recovery</summary>
@@ -1105,6 +1107,45 @@ git<span class="w"> </span>rebase<span class="w"> </span>main
 -<span class="w"> </span>Click<span class="w"> </span><span class="s2">&quot;Merge pull request&quot;</span>
 -<span class="w"> </span>Confirm<span class="w"> </span>with<span class="w"> </span><span class="s2">&quot;Confirm merge&quot;</span>
 -<span class="w"> </span>Optionally<span class="w"> </span>click<span class="w"> </span><span class="s2">&quot;Delete branch&quot;</span>
+</code></pre></div></p>
+</details>
+<details class="info">
+<summary>Note #2: Level 2 – Merge Conflict Resolution (27-07-2024)</summary>
+<p><strong>Exercise Overview:</strong> Practiced resolving complex merge conflicts across multiple file sections.</p>
+<p><strong>Scenario Created:</strong>
+- Created conflicting changes in <code>practice-file.md</code> across multiple sections
+- Main branch: Production configuration (MySQL, enhanced features)
+- Feature branch: Development configuration (PostgreSQL, basic features)</p>
+<p><strong>Resolution Process:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Attempt merge (creates conflict)</span>
+git<span class="w"> </span>merge<span class="w"> </span>main
+<span class="c1"># Output: CONFLICT (add/add): Merge conflict in practice-file.md</span>
+
+<span class="c1"># 2. Examine conflict markers</span>
+<span class="c1"># &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (current branch)</span>
+<span class="c1"># ======= (separator)</span>
+<span class="c1"># &gt;&gt;&gt;&gt;&gt;&gt;&gt; main (incoming branch)</span>
+
+<span class="c1"># 3. Resolve by combining best of both versions</span>
+<span class="c1"># - Combined introduction text</span>
+<span class="c1"># - Added both production and development configurations</span>
+<span class="c1"># - Merged feature lists</span>
+<span class="c1"># - Created comprehensive notes section</span>
+
+<span class="c1"># 4. Complete the merge</span>
+git<span class="w"> </span>add<span class="w"> </span>practice-file.md
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resolve merge conflicts: combine dev and production features&quot;</span>
+</code></pre></div></p>
+<p><strong>Skills Practiced:</strong>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Understanding<span class="w"> </span>conflict<span class="w"> </span>markers
+-<span class="w"> </span>Strategic<span class="w"> </span>conflict<span class="w"> </span>resolution<span class="w"> </span><span class="o">(</span>combining<span class="w"> </span>vs.<span class="w"> </span>choosing<span class="o">)</span>
+-<span class="w"> </span>Maintaining<span class="w"> </span>clean<span class="w"> </span>repository<span class="w"> </span>after<span class="w"> </span>practice
+-<span class="w"> </span>Professional<span class="w"> </span>merge<span class="w"> </span>commit<span class="w"> </span>messages
+</code></pre></div></p>
+<p><strong>Key Learnings:</strong>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Complex<span class="w"> </span>conflicts<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>resolved<span class="w"> </span>by<span class="w"> </span>combining<span class="w"> </span>both<span class="w"> </span>versions<span class="w"> </span>intelligently
+-<span class="w"> </span>Always<span class="w"> </span>clean<span class="w"> </span>up<span class="w"> </span>practice<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>keep<span class="w"> </span>repository<span class="w"> </span>organized
+-<span class="w"> </span>Document<span class="w"> </span>the<span class="w"> </span>resolution<span class="w"> </span>strategy<span class="w"> </span><span class="k">in</span><span class="w"> </span>commit<span class="w"> </span>messages
 </code></pre></div></p>
 </details>
 <hr />
