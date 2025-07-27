@@ -55,37 +55,66 @@
 
 ---
 
-## Progress & Evidence
+## Progress
 
-??? info "Level 1: Git Basics"
-    **Status:**  Completed  
+??? success "Level 1: Git Basics"
+    **Status:** Completed  
     **Focus:** Init, Clone, Add, Commit, Push, Pull, Branching  
     **Commands Practiced:**  
     `git init`, `git clone`, `git add`, `git commit`, `git push`, `git pull`, `.gitignore`  
     **Evidence:**  
-    - [Commit History - GitHub Push Example](https://github.com/your-repo/example-commit)
+    - [Commit History - Upskilling repo commits](https://github.com/AliAlSubhi98/Upskilling/commits/main/)
 
 ??? info "Level 2: Branching & Merging"
     **Status:**  In Progress (2/3 completed)  
     **Focus:** Fast-Forward, Rebasing, Merge Conflicts, PRs  
     **Evidence:**  
-    - [Feature Branching Walkthrough](https://github.com/your-repo/feature-branch-example)
+    - [Feature Branching Walkthrough](https://github.com/AliAlSubhi98/Upskilling/pull/1)
     - **Merge Conflict Resolution** (Completed 27-07-2024): Successfully resolved complex conflicts across multiple file sections
     
     **Next:** Git cherry-pick exercise
 
 ??? warning "Level 3: Commit History & Recovery"
-    **Status:**  In Progress  
-    **Focus:** `git reflog`, `git reset`, `git revert`, `git bisect`  
-    **Next Task:** Recover deleted commit and document reflog use
+    **Status:** Planned  
+    **Focus:** `git reflog`, `git reset`, `git revert`, `git bisect`
 
-??? note "Level 4: GitOps & Security"
-    **Status:**  Planned  
+??? todo "Level 4: GitOps & Security"
+    **Status:** Planned  
     **Focus:** CI/CD, Signed Commits, LFS, Protected Branches
 
-??? note "Level 5: Git Internals & Automation"
-    **Status:**  Planned  
+??? todo "Level 5: Git Internals & Automation"
+    **Status:** Planned  
     **Focus:** Hooks, Packfiles, GitHub API, Performance
+
+---
+
+## Evidence
+
+??? tip "Level 1 Evidence"
+    **Repository:** [Practice Projects](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/git-github/level-1)  
+    **Demonstrations:**
+    - `repo-creation-push` - Web project with Git workflow
+    - `clone-and-commit` - Java HelloWorld with version control
+    - `gitignore-basics` - File exclusion patterns
+
+??? tip "Level 2 Evidence"
+    **Repository:** [Practice Projects](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/git-github/level-2)  
+    **Demonstrations:**
+    - `branching-workflow` - Feature branch management
+    - `merge-vs-rebase` - Different merge strategies
+    - `cherry-pick-practice` - Selective commit application
+    
+    **Visual Documentation:**
+    
+    ![Initial Git Status](../images/git-github/level-2-branching-merging-practice/01-initial-git-status.png)
+    
+    ![Merge Conflict Resolution](../images/git-github/level-2-branching-merging-practice/02-merge-conflict-resolution.png)
+    
+    ![Git Branch Workflow](../images/git-github/level-2-branching-merging-practice/03-git-branch-workflow.png)
+    
+    ![Commit History Log](../images/git-github/level-2-branching-merging-practice/04-commit-history-log.png)
+    
+    ![Git Push Success](../images/git-github/level-2-branching-merging-practice/05-git-push-success.png)
 
 ---
 
