@@ -111,7 +111,8 @@ curl http://localhost:8080/api/advanced/users/user1
 # Create new user
 curl -X POST http://localhost:8080/api/advanced/users \
   -H "Content-Type: application/json" \
-  -d '{"name":"Alice Johnson","email":"alice@example.com"}'
+  -d '{"name":"Adnan","email":"adnan
+  @example.com"}'
 
 # Call external API (simulated)
 curl http://localhost:8080/api/advanced/external-api
