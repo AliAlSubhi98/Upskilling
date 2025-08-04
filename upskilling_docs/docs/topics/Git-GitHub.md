@@ -20,7 +20,7 @@
 - **Checklist:**
     - [x] Create feature branches and merge using both merge and rebase
     - [x] Resolve complex merge conflicts
-    - [ ] Use git cherry-pick to selectively move commits across branches
+    - [x] Use git cherry-pick to selectively move commits across branches
 
 ## Level 3: Commit History & Recovery
 - **Competencies:** Reflog, Reset, Revert, Bisect, Tagging
@@ -65,14 +65,15 @@
     **Evidence:**  
     - [Commit History - Upskilling repo commits](https://github.com/AliAlSubhi98/Upskilling/commits/main/)
 
-??? info "Level 2: Branching & Merging"
-    **Status:**  In Progress (2/3 completed)  
-    **Focus:** Fast-Forward, Rebasing, Merge Conflicts, PRs  
+??? success "Level 2: Branching & Merging"
+    **Status:** Completed  
+    **Focus:** Fast-Forward, Rebasing, Merge Conflicts, Cherry-Pick, PRs  
     **Evidence:**  
     - [Feature Branching Walkthrough](https://github.com/AliAlSubhi98/Upskilling/pull/1)
     - **Merge Conflict Resolution** (Completed 27-07-2024): Successfully resolved complex conflicts across multiple file sections
+    - **Cherry-Pick Practice** (Completed 04-08-2024): Successfully demonstrated selective commit application across branches
     
-    **Next:** Git cherry-pick exercise
+    **All Level 2 tasks completed!**
 
 ??? warning "Level 3: Commit History & Recovery"
     **Status:** Planned  
@@ -205,6 +206,47 @@
     - Complex conflicts can be resolved by combining both versions intelligently
     - Always clean up practice files to keep repository organized
     - Document the resolution strategy in commit messages
+    ```
+
+??? info "Note #3: Level 2 – Cherry-Pick Practice (04-08-2024)"
+    **Exercise Overview:** Successfully practiced selective commit application using git cherry-pick.
+
+    **Scenario Created:**
+    - Created feature branch with 3 different features:
+      - UserAuth.java (user authentication)
+      - PaymentProcessor.java (payment processing)
+      - NotificationService.java (notification service)
+    - Each feature committed separately for selective picking
+
+    **Cherry-Pick Process:**
+    ```bash
+    # 1. Created feature branch with multiple commits
+    git checkout -b feature/user-authentication
+    # Added UserAuth.java, PaymentProcessor.java, NotificationService.java
+
+    # 2. Switched back to main branch
+    git checkout main
+
+    # 3. Cherry-picked specific commits
+    git cherry-pick 12827b6  # Payment processing feature
+    git cherry-pick c1de365  # User authentication feature
+    git cherry-pick 75ecc57  # Notification service feature
+    ```
+
+    **Skills Practiced:**
+    ```bash
+    - Understanding commit hashes and their purpose
+    - Selective commit application across branches
+    - Managing multiple features in separate commits
+    - Verifying cherry-pick results
+    ```
+
+    **Key Learnings:**
+    ```bash
+    - Cherry-pick creates new commit IDs while preserving changes
+    - Useful for applying hotfixes or specific features to different branches
+    - Maintains clean commit history by selecting only needed changes
+    - Essential skill for advanced Git workflows and release management
     ```
     
 ---
