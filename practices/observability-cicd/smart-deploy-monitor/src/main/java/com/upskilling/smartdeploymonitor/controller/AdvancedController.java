@@ -55,8 +55,8 @@ public class AdvancedController {
                 .register(meterRegistry);
         
         // Initialize with some sample data
-        userDatabase.put("user1", new User("user1", "John Doe", "john@example.com"));
-        userDatabase.put("user2", new User("user2", "Jane Smith", "jane@example.com"));
+        userDatabase.put("user1", new User("user1", "Ali Hamood", "AliHamood@example.com"));
+        userDatabase.put("user2", new User("user2", "Nidhal Salim", "NidhalSalim@example.com"));
     }
 
     @GetMapping("/users/{userId}")
