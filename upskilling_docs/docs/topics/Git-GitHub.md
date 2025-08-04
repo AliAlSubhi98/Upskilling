@@ -52,6 +52,7 @@
 - [Pro Git Book](https://git-scm.com/book/en/v2)
 - [GitHub Docs](https://docs.github.com/en)
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
+- [How to Use Git Cherry-Pick: With Practical Examples](https://app.daily.dev/posts/how-to-use-the-git-cherry-pick-command-with-practical-examples-ay0tpzcjl)
 
 ---
 
@@ -72,6 +73,16 @@
     - [Feature Branching Walkthrough](https://github.com/AliAlSubhi98/Upskilling/pull/1)
     - **Merge Conflict Resolution** (Completed 27-07-2024): Successfully resolved complex conflicts across multiple file sections
     - **Cherry-Pick Practice** (Completed 04-08-2024): Successfully demonstrated selective commit application across branches
+    
+    **What I Learned:**
+    - Feature branching with proper naming and workflow
+    - Merge vs rebase strategies and when to use each
+    - Complex conflict resolution by combining changes intelligently
+    - Cherry-pick for selective commit application across branches
+    
+    **Resources Used:** ChatGPT (AI Assistant) for step-by-step guidance
+    
+    **Applied Knowledge:** Built Java projects (UserAuth, PaymentProcessor, NotificationService) and practiced real-world Git scenarios
     
     **All Level 2 tasks completed!**
 
@@ -116,6 +127,10 @@
     ![Commit History Log](../images/git-github/level-2-branching-merging-practice/04-commit-history-log.png)
     
     ![Git Push Success](../images/git-github/level-2-branching-merging-practice/05-git-push-success.png)
+
+---
+
+
 
 ---
 
