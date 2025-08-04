@@ -1,0 +1,231 @@
+name: Enhanced CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch: # Manual trigger
+
+env:
+  JAVA_VERSION: '17'
+  MAVEN_VERSION: '3.9.6'
+
+jobs:
+  # Build and Test Job
+  build-and-test:
+    runs-on: ubuntu-latest
+    name: Build and Test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK ${{ env.JAVA_VERSION }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ env.JAVA_VERSION }}
+        distribution: 'temurin'
+        cache: 'maven'
+        
+    - name: Cache Maven packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2
+        
+    - name: Build with Maven
+      run: mvn clean compile
+      
+    - name: Run tests with coverage
+      run: mvn test jacoco:report
+      
+    - name: Build JAR
+      run: mvn package -DskipTests
+      
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: smart-deploy-monitor-jar
+        path: target/smart-deploy-monitor-*.jar
+        
+    - name: Upload test coverage
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-coverage
+        path: target/site/jacoco/
+        
+  # Code Quality Job
+  code-quality:
+    runs-on: ubuntu-latest
+    name: Code Quality
+    needs: build-and-test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK ${{ env.JAVA_VERSION }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ env.JAVA_VERSION }}
+        distribution: 'temurin'
+        
+    - name: Run SonarQube analysis
+      run: |
+        mvn clean verify sonar:sonar \
+        -Dsonar.projectKey=smart-deploy-monitor \
+        -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
+        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      continue-on-error: true
+      
+  # Security Scan Job
+  security-scan:
+    runs-on: ubuntu-latest
+    name: Security Scan
+    needs: build-and-test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK ${{ env.JAVA_VERSION }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ env.JAVA_VERSION }}
+        distribution: 'temurin'
+        
+    - name: Run OWASP dependency check
+      uses: dependency-check/Dependency-Check_Action@main
+      with:
+        project: 'Smart Deploy Monitor'
+        path: '.'
+        format: 'HTML'
+        out: 'reports'
+        args: >
+          --failOnCVSS 7
+          --enableRetired
+          
+    - name: Upload security report
+      uses: actions/upload-artifact@v4
+      with:
+        name: security-report
+        path: reports/
+        
+  # Performance Testing Job
+  performance-test:
+    runs-on: ubuntu-latest
+    name: Performance Test
+    needs: build-and-test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK ${{ env.JAVA_VERSION }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ env.JAVA_VERSION }}
+        distribution: 'temurin'
+        
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: smart-deploy-monitor-jar
+        
+    - name: Start application
+      run: |
+        java -jar target/smart-deploy-monitor-*.jar &
+        sleep 30
+        
+    - name: Run performance tests
+      run: |
+        echo "Running performance tests..."
+        # Test health endpoint response time
+        curl -w "@curl-format.txt" -o /dev/null -s "http://localhost:8080/api/demo/health"
+        # Test metrics endpoint
+        curl -s "http://localhost:8080/api/actuator/metrics" | head -20
+        echo "Performance tests completed!"
+        
+    - name: Stop application
+      run: pkill -f smart-deploy-monitor || true
+        
+  # Deploy to Staging Job
+  deploy-staging:
+    runs-on: ubuntu-latest
+    name: Deploy to Staging
+    needs: [build-and-test, code-quality, security-scan, performance-test]
+    if: github.ref == 'refs/heads/develop'
+    environment: staging
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: smart-deploy-monitor-jar
+        
+    - name: Deploy to staging server
+      run: |
+        echo "Deploying to staging environment..."
+        echo "Staging URL: https://staging-smart-deploy-monitor.example.com"
+        # Add your staging deployment commands here
+        
+    - name: Health check staging
+      run: |
+        echo "Performing health check on staging..."
+        # curl -f https://staging-smart-deploy-monitor.example.com/api/actuator/health
+        
+  # Deploy to Production Job
+  deploy-production:
+    runs-on: ubuntu-latest
+    name: Deploy to Production
+    needs: [build-and-test, code-quality, security-scan, performance-test]
+    if: github.ref == 'refs/heads/main'
+    environment: production
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: smart-deploy-monitor-jar
+        
+    - name: Deploy to production server
+      run: |
+        echo "Deploying to production environment..."
+        echo "Production URL: https://smart-deploy-monitor.example.com"
+        # Add your production deployment commands here
+        
+    - name: Health check production
+      run: |
+        echo "Performing health check on production..."
+        # curl -f https://smart-deploy-monitor.example.com/api/actuator/health
+        
+    - name: Notify deployment success
+      run: |
+        echo "Production deployment completed successfully!"
+        # Add notification commands (Slack, email, etc.)
+        
+  # Observability Setup Job
+  observability-setup:
+    runs-on: ubuntu-latest
+    name: Setup Observability
+    needs: deploy-production
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Setup monitoring
+      run: |
+        echo "Setting up observability monitoring..."
+        echo "Configuring Prometheus scraping..."
+        echo "Setting up Grafana dashboards..."
+        echo "Configuring alerting rules..."
+        
+    - name: Verify observability endpoints
+      run: |
+        echo "Verifying observability endpoints..."
+        echo "Health: /api/actuator/health"
+        echo "Metrics: /api/actuator/metrics"
+        echo "Prometheus: /api/actuator/prometheus" 

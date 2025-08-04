@@ -16,6 +16,7 @@ This project combines two upskilling topics:
 - ✅ **Logging:** Structured logging with different levels
 - ✅ **Monitoring:** Performance monitoring and error tracking
 - ✅ **Custom Metrics:** Request counters and error counters
+- ✅ **Advanced Metrics:** Database queries, cache hits/misses, external API calls
 
 ### CI/CD Features
 - ✅ **GitHub Actions:** Automated build and test pipeline
@@ -102,6 +103,26 @@ curl http://localhost:8080/api/demo/performance
 curl http://localhost:8080/api/demo/error
 ```
 
+### Advanced Features Endpoints
+```bash
+# Get user by ID (with caching)
+curl http://localhost:8080/api/advanced/users/user1
+
+# Create new user
+curl -X POST http://localhost:8080/api/advanced/users \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Alice Johnson","email":"alice@example.com"}'
+
+# Call external API (simulated)
+curl http://localhost:8080/api/advanced/external-api
+
+# Get cache statistics
+curl http://localhost:8080/api/advanced/cache/stats
+
+# Clear cache
+curl -X DELETE http://localhost:8080/api/advanced/cache/clear
+```
+
 ### Actuator Endpoints
 ```bash
 # Health check
@@ -160,6 +181,10 @@ curl http://localhost:8080/api/actuator/prometheus
 ### Custom Metrics
 - `demo.requests.total` - Total number of demo requests
 - `demo.errors.total` - Total number of demo errors
+- `advanced.database.queries` - Number of database queries
+- `advanced.cache.hits` - Number of cache hits
+- `advanced.cache.misses` - Number of cache misses
+- `advanced.external.api.calls` - Number of external API calls
 
 ### Built-in Metrics
 - JVM metrics (memory, threads, garbage collection)
