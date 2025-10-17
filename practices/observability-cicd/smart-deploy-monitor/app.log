@@ -1,0 +1,256 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.upskilling:smart-deploy-monitor >-----------------
+[INFO] Building Smart Deploy Monitor 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.0:run (default-cli) > test-compile @ smart-deploy-monitor >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ smart-deploy-monitor ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ smart-deploy-monitor ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ smart-deploy-monitor ---
+[INFO] skip non existing resourceDirectory /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ smart-deploy-monitor ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 1 source file with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] <<< spring-boot:3.2.0:run (default-cli) < test-compile @ smart-deploy-monitor <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.0:run (default-cli) @ smart-deploy-monitor ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v3.2.0)[0;39m
+
+2025-10-17 23:36:12 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 15534 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-17 23:36:12 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-17 23:36:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-17 23:36:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2025-10-17 23:36:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-17 23:36:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-17 23:36:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-17 23:36:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-17 23:36:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 728 ms
+2025-10-17 23:36:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-17 23:36:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-17 23:36:13 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-17 23:36:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-17 23:36:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-17 23:36:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2d3b0978
+2025-10-17 23:36:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-17 23:36:13 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-17 23:36:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists users cascade
+2025-10-17 23:36:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-17 23:36:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+Hibernate: 
+    create table users (
+        is_active boolean,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        id uuid not null,
+        role varchar(50) check (role in ('USER','ADMIN','MODERATOR')),
+        first_name varchar(100),
+        last_name varchar(100),
+        email varchar(255) not null unique,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2025-10-17 23:36:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-17 23:36:14 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-17 23:36:14 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-17 23:36:14 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-17 23:36:15 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-17 23:36:15 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-17 23:36:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-17 23:36:15 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 2.656 seconds (process running for 3.121)
+2025-10-17 23:36:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 70.79/83.00MB, CPU Cores: 8, Requests: 0, Connections: 21
+2025-10-17 23:37:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 42.65/83.00MB, CPU Cores: 8, Requests: 0, Connections: 16
+2025-10-17 23:37:23 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-17 23:37:23 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-17 23:37:23 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2025-10-17 23:37:23 [http-nio-8080-exec-1] INFO  c.u.s.controller.DemoController - Health check requested at 2025-10-17T23:37:23.813458
+2025-10-17 23:37:57 [http-nio-8080-exec-6] INFO  c.u.s.controller.UserController - Creating new user with email: test@example.com
+2025-10-17 23:37:57 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - Creating new user with email: test@example.com
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-10-17 23:37:57 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - User created successfully with ID: 36cebcb8-ef2b-4b69-bef1-84ba19a6aa03
+Hibernate: 
+    insert 
+    into
+        users
+        (created_at, email, first_name, is_active, last_name, password_hash, role, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-10-17 23:37:57 [http-nio-8080-exec-8] INFO  c.u.s.controller.UserController - Fetching all users
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2025-10-17 23:37:57 [http-nio-8080-exec-10] INFO  c.u.s.controller.UserController - Fetching user statistics
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.is_active
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+2025-10-17 23:37:58 [http-nio-8080-exec-2] INFO  c.u.s.controller.UserController - Verifying password for user: test@example.com
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2025-10-17 23:38:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 120s, Memory: 69.56/83.00MB, CPU Cores: 8, Requests: 0, Connections: 42
+2025-10-17 23:39:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 180s, Memory: 69.56/83.00MB, CPU Cores: 8, Requests: 0, Connections: 41
+2025-10-17 23:40:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 240s, Memory: 69.56/83.00MB, CPU Cores: 8, Requests: 0, Connections: 6
+2025-10-17 23:40:41 [http-nio-8080-exec-4] INFO  c.u.s.controller.UserController - Fetching user statistics
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.is_active
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+2025-10-17 23:41:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 300s, Memory: 69.68/83.00MB, CPU Cores: 8, Requests: 0, Connections: 32
+2025-10-17 23:41:41 [http-nio-8080-exec-6] INFO  c.u.s.controller.UserController - Creating new admin user with email: admin@example.com
+2025-10-17 23:41:41 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - Creating new admin user with email: admin@example.com
+2025-10-17 23:41:41 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - Creating new user with email: admin@example.com
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-10-17 23:41:41 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - User created successfully with ID: 8f3d648e-d2d9-4c14-bf50-ebf24d61c3b0
+2025-10-17 23:41:41 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - Admin user created successfully with ID: 8f3d648e-d2d9-4c14-bf50-ebf24d61c3b0
+Hibernate: 
+    insert 
+    into
+        users
+        (created_at, email, first_name, is_active, last_name, password_hash, role, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    update
+        users 
+    set
+        email=?,
+        first_name=?,
+        is_active=?,
+        last_name=?,
+        password_hash=?,
+        role=?,
+        updated_at=? 
+    where
+        id=?
+2025-10-17 23:41:57 [http-nio-8080-exec-8] INFO  c.u.s.controller.UserController - Fetching user statistics
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.is_active
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+2025-10-17 23:42:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 360s, Memory: 41.49/83.00MB, CPU Cores: 8, Requests: 0, Connections: 21
+2025-10-17 23:43:15 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 420s, Memory: 41.49/83.00MB, CPU Cores: 8, Requests: 0, Connections: 13
