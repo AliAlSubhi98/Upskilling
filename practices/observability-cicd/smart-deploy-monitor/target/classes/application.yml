@@ -9,16 +9,34 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,prometheus
+        include: health,info,metrics,prometheus,env,beans,configprops
   endpoint:
     health:
       show-details: always
+      show-components: always
     prometheus:
       enabled: true
+    metrics:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+        demo.response.time: true
+      percentiles:
+        http.server.requests: 0.5, 0.95, 0.99
+        demo.response.time: 0.5, 0.95, 0.99
 
 logging:
   level:
     com.upskilling.smartdeploymonitor: INFO
     org.springframework.web: INFO
+    org.springframework.scheduling: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/smart-deploy-monitor.log
