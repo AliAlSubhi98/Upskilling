@@ -10,9 +10,34 @@
 - **Competencies:** Basic GitHub Actions, YAML Pipelines, Continuous Integration
 - **Tools:** GitHub Actions, YAML, Workflows, Runners
 - **Checklist:**
-  - [ ] Set up a GitHub Actions workflow that runs on push
-  - [ ] Automate a simple build process using GitHub Actions
-  - [ ] Debug a failing CI/CD pipeline
+  - [x] Set up a GitHub Actions workflow that runs on push
+  - [x] Automate a simple build process using GitHub Actions
+  - [x] Debug a failing CI/CD pipeline
+
+### Progress
+**Completed:** Smart Deploy Monitor CI/CD Pipeline
+
+**What I Learned:**
+- **GitHub Actions**: Created YAML workflows for automated testing and building
+- **Maven Integration**: Configured Maven builds in CI/CD pipeline with dependency caching
+- **Java CI/CD**: Set up Java 17 environment with proper build and test automation
+- **Artifact Management**: Uploaded build artifacts for deployment
+- **Pipeline Debugging**: Fixed workflow issues and optimized for monorepo structure
+- **Conditional Triggers**: Configured workflows to run only on specific directory changes
+
+**Resources Used:**
+- GitHub Actions documentation
+- Maven documentation
+- ChatGPT for troubleshooting pipeline issues
+- Spring Boot Maven plugin documentation
+
+**How I Applied This Knowledge:**
+- Created a complete CI/CD pipeline for the Spring Boot application
+- Implemented automated testing with Maven Surefire
+- Set up dependency caching to speed up builds
+- Configured proper Java environment setup
+- Added artifact upload for deployment readiness
+- Integrated with the observability application for end-to-end testing
 
 ## Level 2: Automated Testing & Deployments
 - **Competencies:** Unit Tests, Linting, Docker Builds, Secrets Management
