@@ -1,2 +1,5 @@
-com/upskilling/smartdeploymonitor/SmartDeployMonitorApplication.class
+com/upskilling/smartdeploymonitor/controller/SystemController.class
 com/upskilling/smartdeploymonitor/controller/DemoController.class
+com/upskilling/smartdeploymonitor/service/MonitoringService.class
+com/upskilling/smartdeploymonitor/controller/MetricsController.class
+com/upskilling/smartdeploymonitor/SmartDeployMonitorApplication.class

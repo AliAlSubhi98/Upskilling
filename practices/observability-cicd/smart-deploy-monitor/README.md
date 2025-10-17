@@ -28,8 +28,21 @@ The application will start on `http://localhost:8080`
 
 ### Available Endpoints
 
-- `GET /demo/health` - Application health check
-- `GET /demo/info` - Application information
+#### Demo Endpoints
+- `GET /demo/health` - Application health check with uptime
+- `GET /demo/info` - Application information with system details
+- `GET /demo/logs` - Generate random logs (INFO, WARN, ERROR)
+- `GET /demo/performance` - Performance test with timing and memory usage
+- `GET /demo/error` - Simulate error for testing
+- `POST /demo/data` - Process JSON data
+
+#### System Endpoints
+- `GET /system/status` - Comprehensive system status
+- `GET /system/health/detailed` - Detailed health checks
+- `GET /system/info` - System and environment information
+
+#### Metrics Endpoints
+- `GET /metrics/system` - Custom system metrics
 - `GET /actuator/health` - Spring Boot Actuator health endpoint
 - `GET /actuator/metrics` - Application metrics
 - `GET /actuator/prometheus` - Prometheus metrics format
@@ -43,8 +56,23 @@ curl http://localhost:8080/demo/health
 # Application info
 curl http://localhost:8080/demo/info
 
+# Generate logs
+curl http://localhost:8080/demo/logs
+
+# Performance test
+curl http://localhost:8080/demo/performance
+
+# System status
+curl http://localhost:8080/system/status
+
+# Custom metrics
+curl http://localhost:8080/metrics/system
+
 # Actuator health
 curl http://localhost:8080/actuator/health
+
+# Prometheus metrics
+curl http://localhost:8080/actuator/prometheus
 ```
 
 ## CI/CD Pipeline

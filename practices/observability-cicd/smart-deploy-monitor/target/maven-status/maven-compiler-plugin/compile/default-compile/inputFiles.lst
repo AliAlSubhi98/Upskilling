@@ -1,2 +1,5 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/DemoController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/SmartDeployMonitorApplication.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/MetricsController.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/MonitoringService.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/SystemController.java

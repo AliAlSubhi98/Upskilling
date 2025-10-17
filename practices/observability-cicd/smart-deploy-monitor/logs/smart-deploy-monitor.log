@@ -1,0 +1,45 @@
+2025-10-17 21:51:35 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 93253 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-17 21:51:35 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-17 21:51:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-17 21:51:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-17 21:51:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-17 21:51:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-17 21:51:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 446 ms
+2025-10-17 21:51:36 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-17 21:51:36 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-17 21:51:36 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-17 21:51:36 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-17 21:51:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-17 21:51:36 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 0.955 seconds (process running for 1.103)
+2025-10-17 21:51:36 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 25.52/47.00MB, CPU Cores: 8, Requests: 0, Connections: 46
+2025-10-17 21:51:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-17 21:51:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-17 21:51:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-10-17 21:51:53 [http-nio-8080-exec-1] INFO  c.u.s.controller.DemoController - Health check requested at 2025-10-17T21:51:53.138541
+2025-10-17 21:52:19 [http-nio-8080-exec-2] INFO  c.u.s.controller.DemoController - Info value generated: 46
+2025-10-17 21:52:36 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 36.26/47.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-17 21:52:45 [http-nio-8080-exec-7] INFO  c.u.s.controller.DemoController - Performance test completed in 572 ms
+2025-10-17 21:52:51 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-17 21:52:51 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-17 21:54:41 [main] INFO  c.u.s.controller.DemoControllerTest - Starting DemoControllerTest using Java 23 with PID 94562 (started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-17 21:54:41 [main] INFO  c.u.s.controller.DemoControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-10-17 21:54:42 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-17 21:54:42 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-17 21:54:42 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-17 21:54:42 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 6 endpoint(s) beneath base path '/actuator'
+2025-10-17 21:54:42 [main] INFO  c.u.s.controller.DemoControllerTest - Started DemoControllerTest in 0.999 seconds (process running for 1.603)
+2025-10-17 21:54:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 26.15/59.00MB, CPU Cores: 8, Requests: 0, Connections: 33
+2025-10-17 21:54:42 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-17 21:54:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-17 21:54:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-17 21:54:42 [main] INFO  c.u.s.controller.DemoController - Health check requested at 2025-10-17T21:54:42.933763
+2025-10-17 21:54:42 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-17 21:54:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-17 21:54:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-17 21:54:42 [main] INFO  c.u.s.controller.DemoController - Info value generated: 99
+2025-10-17 21:54:42 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-10-17 21:54:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-10-17 21:54:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-10-17 21:54:42 [main] INFO  c.u.s.controller.DemoController - Info endpoint requested
+2025-10-17 21:54:43 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-17 21:54:43 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
