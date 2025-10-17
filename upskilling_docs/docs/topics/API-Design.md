@@ -71,9 +71,9 @@
     **Tools Used:** OpenAPI/Swagger, Spring Boot, Bean Validation  
     **Evidence:**  
     - [Smart Deploy Monitor API](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
-    - **API Testing Results** (Completed 18-10-2024): All 11/11 API design tests passing (100% success rate)
-    - **Swagger UI Integration** (Completed 18-10-2024): Interactive API documentation at `/swagger-ui/index.html`
-    - **OpenAPI JSON** (Completed 18-10-2024): Complete API specification at `/v3/api-docs`
+    - **API Testing Results** (Completed 18-10-2025): All 11/11 API design tests passing (100% success rate)
+    - **Swagger UI Integration** (Completed 18-10-2025): Interactive API documentation at `/swagger-ui/index.html`
+    - **OpenAPI JSON** (Completed 18-10-2025): Complete API specification at `/v3/api-docs`
     
     **What I Learned:**
     - **OpenAPI/Swagger Integration**: Added comprehensive API documentation with SpringDoc OpenAPI
@@ -150,7 +150,7 @@
 
 ## Personal Notes
 
-??? info "Note #1: API Design Implementation (18-10-2024)"
+??? info "Note #1: API Design Implementation (18-10-2025)"
     To achieve **Level 1: REST API Fundamentals**, I implemented:
 
     **1. OpenAPI/Swagger Integration**

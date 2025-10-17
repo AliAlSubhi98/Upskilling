@@ -71,7 +71,7 @@
     **Focus:** Fast-Forward, Rebasing, Merge Conflicts, Cherry-Pick, PRs  
     **Evidence:**  
     - [Feature Branching Walkthrough](https://github.com/AliAlSubhi98/Upskilling/pull/1)
-    - **Merge Conflict Resolution** (Completed 27-07-2024): Successfully resolved complex conflicts across multiple file sections
+    - **Merge Conflict Resolution** (Completed 27-07-2025): Successfully resolved complex conflicts across multiple file sections
     - **Cherry-Pick Practice** (Completed 04-08-2024): Successfully demonstrated selective commit application across branches
     
     **What I Learned:**
@@ -136,7 +136,7 @@
 
 ## Personal Notes
 
-??? info "Note #1: Level 2 – Branching & Merging (26-07-2024)"
+??? info "Note #1: Level 2 – Branching & Merging (26-07-2025)"
     To achieve **Level 2: Branching & Merging**, I followed these steps:
 
     **1. Create a feature branch**
@@ -178,7 +178,7 @@
     - Optionally click "Delete branch"
     ```
 
-??? info "Note #2: Level 2 – Merge Conflict Resolution (27-07-2024)"
+??? info "Note #2: Level 2 – Merge Conflict Resolution (27-07-2025)"
     **Exercise Overview:** Practiced resolving complex merge conflicts across multiple file sections.
 
     **Scenario Created:**
@@ -223,7 +223,7 @@
     - Document the resolution strategy in commit messages
     ```
 
-??? info "Note #3: Level 2 – Cherry-Pick Practice (04-08-2024)"
+??? info "Note #3: Level 2 – Cherry-Pick Practice (04-08-2025)"
     **Exercise Overview:** Successfully practiced selective commit application using git cherry-pick.
 
     **Scenario Created:**
