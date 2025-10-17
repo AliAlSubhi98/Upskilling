@@ -545,6 +545,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Level 1: Monitoring &amp; Logging Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progress
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -888,6 +903,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Level 1: Monitoring &amp; Logging Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progress
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -981,10 +1011,29 @@
 <li><strong>Competencies:</strong> Log Analysis, Metrics Collection, Understanding Alerts</li>
 <li><strong>Tools:</strong> Log Files, Syslog, journalctl, top, htop</li>
 <li><strong>Checklist:</strong></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Collect logs from a running application using journalctl or tail -f</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use htop or top to monitor real-time system performance</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Configure basic alerts for server uptime</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Collect logs from a running application using journalctl or tail -f</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Use htop or top to monitor real-time system performance</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Configure basic alerts for server uptime</li>
 </ul>
+<h3 id="progress">Progress<a class="headerlink" href="#progress" title="Permanent link">&para;</a></h3>
+<p><strong>Completed:</strong> Smart Deploy Monitor Application with Advanced Observability</p>
+<p><strong>What I Learned:</strong>
+- <strong>Spring Boot Actuator</strong>: Built-in monitoring endpoints for health checks, metrics, and application info
+- <strong>Micrometer</strong>: Java metrics library for collecting application metrics (Counters, Timers, Gauges)
+- <strong>Structured Logging</strong>: Implemented SLF4J with Logback for consistent log formatting
+- <strong>Custom Metrics</strong>: Created custom metrics for request counting, response times, and system monitoring
+- <strong>Prometheus Integration</strong>: Exposed metrics in Prometheus format for monitoring systems
+- <strong>Scheduled Monitoring</strong>: Used Spring's @Scheduled to collect system metrics every 30 seconds</p>
+<p><strong>Resources Used:</strong>
+- Spring Boot Actuator documentation
+- Micrometer documentation
+- ChatGPT for code examples and troubleshooting
+- Maven for dependency management</p>
+<p><strong>How I Applied This Knowledge:</strong>
+- Built a complete Spring Boot application with observability features
+- Implemented custom metrics collection using Micrometer
+- Created multiple monitoring endpoints for different types of system information
+- Added unit tests to ensure monitoring functionality works correctly</p>
 <h2 id="level-2-advanced-logging-metrics-collection">Level 2: Advanced Logging &amp; Metrics Collection<a class="headerlink" href="#level-2-advanced-logging-metrics-collection" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li><strong>Competencies:</strong> Centralized Logging, Structured Logs, Metrics Dashboards</li>
