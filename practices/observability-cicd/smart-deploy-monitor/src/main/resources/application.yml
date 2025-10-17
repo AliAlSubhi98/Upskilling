@@ -26,6 +26,25 @@ spring:
   # Flyway Configuration (disabled for now)
   flyway:
     enabled: false
+  
+  # Redis Configuration
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+  
+  # Elasticsearch Configuration
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
+      connection-timeout: 1s
+      read-timeout: 30s
 
 # OpenAPI/Swagger Configuration
 springdoc:
@@ -73,3 +92,8 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   file:
     name: logs/smart-deploy-monitor.log
+
+# Qdrant Configuration
+qdrant:
+  host: localhost
+  port: 6333
