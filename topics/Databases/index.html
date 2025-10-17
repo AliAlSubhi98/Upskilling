@@ -982,9 +982,9 @@
 <li><strong>Tools:</strong> PostgreSQL, MS SQL, Oracle, Redis, Elasticsearch, Qdrant</li>
 <li><strong>Checklist:</strong></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Perform CRUD in SQL</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Search/filter with Elastic filters vs queries</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Insert/search vectors in Qdrant</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use Redis for TTL-based caching</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Search/filter with Elastic filters vs queries</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Insert/search vectors in Qdrant</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Use Redis for TTL-based caching</li>
 </ul>
 <h2 id="level-2-schema-design">Level 2: Schema Design<a class="headerlink" href="#level-2-schema-design" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -1055,7 +1055,11 @@
 - <strong>Service Layer</strong>: Built UserService with business logic, password encryption, and user management
 - <strong>REST API Development</strong>: Created comprehensive UserController with CRUD operations
 - <strong>Password Security</strong>: Implemented BCrypt password encryption for secure user authentication
-- <strong>Database Testing</strong>: Created automated testing scripts for database operations</p>
+- <strong>Database Testing</strong>: Created automated testing scripts for database operations
+- <strong>Redis TTL-based Caching</strong>: Implemented Redis caching with Time To Live for performance optimization
+- <strong>Elasticsearch Search/Filter</strong>: Created search services with filters (exact matches) and queries (relevance scoring)
+- <strong>Qdrant Vector Operations</strong>: Implemented vector insert/search operations for similarity search
+- <strong>Multi-Database Integration</strong>: Successfully integrated PostgreSQL, Redis, Elasticsearch, and Qdrant</p>
 <p><strong>Resources Used:</strong>
 - Spring Data JPA documentation
 - PostgreSQL official documentation
@@ -1072,7 +1076,12 @@
 - <strong>Successfully tested all database operations</strong> with 100% test pass rate
 - <strong>Verified user creation, retrieval, statistics, and password verification</strong>
 - <strong>Confirmed admin and regular user roles working correctly</strong>
-- <strong>Database integration fully operational and production-ready</strong></p>
+- <strong>Database integration fully operational and production-ready</strong>
+- <strong>Implemented Redis TTL-based caching</strong> for performance optimization
+- <strong>Created Elasticsearch search/filter services</strong> with filters and queries
+- <strong>Built Qdrant vector operations</strong> for similarity search and metadata filtering
+- <strong>Integrated multiple database technologies</strong> in a single Spring Boot application
+- <strong>Created comprehensive Level 1 database testing suite</strong> covering all requirements</p>
 <p><strong>All Level 1 tasks completed!</strong></p>
 </details>
 <details class="todo">
@@ -1111,12 +1120,19 @@
 -  User retrieval by ID, email, and custom queries
 -  User statistics and analytics
 -  Password verification and change functionality
--  Admin and regular user role management</p>
+-  Admin and regular user role management
+-  Redis TTL-based caching operations
+-  Elasticsearch search/filter operations
+-  Qdrant vector insert/search operations</p>
 <p><strong>Testing Results:</strong>
 -  All 5/5 database tests passing (100% success rate)
 -  User creation, retrieval, statistics working correctly
 -  Password verification and admin roles functioning
--  Database integration fully operational and production-ready</p>
+-  Database integration fully operational and production-ready
+-  Redis caching operations tested and verified
+-  Elasticsearch search/filter functionality confirmed
+-  Qdrant vector operations successfully implemented
+-  Multi-database integration fully operational</p>
 </details>
 <hr />
 <h2 id="personal-notes">Personal Notes<a class="headerlink" href="#personal-notes" title="Permanent link">&para;</a></h2>
@@ -1156,6 +1172,37 @@
 <span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Key Learning:</strong> The combination of Spring Data JPA, PostgreSQL, and proper entity design creates a robust, scalable database layer that integrates seamlessly with Spring Boot applications.</p>
+</details>
+<details class="info">
+<summary>Note #2: Level 1 – Multi-Database Integration (18-10-2025)</summary>
+<p>To complete <strong>Level 1: Fundamentals</strong>, I implemented:</p>
+<p><strong>1. Redis TTL-based Caching</strong>
+<div class="highlight"><pre><span></span><code><span class="nd">@Service</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CacheService</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setWithTTL</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ttlSeconds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">Duration</span><span class="p">.</span><span class="na">ofSeconds</span><span class="p">(</span><span class="n">ttlSeconds</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>2. Elasticsearch Search/Filter Operations</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nf">searchUsersWithFilters</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="w"> </span><span class="n">isActive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">BoolQueryBuilder</span><span class="w"> </span><span class="n">boolQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QueryBuilders</span><span class="p">.</span><span class="na">boolQuery</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">email</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">boolQuery</span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">QueryBuilders</span><span class="p">.</span><span class="na">termQuery</span><span class="p">(</span><span class="s">&quot;email.keyword&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Filters are cached and faster for exact matches</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>3. Qdrant Vector Operations</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">insertVector</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">pointId</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vector</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">PointStruct</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PointStruct</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">PointId</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">().</span><span class="na">setUuid</span><span class="p">(</span><span class="n">pointId</span><span class="p">).</span><span class="na">build</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setVectors</span><span class="p">(</span><span class="n">Vectors</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">().</span><span class="na">setVector</span><span class="p">(</span><span class="n">Vector</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">().</span><span class="na">addAllData</span><span class="p">(</span><span class="n">vector</span><span class="p">).</span><span class="na">build</span><span class="p">()).</span><span class="na">build</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="na">putAllPayload</span><span class="p">(</span><span class="n">qdrantPayload</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Key Learning:</strong> Multi-database integration requires understanding each technology's strengths: PostgreSQL for ACID transactions, Redis for fast caching, Elasticsearch for full-text search, and Qdrant for vector similarity search.</p>
 </details>
 
 
