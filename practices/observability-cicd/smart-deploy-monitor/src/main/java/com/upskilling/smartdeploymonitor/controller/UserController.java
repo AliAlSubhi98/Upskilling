@@ -3,6 +3,18 @@ package com.upskilling.smartdeploymonitor.controller;
 import com.upskilling.smartdeploymonitor.entity.User;
 import com.upskilling.smartdeploymonitor.entity.UserRole;
 import com.upskilling.smartdeploymonitor.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +29,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/users")
+@Tag(name = "User Management", description = "APIs for managing users in the Smart Deploy Monitor system")
 public class UserController {
     
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -31,8 +44,46 @@ public class UserController {
     /**
      * Create a new user
      */
+    @Operation(
+        summary = "Create a new user",
+        description = "Creates a new user account with the provided information. The user will be assigned the USER role by default."
+    )
+    @ApiResponses(value = {
+        @ApiResponse(
+            responseCode = "201",
+            description = "User created successfully",
+            content = @Content(
+                mediaType = "application/json",
+                schema = @Schema(implementation = Map.class),
+                examples = @ExampleObject(
+                    value = "{\"success\": true, \"message\": \"User created successfully\", \"user\": {\"id\": \"uuid\", \"email\": \"john@example.com\", \"firstName\": \"John\", \"lastName\": \"Doe\", \"role\": \"USER\"}}"
+                )
+            )
+        ),
+        @ApiResponse(
+            responseCode = "400",
+            description = "Bad request - Invalid input or user already exists",
+            content = @Content(
+                mediaType = "application/json",
+                schema = @Schema(implementation = Map.class),
+                examples = @ExampleObject(
+                    value = "{\"success\": false, \"message\": \"User with email already exists\"}"
+                )
+            )
+        ),
+        @ApiResponse(
+            responseCode = "500",
+            description = "Internal server error",
+            content = @Content(
+                mediaType = "application/json",
+                schema = @Schema(implementation = Map.class)
+            )
+        )
+    })
     @PostMapping
-    public ResponseEntity<Map<String, Object>> createUser(@RequestBody CreateUserRequest request) {
+    public ResponseEntity<Map<String, Object>> createUser(
+            @Parameter(description = "User creation request", required = true)
+            @Valid @RequestBody CreateUserRequest request) {
         try {
             logger.info("Creating new user with email: {}", request.getEmail());
             
@@ -97,6 +148,31 @@ public class UserController {
     /**
      * Get all users
      */
+    @Operation(
+        summary = "Get all users",
+        description = "Retrieves a list of all users in the system with their basic information."
+    )
+    @ApiResponses(value = {
+        @ApiResponse(
+            responseCode = "200",
+            description = "Users retrieved successfully",
+            content = @Content(
+                mediaType = "application/json",
+                schema = @Schema(implementation = Map.class),
+                examples = @ExampleObject(
+                    value = "{\"success\": true, \"count\": 2, \"users\": [{\"id\": \"uuid\", \"email\": \"john@example.com\", \"firstName\": \"John\", \"lastName\": \"Doe\", \"role\": \"USER\"}]}"
+                )
+            )
+        ),
+        @ApiResponse(
+            responseCode = "500",
+            description = "Internal server error",
+            content = @Content(
+                mediaType = "application/json",
+                schema = @Schema(implementation = Map.class)
+            )
+        )
+    })
     @GetMapping
     public ResponseEntity<Map<String, Object>> getAllUsers() {
         logger.info("Fetching all users");
@@ -393,10 +469,24 @@ public class UserController {
     }
     
     // Request DTOs
+    @Schema(description = "Request to create a new user")
     public static class CreateUserRequest {
+        @Schema(description = "User email address", example = "john.doe@example.com", required = true)
+        @NotBlank(message = "Email is required")
+        @Email(message = "Email must be valid")
         private String email;
+        
+        @Schema(description = "User password", example = "securePassword123", required = true, minLength = 6)
+        @NotBlank(message = "Password is required")
+        @Size(min = 6, message = "Password must be at least 6 characters")
         private String password;
+        
+        @Schema(description = "User first name", example = "John", required = true)
+        @NotBlank(message = "First name is required")
         private String firstName;
+        
+        @Schema(description = "User last name", example = "Doe", required = true)
+        @NotBlank(message = "Last name is required")
         private String lastName;
         
         // Getters and setters
