@@ -67,8 +67,8 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     /**
      * Custom query to find users created in the last N days
      */
-    @Query("SELECT u FROM User u WHERE u.createdAt >= CURRENT_DATE - :days")
-    List<User> findUsersCreatedInLastDays(@Param("days") int days);
+    @Query("SELECT u FROM User u WHERE u.createdAt >= :startDate")
+    List<User> findUsersCreatedInLastDays(@Param("startDate") java.time.LocalDateTime startDate);
     
     /**
      * Custom query to find users by email domain
