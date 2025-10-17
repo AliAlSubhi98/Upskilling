@@ -43,7 +43,7 @@ nav:
     - Databases: topics/Databases.md
     - System Design: topics/System-Design.md
     - Security: topics/Security.md
-    - API: topics/API.md
+    - API Design: topics/API-Design.md
     - Authentication & Authorization: topics/Auth.md
     - Testing: topics/Testing.md
   - Deployment Guide: topics/Deployment.md
