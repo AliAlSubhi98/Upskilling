@@ -10,9 +10,34 @@
 - **Competencies:** Task Breakdown, Prioritization, Time Tracking, Status Updates
 - **Tools:** Jira, Trello, GitHub Issues, Kanban Boards, Eisenhower Matrix, Pomodoro
 - **Checklist:**
-  - [ ] Break down a user story into smaller actionable tasks
-  - [ ] Use Eisenhower Matrix to prioritize urgent vs. important tasks
-  - [ ] Track time spent on development tasks
+  - [x] Break down a user story into smaller actionable tasks
+  - [x] Use Eisenhower Matrix to prioritize urgent vs. important tasks
+  - [x] Track time spent on development tasks
+
+### Progress
+**Completed:** Smart Deploy Monitor V2 Project Management Practice
+
+**What I Learned:**
+- **Task Breakdown**: Broke down a complex project into 5 manageable tasks with clear dependencies
+- **Eisenhower Matrix**: Categorized tasks by urgency and importance (Urgent/Important, Important/Not Urgent, etc.)
+- **Story Points**: Estimated tasks using story points (1-8 scale) for sprint planning
+- **Time Tracking**: Used Pomodoro technique (25-minute focused sessions) for productivity
+- **GitHub Issues**: Created issue templates for bugs and features with proper labeling
+- **Sprint Planning**: Planned a 2-week sprint with 17 story points capacity
+
+**Resources Used:**
+- GitHub Issues documentation
+- Pomodoro technique guides
+- Agile project management principles
+- ChatGPT for task breakdown examples
+
+**How I Applied This Knowledge:**
+- Created a complete project plan for Smart Deploy Monitor V2
+- Implemented task tracking with status updates and time logging
+- Used Eisenhower Matrix to prioritize database setup over documentation
+- Set up GitHub Issues with proper templates and labels
+- Tracked daily progress with Pomodoro sessions
+- Planned realistic sprint capacity (20 points) with buffer
 
 ## Level 2: Sprint Planning & Task Complexity
 - **Competencies:** Estimations, Task Assignment, Workload Balancing, Team Collaboration
