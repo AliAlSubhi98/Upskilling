@@ -640,18 +640,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#level-2-schema-design" class="md-nav__link">
     <span class="md-ellipsis">
-      Resources
+      Level 2: Schema Design
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#progress" class="md-nav__link">
+  <a href="#level-3-advanced-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Progress
+      Level 3: Advanced Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-operational-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 4: Operational Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-5-distributed-dbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 5: Distributed DBs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
     </span>
   </a>
   
@@ -864,18 +891,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#level-2-schema-design" class="md-nav__link">
     <span class="md-ellipsis">
-      Resources
+      Level 2: Schema Design
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#progress" class="md-nav__link">
+  <a href="#level-3-advanced-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Progress
+      Level 3: Advanced Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-operational-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 4: Operational Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-5-distributed-dbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 5: Distributed DBs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
     </span>
   </a>
   
@@ -932,6 +986,46 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Insert/search vectors in Qdrant</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use Redis for TTL-based caching</li>
 </ul>
+<h2 id="level-2-schema-design">Level 2: Schema Design<a class="headerlink" href="#level-2-schema-design" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li><strong>Competencies:</strong> Normalization, indexing, analyzers, Redis eviction, Qdrant collection config</li>
+<li><strong>Tools:</strong> B-tree/GiST/GIN, EXPLAIN ANALYZE, Elastic mappings, Redis data types, Qdrant token filters</li>
+<li><strong>Checklist:</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Normalize SQL tables and create optimal indexes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Create analyzers in Elastic for multi-language support</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tune Redis eviction policy</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Define Qdrant collection schema with metadata fields</li>
+</ul>
+<h2 id="level-3-advanced-usage">Level 3: Advanced Usage<a class="headerlink" href="#level-3-advanced-usage" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li><strong>Competencies:</strong> SQL functions, CTEs, triggers, Elastic aggregations/scripts, Redis rate limits, Qdrant optimization</li>
+<li><strong>Tools:</strong> PL/pgSQL, T-SQL, Elastic Painless scripts, Redis Streams/Lua, Qdrant payload indexing</li>
+<li><strong>Checklist:</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use SQL functions and triggers to automate logic</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Aggregate and bucket results in Elastic</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Implement Redis-based rate limiting</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Optimize Qdrant collection with multiple segments and query filters</li>
+</ul>
+<h2 id="level-4-operational-architecture">Level 4: Operational Architecture<a class="headerlink" href="#level-4-operational-architecture" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li><strong>Competencies:</strong> Replica design, shard tuning, cache patterns, Qdrant payloads</li>
+<li><strong>Tools:</strong> PgBouncer, AlwaysOn Ags, Redis caching layers, Qdrant indexed payloads</li>
+<li><strong>Checklist:</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Route SQL reads to replicas</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tune Elastic shard counts and replicas</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Implement Redis caching for different workloads</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Filter and score with Qdrant payloads</li>
+</ul>
+<h2 id="level-5-distributed-dbs">Level 5: Distributed DBs<a class="headerlink" href="#level-5-distributed-dbs" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li><strong>Competencies:</strong> Geo-distribution, failover, hybrid search, alerting</li>
+<li><strong>Tools:</strong> CockroachDB, Cassandra, Redis Sentinel, Prometheus + Grafana, Elastic + Qdrant</li>
+<li><strong>Checklist:</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Deploy CockroachDB for geo-distributed SQL</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Handle key eviction and latency in Redis cluster</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Implement hybrid search (vector + keyword)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Set alerts on DB metrics and failover</li>
+</ul>
 <hr />
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
@@ -943,7 +1037,6 @@
 <li><a href="https://chat.openai.com/">ChatGPT for code examples and troubleshooting</a></li>
 </ul>
 <hr />
-<h2 id="progress">Progress<a class="headerlink" href="#progress" title="Permanent link">&para;</a></h2>
 <details class="success">
 <summary>Level 1: Fundamentals</summary>
 <p><strong>Status:</strong> Completed<br />
