@@ -10,10 +10,38 @@
 - **Competencies:** SQL basics, Redis commands, Elasticsearch DSL, Qdrant insert/query
 - **Tools:** PostgreSQL, MS SQL, Oracle, Redis, Elasticsearch, Qdrant
 - **Checklist:**
-  - [ ] Perform CRUD in SQL
+  - [x] Perform CRUD in SQL
   - [ ] Search/filter with Elastic filters vs queries
   - [ ] Insert/search vectors in Qdrant
   - [ ] Use Redis for TTL-based caching
+
+### Progress
+**Completed:** Smart Deploy Monitor Database Integration
+
+**What I Learned:**
+- **Spring Data JPA**: Object-relational mapping with JPA annotations and repositories
+- **PostgreSQL Integration**: Database setup, connection configuration, and schema management
+- **Entity Design**: Created User entity with UUID primary keys, audit fields, and relationships
+- **Repository Pattern**: Implemented UserRepository with custom query methods and Spring Data JPA
+- **Service Layer**: Built UserService with business logic, password encryption, and user management
+- **REST API Development**: Created comprehensive UserController with CRUD operations
+- **Password Security**: Implemented BCrypt password encryption for secure user authentication
+- **Database Testing**: Created automated testing scripts for database operations
+
+**Resources Used:**
+- Spring Data JPA documentation
+- PostgreSQL official documentation
+- Spring Boot database configuration guides
+- BCrypt password encryption tutorials
+- ChatGPT for code examples and troubleshooting
+
+**How I Applied This Knowledge:**
+- Integrated PostgreSQL database into existing Spring Boot application
+- Created complete user management system with secure password handling
+- Implemented comprehensive REST API for user operations
+- Added Docker Compose setup for easy database deployment
+- Created automated testing scripts for database functionality
+- Documented complete database setup and usage guide
 
 ## Level 2: Schema Design
 - **Competencies:** Normalization, indexing, analyzers, Redis eviction, Qdrant collection config
