@@ -6,5 +6,6 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/MonitoringService.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/entity/User.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/repository/UserRepository.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/OpenApiConfig.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/SystemController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/UserController.java
