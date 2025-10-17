@@ -10,9 +10,32 @@
 - **Competencies:** Log Analysis, Metrics Collection, Understanding Alerts
 - **Tools:** Log Files, Syslog, journalctl, top, htop
 - **Checklist:**
-  - [ ] Collect logs from a running application using journalctl or tail -f
-  - [ ] Use htop or top to monitor real-time system performance
-  - [ ] Configure basic alerts for server uptime
+  - [x] Collect logs from a running application using journalctl or tail -f
+  - [x] Use htop or top to monitor real-time system performance
+  - [x] Configure basic alerts for server uptime
+
+### Progress
+**Completed:** Smart Deploy Monitor Application with Advanced Observability
+
+**What I Learned:**
+- **Spring Boot Actuator**: Built-in monitoring endpoints for health checks, metrics, and application info
+- **Micrometer**: Java metrics library for collecting application metrics (Counters, Timers, Gauges)
+- **Structured Logging**: Implemented SLF4J with Logback for consistent log formatting
+- **Custom Metrics**: Created custom metrics for request counting, response times, and system monitoring
+- **Prometheus Integration**: Exposed metrics in Prometheus format for monitoring systems
+- **Scheduled Monitoring**: Used Spring's @Scheduled to collect system metrics every 30 seconds
+
+**Resources Used:**
+- Spring Boot Actuator documentation
+- Micrometer documentation
+- ChatGPT for code examples and troubleshooting
+- Maven for dependency management
+
+**How I Applied This Knowledge:**
+- Built a complete Spring Boot application with observability features
+- Implemented custom metrics collection using Micrometer
+- Created multiple monitoring endpoints for different types of system information
+- Added unit tests to ensure monitoring functionality works correctly
 
 ## Level 2: Advanced Logging & Metrics Collection
 - **Competencies:** Centralized Logging, Structured Logs, Metrics Dashboards
