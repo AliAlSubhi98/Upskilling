@@ -35,9 +35,9 @@
     **Tools Used:** PostgreSQL, Spring Data JPA, Docker Compose, BCrypt  
     **Evidence:**  
     - [Smart Deploy Monitor Database](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
-    - **Database Testing Results** (Completed 17-10-2024): All 5/5 database tests passing (100% success rate)
-    - **User Management System** (Completed 17-10-2024): Complete CRUD operations with secure password handling
-    - **Database Integration** (Completed 17-10-2024): PostgreSQL fully operational with Spring Boot
+    - **Database Testing Results** (Completed 18-10-2025): All 5/5 database tests passing (100% success rate)
+    - **User Management System** (Completed 18-10-2025): Complete CRUD operations with secure password handling
+    - **Database Integration** (Completed 18-10-2025): PostgreSQL fully operational with Spring Boot
     
     **What I Learned:**
     - **Spring Data JPA**: Object-relational mapping with JPA annotations and repositories
@@ -116,7 +116,7 @@
 
 ## Personal Notes
 
-??? info "Note #1: Database Integration Implementation (17-10-2024)"
+??? info "Note #1: Database Integration Implementation (18-10-2025)"
     To achieve **Level 1: Fundamentals**, I implemented:
 
     **1. PostgreSQL Database Setup**
