@@ -1,5 +1,15 @@
 com/upskilling/smartdeploymonitor/controller/SystemController.class
+com/upskilling/smartdeploymonitor/controller/UserController$VerifyPasswordRequest.class
 com/upskilling/smartdeploymonitor/controller/DemoController.class
 com/upskilling/smartdeploymonitor/service/MonitoringService.class
-com/upskilling/smartdeploymonitor/controller/MetricsController.class
+com/upskilling/smartdeploymonitor/entity/User.class
 com/upskilling/smartdeploymonitor/SmartDeployMonitorApplication.class
+com/upskilling/smartdeploymonitor/service/UserService.class
+com/upskilling/smartdeploymonitor/controller/MetricsController.class
+com/upskilling/smartdeploymonitor/repository/UserRepository.class
+com/upskilling/smartdeploymonitor/controller/UserController$ChangePasswordRequest.class
+com/upskilling/smartdeploymonitor/service/UserService$UserStatistics.class
+com/upskilling/smartdeploymonitor/controller/UserController$UpdateUserRequest.class
+com/upskilling/smartdeploymonitor/controller/UserController.class
+com/upskilling/smartdeploymonitor/entity/UserRole.class
+com/upskilling/smartdeploymonitor/controller/UserController$CreateUserRequest.class

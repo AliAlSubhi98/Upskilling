@@ -4,6 +4,28 @@ server:
 spring:
   application:
     name: smart-deploy-monitor
+  
+  # Database Configuration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smart_deploy_monitor
+    username: postgres
+    password: Root@123
+    driver-class-name: org.postgresql.Driver
+  
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: create-drop  # Create tables automatically for development
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    open-in-view: false
+  
+  # Flyway Configuration (disabled for now)
+  flyway:
+    enabled: false
 
 management:
   endpoints:
