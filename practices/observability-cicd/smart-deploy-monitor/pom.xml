@@ -99,8 +99,8 @@
         <!-- Qdrant client for vector operations -->
         <dependency>
             <groupId>io.qdrant</groupId>
-            <artifactId>qdrant-client</artifactId>
-            <version>1.7.0</version>
+            <artifactId>client</artifactId>
+            <version>1.14.0</version>
         </dependency>
     </dependencies>
     

@@ -1174,3 +1174,681 @@ org.postgresql.util.PSQLException: ERROR: relation "users" does not exist
 2025-10-18 02:55:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3180s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 14
 2025-10-18 02:56:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3240s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 38
 2025-10-18 02:57:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3300s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 02:58:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3360s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 31
+2025-10-18 02:59:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3420s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 37
+2025-10-18 03:00:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3480s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-18 03:01:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3540s, Memory: 59.34/104.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-18 03:02:03 [http-nio-8080-exec-6] INFO  c.u.s.controller.UserController - Fetching all users
+2025-10-18 03:02:08 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:02:12 [http-nio-8080-exec-10] INFO  c.u.s.controller.UserController - Fetching user statistics
+2025-10-18 03:02:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3600s, Memory: 67.11/104.00MB, CPU Cores: 8, Requests: 0, Connections: 32
+2025-10-18 03:03:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3660s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-18 03:04:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3720s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-18 03:05:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3780s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:06:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3840s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 49
+2025-10-18 03:07:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3900s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-18 03:08:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3960s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 7
+2025-10-18 03:09:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4020s, Memory: 67.21/104.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 03:10:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4080s, Memory: 67.21/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:11:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4140s, Memory: 67.32/104.00MB, CPU Cores: 8, Requests: 0, Connections: 33
+2025-10-18 03:12:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4200s, Memory: 67.39/104.00MB, CPU Cores: 8, Requests: 0, Connections: 36
+2025-10-18 03:13:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4260s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 03:14:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4320s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-18 03:15:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4380s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 27
+2025-10-18 03:16:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4440s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-18 03:17:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4500s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-18 03:18:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4560s, Memory: 67.67/104.00MB, CPU Cores: 8, Requests: 0, Connections: 22
+2025-10-18 03:19:15 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.upskilling.smartdeploymonitor.controller.UserController.createUser(com.upskilling.smartdeploymonitor.controller.UserController$CreateUserRequest) with 2 errors: [Field error in object 'createUserRequest' on field 'firstName': rejected value [null]; codes [NotBlank.createUserRequest.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] [Field error in object 'createUserRequest' on field 'lastName': rejected value [null]; codes [NotBlank.createUserRequest.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.lastName,lastName]; arguments []; default message [lastName]]; default message [Last name is required]] ]
+2025-10-18 03:19:15 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: all]
+2025-10-18 03:19:15 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:19:16 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:19:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4620s, Memory: 67.77/104.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-18 03:20:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4680s, Memory: 67.77/104.00MB, CPU Cores: 8, Requests: 0, Connections: 12
+2025-10-18 03:21:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4741s, Memory: 67.77/104.00MB, CPU Cores: 8, Requests: 0, Connections: 36
+2025-10-18 03:22:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4800s, Memory: 67.91/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:23:09 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:23:21 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: all]
+2025-10-18 03:23:27 [http-nio-8080-exec-2] INFO  c.u.s.controller.UserController - Fetching all users
+2025-10-18 03:23:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4860s, Memory: 68.41/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:23:31 [http-nio-8080-exec-3] INFO  c.u.s.controller.UserController - Fetching user statistics
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 03:24:25 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 46971 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 03:24:25 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 03:24:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 03:24:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2025-10-18 03:24:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 03:24:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 03:24:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 03:24:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 03:24:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 866 ms
+2025-10-18 03:24:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 03:24:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 03:24:26 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 03:24:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 03:24:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 03:24:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2133b712
+2025-10-18 03:24:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 03:24:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 03:24:27 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 03:24:27 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 03:24:27 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 03:24:27 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:24:27 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 03:24:28 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 03:24:28 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 03:24:28 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:24:28 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 03:24:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 03:24:28 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 2.96 seconds (process running for 3.116)
+2025-10-18 03:24:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 67.29/87.00MB, CPU Cores: 8, Requests: 0, Connections: 18
+2025-10-18 03:25:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 72.29/87.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-18 03:25:54 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 03:25:54 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:25:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:25:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 03:25:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 03:26:07 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 47450 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 03:26:07 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 03:26:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 03:26:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2025-10-18 03:26:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 03:26:08 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 03:26:08 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 03:26:08 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 03:26:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 991 ms
+2025-10-18 03:26:08 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 03:26:08 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 03:26:08 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 03:26:08 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 03:26:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 03:26:08 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60b553f
+2025-10-18 03:26:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 03:26:08 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 03:26:08 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 03:26:08 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 03:26:08 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 03:26:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:26:09 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 03:26:09 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 03:26:09 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 03:26:09 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:26:09 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 03:26:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 03:26:09 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 3.051 seconds (process running for 3.234)
+2025-10-18 03:26:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 64.16/92.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-18 03:26:27 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-18 03:26:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-18 03:26:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2025-10-18 03:26:39 [http-nio-8080-exec-2] INFO  c.u.s.controller.UserController - Fetching all users
+2025-10-18 03:26:54 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.upskilling.smartdeploymonitor.controller.UserController.createUser(com.upskilling.smartdeploymonitor.controller.UserController$CreateUserRequest) with 2 errors: [Field error in object 'createUserRequest' on field 'firstName': rejected value [null]; codes [NotBlank.createUserRequest.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] [Field error in object 'createUserRequest' on field 'lastName': rejected value [null]; codes [NotBlank.createUserRequest.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.lastName,lastName]; arguments []; default message [lastName]]; default message [Last name is required]] ]
+2025-10-18 03:26:54 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: all]
+2025-10-18 03:26:54 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:26:56 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:27:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 58.42/92.00MB, CPU Cores: 8, Requests: 0, Connections: 6
+2025-10-18 03:28:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 120s, Memory: 58.42/92.00MB, CPU Cores: 8, Requests: 0, Connections: 29
+2025-10-18 03:29:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 180s, Memory: 58.42/92.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-18 03:29:23 [http-nio-8080-exec-4] INFO  c.u.s.controller.UserController - Fetching all users
+2025-10-18 03:30:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 240s, Memory: 58.70/92.00MB, CPU Cores: 8, Requests: 0, Connections: 6
+2025-10-18 03:30:17 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-10-18 03:31:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 300s, Memory: 59.49/92.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-18 03:32:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 360s, Memory: 59.49/92.00MB, CPU Cores: 8, Requests: 0, Connections: 35
+2025-10-18 03:33:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 420s, Memory: 59.62/92.00MB, CPU Cores: 8, Requests: 0, Connections: 16
+2025-10-18 03:34:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 480s, Memory: 59.62/92.00MB, CPU Cores: 8, Requests: 0, Connections: 29
+2025-10-18 03:35:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 540s, Memory: 59.62/92.00MB, CPU Cores: 8, Requests: 0, Connections: 41
+2025-10-18 03:36:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 600s, Memory: 59.76/92.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 03:37:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 660s, Memory: 59.76/92.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-18 03:38:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 720s, Memory: 60.34/92.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-18 03:39:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 780s, Memory: 60.43/92.00MB, CPU Cores: 8, Requests: 0, Connections: 12
+2025-10-18 03:40:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 840s, Memory: 60.51/92.00MB, CPU Cores: 8, Requests: 0, Connections: 26
+2025-10-18 03:41:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 900s, Memory: 60.65/92.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-18 03:42:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 960s, Memory: 60.65/92.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-18 03:43:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1020s, Memory: 60.65/92.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-18 03:43:42 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 03:43:42 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:43:42 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:43:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 03:43:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 03:44:14 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 53194 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 03:44:14 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 03:44:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 03:44:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 03:44:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interface.
+2025-10-18 03:44:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 03:44:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 03:44:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 03:44:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-10-18 03:44:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 03:44:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 03:44:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 03:44:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 03:44:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1107 ms
+2025-10-18 03:44:15 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 03:44:15 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 03:44:15 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 03:44:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 03:44:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 03:44:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69ac5752
+2025-10-18 03:44:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 03:44:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 03:44:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 03:44:17 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 03:44:17 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 03:44:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:44:17 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 03:44:17 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseController': Unsatisfied dependency expressed through field 'redisService': Error creating bean with name 'redisService': Unsatisfied dependency expressed through field 'redisTemplate': No qualifying bean of type 'org.springframework.data.redis.core.RedisTemplate<java.lang.String, java.lang.Object>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-10-18 03:44:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:44:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 03:44:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 03:44:17 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-10-18 03:44:17 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-18 03:44:17 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisTemplate in com.upskilling.smartdeploymonitor.service.RedisService required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+2025-10-18 03:45:23 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 54455 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 03:45:23 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 03:45:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 03:45:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 03:45:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interface.
+2025-10-18 03:45:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 03:45:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 03:45:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 03:45:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-10-18 03:45:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 03:45:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 03:45:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 03:45:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 03:45:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1074 ms
+2025-10-18 03:45:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 03:45:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 03:45:24 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 03:45:25 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 03:45:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 03:45:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39ac8c0c
+2025-10-18 03:45:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 03:45:25 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 03:45:25 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 03:45:25 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 03:45:25 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 03:45:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:45:25 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 03:45:26 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 03:45:26 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 03:45:26 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:45:26 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 03:45:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 03:45:26 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 3.521 seconds (process running for 3.718)
+2025-10-18 03:45:26 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 68.23/95.00MB, CPU Cores: 8, Requests: 0, Connections: 15
+2025-10-18 03:46:26 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 72.97/95.00MB, CPU Cores: 8, Requests: 0, Connections: 38
+2025-10-18 03:47:16 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 03:47:16 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:47:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:47:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 03:47:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 03:49:44 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 56885 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 03:49:44 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 03:49:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 03:49:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 03:49:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2025-10-18 03:49:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 03:49:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 03:49:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 03:49:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-10-18 03:49:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 03:49:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 03:49:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 03:49:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 03:49:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 965 ms
+2025-10-18 03:49:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 03:49:46 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 03:49:46 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 03:49:46 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 03:49:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 03:49:46 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39ac8c0c
+2025-10-18 03:49:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 03:49:46 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 03:49:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 03:49:46 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 03:49:46 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 03:49:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:49:47 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 03:49:47 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 03:49:47 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 03:49:47 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:49:47 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 03:49:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 03:49:48 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 3.311 seconds (process running for 3.49)
+2025-10-18 03:49:48 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 65.18/100.00MB, CPU Cores: 8, Requests: 0, Connections: 17
+2025-10-18 03:50:13 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 03:50:13 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:50:13 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 03:50:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 03:50:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 04:01:22 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 59841 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 04:01:22 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Elasticsearch repository interfaces.
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 04:01:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-10-18 04:01:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 04:01:23 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 04:01:23 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 04:01:23 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 04:01:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1545 ms
+2025-10-18 04:01:23 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 04:01:23 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 04:01:23 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 04:01:24 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 04:01:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 04:01:24 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2553dcc0
+2025-10-18 04:01:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 04:01:24 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 04:01:25 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 04:01:25 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 04:01:25 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 04:01:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:01:25 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 04:01:26 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 04:01:26 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 04:01:26 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:01:26 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 04:01:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 04:01:27 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 5.579 seconds (process running for 5.766)
+2025-10-18 04:01:27 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1s, Memory: 54.20/98.00MB, CPU Cores: 8, Requests: 0, Connections: 42
+2025-10-18 04:02:03 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-18 04:02:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-18 04:02:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 26 ms
+2025-10-18 04:02:03 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-10-18 04:02:21 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-10-18 04:02:27 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 61s, Memory: 66.14/98.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 04:02:29 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 04:02:29 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:02:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:02:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 04:02:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 04:04:09 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 62048 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 04:04:09 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Elasticsearch repository interfaces.
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 04:04:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-10-18 04:04:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 04:04:10 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 04:04:10 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 04:04:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 04:04:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1034 ms
+2025-10-18 04:04:10 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 04:04:10 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 04:04:10 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 04:04:11 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 04:04:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 04:04:11 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4070c4ff
+2025-10-18 04:04:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 04:04:11 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 04:04:11 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 04:04:11 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 04:04:11 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 04:04:11 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:04:11 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 04:04:12 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 04:04:12 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 04:04:12 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:04:12 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 04:04:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 04:04:13 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 3.688 seconds (process running for 3.871)
+2025-10-18 04:04:13 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 86.23/118.00MB, CPU Cores: 8, Requests: 0, Connections: 31
+2025-10-18 04:04:52 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 04:04:52 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:04:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:04:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 04:04:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 04:05:50 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 64367 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 04:05:50 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Elasticsearch repository interfaces.
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 04:05:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-10-18 04:05:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 04:05:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 04:05:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 04:05:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 04:05:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1190 ms
+2025-10-18 04:05:51 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 04:05:51 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 04:05:51 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 04:05:51 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 04:05:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 04:05:51 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2553dcc0
+2025-10-18 04:05:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 04:05:51 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 04:05:52 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 04:05:52 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 04:05:52 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 04:05:52 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:05:52 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 04:05:52 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 04:05:53 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 04:05:53 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:05:53 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 04:05:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 04:05:53 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 3.831 seconds (process running for 4.008)
+2025-10-18 04:05:53 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 72.00/118.00MB, CPU Cores: 8, Requests: 0, Connections: 44
+2025-10-18 04:06:06 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 04:06:06 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:06:06 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:06:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 04:06:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 04:06:52 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 65283 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 04:06:52 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Elasticsearch repository interfaces.
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interface.
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 04:06:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-10-18 04:06:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 04:06:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 04:06:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 04:06:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 04:06:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1031 ms
+2025-10-18 04:06:53 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 04:06:53 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 04:06:53 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 04:06:54 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 04:06:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 04:06:54 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2553dcc0
+2025-10-18 04:06:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 04:06:54 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 04:06:54 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 04:06:54 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 04:06:54 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 04:06:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:06:54 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 04:06:55 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 04:06:55 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 04:06:55 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:06:55 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 04:06:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 04:06:56 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 3.662 seconds (process running for 3.834)
+2025-10-18 04:06:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 81.98/118.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-18 04:07:09 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-18 04:07:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-18 04:07:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-10-18 04:07:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 78.92/118.00MB, CPU Cores: 8, Requests: 0, Connections: 7
+2025-10-18 04:08:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 120s, Memory: 79.17/118.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-18 04:09:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 180s, Memory: 79.17/118.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-18 04:10:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 240s, Memory: 79.17/118.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-18 04:11:04 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-10-18 04:11:23 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.upskilling.smartdeploymonitor.controller.UserController.createUser(com.upskilling.smartdeploymonitor.controller.UserController$CreateUserRequest) with 2 errors: [Field error in object 'createUserRequest' on field 'firstName': rejected value [null]; codes [NotBlank.createUserRequest.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] [Field error in object 'createUserRequest' on field 'lastName': rejected value [null]; codes [NotBlank.createUserRequest.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.lastName,lastName]; arguments []; default message [lastName]]; default message [Last name is required]] ]
+2025-10-18 04:11:23 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: all]
+2025-10-18 04:11:23 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 04:11:24 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 04:11:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 300s, Memory: 99.08/118.00MB, CPU Cores: 8, Requests: 0, Connections: 34
+2025-10-18 04:12:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 360s, Memory: 99.08/118.00MB, CPU Cores: 8, Requests: 0, Connections: 8
+2025-10-18 04:13:56 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 420s, Memory: 99.08/118.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-18 04:14:06 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 04:14:06 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:14:06 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:14:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 04:14:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 04:14:12 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 67277 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 04:14:12 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Elasticsearch repository interfaces.
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 04:14:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-10-18 04:14:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 04:14:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 04:14:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 04:14:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 04:14:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1119 ms
+2025-10-18 04:14:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 04:14:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 04:14:13 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 04:14:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 04:14:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 04:14:14 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c683cf5
+2025-10-18 04:14:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 04:14:14 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 04:14:15 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 04:14:15 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 04:14:15 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 04:14:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:14:15 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 04:14:16 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 04:14:16 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 04:14:16 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:14:16 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 04:14:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 04:14:16 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 5.165 seconds (process running for 5.399)
+2025-10-18 04:14:16 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 86.69/118.00MB, CPU Cores: 8, Requests: 0, Connections: 21
+2025-10-18 04:14:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-18 04:14:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-18 04:14:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2025-10-18 04:15:17 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 99.89/118.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-18 04:16:17 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 120s, Memory: 100.01/118.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-18 04:17:16 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 180s, Memory: 100.01/118.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-18 04:18:17 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 240s, Memory: 100.02/118.00MB, CPU Cores: 8, Requests: 0, Connections: 31
+2025-10-18 04:19:17 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 300s, Memory: 100.02/118.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-18 04:20:17 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 360s, Memory: 100.02/118.00MB, CPU Cores: 8, Requests: 0, Connections: 42
+2025-10-18 04:21:17 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 420s, Memory: 100.02/118.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-18 04:22:17 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 480s, Memory: 100.02/118.00MB, CPU Cores: 8, Requests: 0, Connections: 10
+2025-10-18 04:22:26 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 04:22:26 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:22:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:22:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 04:22:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 04:22:34 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 69136 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 04:22:34 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Elasticsearch repository interfaces.
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 04:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-10-18 04:22:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 04:22:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 04:22:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 04:22:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 04:22:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1342 ms
+2025-10-18 04:22:35 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 04:22:35 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 04:22:35 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 04:22:35 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 04:22:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 04:22:35 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4070c4ff
+2025-10-18 04:22:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 04:22:35 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 04:22:36 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 04:22:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 04:22:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 04:22:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:22:36 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 04:22:37 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseController': Unsatisfied dependency expressed through field 'qdrantService': Error creating bean with name 'qdrantService': Unsatisfied dependency expressed through field 'restTemplate': No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-10-18 04:22:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:22:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 04:22:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-18 04:22:37 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-10-18 04:22:37 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-18 04:22:37 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in com.upskilling.smartdeploymonitor.service.QdrantService required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2025-10-18 04:23:25 [main] INFO  c.u.s.SmartDeployMonitorApplication - Starting SmartDeployMonitorApplication using Java 23 with PID 69525 (/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/target/classes started by alialsubhi in /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor)
+2025-10-18 04:23:25 [main] INFO  c.u.s.SmartDeployMonitorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Elasticsearch repository interfaces.
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.upskilling.smartdeploymonitor.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-10-18 04:23:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-10-18 04:23:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-10-18 04:23:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-18 04:23:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-18 04:23:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-18 04:23:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 948 ms
+2025-10-18 04:23:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-18 04:23:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-18 04:23:26 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-18 04:23:26 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-18 04:23:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-18 04:23:26 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6b52a40
+2025-10-18 04:23:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-18 04:23:26 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-18 04:23:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-18 04:23:26 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-10-18 04:23:26 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-10-18 04:23:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 04:23:27 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-18 04:23:27 [main] INFO  c.u.s.service.MonitoringService - Monitoring service initialized with custom metrics
+2025-10-18 04:23:27 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path '/actuator'
+2025-10-18 04:23:28 [main] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-10-18 04:23:28 [main] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2025-10-18 04:23:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-10-18 04:23:28 [main] INFO  c.u.s.SmartDeployMonitorApplication - Started SmartDeployMonitorApplication in 3.554 seconds (process running for 3.725)
+2025-10-18 04:23:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 0s, Memory: 75.00/107.00MB, CPU Cores: 8, Requests: 0, Connections: 21
+2025-10-18 04:23:46 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-18 04:23:46 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-18 04:23:46 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2025-10-18 04:24:09 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.upskilling.smartdeploymonitor.controller.UserController.createUser(com.upskilling.smartdeploymonitor.controller.UserController$CreateUserRequest) with 2 errors: [Field error in object 'createUserRequest' on field 'lastName': rejected value [null]; codes [NotBlank.createUserRequest.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.lastName,lastName]; arguments []; default message [lastName]]; default message [Last name is required]] [Field error in object 'createUserRequest' on field 'firstName': rejected value [null]; codes [NotBlank.createUserRequest.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] ]
+2025-10-18 04:24:09 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: all]
+2025-10-18 04:24:09 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 04:24:10 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 04:24:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 60s, Memory: 64.36/107.00MB, CPU Cores: 8, Requests: 0, Connections: 27
+2025-10-18 04:25:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 120s, Memory: 64.46/107.00MB, CPU Cores: 8, Requests: 0, Connections: 17
+2025-10-18 04:26:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 180s, Memory: 64.75/107.00MB, CPU Cores: 8, Requests: 0, Connections: 45
+2025-10-18 04:26:46 [http-nio-8080-exec-6] INFO  c.u.s.controller.UserController - Creating new user with email: test@example.com
+2025-10-18 04:26:46 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - Creating new user with email: test@example.com
+2025-10-18 04:26:46 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - User created successfully with ID: d2a0ec30-c1e4-4743-a583-df8b95304e87
+2025-10-18 04:27:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 240s, Memory: 74.28/107.00MB, CPU Cores: 8, Requests: 0, Connections: 39
+2025-10-18 04:28:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 300s, Memory: 74.28/107.00MB, CPU Cores: 8, Requests: 0, Connections: 37
+2025-10-18 04:28:33 [http-nio-8080-exec-6] INFO  c.u.s.controller.UserController - Creating new user with email: testuser@example.com
+2025-10-18 04:28:33 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - Creating new user with email: testuser@example.com
+2025-10-18 04:28:33 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - User created successfully with ID: f06dbea1-bc47-46bd-9f46-d454ee9bc47e
+2025-10-18 04:28:33 [http-nio-8080-exec-8] INFO  c.u.s.controller.UserController - Fetching all users
+2025-10-18 04:28:33 [http-nio-8080-exec-10] INFO  c.u.s.controller.UserController - Fetching user statistics
+2025-10-18 04:29:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 360s, Memory: 80.10/107.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-18 04:30:24 [http-nio-8080-exec-8] INFO  c.u.s.controller.UserController - Creating new user with email: testuser@example.com
+2025-10-18 04:30:24 [http-nio-8080-exec-8] INFO  c.u.s.service.UserService - Creating new user with email: testuser@example.com
+2025-10-18 04:30:24 [http-nio-8080-exec-8] ERROR c.u.s.controller.UserController - Error creating user: User with email testuser@example.com already exists
+2025-10-18 04:30:24 [http-nio-8080-exec-9] INFO  c.u.s.controller.UserController - Fetching all users
+2025-10-18 04:30:24 [http-nio-8080-exec-1] INFO  c.u.s.controller.UserController - Fetching user statistics
+2025-10-18 04:30:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 420s, Memory: 81.19/107.00MB, CPU Cores: 8, Requests: 0, Connections: 26
+2025-10-18 04:30:54 [http-nio-8080-exec-5] INFO  c.u.s.controller.UserController - Creating new user with email: testuser1760747454@example.com
+2025-10-18 04:30:54 [http-nio-8080-exec-5] INFO  c.u.s.service.UserService - Creating new user with email: testuser1760747454@example.com
+2025-10-18 04:30:54 [http-nio-8080-exec-5] INFO  c.u.s.service.UserService - User created successfully with ID: 0e8aeeee-d6dc-4c47-b1c6-80137e12e836
+2025-10-18 04:30:54 [http-nio-8080-exec-7] INFO  c.u.s.controller.UserController - Fetching all users
+2025-10-18 04:30:54 [http-nio-8080-exec-9] INFO  c.u.s.controller.UserController - Fetching user statistics
+2025-10-18 04:31:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 480s, Memory: 84.13/107.00MB, CPU Cores: 8, Requests: 0, Connections: 24
+2025-10-18 04:32:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 540s, Memory: 84.24/107.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-18 04:33:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 600s, Memory: 84.31/107.00MB, CPU Cores: 8, Requests: 0, Connections: 8
+2025-10-18 04:34:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 660s, Memory: 84.38/107.00MB, CPU Cores: 8, Requests: 0, Connections: 46
+2025-10-18 04:35:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 720s, Memory: 84.38/107.00MB, CPU Cores: 8, Requests: 0, Connections: 16
+2025-10-18 04:36:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 780s, Memory: 84.38/107.00MB, CPU Cores: 8, Requests: 0, Connections: 46
