@@ -239,3 +239,125 @@ Hibernate:
 2025-10-18 02:55:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3180s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 14
 2025-10-18 02:56:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3240s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 38
 2025-10-18 02:57:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3300s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 02:58:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3360s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 31
+2025-10-18 02:59:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3420s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 37
+2025-10-18 03:00:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3480s, Memory: 58.56/104.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-18 03:01:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3540s, Memory: 59.34/104.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-18 03:02:03 [http-nio-8080-exec-6] INFO  c.u.s.controller.UserController - Fetching all users
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2025-10-18 03:02:08 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:02:12 [http-nio-8080-exec-10] INFO  c.u.s.controller.UserController - Fetching user statistics
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.is_active
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+2025-10-18 03:02:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3600s, Memory: 67.11/104.00MB, CPU Cores: 8, Requests: 0, Connections: 32
+2025-10-18 03:03:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3660s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-18 03:04:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3720s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-18 03:05:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3780s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:06:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3840s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 49
+2025-10-18 03:07:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3900s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-18 03:08:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 3960s, Memory: 67.18/104.00MB, CPU Cores: 8, Requests: 0, Connections: 7
+2025-10-18 03:09:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4020s, Memory: 67.21/104.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 03:10:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4080s, Memory: 67.21/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:11:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4140s, Memory: 67.32/104.00MB, CPU Cores: 8, Requests: 0, Connections: 33
+2025-10-18 03:12:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4200s, Memory: 67.39/104.00MB, CPU Cores: 8, Requests: 0, Connections: 36
+2025-10-18 03:13:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4260s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 03:14:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4320s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-18 03:15:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4380s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 27
+2025-10-18 03:16:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4440s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-18 03:17:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4500s, Memory: 67.45/104.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-18 03:18:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4560s, Memory: 67.67/104.00MB, CPU Cores: 8, Requests: 0, Connections: 22
+2025-10-18 03:19:15 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.upskilling.smartdeploymonitor.controller.UserController.createUser(com.upskilling.smartdeploymonitor.controller.UserController$CreateUserRequest) with 2 errors: [Field error in object 'createUserRequest' on field 'firstName': rejected value [null]; codes [NotBlank.createUserRequest.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] [Field error in object 'createUserRequest' on field 'lastName': rejected value [null]; codes [NotBlank.createUserRequest.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUserRequest.lastName,lastName]; arguments []; default message [lastName]]; default message [Last name is required]] ]
+2025-10-18 03:19:15 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: all]
+2025-10-18 03:19:15 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:19:16 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:19:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4620s, Memory: 67.77/104.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-18 03:20:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4680s, Memory: 67.77/104.00MB, CPU Cores: 8, Requests: 0, Connections: 12
+2025-10-18 03:21:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4741s, Memory: 67.77/104.00MB, CPU Cores: 8, Requests: 0, Connections: 36
+2025-10-18 03:22:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4800s, Memory: 67.91/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:23:09 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: stats]
+2025-10-18 03:23:21 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: all]
+2025-10-18 03:23:27 [http-nio-8080-exec-2] INFO  c.u.s.controller.UserController - Fetching all users
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at 
+    from
+        users u1_0
+2025-10-18 03:23:30 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4860s, Memory: 68.41/104.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-18 03:23:31 [http-nio-8080-exec-3] INFO  c.u.s.controller.UserController - Fetching user statistics
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.is_active
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists users cascade
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 03:23:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

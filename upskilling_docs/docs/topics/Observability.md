@@ -36,6 +36,7 @@
 - Implemented custom metrics collection using Micrometer
 - Created multiple monitoring endpoints for different types of system information
 - Added unit tests to ensure monitoring functionality works correctly
+- Integrated with CI/CD pipeline for automated testing and deployment
 
 ## Level 2: Advanced Logging & Metrics Collection
 - **Competencies:** Centralized Logging, Structured Logs, Metrics Dashboards
