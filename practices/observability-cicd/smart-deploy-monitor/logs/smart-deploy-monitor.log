@@ -1852,3 +1852,34 @@ Consider defining a bean of type 'org.springframework.web.client.RestTemplate' i
 2025-10-18 04:34:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 660s, Memory: 84.38/107.00MB, CPU Cores: 8, Requests: 0, Connections: 46
 2025-10-18 04:35:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 720s, Memory: 84.38/107.00MB, CPU Cores: 8, Requests: 0, Connections: 16
 2025-10-18 04:36:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 780s, Memory: 84.38/107.00MB, CPU Cores: 8, Requests: 0, Connections: 46
+2025-10-18 04:37:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 840s, Memory: 84.49/107.00MB, CPU Cores: 8, Requests: 0, Connections: 35
+2025-10-18 04:38:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 900s, Memory: 84.56/107.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 04:39:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 960s, Memory: 84.56/107.00MB, CPU Cores: 8, Requests: 0, Connections: 11
+2025-10-18 04:40:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1020s, Memory: 84.67/107.00MB, CPU Cores: 8, Requests: 0, Connections: 27
+2025-10-18 04:41:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1080s, Memory: 84.67/107.00MB, CPU Cores: 8, Requests: 0, Connections: 17
+2025-10-18 04:42:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1140s, Memory: 84.74/107.00MB, CPU Cores: 8, Requests: 0, Connections: 17
+2025-10-18 04:43:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1200s, Memory: 85.04/107.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 04:44:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1260s, Memory: 85.04/107.00MB, CPU Cores: 8, Requests: 0, Connections: 32
+2025-10-18 04:45:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1320s, Memory: 85.13/107.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-18 04:46:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1380s, Memory: 85.19/107.00MB, CPU Cores: 8, Requests: 0, Connections: 46
+2025-10-18 04:47:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1440s, Memory: 85.26/107.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-18 04:48:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1500s, Memory: 85.56/107.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-18 04:49:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1560s, Memory: 85.73/107.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-18 04:50:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1620s, Memory: 85.73/107.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-18 04:51:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1680s, Memory: 85.73/107.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-18 04:52:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1740s, Memory: 85.79/107.00MB, CPU Cores: 8, Requests: 0, Connections: 17
+2025-10-18 04:53:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1800s, Memory: 88.81/107.00MB, CPU Cores: 8, Requests: 0, Connections: 34
+2025-10-18 04:54:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1860s, Memory: 88.81/107.00MB, CPU Cores: 8, Requests: 0, Connections: 10
+2025-10-18 04:55:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1920s, Memory: 88.87/107.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-18 04:56:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1980s, Memory: 88.93/107.00MB, CPU Cores: 8, Requests: 0, Connections: 6
+2025-10-18 04:57:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 2040s, Memory: 88.99/107.00MB, CPU Cores: 8, Requests: 0, Connections: 49
+2025-10-18 04:58:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 2100s, Memory: 88.99/107.00MB, CPU Cores: 8, Requests: 0, Connections: 21
+2025-10-18 04:59:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 2160s, Memory: 88.99/107.00MB, CPU Cores: 8, Requests: 0, Connections: 10
+2025-10-18 05:00:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 2220s, Memory: 89.06/107.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-18 05:01:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 2280s, Memory: 89.24/107.00MB, CPU Cores: 8, Requests: 0, Connections: 8
+2025-10-18 05:02:28 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 2340s, Memory: 89.56/107.00MB, CPU Cores: 8, Requests: 0, Connections: 44
+2025-10-18 05:02:47 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-18 05:02:47 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-18 05:02:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-18 05:02:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-18 05:02:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
