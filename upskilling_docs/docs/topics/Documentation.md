@@ -10,9 +10,9 @@
 - **Competencies:** Writing README files, basic Markdown, documenting code usage
 - **Tools:** Markdown, GitHub README, Google Docs
 - **Checklist:**
-  - [ ] Write a clear project README
-  - [ ] Document code usage and examples
-  - [ ] Use basic Markdown formatting
+  - [x] Write a clear project README
+  - [x] Document code usage and examples
+  - [x] Use basic Markdown formatting
 
 ## Level 2: Structured Docs & Standards
 - **Competencies:** API docs, docstrings, templates, style guides
@@ -57,10 +57,38 @@
 
 ## Progress & Evidence
 
-??? note "Level 1: Basic Documentation"
-    **Status:** Planned  
-    **Focus:** READMEs, basic technical writing  
-    **Next Task:** Write comprehensive README for a project
+??? success "Level 1: Documentation Basics (18-10-2025)"
+    **Status:** Completed  
+    **Focus:** READMEs, basic technical writing, Markdown formatting  
+    **Evidence:**  
+    - [Upskilling Documentation Site](https://AliAlSubhi98.github.io/Upskilling/)
+    - [Smart Deploy Monitor Project](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
+    - **Comprehensive README Files** (Completed 18-10-2025): Created detailed README files for all projects
+    - **MkDocs Documentation** (Completed 18-10-2025): Built complete documentation site with navigation
+    - **Markdown Proficiency** (Completed 18-10-2025): Professional formatting and structure
+    
+    **What I Learned:**
+    - **README Best Practices**: Clear project descriptions, setup instructions, usage examples
+    - **Markdown Mastery**: Headers, lists, code blocks, tables, links, and formatting
+    - **Documentation Structure**: Logical organization and navigation
+    - **Technical Writing**: Clear, concise, and user-friendly documentation
+    - **MkDocs Integration**: Static site generation and GitHub Pages deployment
+    - **Version Control**: Documentation as code with Git integration
+    
+    **Applied Knowledge:**
+    - Created comprehensive README files for all projects with setup and usage instructions
+    - Built professional MkDocs documentation site with proper navigation
+    - Implemented consistent documentation standards across all projects
+    - Used advanced Markdown features for professional presentation
+    - Integrated documentation with CI/CD for automated deployment
+    
+    **Resources Used:**
+    - MkDocs documentation and Material theme
+    - GitHub Pages for hosting
+    - Markdown best practices and formatting
+    - Technical writing principles
+    
+    **Key Achievement:** Successfully created and maintained comprehensive documentation for multiple projects, demonstrating professional documentation skills and technical writing proficiency.
 
 ??? note "Level 2: Structured Documentation"
     **Status:** Planned  
