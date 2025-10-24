@@ -979,20 +979,20 @@
 <h2 id="level-1-basic-security">Level 1: Basic Security<a class="headerlink" href="#level-1-basic-security" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li><strong>Competencies:</strong> Understand and apply essential security practices to reduce obvious risks.</li>
-<li><strong>Tools:</strong> Let's Encrypt, bcrypt, <code>.env</code> files, basic linters</li>
+<li><strong>Tools:</strong> Spring Security, BCrypt, HTTPS, Input Validation, Environment Variables</li>
 <li><strong>Checklist:</strong></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> HTTPS enabled (with valid TLS cert)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Input validation (e.g., using basic html.EscapeString, etc.)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Secure password storage (e.g., bcrypt)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No secrets or credentials in code/repos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> HTTPS enabled (with valid TLS cert)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Input validation using Spring Boot validation annotations</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Secure password storage using BCrypt</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> No secrets or credentials in code/repos</li>
 </ul>
 <h2 id="level-2-secure-development-practices">Level 2: Secure Development Practices<a class="headerlink" href="#level-2-secure-development-practices" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li><strong>Competencies:</strong> Develop with security in mind and address common OWASP risks.</li>
-<li><strong>Tools:</strong> Go’s security best practices, CSRF, ZAP, Snyk, Dependabot, HashiCorp Vault</li>
+<li><strong>Tools:</strong> Spring Security, OWASP ZAP, Snyk, Dependabot, JWT, CORS</li>
 <li><strong>Checklist:</strong></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Role-based access control (RBAC)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Role-based access control (RBAC) with Spring Security</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Rate limiting / brute-force protection</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Secrets management system in place (e.g., Vault or SSM)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Dependency vulnerability scanning</li>
@@ -1038,11 +1038,56 @@
 </ul>
 <hr />
 <h2 id="progress-evidence">Progress &amp; Evidence<a class="headerlink" href="#progress-evidence" title="Permanent link">&para;</a></h2>
-<details class="note">
-<summary>Level 1: Basic Security Practices</summary>
-<p><strong>Status:</strong> Planned<br />
-<strong>Focus:</strong> Authentication, authorization, input validation<br />
-<strong>Next Task:</strong> Implement basic security practices in a sample application</p>
+<details class="success">
+<summary>Level 1: Basic Security (18-10-2025)</summary>
+<p><strong>Status:</strong> Completed<br />
+<strong>Focus:</strong> Spring Security, authentication, input validation, secure password storage<br />
+<strong>Evidence:</strong><br />
+- <a href="https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor">Smart Deploy Monitor Security Implementation</a>
+- <strong>Spring Security Integration</strong> (Completed 18-10-2025): Implemented authentication and authorization
+- <strong>BCrypt Password Encryption</strong> (Completed 18-10-2025): Secure password storage with BCrypt
+- <strong>Input Validation</strong> (Completed 18-10-2025): Jakarta Bean Validation for request validation
+- <strong>Environment Security</strong> (Completed 18-10-2025): No secrets in code, proper configuration management</p>
+<p><strong>What I Learned:</strong>
+- <strong>Spring Security</strong>: Authentication and authorization framework for Spring Boot applications
+- <strong>BCrypt Password Hashing</strong>: Secure password storage with salt and hashing
+- <strong>Input Validation</strong>: Jakarta Bean Validation annotations for request validation
+- <strong>Security Configuration</strong>: Proper security configuration and best practices
+- <strong>Environment Variables</strong>: Secure configuration management without hardcoded secrets
+- <strong>HTTPS Configuration</strong>: SSL/TLS configuration for secure communication</p>
+<p><strong>Applied Knowledge:</strong>
+- Implemented BCryptPasswordEncoder for secure password storage
+- Added input validation using @Valid, @NotBlank, @Email annotations
+- Configured Spring Security for authentication and authorization
+- Used environment variables for sensitive configuration
+- Implemented proper error handling for security-related issues
+- Applied security best practices throughout the application</p>
+<p><strong>Code Examples:</strong>
+<div class="highlight"><pre><span></span><code><span class="nd">@Configuration</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SecurityConfig</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Bean</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">BCryptPasswordEncoder</span><span class="w"> </span><span class="nf">passwordEncoder</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BCryptPasswordEncoder</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@RestController</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserController</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;/api/users&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="nd">@Valid</span><span class="w"> </span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">UserDTO</span><span class="w"> </span><span class="n">userDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Input validation automatically applied</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">hashedPassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">passwordEncoder</span><span class="p">.</span><span class="na">encode</span><span class="p">(</span><span class="n">userDTO</span><span class="p">.</span><span class="na">getPassword</span><span class="p">());</span>
+<span class="w">        </span><span class="c1">// Secure password storage</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Resources Used:</strong>
+- Spring Security documentation and best practices
+- BCrypt password hashing implementation
+- Jakarta Bean Validation for input validation
+- Spring Boot security configuration
+- OWASP security guidelines</p>
+<p><strong>Key Achievement:</strong> Successfully implemented comprehensive security measures in Spring Boot application including authentication, authorization, secure password storage, and input validation, demonstrating professional security practices.</p>
 </details>
 <details class="note">
 <summary>Level 2: Secure Development</summary>

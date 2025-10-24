@@ -992,10 +992,10 @@
 <li>Resource estimation</li>
 <li>Vertical vs. horizontal scaling</li>
 <li><strong>Checklist:</strong></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Design a URL shortener service</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Design a notification system</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Implement a rate limiter</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Map out data flow diagrams for existing services</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Design a URL shortener service</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Design a notification system</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Implement a rate limiter</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Map out data flow diagrams for existing services</li>
 </ul>
 <h2 id="level-2-architecture-patterns-styles">Level 2: Architecture Patterns &amp; Styles<a class="headerlink" href="#level-2-architecture-patterns-styles" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -1101,11 +1101,72 @@
 </ul>
 <hr />
 <h2 id="progress-evidence">Progress &amp; Evidence<a class="headerlink" href="#progress-evidence" title="Permanent link">&para;</a></h2>
-<details class="note">
-<summary>Level 1: Basic Architecture</summary>
-<p><strong>Status:</strong> Planned<br />
-<strong>Focus:</strong> Monolith vs microservices, load balancing, caching<br />
-<strong>Next Task:</strong> Design a simple web application architecture</p>
+<details class="success">
+<summary>Level 1: System Design Fundamentals (18-10-2025)</summary>
+<p><strong>Status:</strong> Completed<br />
+<strong>Focus:</strong> Architecture patterns, API design, caching, database selection, scalability<br />
+<strong>Evidence:</strong><br />
+- <a href="https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor">Smart Deploy Monitor System Architecture</a>
+- <strong>Multi-Database Architecture</strong> (Completed 18-10-2025): PostgreSQL, Redis, Elasticsearch, Qdrant integration
+- <strong>RESTful API Design</strong> (Completed 18-10-2025): OpenAPI/Swagger documentation with proper HTTP methods
+- <strong>Caching Strategy</strong> (Completed 18-10-2025): Redis TTL-based caching for performance optimization
+- <strong>Microservices Patterns</strong> (Completed 18-10-2025): Service layer architecture with dependency injection</p>
+<p><strong>What I Learned:</strong>
+- <strong>Architecture Patterns</strong>: Layered architecture with Controller-Service-Repository pattern
+- <strong>API Design</strong>: RESTful principles with proper HTTP methods and status codes
+- <strong>Database Selection</strong>: Right database for right use case (PostgreSQL, Redis, Elasticsearch, Qdrant)
+- <strong>Caching Strategy</strong>: TTL-based caching with Redis for performance optimization
+- <strong>Scalability Patterns</strong>: Horizontal scaling considerations and load balancing
+- <strong>System Integration</strong>: Multi-service architecture with proper separation of concerns</p>
+<p><strong>Applied Knowledge:</strong>
+- Designed multi-database architecture for different data types and access patterns
+- Implemented RESTful API with OpenAPI documentation and validation
+- Applied caching strategies for frequently accessed data
+- Used dependency injection for loose coupling and testability
+- Implemented proper error handling and response formatting
+- Applied microservices patterns within a monolithic application</p>
+<p><strong>Architecture Examples:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Layered Architecture Pattern</span>
+<span class="nd">@RestController</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserController</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Autowired</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">UserService</span><span class="w"> </span><span class="n">userService</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;/api/users&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">UserResponse</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="nd">@Valid</span><span class="w"> </span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">UserDTO</span><span class="w"> </span><span class="n">userDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">userService</span><span class="p">.</span><span class="na">createUser</span><span class="p">(</span><span class="n">userDTO</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserService</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Autowired</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">UserRepository</span><span class="w"> </span><span class="n">userRepository</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nd">@Autowired</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">RedisService</span><span class="w"> </span><span class="n">redisService</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">UserResponse</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="n">UserDTO</span><span class="w"> </span><span class="n">userDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Business logic with caching</span>
+<span class="w">        </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userRepository</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">convertToEntity</span><span class="p">(</span><span class="n">userDTO</span><span class="p">));</span>
+<span class="w">        </span><span class="n">redisService</span><span class="p">.</span><span class="na">setWithTTL</span><span class="p">(</span><span class="s">&quot;user:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="mi">3600</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">convertToResponse</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>System Design Principles Applied:</strong>
+- <strong>Single Responsibility</strong>: Each service handles one concern
+- <strong>Dependency Inversion</strong>: Depend on abstractions, not concretions
+- <strong>Open/Closed</strong>: Open for extension, closed for modification
+- <strong>Interface Segregation</strong>: Small, focused interfaces
+- <strong>DRY Principle</strong>: Don't repeat yourself</p>
+<p><strong>Resources Used:</strong>
+- Spring Boot architecture patterns and best practices
+- RESTful API design principles
+- Database selection criteria and patterns
+- Caching strategies and performance optimization
+- System design principles and scalability patterns</p>
+<p><strong>Key Achievement:</strong> Successfully designed and implemented a scalable system architecture with multi-database integration, RESTful APIs, caching strategies, and proper separation of concerns, demonstrating professional system design skills.</p>
 </details>
 <details class="note">
 <summary>Level 2: Design Patterns</summary>

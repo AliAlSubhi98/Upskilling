@@ -981,9 +981,9 @@
 <li><strong>Competencies:</strong> Install, Pull, Run, Stop Containers, Volumes, Networks, Docker Compose</li>
 <li><strong>Commands:</strong> Writing your first Dockerfile, <code>docker run</code>, <code>docker ps</code>, <code>docker stop</code>, <code>docker rm</code>, <code>docker volume</code>, <code>docker network</code>, <code>docker compose</code></li>
 <li><strong>Checklist:</strong></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Run a Docker container with a simple web app</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Bind a volume to a container to persist data</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Create a custom Docker network and connect two containers</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Run a Docker container with a simple web app</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Bind a volume to a container to persist data</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create a custom Docker network and connect two containers</li>
 </ul>
 <h2 id="level-2-advanced-docker">Level 2: Advanced Docker<a class="headerlink" href="#level-2-advanced-docker" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -1030,12 +1030,90 @@
 </ul>
 <hr />
 <h2 id="progress-evidence">Progress &amp; Evidence<a class="headerlink" href="#progress-evidence" title="Permanent link">&para;</a></h2>
-<details class="note">
-<summary>Level 1: Docker Basics</summary>
-<p><strong>Status:</strong> Planned<br />
-<strong>Focus:</strong> Install, Pull, Run, Stop Containers, Volumes, Networks, Docker Compose<br />
-<strong>Commands:</strong> <code>docker run</code>, <code>docker ps</code>, <code>docker stop</code>, <code>docker rm</code>, <code>docker volume</code>, <code>docker network</code><br />
-<strong>Next Task:</strong> Run first Docker container with a simple web app</p>
+<details class="success">
+<summary>Level 1: Docker Containerization (18-10-2025)</summary>
+<p><strong>Status:</strong> Completed<br />
+<strong>Focus:</strong> Multi-stage Docker builds, Docker Compose orchestration, container networking, volume persistence<br />
+<strong>Evidence:</strong><br />
+- <a href="https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor">Smart Deploy Monitor Containerized Application</a>
+- <strong>Multi-Stage Dockerfile</strong> (Completed 18-10-2025): Optimized Spring Boot container with security best practices
+- <strong>Docker Compose Orchestration</strong> (Completed 18-10-2025): Multi-service deployment with PostgreSQL, Redis, Elasticsearch, Qdrant
+- <strong>Container Networking</strong> (Completed 18-10-2025): Custom network with service discovery and health checks
+- <strong>Volume Persistence</strong> (Completed 18-10-2025): Data persistence for all database services</p>
+<p><strong>What I Learned:</strong>
+- <strong>Docker Fundamentals</strong>: Container creation, multi-stage builds, image optimization
+- <strong>Docker Compose</strong>: Multi-service orchestration, service dependencies, health checks
+- <strong>Container Networking</strong>: Custom networks, service discovery, inter-container communication
+- <strong>Volume Management</strong>: Data persistence, volume mounting, backup strategies
+- <strong>Security Best Practices</strong>: Non-root users, minimal base images, security scanning
+- <strong>Production Readiness</strong>: Health checks, logging, monitoring, graceful shutdowns</p>
+<p><strong>Applied Knowledge:</strong>
+- Created multi-stage Dockerfile for optimized Spring Boot application
+- Orchestrated 5 services (App, PostgreSQL, Redis, Elasticsearch, Qdrant) with Docker Compose
+- Implemented service discovery and health checks for all containers
+- Configured persistent volumes for database data
+- Applied security best practices with non-root user execution
+- Set up environment-based configuration for different deployment stages</p>
+<p><strong>Container Architecture Examples:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Multi-stage build for Spring Boot application</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">openjdk:17-jdk-slim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">builder</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>pom.xml<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>./mvnw<span class="w"> </span>dependency:go-offline<span class="w"> </span>-B
+<span class="k">COPY</span><span class="w"> </span>src<span class="w"> </span>src
+<span class="k">RUN</span><span class="w"> </span>./mvnw<span class="w"> </span>clean<span class="w"> </span>package<span class="w"> </span>-DskipTests
+
+<span class="c"># Production stage</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">openjdk:17-jre-slim</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">RUN</span><span class="w"> </span>groupadd<span class="w"> </span>-r<span class="w"> </span>appuser<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>useradd<span class="w"> </span>-r<span class="w"> </span>-g<span class="w"> </span>appuser<span class="w"> </span>appuser
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/app/target/smart-deploy-monitor-1.0.0.jar<span class="w"> </span>app.jar
+<span class="k">RUN</span><span class="w"> </span>chown<span class="w"> </span>appuser:appuser<span class="w"> </span>app.jar
+<span class="k">USER</span><span class="w"> </span><span class="s">appuser</span>
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
+<span class="k">HEALTHCHECK</span><span class="w"> </span>--interval<span class="o">=</span>30s<span class="w"> </span>--timeout<span class="o">=</span>3s<span class="w"> </span>--start-period<span class="o">=</span>5s<span class="w"> </span>--retries<span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>CMD<span class="w"> </span>curl<span class="w"> </span>-f<span class="w"> </span>http://localhost:8080/actuator/health<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-jar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.jar&quot;</span><span class="p">]</span>
+</code></pre></div></p>
+<p><strong>Docker Compose Services:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">postgres</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15-alpine</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smart_deploy_monitor</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres_data:/var/lib/postgresql/data</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smart-deploy-network</span>
+<span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD-SHELL&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;pg_isready</span><span class="nv"> </span><span class="s">-U</span><span class="nv"> </span><span class="s">postgres&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">  </span><span class="nt">smart-deploy-monitor</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8080:8080&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/smart_deploy_monitor</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">postgres</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smart-deploy-network</span>
+</code></pre></div></p>
+<p><strong>Container Operations Mastered:</strong>
+- <code>docker build</code> - Multi-stage image creation
+- <code>docker compose up -d</code> - Service orchestration
+- <code>docker ps</code> - Container monitoring
+- <code>docker logs</code> - Log analysis
+- <code>docker volume</code> - Data persistence
+- <code>docker network</code> - Service communication</p>
+<p><strong>Resources Used:</strong>
+- Docker official documentation and best practices
+- Spring Boot containerization guidelines
+- Multi-service architecture patterns
+- Container security and optimization techniques
+- Production deployment strategies</p>
+<p><strong>Key Achievement:</strong> Successfully containerized a complex Spring Boot application with 5 integrated services, implementing production-ready containerization with security, monitoring, and orchestration best practices.</p>
 </details>
 <details class="note">
 <summary>Level 2: Advanced Docker</summary>
