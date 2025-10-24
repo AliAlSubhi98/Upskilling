@@ -2817,3 +2817,11 @@ Caused by: java.net.ConnectException: Connection refused
 2025-10-25 03:34:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 121s, Memory: 122.58/166.00MB, CPU Cores: 8, Requests: 0, Connections: 49
 2025-10-25 03:35:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 181s, Memory: 122.60/166.00MB, CPU Cores: 8, Requests: 0, Connections: 9
 2025-10-25 03:36:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 241s, Memory: 122.63/166.00MB, CPU Cores: 8, Requests: 0, Connections: 24
+2025-10-25 03:37:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 301s, Memory: 122.66/166.00MB, CPU Cores: 8, Requests: 0, Connections: 31
+2025-10-25 03:38:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 361s, Memory: 122.69/166.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-25 03:39:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 421s, Memory: 122.71/166.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-25 03:40:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 481s, Memory: 122.74/166.00MB, CPU Cores: 8, Requests: 0, Connections: 42
+2025-10-25 03:41:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 541s, Memory: 122.76/166.00MB, CPU Cores: 8, Requests: 0, Connections: 29
+2025-10-25 03:42:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 601s, Memory: 122.76/166.00MB, CPU Cores: 8, Requests: 0, Connections: 22
+2025-10-25 03:42:53 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 479 ms
+2025-10-25 03:43:11 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 661s, Memory: 97.62/200.00MB, CPU Cores: 8, Requests: 0, Connections: 42

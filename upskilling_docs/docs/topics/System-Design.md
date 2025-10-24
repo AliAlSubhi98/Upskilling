@@ -133,11 +133,336 @@
     **Focus:** Architecture patterns, API design, caching, database selection, scalability  
     **Evidence:**  
     - [Smart Deploy Monitor System Architecture](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
-    - **Multi-Database Architecture** (Completed 18-10-2025): PostgreSQL, Redis, Elasticsearch, Qdrant integration
-    - **RESTful API Design** (Completed 18-10-2025): OpenAPI/Swagger documentation with proper HTTP methods
-    - **Caching Strategy** (Completed 18-10-2025): Redis TTL-based caching for performance optimization
-    - **Microservices Patterns** (Completed 18-10-2025): Service layer architecture with dependency injection
-    
+    - **Multi-Database Architecture** (Completed 18-10-2025): [PostgreSQL, Redis, Elasticsearch, Qdrant integration](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/docker-compose.yml)
+    - **RESTful API Design** (Completed 18-10-2025): [OpenAPI/Swagger documentation with proper HTTP methods](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/ApiDesignController.java)
+    - **Caching Strategy** (Completed 18-10-2025): [Redis TTL-based caching for performance optimization](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/resources/application.yml)
+    - **Microservices Patterns** (Completed 18-10-2025): [Service layer architecture with dependency injection](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/domain/)
+
+    **Comprehensive Implementation Evidence:**
+
+    ??? tip "Step 1: Client-Server Architecture Implementation"
+        **HealthController Implementation:**
+        - **GitHub Link**: [HealthController.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/HealthController.java)
+        ```java
+        @RestController
+        @RequestMapping("/api/health")
+        public class HealthController {
+            @GetMapping("/ping")
+            public ResponseEntity<Map<String, String>> ping() {
+                // Basic health check for load balancers
+            }
+            
+            @GetMapping("/detailed")
+            public ResponseEntity<Map<String, Object>> detailedHealth() {
+                // Comprehensive health information
+            }
+        }
+        ```
+        
+        **ClientConfig Implementation:**
+        - **GitHub Link**: [ClientConfig.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/ClientConfig.java)
+        ```java
+        @Configuration
+        public class ClientConfig {
+            @Bean("clientRestTemplate")
+            public RestTemplate clientRestTemplate() {
+                // HTTP client with timeout configuration
+                factory.setConnectTimeout(5000);
+                factory.setReadTimeout(10000);
+            }
+        }
+        ```
+
+    ??? tip "Step 2: Monolith vs Microservices Implementation"
+        **UserDomainService - Business Logic Encapsulation:**
+        - **GitHub Link**: [UserDomainService.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/domain/UserDomainService.java)
+        ```java
+        @Service
+        @Transactional
+        public class UserDomainService {
+            public Optional<User> findUserById(UUID id) {
+                return userRepository.findById(id);
+            }
+            
+            public Optional<User> performComplexUserOperation(UUID userId, boolean newStatus) {
+                // Complex business logic with inter-service communication
+            }
+        }
+        ```
+        
+        **ApiGatewayController - Centralized Routing:**
+        - **GitHub Link**: [ApiGatewayController.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/ApiGatewayController.java)
+        ```java
+        @RestController
+        @RequestMapping("/api/gateway")
+        public class ApiGatewayController {
+            @GetMapping("/users")
+            public ResponseEntity<List<User>> getAllUsers() {
+                // Route to UserDomainService
+            }
+            
+            @PostMapping("/notifications/email")
+            public ResponseEntity<Map<String, Object>> sendEmail(@RequestBody Map<String, String> request) {
+                // Route to NotificationDomainService
+            }
+        }
+        ```
+        
+        **NotificationDomainService - Domain Boundaries:**
+        - **GitHub Link**: [NotificationDomainService.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/domain/NotificationDomainService.java)
+
+    ??? tip "Step 3: Basic API Design Patterns Implementation"
+        **ApiResponse - Standardized Response Format:**
+        - **GitHub Link**: [ApiResponse.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/dto/ApiResponse.java)
+        ```java
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public class ApiResponse<T> {
+            private boolean success;
+            private String message;
+            private T data;
+            private String error;
+            
+            public static <T> ApiResponse<T> success(T data) {
+                return new ApiResponse<>(true, "Success", data);
+            }
+        }
+        ```
+        
+        **ApiDesignController - RESTful Endpoints:**
+        - **GitHub Link**: [ApiDesignController.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/ApiDesignController.java)
+        ```java
+        @RestController
+        @RequestMapping("/api/design")
+        public class ApiDesignController {
+            @GetMapping("/info")
+            public ResponseEntity<ApiResponse<Map<String, Object>>> getInfo() {
+                // GET endpoint with proper response format
+            }
+            
+            @PostMapping("/contact")
+            public ResponseEntity<ApiResponse<String>> sendContact(@Valid @RequestBody ContactRequest request) {
+                // POST endpoint with validation
+            }
+        }
+        ```
+
+    **Testing Evidence:**
+
+    ??? tip "Health Check Endpoints Testing"
+        **Basic Health Check Response:**
+        ```json
+        {
+          "service": "smart-deploy-monitor",
+          "status": "UP",
+          "timestamp": "1761348363913"
+        }
+        ```
+        
+        **Detailed Health Check Response:**
+        ```json
+        {
+          "service": "smart-deploy-monitor",
+          "version": "1.0.0",
+          "status": "UP",
+          "timestamp": 1761348368794,
+          "uptime": 1761348368794
+        }
+        ```
+
+    ??? tip "API Gateway Testing"
+        **User Management via Gateway:**
+        ```json
+        {
+          "success": true,
+          "service": "User Domain Service",
+          "count": 0,
+          "message": "Users retrieved successfully via gateway",
+          "users": []
+        }
+        ```
+        
+        **Email Notification via Gateway:**
+        ```json
+        {
+          "success": true,
+          "service": "Notification Domain Service",
+          "message": "Email notification sent successfully via gateway"
+        }
+        ```
+
+    ??? tip "API Design Patterns Testing"
+        **GET Endpoint Response:**
+        ```json
+        {
+          "success": true,
+          "message": "API information retrieved",
+          "data": {
+            "name": "Smart Deploy Monitor API",
+            "version": "1.0.0",
+            "status": "operational"
+          }
+        }
+        ```
+        
+        **POST Endpoint with Validation:**
+        ```json
+        {
+          "success": true,
+          "message": "Contact message received",
+          "data": "Message from Ali (ali@example.com): This is a test message for API design"
+        }
+        ```
+        
+        **Error Response Format:**
+        ```json
+        {
+          "success": false,
+          "error": "This is a demonstration of error handling"
+        }
+        ```
+
+    **Comprehensive Test Results:**
+    - ✅ **Health Endpoints**: All health checks responding correctly (UP, READY, ALIVE status)
+    - ✅ **API Gateway**: Successfully routing requests to domain services
+    - ✅ **Notification Services**: Email and SMS notifications working with validation
+    - ✅ **API Design**: All HTTP methods (GET, POST, PUT, DELETE) working with proper status codes
+    - ✅ **Request Validation**: Comprehensive validation with detailed error messages
+    - ✅ **Error Handling**: Consistent error response format across all endpoints
+    - ✅ **Domain Services**: Clear business logic encapsulation and service boundaries
+    - ✅ **Inter-Service Communication**: Simulated notification processing working correctly
+
+    **System Architecture Evidence:**
+
+    ??? tip "Smart Deploy Monitor System Architecture"
+        **Multi-Layer Architecture:**
+        ```
+        ┌─────────────────────────────────────────────────────────────┐
+        │                    Client Layer                             │
+        │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
+        │  │   Web UI    │  │  Mobile App  │  │   API Client│        │
+        │  └─────────────┘  └─────────────┘  └─────────────┘        │
+        └─────────────────────────────────────────────────────────────┘
+                                    │
+        ┌─────────────────────────────────────────────────────────────┐
+        │                  API Gateway Layer                         │
+        │  ┌─────────────────────────────────────────────────────────┐│
+        │  │           ApiGatewayController                          ││
+        │  │  • Centralized Routing                                 ││
+        │  │  • Service Orchestration                               ││
+        │  │  • Request/Response Transformation                     ││
+        │  └─────────────────────────────────────────────────────────┘│
+        └─────────────────────────────────────────────────────────────┘
+                                    │
+        ┌─────────────────────────────────────────────────────────────┐
+        │                 Domain Services Layer                       │
+        │  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐│
+        │  │ UserDomainService│  │NotificationDomain│  │ HealthController││
+        │  │ • User Management│  │ • Email/SMS/Push│  │ • Health Checks││
+        │  │ • Business Logic│  │ • Notifications │  │ • System Status││
+        │  └─────────────────┘  └─────────────────┘  └─────────────────┘│
+        └─────────────────────────────────────────────────────────────┘
+                                    │
+        ┌─────────────────────────────────────────────────────────────┐
+        │                  Data Access Layer                         │
+        │  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐│
+        │  │   PostgreSQL    │  │     Redis       │  │  Elasticsearch  ││
+        │  │ • User Data     │  │ • Caching       │  │ • Search/Filter ││
+        │  │ • Transactions │  │ • Sessions      │  │ • Analytics     ││
+        │  └─────────────────┘  └─────────────────┘  └─────────────────┘│
+        └─────────────────────────────────────────────────────────────┘
+        ```
+
+    **Deployment Evidence:**
+
+    ??? tip "Docker Compose Multi-Service Architecture"
+        **Services Configuration:**
+        - **GitHub Link**: [docker-compose.yml](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/docker-compose.yml)
+        ```yaml
+        services:
+          smart-deploy-monitor:
+            build: .
+            ports:
+              - "8080:8080"
+            depends_on:
+              - postgres
+              - redis
+              - elasticsearch
+              - qdrant
+              - keycloak
+          
+          postgres:
+            image: postgres:15
+            environment:
+              POSTGRES_DB: smart_deploy_monitor
+              POSTGRES_USER: admin
+              POSTGRES_PASSWORD: password
+          
+          redis:
+            image: redis:7-alpine
+            ports:
+              - "6379:6379"
+          
+          elasticsearch:
+            image: elasticsearch:8.11.0
+            environment:
+              - discovery.type=single-node
+              - xpack.security.enabled=false
+        ```
+
+    **Performance & Monitoring Evidence:**
+
+    ??? tip "System Monitoring & Observability"
+        **Health Check Endpoints:**
+        - `/api/health/ping` - Basic health check (UP/DOWN)
+        - `/api/health/detailed` - Comprehensive system information
+        - `/api/health/ready` - Readiness check for traffic acceptance
+        - `/api/health/live` - Liveness check for service monitoring
+        
+        **Monitoring Metrics:**
+        - System uptime tracking
+        - Memory usage monitoring
+        - CPU core utilization
+        - Active connections count
+        - Request processing metrics
+        
+        **Logging Evidence:**
+        ```
+        2025-10-25 03:24:02 [scheduling-1] INFO  c.u.s.service.MonitoringService - 
+        System Status - Uptime: 0s, Memory: 127.95/178.00MB, CPU Cores: 8, 
+        Requests: 0, Connections: 23
+        ```
+
+    **Security Implementation Evidence:**
+
+    ??? tip "Security Configuration & Authentication"
+        **Spring Security Configuration:**
+        - **GitHub Link**: [SecurityConfig.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/SecurityConfig.java)
+        ```java
+        @Configuration
+        @EnableWebSecurity
+        public class SecurityConfig {
+            @Bean
+            public SecurityFilterChain filterChain(HttpSecurity http) {
+                return http
+                    .csrf(AbstractHttpConfigurer::disable)
+                    .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/health/**").permitAll()
+                        .requestMatchers("/api/design/**").permitAll()
+                        .requestMatchers("/api/gateway/**").permitAll()
+                        .anyRequest().authenticated()
+                    )
+                    .build();
+            }
+        }
+        ```
+        
+        **JWT Authentication:**
+        - **GitHub Link**: [AuthService.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/AuthService.java)
+        - Token-based authentication implemented
+        - Access and refresh token support
+        - Secure password hashing with BCrypt
+        - Role-based access control (RBAC)
+
     **What I Learned:**
     - **Architecture Patterns**: Layered architecture with Controller-Service-Repository pattern
     - **API Design**: RESTful principles with proper HTTP methods and status codes
