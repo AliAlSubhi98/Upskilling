@@ -21,10 +21,10 @@
   - Resource estimation
   - Vertical vs. horizontal scaling
 - **Checklist:**
-  - [ ] Design a URL shortener service
-  - [ ] Design a notification system
-  - [ ] Implement a rate limiter
-  - [ ] Map out data flow diagrams for existing services
+  - [x] Design a URL shortener service
+  - [x] Design a notification system
+  - [x] Implement a rate limiter
+  - [x] Map out data flow diagrams for existing services
 
 ## Level 2: Architecture Patterns & Styles
 - **Competencies:**
@@ -128,10 +128,78 @@
 
 ## Progress & Evidence
 
-??? note "Level 1: Basic Architecture"
-    **Status:** Planned  
-    **Focus:** Monolith vs microservices, load balancing, caching  
-    **Next Task:** Design a simple web application architecture
+??? success "Level 1: System Design Fundamentals (18-10-2025)"
+    **Status:** Completed  
+    **Focus:** Architecture patterns, API design, caching, database selection, scalability  
+    **Evidence:**  
+    - [Smart Deploy Monitor System Architecture](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
+    - **Multi-Database Architecture** (Completed 18-10-2025): PostgreSQL, Redis, Elasticsearch, Qdrant integration
+    - **RESTful API Design** (Completed 18-10-2025): OpenAPI/Swagger documentation with proper HTTP methods
+    - **Caching Strategy** (Completed 18-10-2025): Redis TTL-based caching for performance optimization
+    - **Microservices Patterns** (Completed 18-10-2025): Service layer architecture with dependency injection
+    
+    **What I Learned:**
+    - **Architecture Patterns**: Layered architecture with Controller-Service-Repository pattern
+    - **API Design**: RESTful principles with proper HTTP methods and status codes
+    - **Database Selection**: Right database for right use case (PostgreSQL, Redis, Elasticsearch, Qdrant)
+    - **Caching Strategy**: TTL-based caching with Redis for performance optimization
+    - **Scalability Patterns**: Horizontal scaling considerations and load balancing
+    - **System Integration**: Multi-service architecture with proper separation of concerns
+    
+    **Applied Knowledge:**
+    - Designed multi-database architecture for different data types and access patterns
+    - Implemented RESTful API with OpenAPI documentation and validation
+    - Applied caching strategies for frequently accessed data
+    - Used dependency injection for loose coupling and testability
+    - Implemented proper error handling and response formatting
+    - Applied microservices patterns within a monolithic application
+    
+    **Architecture Examples:**
+    ```java
+    // Layered Architecture Pattern
+    @RestController
+    public class UserController {
+        @Autowired
+        private UserService userService;
+        
+        @PostMapping("/api/users")
+        public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserDTO userDTO) {
+            return ResponseEntity.ok(userService.createUser(userDTO));
+        }
+    }
+    
+    @Service
+    public class UserService {
+        @Autowired
+        private UserRepository userRepository;
+        
+        @Autowired
+        private RedisService redisService;
+        
+        public UserResponse createUser(UserDTO userDTO) {
+            // Business logic with caching
+            User user = userRepository.save(convertToEntity(userDTO));
+            redisService.setWithTTL("user:" + user.getId(), user, 3600);
+            return convertToResponse(user);
+        }
+    }
+    ```
+    
+    **System Design Principles Applied:**
+    - **Single Responsibility**: Each service handles one concern
+    - **Dependency Inversion**: Depend on abstractions, not concretions
+    - **Open/Closed**: Open for extension, closed for modification
+    - **Interface Segregation**: Small, focused interfaces
+    - **DRY Principle**: Don't repeat yourself
+    
+    **Resources Used:**
+    - Spring Boot architecture patterns and best practices
+    - RESTful API design principles
+    - Database selection criteria and patterns
+    - Caching strategies and performance optimization
+    - System design principles and scalability patterns
+    
+    **Key Achievement:** Successfully designed and implemented a scalable system architecture with multi-database integration, RESTful APIs, caching strategies, and proper separation of concerns, demonstrating professional system design skills.
 
 ??? note "Level 2: Design Patterns"
     **Status:** Planned  

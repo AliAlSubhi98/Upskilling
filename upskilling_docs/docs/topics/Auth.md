@@ -2,7 +2,7 @@
 
 **Goal:** Secure systems with robust, scalable, and standards-compliant authentication and authorization flows.
 
-**Current Level:** Level 1
+**Current Level:** Level 1 (Complete)
 
 ---
 
@@ -16,9 +16,9 @@
 - **Key Tools & Practices:**
   - Keycloak, HTTP/HTTPS protocols, Cookie management
 - **Checklist:**
-  - Initialize Keycloak for web apps
-  - Configure and secure Keycloak
-  - Integrate multiple social logins
+  - [x] Initialize Keycloak for web apps
+  - [x] Configure and secure Keycloak
+  - [x] Integrate multiple social logins
 
 ## Level 2: Intermediate Auth
 - **Competencies:**
@@ -86,10 +86,94 @@
 
 ## Progress & Evidence
 
-??? note "Level 1: Authentication Basics"
-    **Status:** Planned  
-    **Focus:** Auth vs AuthZ, cookies, sessions, hashing  
-    **Next Task:** Implement basic session-based authentication
+??? success "Level 1: JWT Authentication & Authorization (18-10-2025)"
+    **Status:** Completed  
+    **Focus:** JWT authentication, OAuth2 integration, RBAC, security best practices  
+    **Evidence:**  
+    - [Smart Deploy Monitor Authentication System](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
+    - **JWT Authentication** (Completed 18-10-2025): Access and refresh token implementation with Spring Security
+    - **OAuth2 Integration** (Completed 18-10-2025): Google and GitHub OAuth2 client configuration
+    - **Role-Based Access Control** (Completed 18-10-2025): USER and ADMIN roles with endpoint protection
+    - **Security Configuration** (Completed 18-10-2025): CORS, CSRF protection, and security headers
+    
+    **What I Learned:**
+    - **JWT Fundamentals**: Token generation, validation, expiration, and refresh mechanisms
+    - **Spring Security**: Authentication filters, security configuration, and user details service
+    - **OAuth2 Integration**: External authentication providers and social login flows
+    - **RBAC Implementation**: Role-based access control with method-level security
+    - **Security Best Practices**: Password hashing, token storage, and secure communication
+    - **Authentication Flows**: Registration, login, token refresh, and logout processes
+    
+    **Applied Knowledge:**
+    - Implemented JWT-based authentication with access and refresh tokens
+    - Configured Spring Security with custom authentication filters
+    - Integrated OAuth2 providers (Google, GitHub) for external authentication
+    - Applied role-based access control to protect endpoints and resources
+    - Implemented secure password hashing with BCrypt
+    - Configured CORS and security headers for production deployment
+    
+    **Authentication Architecture Examples:**
+    ```java
+    // JWT Service for token management
+    @Service
+    public class JwtService {
+        public String generateToken(UserDetails userDetails) {
+            return Jwts.builder()
+                .setSubject(userDetails.getUsername())
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + expiration))
+                .signWith(getSigningKey(), SignatureAlgorithm.HS256)
+                .compact();
+        }
+        
+        public Boolean validateToken(String token, UserDetails userDetails) {
+            final String username = extractUsername(token);
+            return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+        }
+    }
+    
+    // Security Configuration with RBAC
+    @Configuration
+    @EnableWebSecurity
+    public class SecurityConfig {
+        @Bean
+        public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+            return http
+                .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/api/auth/**").permitAll()
+                    .requestMatchers("/api/users/**").hasAnyRole("ADMIN", "USER")
+                    .requestMatchers("/api/database/**").hasRole("ADMIN")
+                    .anyRequest().authenticated()
+                )
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
+        }
+    }
+    ```
+    
+    **Authentication Endpoints Implemented:**
+    - `POST /api/auth/register` - User registration with validation
+    - `POST /api/auth/login` - User authentication with JWT tokens
+    - `POST /api/auth/refresh` - Token refresh mechanism
+    - `POST /api/auth/logout` - User logout (client-side token removal)
+    
+    **Security Features Implemented:**
+    - JWT access tokens with configurable expiration
+    - Refresh tokens for seamless authentication
+    - Role-based access control (USER, ADMIN)
+    - OAuth2 integration for external providers
+    - Password hashing with BCrypt
+    - CORS configuration for cross-origin requests
+    - Security headers and CSRF protection
+    
+    **Resources Used:**
+    - Spring Security documentation and best practices
+    - JWT.io for token debugging and validation
+    - OAuth2 specification and implementation guides
+    - OWASP authentication security guidelines
+    - Spring Boot security configuration patterns
+    
+    **Key Achievement:** Successfully implemented a comprehensive authentication and authorization system with JWT tokens, OAuth2 integration, role-based access control, and security best practices, demonstrating professional-level authentication system design.
 
 ??? note "Level 2: Session Management"
     **Status:** Planned  

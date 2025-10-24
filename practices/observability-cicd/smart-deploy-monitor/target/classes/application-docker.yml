@@ -1,0 +1,75 @@
+# Docker-specific configuration
+spring:
+  profiles:
+    active: docker
+  
+  # Database Configuration
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres:5432/smart_deploy_monitor}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:Root@123}
+    driver-class-name: org.postgresql.Driver
+  
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  
+  # Redis Configuration
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:redis}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+  
+  # Elasticsearch Configuration
+  elasticsearch:
+    rest:
+      uris: ${SPRING_ELASTICSEARCH_REST_URIS:http://elasticsearch:9200}
+      connection-timeout: 1s
+      read-timeout: 30s
+
+# Qdrant Configuration
+qdrant:
+  host: ${QDRANT_HOST:qdrant}
+  port: ${QDRANT_PORT:6333}
+
+# Management endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+
+# Logging configuration
+logging:
+  level:
+    com.upskilling.smartdeploymonitor: INFO
+    org.springframework.data.redis: DEBUG
+    org.springframework.data.elasticsearch: DEBUG
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# Application configuration
+app:
+  features:
+    advanced: true
+    monitoring: true
+    caching: true
+    search: true
+    vector: true

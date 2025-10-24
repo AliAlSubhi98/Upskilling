@@ -21,7 +21,7 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 | System Design               | Architect scalable, robust systems      | Level 1       |
 | Security                    | Build and maintain secure systems       | Level 1       |
 | API                         | Design and implement robust APIs        | Level 1 (Complete) |
-| Authentication & Authorization | Securely manage user access             | Level 1       |
+| Authentication & Authorization | Securely manage user access             | Level 1 (Complete) |
 | Testing                     | Confidently test and validate software  | Level 1 (Complete) |
 
 ---

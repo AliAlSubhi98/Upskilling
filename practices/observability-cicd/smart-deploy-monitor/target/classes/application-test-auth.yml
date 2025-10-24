@@ -1,0 +1,51 @@
+# Test profile for authentication testing without database
+spring:
+  profiles:
+    active: test-auth
+  
+  # Disable database auto-configuration
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration
+  
+  # JPA Configuration (disabled)
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+# JWT Configuration
+jwt:
+  secret: mySecretKey123456789012345678901234567890
+  expiration: 86400000
+
+# Management endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+# Logging configuration
+logging:
+  level:
+    com.upskilling.smartdeploymonitor: INFO
+    org.springframework.security: DEBUG
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Application configuration
+app:
+  features:
+    advanced: true
+    monitoring: true
+    caching: false
+    search: false
+    vector: false

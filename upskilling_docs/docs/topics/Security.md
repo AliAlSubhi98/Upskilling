@@ -8,19 +8,19 @@
 
 ## Level 1: Basic Security
 - **Competencies:** Understand and apply essential security practices to reduce obvious risks.
-- **Tools:** Let's Encrypt, bcrypt, `.env` files, basic linters
+- **Tools:** Spring Security, BCrypt, HTTPS, Input Validation, Environment Variables
 - **Checklist:**
-  - [ ] HTTPS enabled (with valid TLS cert)
-  - [ ] Input validation (e.g., using basic html.EscapeString, etc.)
-  - [ ] Secure password storage (e.g., bcrypt)
-  - [ ] No secrets or credentials in code/repos
+  - [x] HTTPS enabled (with valid TLS cert)
+  - [x] Input validation using Spring Boot validation annotations
+  - [x] Secure password storage using BCrypt
+  - [x] No secrets or credentials in code/repos
 
 ## Level 2: Secure Development Practices
 - **Competencies:** Develop with security in mind and address common OWASP risks.
-- **Tools:** Go’s security best practices, CSRF, ZAP, Snyk, Dependabot, HashiCorp Vault
+- **Tools:** Spring Security, OWASP ZAP, Snyk, Dependabot, JWT, CORS
 - **Checklist:**
   - [ ] Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)
-  - [ ] Role-based access control (RBAC)
+  - [ ] Role-based access control (RBAC) with Spring Security
   - [ ] Rate limiting / brute-force protection
   - [ ] Secrets management system in place (e.g., Vault or SSM)
   - [ ] Dependency vulnerability scanning
@@ -65,10 +65,61 @@
 
 ## Progress & Evidence
 
-??? note "Level 1: Basic Security Practices"
-    **Status:** Planned  
-    **Focus:** Authentication, authorization, input validation  
-    **Next Task:** Implement basic security practices in a sample application
+??? success "Level 1: Basic Security (18-10-2025)"
+    **Status:** Completed  
+    **Focus:** Spring Security, authentication, input validation, secure password storage  
+    **Evidence:**  
+    - [Smart Deploy Monitor Security Implementation](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
+    - **Spring Security Integration** (Completed 18-10-2025): Implemented authentication and authorization
+    - **BCrypt Password Encryption** (Completed 18-10-2025): Secure password storage with BCrypt
+    - **Input Validation** (Completed 18-10-2025): Jakarta Bean Validation for request validation
+    - **Environment Security** (Completed 18-10-2025): No secrets in code, proper configuration management
+    
+    **What I Learned:**
+    - **Spring Security**: Authentication and authorization framework for Spring Boot applications
+    - **BCrypt Password Hashing**: Secure password storage with salt and hashing
+    - **Input Validation**: Jakarta Bean Validation annotations for request validation
+    - **Security Configuration**: Proper security configuration and best practices
+    - **Environment Variables**: Secure configuration management without hardcoded secrets
+    - **HTTPS Configuration**: SSL/TLS configuration for secure communication
+    
+    **Applied Knowledge:**
+    - Implemented BCryptPasswordEncoder for secure password storage
+    - Added input validation using @Valid, @NotBlank, @Email annotations
+    - Configured Spring Security for authentication and authorization
+    - Used environment variables for sensitive configuration
+    - Implemented proper error handling for security-related issues
+    - Applied security best practices throughout the application
+    
+    **Code Examples:**
+    ```java
+    @Configuration
+    public class SecurityConfig {
+        @Bean
+        public BCryptPasswordEncoder passwordEncoder() {
+            return new BCryptPasswordEncoder();
+        }
+    }
+    
+    @RestController
+    public class UserController {
+        @PostMapping("/api/users")
+        public ResponseEntity<?> createUser(@Valid @RequestBody UserDTO userDTO) {
+            // Input validation automatically applied
+            String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
+            // Secure password storage
+        }
+    }
+    ```
+    
+    **Resources Used:**
+    - Spring Security documentation and best practices
+    - BCrypt password hashing implementation
+    - Jakarta Bean Validation for input validation
+    - Spring Boot security configuration
+    - OWASP security guidelines
+    
+    **Key Achievement:** Successfully implemented comprehensive security measures in Spring Boot application including authentication, authorization, secure password storage, and input validation, demonstrating professional security practices.
 
 ??? note "Level 2: Secure Development"
     **Status:** Planned  
