@@ -18,7 +18,7 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 | Networking                  | Understand and troubleshoot networks    | Level 1       |
 | Code + Design Patterns      | Apply proven coding/design techniques   | Level 1       |
 | Databases                   | Use and optimize modern databases       | Level 1 (Complete) |
-| System Design               | Architect scalable, robust systems      | Level 1       |
+| System Design               | Architect scalable, robust systems      | Level 1 (Complete) |
 | Security                    | Build and maintain secure systems       | Level 1       |
 | API                         | Design and implement robust APIs        | Level 1 (Complete) |
 | Authentication & Authorization | Securely manage user access             | Level 1 (Complete) |

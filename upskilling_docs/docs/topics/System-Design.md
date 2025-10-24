@@ -220,3 +220,95 @@
 ---
 
 ## Personal Notes
+
+??? info "Step 1: Client-Server Architecture (Completed 18-10-2025)"
+
+    **What I Implemented:**
+    - **HealthController**: Created comprehensive health check endpoints demonstrating client-server communication patterns
+      - `/api/health/ping` - Basic health check for load balancers
+      - `/api/health/detailed` - Comprehensive health information
+      - `/api/health/ready` - Readiness check for traffic acceptance
+      - `/api/health/live` - Liveness check for service monitoring
+    - **ClientConfig**: Implemented HTTP client configuration with proper timeout management
+      - Connection timeout configuration (5 seconds)
+      - Read timeout configuration (10 seconds)
+      - Error handling for better client-server communication
+      - RestTemplate bean configuration for dependency injection
+
+    **What I Learned:**
+    - **Health Check Patterns**: Different types of health checks serve different purposes in client-server architecture
+    - **Timeout Management**: Proper timeout configuration prevents hanging connections and improves reliability
+    - **Error Handling**: Implementing proper error handling in HTTP clients improves system resilience
+    - **RESTful Design**: Health endpoints follow RESTful principles and provide clear client-server contracts
+
+    **Applied Knowledge:**
+    - Implemented health check endpoints that clients can use for monitoring and load balancing
+    - Configured HTTP clients with appropriate timeouts for production environments
+    - Applied dependency injection patterns for client configuration
+    - Created clear API contracts for client-server communication
+
+    **Key Achievement:** Successfully implemented client-server architecture patterns with comprehensive health checks and proper HTTP client configuration, demonstrating understanding of client-server communication patterns and system monitoring requirements.
+
+??? info "Step 2: Monolith vs Microservices (Completed 18-10-2025)"
+
+    **What I Implemented:**
+    - **UserDomainService**: Created comprehensive domain service for user management
+      - Business logic encapsulation for user creation, updates, and validation
+      - Domain boundaries that could be extracted into a microservice
+      - Business validation and error handling
+    - **NotificationDomainService**: Implemented notification domain service
+      - Email, SMS, and push notification business logic
+      - Domain encapsulation for notification processing
+      - Inter-service communication simulation
+    - **ApiGatewayController**: Created centralized routing controller
+      - Centralized entry point for all domain services
+      - API Gateway pattern implementation
+      - Service orchestration and routing
+
+    **What I Learned:**
+    - **Domain Boundaries**: Clear separation of business logic into domain services
+    - **Service Encapsulation**: Each domain service encapsulates its own business logic
+    - **API Gateway Pattern**: Centralized routing and service orchestration
+    - **Monolith Evolution**: How to structure a monolith for future microservices extraction
+
+    **Applied Knowledge:**
+    - Implemented domain services with clear business boundaries
+    - Created API Gateway pattern for centralized routing
+    - Applied domain-driven design principles
+    - Demonstrated how monolith can evolve toward microservices
+
+    **Key Achievement:** Successfully implemented monolith vs microservices patterns with domain services, API Gateway routing, and clear service boundaries, demonstrating understanding of how to structure applications for future microservices evolution.
+
+??? info "Step 3: Basic API Design Patterns (Completed 18-10-2025)"
+
+    **What I Implemented:**
+    - **ApiResponse**: Created standardized response format for consistent API responses
+      - Success and error response handling
+      - Generic type support for different data types
+      - Consistent JSON structure across all endpoints
+    - **ApiDesignController**: Implemented comprehensive API design patterns
+      - GET /api/design/info: API information endpoint with proper response format
+      - POST /api/design/contact: Contact form with request validation
+      - PUT /api/design/settings/{id}: Settings update with proper HTTP status codes
+      - DELETE /api/design/data/{id}: Data deletion with confirmation
+      - Error handling demonstration with proper error responses
+    - **Request Validation**: Implemented comprehensive input validation
+      - @Valid, @NotBlank, @Email, @Size annotations
+      - Detailed error messages for validation failures
+      - Proper HTTP status codes for different error types
+
+    **What I Learned:**
+    - **API Design Principles**: Consistent response format and proper HTTP status codes
+    - **Request Validation**: Input validation with detailed error messages
+    - **RESTful Design**: Proper use of HTTP methods (GET, POST, PUT, DELETE)
+    - **Error Handling**: User-friendly error responses and proper status codes
+    - **Response Formatting**: Standardized API response structure
+
+    **Applied Knowledge:**
+    - Implemented consistent API response format across all endpoints
+    - Applied proper HTTP status codes (200, 201, 400) for different scenarios
+    - Created comprehensive request validation with detailed error messages
+    - Designed RESTful endpoints following API design best practices
+    - Implemented proper error handling with user-friendly messages
+
+    **Key Achievement:** Successfully implemented basic API design patterns with consistent response format, proper HTTP status codes, comprehensive request validation, and RESTful endpoint design, demonstrating understanding of essential API design principles and best practices.

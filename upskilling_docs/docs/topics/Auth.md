@@ -95,6 +95,10 @@
     - **OAuth2 Integration** (Completed 18-10-2025): Google and GitHub OAuth2 client configuration
     - **Role-Based Access Control** (Completed 18-10-2025): USER and ADMIN roles with endpoint protection
     - **Security Configuration** (Completed 18-10-2025): CORS, CSRF protection, and security headers
+    - **Keycloak Integration** (Completed 18-10-2025): Enterprise identity management with Keycloak server
+    - **Dual Authentication System** (Completed 18-10-2025): Both Spring Security + JWT and Keycloak authentication working
+    - **Keycloak Documentation Update** (Completed 18-10-2025): Comprehensive documentation of Keycloak implementation and dual authentication architecture
+    - **Authentication Bug Fix** (Completed 18-10-2025): Resolved double password encoding issue causing login failures
     
     **What I Learned:**
     - **JWT Fundamentals**: Token generation, validation, expiration, and refresh mechanisms
@@ -103,6 +107,10 @@
     - **RBAC Implementation**: Role-based access control with method-level security
     - **Security Best Practices**: Password hashing, token storage, and secure communication
     - **Authentication Flows**: Registration, login, token refresh, and logout processes
+    - **Keycloak Integration**: Enterprise identity management, realm configuration, and client setup
+    - **Dual Authentication**: Implementing both custom JWT and enterprise Keycloak authentication
+    - **Docker Orchestration**: Multi-service authentication with Docker Compose
+    - **Authentication Debugging**: Identifying and resolving double password encoding issues in authentication flows
     
     **Applied Knowledge:**
     - Implemented JWT-based authentication with access and refresh tokens
@@ -111,6 +119,10 @@
     - Applied role-based access control to protect endpoints and resources
     - Implemented secure password hashing with BCrypt
     - Configured CORS and security headers for production deployment
+    - Integrated Keycloak for enterprise identity management
+    - Implemented dual authentication system (Spring Security + Keycloak)
+    - Configured Docker Compose for multi-service authentication architecture
+    - Debugged and resolved authentication issues with systematic problem-solving approach
     
     **Authentication Architecture Examples:**
     ```java
@@ -149,6 +161,44 @@
                 .build();
         }
     }
+    
+    // Keycloak Integration Configuration
+    @KeycloakConfiguration
+    @EnableMethodSecurity(prePostEnabled = true)
+    @Import(KeycloakSpringBootConfigResolver.class)
+    public class KeycloakConfig extends KeycloakWebSecurityConfigurerAdapter {
+        @Autowired
+        public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+            KeycloakAuthenticationProvider keycloakAuthenticationProvider = keycloakAuthenticationProvider();
+            keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
+            auth.authenticationProvider(keycloakAuthenticationProvider);
+        }
+        
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            super.configure(http);
+            http
+                .csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/keycloak/**").permitAll()
+                .anyRequest().authenticated();
+        }
+    }
+    
+    // Keycloak Controller for testing
+    @RestController
+    @RequestMapping("/keycloak")
+    public class KeycloakController {
+        @GetMapping("/public")
+        public ResponseEntity<String> publicEndpoint() {
+            return ResponseEntity.ok("Public endpoint accessible without Keycloak authentication.");
+        }
+        
+        @GetMapping("/secured")
+        public ResponseEntity<String> securedEndpoint() {
+            return ResponseEntity.ok("Secured endpoint, accessible with Keycloak authentication.");
+        }
+    }
     ```
     
     **Authentication Endpoints Implemented:**
@@ -156,6 +206,9 @@
     - `POST /api/auth/login` - User authentication with JWT tokens
     - `POST /api/auth/refresh` - Token refresh mechanism
     - `POST /api/auth/logout` - User logout (client-side token removal)
+    - `GET /keycloak/public` - Public endpoint accessible without Keycloak authentication
+    - `GET /keycloak/secured` - Secured endpoint requiring Keycloak authentication
+    - `GET /keycloak/admin` - Admin endpoint with role-based access control
     
     **Security Features Implemented:**
     - JWT access tokens with configurable expiration
@@ -165,6 +218,10 @@
     - Password hashing with BCrypt
     - CORS configuration for cross-origin requests
     - Security headers and CSRF protection
+    - Keycloak enterprise identity management
+    - Dual authentication system (Spring Security + Keycloak)
+    - Docker Compose multi-service architecture
+    - Keycloak realm and client configuration
     
     **Resources Used:**
     - Spring Security documentation and best practices
@@ -172,8 +229,13 @@
     - OAuth2 specification and implementation guides
     - OWASP authentication security guidelines
     - Spring Boot security configuration patterns
+    - Keycloak documentation and integration guides
+    - Docker Compose multi-service orchestration
+    - Enterprise authentication patterns 
     
-    **Key Achievement:** Successfully implemented a comprehensive authentication and authorization system with JWT tokens, OAuth2 integration, role-based access control, and security best practices, demonstrating professional-level authentication system design.
+    **Authentication Fix (Completed 18-10-2025):** Resolved critical login endpoint issue where "Bad credentials" error occurred due to double password encoding during user registration. Fixed by removing redundant password encoding in AuthService.register() method, allowing UserService.createUser() to handle single encoding. This ensures proper password comparison during login authentication.
+
+    **Key Achievement:** Successfully implemented a comprehensive authentication and authorization system with JWT tokens, OAuth2 integration, role-based access control, Keycloak enterprise identity management, dual authentication architecture, and resolved critical login authentication issues, demonstrating professional-level authentication system design and debugging skills.
 
 ??? note "Level 2: Session Management"
     **Status:** Planned  

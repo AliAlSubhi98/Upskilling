@@ -7,7 +7,7 @@ spring:
   
   # Database Configuration
   datasource:
-    url: jdbc:postgresql://localhost:5433/smart_deploy_monitor
+    url: jdbc:postgresql://localhost:5432/smart_deploy_monitor
     username: postgres
     password: Root@123
     driver-class-name: org.postgresql.Driver
@@ -97,3 +97,14 @@ logging:
 qdrant:
   host: localhost
   port: 6333
+
+# Keycloak Configuration
+keycloak:
+  realm: smart-deploy-monitor
+  auth-server-url: http://localhost:8081
+  ssl-required: none
+  resource: smart-deploy-monitor-client
+  credentials:
+    secret: your-client-secret-here
+  use-resource-role-mappings: true
+  bearer-only: false
