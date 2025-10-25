@@ -1,5 +1,4 @@
 com/upskilling/smartdeploymonitor/SmartDeployMonitorApplication.class
-com/upskilling/smartdeploymonitor/config/SecurityHeadersConfig.class
 com/upskilling/smartdeploymonitor/dto/ApiResponse.class
 com/upskilling/smartdeploymonitor/controller/ApiDesignController$SettingsRequest.class
 com/upskilling/smartdeploymonitor/controller/HealthController.class
@@ -8,6 +7,7 @@ com/upskilling/smartdeploymonitor/service/ElasticsearchService.class
 com/upskilling/smartdeploymonitor/config/ClientConfig.class
 com/upskilling/smartdeploymonitor/security/SecurityEventLogger.class
 com/upskilling/smartdeploymonitor/controller/KeycloakController.class
+com/upskilling/smartdeploymonitor/security/RateLimitingFilter$RequestCounter.class
 com/upskilling/smartdeploymonitor/service/UserService$UserStatistics.class
 com/upskilling/smartdeploymonitor/service/domain/UserDomainService.class
 com/upskilling/smartdeploymonitor/controller/AuthController.class
@@ -27,8 +27,6 @@ com/upskilling/smartdeploymonitor/config/PasswordConfig.class
 com/upskilling/smartdeploymonitor/dto/AuthRequest.class
 com/upskilling/smartdeploymonitor/config/ClientConfig$ClientProperties.class
 com/upskilling/smartdeploymonitor/security/InputValidationFilter.class
-com/upskilling/smartdeploymonitor/config/RateLimitingConfig$1.class
-com/upskilling/smartdeploymonitor/config/RateLimitingConfig$RateLimitConfig.class
 com/upskilling/smartdeploymonitor/dto/RegisterRequest.class
 com/upskilling/smartdeploymonitor/service/QdrantService.class
 com/upskilling/smartdeploymonitor/controller/DatabaseController.class
@@ -37,7 +35,6 @@ com/upskilling/smartdeploymonitor/graphql/dto/UserConnection.class
 com/upskilling/smartdeploymonitor/controller/UserController.class
 com/upskilling/smartdeploymonitor/controller/UserController$CreateUserRequest.class
 com/upskilling/smartdeploymonitor/controller/ApiGatewayController.class
-com/upskilling/smartdeploymonitor/config/RateLimitingConfig.class
 com/upskilling/smartdeploymonitor/config/RedisConfig.class
 com/upskilling/smartdeploymonitor/controller/ApiDesignController.class
 com/upskilling/smartdeploymonitor/service/MonitoringService.class
@@ -45,7 +42,6 @@ com/upskilling/smartdeploymonitor/entity/User.class
 com/upskilling/smartdeploymonitor/graphql/resolver/UserMutationResolver.class
 com/upskilling/smartdeploymonitor/security/RateLimitingFilter.class
 com/upskilling/smartdeploymonitor/service/RedisService.class
-com/upskilling/smartdeploymonitor/config/SecurityHeadersConfig$1.class
 com/upskilling/smartdeploymonitor/service/UserService.class
 com/upskilling/smartdeploymonitor/repository/UserRepository.class
 com/upskilling/smartdeploymonitor/controller/UserController$ChangePasswordRequest.class

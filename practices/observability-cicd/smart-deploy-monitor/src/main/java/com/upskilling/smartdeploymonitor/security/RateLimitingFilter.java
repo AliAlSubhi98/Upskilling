@@ -12,26 +12,68 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 @Component
 public class RateLimitingFilter extends OncePerRequestFilter {
 
-    @Autowired
+    @Autowired(required = false)
     private RedisTemplate<String, String> redisTemplate;
 
+    // In-memory rate limiting as fallback
+    private final ConcurrentHashMap<String, RequestCounter> inMemoryCounters = new ConcurrentHashMap<>();
+    
     private static final int MAX_REQUESTS = 100; // requests per minute
     private static final Duration WINDOW_SIZE = Duration.ofMinutes(1);
+    
+    // Request counter for in-memory rate limiting
+    private static class RequestCounter {
+        private int count;
+        private LocalDateTime windowStart;
+        
+        public RequestCounter() {
+            this.count = 1;
+            this.windowStart = LocalDateTime.now();
+        }
+        
+        public boolean isExpired() {
+            return LocalDateTime.now().isAfter(windowStart.plus(WINDOW_SIZE));
+        }
+        
+        public void increment() {
+            this.count++;
+        }
+        
+        public int getCount() {
+            return count;
+        }
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, 
                                     FilterChain filterChain) throws ServletException, IOException {
         
         String clientIp = getClientIpAddress(request);
-        String key = "rate_limit:" + clientIp;
         
+        // Try Redis first, fallback to in-memory
+        if (redisTemplate != null) {
+            if (checkRedisRateLimit(clientIp, response)) {
+                return; // Rate limit exceeded
+            }
+        } else {
+            if (checkInMemoryRateLimit(clientIp, response)) {
+                return; // Rate limit exceeded
+            }
+        }
+        
+        filterChain.doFilter(request, response);
+    }
+    
+    private boolean checkRedisRateLimit(String clientIp, HttpServletResponse response) throws IOException {
         try {
-            // Check if Redis is available
+            String key = "rate_limit:" + clientIp;
             String currentCount = redisTemplate.opsForValue().get(key);
             
             if (currentCount == null) {
@@ -44,18 +86,42 @@ public class RateLimitingFilter extends OncePerRequestFilter {
                     response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());
                     response.setContentType("application/json");
                     response.getWriter().write("{\"error\":\"Rate limit exceeded. Try again later.\"}");
-                    return;
+                    return true;
                 } else {
                     // Increment counter
                     redisTemplate.opsForValue().increment(key);
                 }
             }
         } catch (Exception e) {
-            // If Redis is not available, allow the request to proceed
-            logger.warn("Rate limiting disabled due to Redis unavailability: " + e.getMessage());
+            logger.warn("Redis rate limiting failed, falling back to in-memory: " + e.getMessage());
+            return checkInMemoryRateLimit(clientIp, response);
+        }
+        return false;
+    }
+    
+    private boolean checkInMemoryRateLimit(String clientIp, HttpServletResponse response) throws IOException {
+        // Clean up expired counters
+        inMemoryCounters.entrySet().removeIf(entry -> entry.getValue().isExpired());
+        
+        RequestCounter counter = inMemoryCounters.computeIfAbsent(clientIp, k -> new RequestCounter());
+        
+        if (counter.isExpired()) {
+            // Reset counter for new window
+            counter = new RequestCounter();
+            inMemoryCounters.put(clientIp, counter);
+        } else {
+            counter.increment();
         }
         
-        filterChain.doFilter(request, response);
+        if (counter.getCount() > MAX_REQUESTS) {
+            // Rate limit exceeded
+            response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());
+            response.setContentType("application/json");
+            response.getWriter().write("{\"error\":\"Rate limit exceeded. Try again later.\"}");
+            return true;
+        }
+        
+        return false;
     }
 
     private String getClientIpAddress(HttpServletRequest request) {
