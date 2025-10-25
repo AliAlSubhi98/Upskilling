@@ -1,37 +1,19 @@
-# Multi-stage build for Spring Boot application
-FROM eclipse-temurin:17-jdk-alpine as builder
+# Simple Dockerfile for Spring Boot application
+FROM openjdk:17-jdk-slim
+
+# Install curl for health checks
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
 
-# Copy Maven files
-COPY pom.xml .
-COPY mvnw .
-COPY .mvn .mvn
-
-# Download dependencies (this layer will be cached if pom.xml doesn't change)
-RUN ./mvnw dependency:go-offline -B
-
-# Copy source code
-COPY src src
-
-# Build the application
-RUN ./mvnw clean package -DskipTests
-
-# Production stage
-FROM eclipse-temurin:17-jre-alpine
-
-# Set working directory
-WORKDIR /app
+# Copy the JAR file
+COPY target/smart-deploy-monitor-1.0.0.jar app.jar
 
 # Create non-root user for security
-RUN groupadd -r appuser && useradd -r -g appuser appuser
-
-# Copy the JAR file from builder stage
-COPY --from=builder /app/target/smart-deploy-monitor-1.0.0.jar app.jar
-
-# Change ownership to non-root user
-RUN chown appuser:appuser app.jar
+RUN groupadd -g 1001 appuser && \
+    useradd -r -u 1001 -g appuser appuser && \
+    chown appuser:appuser app.jar
 
 # Switch to non-root user
 USER appuser
@@ -40,7 +22,7 @@ USER appuser
 EXPOSE 8080
 
 # Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:8080/actuator/health || exit 1
 
 # Run the application

@@ -10,7 +10,7 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 | Project Management          | Understand dev project workflows        | Level 1 (Complete) |
 | Communication & Collaboration | Improve team communication skills       | Level 1       |
 | Documentation               | Write and maintain clear docs           | Level 1 (Complete) |
-| Containers & Orchestration  | Deploy/manage containers & clusters     | Level 1       |
+| Containers & Orchestration  | Deploy/manage containers & clusters     | Level 1 (Complete) |
 | Linux                       | Confident Linux user/admin              | Level 1       |
 | CI/CD                       | Automate build, test, deploy            | Level 1 (Complete) |
 | Observability               | Monitor and troubleshoot systems        | Level 1 (Complete) |

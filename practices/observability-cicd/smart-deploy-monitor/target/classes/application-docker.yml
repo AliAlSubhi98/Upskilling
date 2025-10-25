@@ -1,7 +1,5 @@
 # Docker-specific configuration
 spring:
-  profiles:
-    active: docker
   
   # Database Configuration
   datasource:
