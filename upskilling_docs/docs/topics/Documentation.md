@@ -2,7 +2,7 @@
 
 **Goal:** Write and maintain clear, effective documentation.
 
-**Current Level:** Level 1
+**Current Level:** Level 2 (In Progress)
 
 ---
 
@@ -18,9 +18,11 @@
 - **Competencies:** API docs, docstrings, templates, style guides
 - **Tools:** Sphinx, JSDoc, OpenAPI/Swagger, Confluence
 - **Checklist:**
-  - [ ] Add docstrings/comments to functions and classes
-  - [ ] Create API documentation using a standard tool
-  - [ ] Follow a documentation style guide
+  - [x] Add docstrings/comments to functions and classes
+  - [x] Create API documentation using a standard tool
+  - [x] Follow a documentation style guide
+  - [x] Create documentation templates
+  - [x] Implement code documentation standards
 
 ## Level 3: Collaborative & Living Docs
 - **Competencies:** Collaborative editing, versioned docs, changelogs, diagrams
@@ -90,9 +92,118 @@
     
     **Key Achievement:** Successfully created and maintained comprehensive documentation for multiple projects, demonstrating professional documentation skills and technical writing proficiency.
 
-??? note "Level 2: Structured Documentation"
-    **Status:** Planned  
-    **Focus:** API docs, user guides, knowledge bases
+??? success "Level 2: Structured Documentation (Completed)"
+    **Status:** Completed  
+    **Focus:** API docs, docstrings, templates, style guides  
+    **Evidence:**
+    - [Documentation Level 2 Practice](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/documentation/level-2)
+    - **Java Documentation Examples** (Completed 26-10-2025): Comprehensive JavaDoc examples with full documentation standards
+    - **API Documentation Template** (Completed 26-10-2025): Complete REST API documentation template with examples
+    - **Documentation Style Guide** (Completed 26-10-2025): Comprehensive style guide with formatting standards and best practices
+
+    ??? tip "Level 2: Structured Documentation Commands & Examples"
+        **JavaDoc Documentation:**
+        ```java
+        /**
+         * Creates a new user with the provided information.
+         * 
+         * This method validates the input data, encrypts the password using BCrypt,
+         * and persists the user to the database.
+         * 
+         * @param user The user object containing all necessary information
+         * @return User The created user with generated ID and timestamps
+         * @throws IllegalArgumentException if email is already in use
+         * @throws ValidationException if input data is invalid
+         * 
+         * @example
+         * <pre>{@code
+         * User newUser = new User();
+         * newUser.setEmail("ahmed.hassan@example.com");
+         * newUser.setPassword("securePassword123");
+         * User createdUser = userService.createUser(newUser);
+         * }</pre>
+         */
+        public User createUser(User user) {
+            // Implementation
+        }
+        ```
+        
+        **API Documentation Structure:**
+        ```markdown
+        ### GET /users
+        Retrieve a list of users with optional filtering and pagination.
+        
+        **Parameters:**
+        - `page` (optional, integer): Page number (default: 0)
+        - `size` (optional, integer): Number of items per page (default: 10)
+        - `role` (optional, string): Filter by user role
+        
+        **Response:**
+        ```json
+        {
+          "content": [
+            {
+              "id": "uuid",
+              "email": "ahmed.hassan@example.com",
+              "firstName": "أحمد",
+              "lastName": "حسن",
+              "role": "USER",
+              "isActive": true,
+              "createdAt": "2025-10-26T10:00:00Z"
+            }
+          ],
+          "pageable": {
+            "pageNumber": 0,
+            "pageSize": 10,
+            "totalElements": 100,
+            "totalPages": 10
+          }
+        }
+        ```
+        
+        **Status Codes:**
+        - `200 OK`: Successfully retrieved users
+        - `400 Bad Request`: Invalid parameters
+        - `401 Unauthorized`: Authentication required
+        ```
+        
+        **Documentation Style Guide:**
+        ```markdown
+        # Headers
+        # Level 1 Header (Page Title)
+        ## Level 2 Header (Major Sections)
+        ### Level 3 Header (Subsections)
+        
+        # Code Blocks
+        ```java
+        public class Example {
+            // Code here
+        }
+        ```
+        
+        # Tables
+        | Column 1 | Column 2 | Column 3 |
+        |----------|----------|----------|
+        | Data 1   | Data 2   | Data 3   |
+        ```
+        
+        **Documentation Templates:**
+        ```markdown
+        # API Documentation Template
+        ## Overview
+        Brief description of the API, its purpose, and main functionality.
+        
+        ## Base URL
+        ```
+        https://api.example.com/v1
+        ```
+        
+        ## Authentication
+        Describe how to authenticate with the API.
+        
+        ## Endpoints
+        [Detailed endpoint documentation with examples]
+        ```
 
 ??? note "Level 3: Advanced Documentation"
     **Status:** Planned  
