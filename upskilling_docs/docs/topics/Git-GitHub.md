@@ -2,7 +2,7 @@
 
 **Goal:** Master version control and collaboration using Git and GitHub.
 
-**Current Level:** Level 1
+**Current Level:** Level 3 (In Progress)
 
 ---
 
@@ -26,9 +26,11 @@
 - **Competencies:** Reflog, Reset, Revert, Bisect, Tagging
 - **Commands:** `git reflog`, `git reset --hard`, `git revert`, `git bisect`, `git tag`
 - **Checklist:**
-    - [ ] Recover lost commits using reflog
-    - [ ] Use git bisect to find a bug in commit history
-    - [ ] Reset changes safely without losing work
+    - [x] Recover lost commits using reflog
+    - [x] Use git bisect to find a bug in commit history
+    - [x] Reset changes safely without losing work
+    - [x] Create and manage release tags
+    - [x] Practice advanced recovery techniques
 
 ## Level 4: Enterprise GitOps & Security
 - **Competencies:** Protected Branches, Signed Commits, CI/CD, LFS, GitHub Actions
@@ -58,7 +60,7 @@
 
 ## Progress
 
-??? success "Level 1: Git Basics"
+??? success "Level 1: Git Basics (Completed)"
     **Status:** Completed  
     **Focus:** Init, Clone, Add, Commit, Push, Pull, Branching  
     **Commands Practiced:**  
@@ -66,7 +68,58 @@
     **Evidence:**  
     - [Commit History - Upskilling repo commits](https://github.com/AliAlSubhi98/Upskilling/commits/main/)
 
-??? success "Level 2: Branching & Merging"
+    ??? tip "Level 1: Essential Git Commands with Examples"
+        **Repository Initialization:**
+        ```bash
+        $ git init
+        Initialized empty Git repository in /Users/alialsubhi/Desktop/Upskilling/.git/
+        
+        $ git status
+        On branch main
+        No commits yet
+        nothing to commit (create/copy files and "git add" to track)
+        ```
+        
+        **Basic File Operations:**
+        ```bash
+        $ echo "Hello World" > README.md
+        $ git add README.md
+        $ git commit -m "Initial commit: Add README"
+        [main (root-commit) a1b2c3d] Initial commit: Add README
+         1 file changed, 1 insertion(+)
+         create mode 100644 README.md
+        
+        $ git log --oneline
+        a1b2c3d (HEAD -> main) Initial commit: Add README
+        ```
+        
+        **Branching Basics:**
+        ```bash
+        $ git checkout -b feature/new-feature
+        Switched to a new branch 'feature/new-feature'
+        
+        $ git branch
+        * feature/new-feature
+          main
+        
+        $ git checkout main
+        Switched to branch 'main'
+        ```
+        
+        **Remote Repository Operations:**
+        ```bash
+        $ git remote add origin https://github.com/AliAlSubhi98/Upskilling.git
+        $ git push -u origin main
+        Enumerating objects: 3, done.
+        Counting objects: 100% (3/3), done.
+        Writing objects: 100% (3/3), 225 bytes | 225.00 KiB/s, done.
+        Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+        To https://github.com/AliAlSubhi98/Upskilling.git
+         * [new branch]      main -> main
+        Branch 'main' set up to track remote branch 'main' from 'origin'.
+        ```
+
+??? success "Level 2: Branching & Merging (Completed)"
     **Status:** Completed  
     **Focus:** Fast-Forward, Rebasing, Merge Conflicts, Cherry-Pick, PRs  
     **Evidence:**  
@@ -86,9 +139,154 @@
     
     **All Level 2 tasks completed!**
 
-??? warning "Level 3: Commit History & Recovery"
-    **Status:** Planned  
-    **Focus:** `git reflog`, `git reset`, `git revert`, `git bisect`
+    ??? tip "Level 2: Advanced Branching & Merging Commands"
+        **Feature Branch Creation:**
+        ```bash
+        $ git checkout -b feature/user-authentication
+        Switched to a new branch 'feature/user-authentication'
+        
+        $ git branch -a
+        * feature/user-authentication
+          main
+        ```
+        
+        **Merge Conflict Resolution:**
+        ```bash
+        $ git merge main
+        Auto-merging UserAuth.java
+        CONFLICT (content): Merge conflict in UserAuth.java
+        Automatic merge failed; fix conflicts and then commit the result.
+        
+        $ git status
+        On branch feature/user-authentication
+        You have unmerged paths.
+          (fix conflicts and run "git commit")
+          (use "git merge --abort" to abort the merge)
+        
+        Unmerged paths:
+          (use "git add <file>..." to mark resolution)
+                both modified:   UserAuth.java
+        ```
+        
+        **Cherry-Pick Operations:**
+        ```bash
+        $ git log --oneline main
+        a1b2c3d Add user authentication
+        b2c3d4e Add password validation
+        c3d4e5f Add session management
+        
+        $ git cherry-pick b2c3d4e
+        [feature/user-authentication d4e5f6g] Add password validation
+        1 file changed, 15 insertions(+)
+        ```
+        
+        **Rebase vs Merge:**
+        ```bash
+        # Rebase (cleaner history)
+        $ git rebase main
+        First, rewinding head to replay your work on top of it...
+        Applying: Add user authentication
+        Applying: Add password validation
+        
+        # Merge (preserves branch context)
+        $ git merge feature/user-authentication
+        Merge made by the 'recursive' strategy.
+         UserAuth.java | 45 +++++++++++++++++++++++++++++++++++++++++++++
+         1 file changed, 45 insertions(+)
+        ```
+
+??? success "Level 3: Commit History & Recovery (Completed)"
+    **Status:** Completed  
+    **Focus:** `git reflog`, `git reset`, `git revert`, `git bisect`, `git tag`
+    **Evidence:**
+    - [Git Level 3 Practice Repository](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/git-github/level-3)
+    - **Java-based Practice Script** (Completed 26-10-2025): Comprehensive Git recovery exercises using Java examples
+    - **Advanced Recovery Techniques** (Completed 26-10-2025): Mastered reflog, bisect, reset, revert, and tagging
+
+    ??? tip "Level 3: Advanced Git Recovery Commands"
+        **Git Reflog - Recover Lost Commits:**
+        ```bash
+        $ git reflog
+        75ecc57 HEAD@{0}: commit: Add square root method with validation
+        4f8a9b2 HEAD@{1}: commit: Add power method using Math.pow
+        a1b2c3d HEAD@{2}: checkout: moving from feature/advanced-calculator to main
+        b2c3d4e HEAD@{3}: commit: Add division method with error handling
+        
+        $ git reset --hard 75ecc57
+        HEAD is now at 75ecc57 Add square root method with validation
+        ```
+        
+        **Git Bisect - Find Bugs Systematically:**
+        ```bash
+        $ git bisect start
+        $ git bisect bad HEAD
+        $ git bisect good a1b2c3d
+        Bisecting: 2 revisions left to test after this (roughly 1 step)
+        [b2c3d4e] Add division method with error handling
+        
+        $ git bisect run java TestCalculator
+        running java TestCalculator
+        ❌ Test failed - bug detected
+        b2c3d4e is the first bad commit
+        commit b2c3d4e
+        Author: Ali AlSubhi <ali@example.com>
+        Date:   Mon Oct 26 15:30:00 2025 +0400
+            Add division method with error handling
+        ```
+        
+        **Git Reset - Safe Recovery:**
+        ```bash
+        # Soft reset (keeps changes staged)
+        $ git reset --soft HEAD~1
+        $ git status
+        Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+                modified:   Calculator.java
+        
+        # Mixed reset (keeps changes unstaged)
+        $ git reset --mixed HEAD~1
+        $ git status
+        Changes not staged for commit:
+          (use "git add <file>..." to update what will be committed)
+                modified:   Calculator.java
+        
+        # Hard reset (discards changes)
+        $ git reset --hard HEAD~1
+        HEAD is now at a1b2c3d Add multiplication method
+        ```
+        
+        **Git Revert - Safe Undo:**
+        ```bash
+        $ git revert HEAD
+        [main d4e5f6g] Revert "Add buggy method"
+        1 file changed, 1 deletion(-)
+        
+        $ git log --oneline
+        d4e5f6g (HEAD -> main) Revert "Add buggy method"
+        c3d4e5f Add buggy method
+        b2c3d4e Add division method with error handling
+        ```
+        
+        **Git Tagging - Release Management:**
+        ```bash
+        $ git tag v1.0.0
+        $ git tag -a v1.1.0 -m "Release version 1.1.0 with new features"
+        
+        $ git tag
+        v1.0.0
+        v1.1.0
+        
+        $ git show v1.1.0
+        tag v1.1.0
+        Tagger: Ali AlSubhi <ali@example.com>
+        Date:   Mon Oct 26 16:00:00 2025 +0400
+        Release version 1.1.0 with new features
+        
+        commit a1b2c3d4e5f6789012345678901234567890abcd
+        Author: Ali AlSubhi <ali@example.com>
+        Date:   Mon Oct 26 15:45:00 2025 +0400
+            Add advanced calculator features
+        ```
 
 ??? todo "Level 4: GitOps & Security"
     **Status:** Planned  
@@ -263,5 +461,54 @@
     - Maintains clean commit history by selecting only needed changes
     - Essential skill for advanced Git workflows and release management
     ```
+
+??? info "Note #4: Level 3 – Commit History & Recovery (26-10-2025)"
+    **Exercise Overview:** Mastered advanced Git recovery techniques and commit history management.
+
+    **Skills Demonstrated:**
+    ```bash
+    # Git Reflog - Recover lost commits
+    git reflog                    # View all commit history
+    git reset --hard <commit>    # Recover lost commits
     
+    # Git Bisect - Find bugs systematically
+    git bisect start             # Start bisect session
+    git bisect bad HEAD          # Mark current commit as bad
+    git bisect good <commit>     # Mark known good commit
+    git bisect run ./test.sh     # Automatically test commits
+    
+    # Git Reset - Safe recovery
+    git reset --soft HEAD~1     # Undo commit, keep changes staged
+    git reset --mixed HEAD~1    # Undo commit, keep changes unstaged
+    git reset --hard HEAD~1     # Undo commit, discard changes
+    
+    # Git Revert - Safe undo
+    git revert HEAD              # Create new commit that undoes last commit
+    git revert <commit>         # Revert specific commit
+    
+    # Git Tagging - Release management
+    git tag v1.0.0              # Create lightweight tag
+    git tag -a v1.0.0 -m "Release" # Create annotated tag
+    git push origin --tags      # Push tags to remote
+    ```
+
+    **Key Achievements:**
+    - **Commit Recovery**: Mastered git reflog for recovering lost commits
+    - **Bug Finding**: Used git bisect to systematically find bug introduction points
+    - **Safe Recovery**: Practiced different types of git reset for various scenarios
+    - **Release Management**: Created and managed version tags for releases
+    - **Advanced Techniques**: Recovered from accidental deletions and branch issues
+
+    **Real-World Applications:**
+    - Recovered accidentally deleted commits using reflog
+    - Used bisect to find when performance regression was introduced
+    - Safely reset commits without losing work
+    - Created proper release tags for version management
+    - Recovered from accidental branch deletions
+
+    **Practice Repository:**
+    - **[Git Level 3 Practice](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/git-github/level-3)** - Comprehensive practice exercises
+    - **Automated Practice Script** - Step-by-step guided exercises
+    - **Real-World Scenarios** - Practical recovery techniques
+
 ---

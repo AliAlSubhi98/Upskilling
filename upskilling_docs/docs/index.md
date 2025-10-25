@@ -6,12 +6,12 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 
 | Topic                       | Goal/Description                        | Current Level |
 |-----------------------------|-----------------------------------------|--------------|
-| Git & GitHub                | Master version control & collaboration  | Level 2 (Complete) |
+| Git & GitHub                | Master version control & collaboration  | Level 3 (Complete) |
 | Project Management          | Understand dev project workflows        | Level 1 (Complete) |
 | Communication & Collaboration | Improve team communication skills       | Level 1 (In Progress) |
 | Documentation               | Write and maintain clear docs           | Level 1 (Complete) |
 | Containers & Orchestration  | Deploy/manage containers & clusters     | Level 1 (Complete) |
-| Linux                       | Confident Linux user/admin              | Level 3 (Complete) ✅ |
+| Linux                       | Confident Linux user/admin              | Level 3 (Complete)  |
 | CI/CD                       | Automate build, test, deploy            | Level 1 (Complete) |
 | Observability               | Monitor and troubleshoot systems        | Level 1 (Complete) |
 | Redundancy & DR             | Ensure system reliability & recovery    | Level 1       |
@@ -20,7 +20,7 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 | Databases                   | Use and optimize modern databases       | Level 1 (Complete) |
 | System Design               | Architect scalable, robust systems      | Level 1 (Complete) |
 | Security                    | Build and maintain secure systems       | Level 1 (Complete) |
-| API                         | Design and implement robust APIs        | Level 1 (Complete) |
+| API                         | Design and implement robust APIs        | Level 3 (Complete) |
 | Authentication & Authorization | Securely manage user access             | Level 1 (Complete) |
 | Testing                     | Confidently test and validate software  | Level 1 (Complete) |
 
