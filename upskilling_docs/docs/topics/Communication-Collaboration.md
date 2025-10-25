@@ -20,43 +20,77 @@
   - [x] Give and receive constructive feedback
 
 ## Level 2: Team Collaboration
-- **Competencies:** Asynchronous updates, knowledge sharing, feedback culture
-- **Tools:** Confluence, Google Docs, Standup bots
+- **Competencies:** Asynchronous updates, knowledge sharing, feedback culture, cross-team communication
+- **Tools:** Confluence, Google Docs, Standup bots, Slack/Teams, Project management tools
 - **Checklist:**
   - [ ] Share updates asynchronously with the team
   - [ ] Contribute to shared documentation
   - [ ] Give and receive constructive feedback
+  - [ ] Facilitate knowledge sharing sessions
+  - [ ] Build feedback culture within team
+  - [ ] Manage cross-team communication
 
 ## Level 3: Conflict Resolution & Facilitation
-- **Competencies:** Conflict resolution, facilitating meetings, inclusive communication
-- **Tools:** Retrospective tools, Miro, Zoom breakout rooms
+- **Competencies:** Conflict resolution, facilitating meetings, inclusive communication, mediation
+- **Tools:** Retrospective tools, Miro, Zoom breakout rooms, Conflict resolution frameworks
 - **Checklist:**
   - [ ] Help resolve a team conflict constructively
   - [ ] Facilitate a team meeting or retrospective
   - [ ] Ensure all voices are heard in discussions
+  - [ ] Mediate disagreements between team members
+  - [ ] Create inclusive meeting environments
+  - [ ] Handle difficult conversations professionally
 
 ## Level 4: Cross-Team Collaboration
-- **Competencies:** Cross-team projects, stakeholder management, negotiation
-- **Tools:** Jira, shared calendars, project management tools
+- **Competencies:** Cross-team projects, stakeholder management, negotiation, influence
+- **Tools:** Jira, shared calendars, project management tools, Stakeholder mapping
 - **Checklist:**
   - [ ] Collaborate on a project with another team
   - [ ] Manage stakeholder expectations
   - [ ] Negotiate priorities or resources
+  - [ ] Build relationships across departments
+  - [ ] Influence without authority
+  - [ ] Manage complex multi-team projects
 
 ## Level 5: Leadership & Influence
-- **Competencies:** Mentoring, leading initiatives, organizational communication
-- **Tools:** Mentoring platforms, company-wide forums, leadership training
+- **Competencies:** Mentoring, leading initiatives, organizational communication, strategic influence
+- **Tools:** Mentoring platforms, company-wide forums, leadership training, Executive communication
 - **Checklist:**
   - [ ] Mentor or coach a team member
   - [ ] Lead a cross-team initiative
   - [ ] Communicate effectively at the organizational level
+  - [ ] Influence organizational culture
+  - [ ] Lead large-scale communication initiatives
+  - [ ] Develop communication strategies for teams
 
 ---
+
+## Learning Framework
+
+### Core Communication Skills
+- **Written Communication**: Email, documentation, reports, proposals
+- **Verbal Communication**: Meetings, presentations, one-on-ones, public speaking
+- **Non-verbal Communication**: Body language, tone, presence, cultural awareness
+- **Digital Communication**: Video calls, chat, collaboration tools, remote work
+
+### Collaboration Competencies
+- **Team Dynamics**: Building trust, managing relationships, conflict resolution
+- **Knowledge Sharing**: Documentation, mentoring, teaching, knowledge transfer
+- **Feedback Culture**: Giving feedback, receiving feedback, continuous improvement
+- **Cross-functional Collaboration**: Working with different teams, stakeholders, departments
+
+### Leadership Communication
+- **Influence**: Persuasion, negotiation, consensus building
+- **Facilitation**: Meeting management, workshop design, group dynamics
+- **Mentoring**: Coaching, development, career guidance
+- **Strategic Communication**: Organizational messaging, change management, vision communication
 
 ## Resources
 - [Crucial Conversations Book](https://www.vitalsmarts.com/crucial-conversations-book/)
 - [Atlassian Team Playbook](https://www.atlassian.com/team-playbook)
 - [Google re:Work - Guide: Understand Team Effectiveness](https://rework.withgoogle.com/guides/understanding-team-effectiveness/steps/introduction/)
+- [Harvard Business Review - Communication](https://hbr.org/topic/communication)
+- [LinkedIn Learning - Communication Skills](https://www.linkedin.com/learning/topics/communication)
 
 ---
 
@@ -115,46 +149,14 @@
     - Applied communication best practices to daily work interactions and team collaboration
     
     **Communication Skills Mastered:**
-    ```markdown
-    ✅ Clear Written Communication:
-    - Professional email structure with clear subject lines
-    - Technical documentation with examples and context
-    - Crisis communication with impact assessment
-    - Constructive feedback with specific examples
-    
-    ✅ Active Listening Techniques:
-    - Pay full attention and show engagement
-    - Ask clarifying questions for understanding
-    - Paraphrase to confirm comprehension
-    - Provide appropriate responses and support
-    
-    ✅ Meeting Participation:
-    - Professional presence and etiquette
-    - Effective contribution and time management
-    - Technology best practices for video calls
-    - Follow-up and action item management
-    ```
+    - **Clear Written Communication**: Professional email structure with clear subject lines, technical documentation with examples and context, crisis communication with impact assessment, constructive feedback with specific examples
+    - **Active Listening Techniques**: Pay full attention and show engagement, ask clarifying questions for understanding, paraphrase to confirm comprehension, provide appropriate responses and support
+    - **Meeting Participation**: Professional presence and etiquette, effective contribution and time management, technology best practices for video calls, follow-up and action item management
     
     **Team Collaboration Skills:**
-    ```markdown
-    ✅ Knowledge Sharing:
-    - Clear explanation of concepts and examples
-    - Practical implementation guidance
-    - Offer help and support to teammates
-    - Use appropriate communication channels
-    
-    ✅ Feedback Culture:
-    - Start with positives and acknowledge good work
-    - Provide specific, actionable suggestions
-    - Use examples and alternatives
-    - End on encouraging notes
-    
-    ✅ Trust Building:
-    - Be reliable and meet commitments
-    - Share information transparently
-    - Support teammates' success
-    - Respect different perspectives and working styles
-    ```
+    - **Knowledge Sharing**: Clear explanation of concepts and examples, practical implementation guidance, offer help and support to teammates, use appropriate communication channels
+    - **Feedback Culture**: Start with positives and acknowledge good work, provide specific actionable suggestions, use examples and alternatives, end on encouraging notes
+    - **Trust Building**: Be reliable and meet commitments, share information transparently, support teammates' success, respect different perspectives and working styles
     
     **Practice Materials Created:**
     - **Communication Exercises**: 5 practical scenarios with examples and assessment criteria
