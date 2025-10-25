@@ -55,6 +55,26 @@ springdoc:
     operationsSorter: method
     tagsSorter: alpha
     tryItOutEnabled: true
+
+# GraphQL Configuration
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphiql
+    path: /graphql
+    schema:
+      location: classpath:graphql/
+    cors:
+      allowed-origins: "*"
+      allowed-methods: "GET,POST,OPTIONS"
+      allowed-headers: "*"
+
+# gRPC Configuration (simplified for Level 3)
+# grpc:
+#   server:
+#     port: 9090
+#     enable-reflection: true
   show-actuator: true
 
 management:

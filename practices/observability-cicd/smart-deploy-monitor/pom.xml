@@ -139,6 +139,14 @@
             <artifactId>client</artifactId>
             <version>1.14.0</version>
         </dependency>
+        
+        <!-- GraphQL Dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-graphql</artifactId>
+        </dependency>
+        
+        <!-- GraphQL DataLoader for N+1 problem solving (using Spring's built-in support) -->
     </dependencies>
     
     <build>

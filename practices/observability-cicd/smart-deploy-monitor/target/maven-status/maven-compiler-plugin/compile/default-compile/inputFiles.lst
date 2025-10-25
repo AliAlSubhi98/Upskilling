@@ -8,6 +8,7 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/WebConfig.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/validation/SecurityValidation.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/UserController.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/resolver/UserResolver.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/QdrantService.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/ApiGatewayController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/KeycloakController.java
@@ -30,6 +31,7 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/OpenApiConfig.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/SystemController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/dto/AuthResponse.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/resolver/UserMutationResolver.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/dto/AuthRequest.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/entity/UserRole.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/HealthController.java

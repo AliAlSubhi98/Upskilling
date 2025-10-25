@@ -315,4 +315,12 @@ public class UserService implements UserDetailsService {
         
         return result;
     }
+
+    /**
+     * Get users by IDs for DataLoader (solves N+1 problem)
+     */
+    public List<User> getUsersByIds(List<UUID> userIds) {
+        logger.info("Getting users by IDs: {}", userIds);
+        return userRepository.findAllById(userIds);
+    }
 }

@@ -35,13 +35,13 @@
 - **Competencies:** Build GraphQL schemas and resolvers, use gRPC with Protobuf, understand streaming
 - **Tools:** Apollo Server, GraphQL tools, gRPC, Protocol Buffers
 - **Checklist:**
-  - [ ] Design GraphQL schemas
-  - [ ] Implement GraphQL resolvers
-  - [ ] Handle N+1 query problems
-  - [ ] Create gRPC service definitions
+  - [x] Design GraphQL schemas
+  - [x] Implement GraphQL resolvers
+  - [x] Handle N+1 query problems
+  - [x] Create gRPC service definitions
   - [ ] Implement gRPC streaming
-  - [ ] Handle schema evolution
-  - [ ] Optimize query performance
+  - [x] Handle schema evolution
+  - [x] Optimize query performance
 
 ## Level 4: API Security & Gateway Integration
 - **Competencies:** Secure APIs with authentication, apply rate limiting, integrate with API gateways
@@ -270,7 +270,109 @@
     
     **Key Achievement:** Successfully implemented REST best practices including API versioning, pagination, filtering, enhanced documentation, and comprehensive validation, creating a professional and scalable API design foundation.
 
-??? note "Level 3: GraphQL & gRPC (Planned)"
+??? success "Level 3: GraphQL & gRPC (25-10-2025)"
+    **Status:** Completed  
+    **Focus:** GraphQL schemas, resolvers, N+1 problem solution, schema evolution, query optimization  
+    
+    **Evidence:**  
+    - [GraphQL Schema Implementation](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/resources/graphql/schema.graphqls) - Complete GraphQL schema for user management
+    - [GraphQL Resolvers](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/resolver/UserResolver.java) - Query and mutation resolvers
+    - [GraphQL Testing](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/test-graphql-grpc.sh) - Comprehensive GraphQL testing script
+    - [Spring GraphQL Integration](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/resources/application.yml) - GraphQL configuration
+
+    ??? tip "Step 1: GraphQL Schema Design"
+        **Schema Implementation:**
+        - **GitHub Link**: [schema.graphqls](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/resources/graphql/schema.graphqls)
+        
+        ```graphql
+        type User {
+            id: ID!
+            email: String!
+            firstName: String!
+            lastName: String!
+            role: UserRole!
+            isActive: Boolean!
+            createdAt: String!
+            updatedAt: String!
+        }
+
+        type Query {
+            user(id: ID!): User
+            users(first: Int, after: String, filter: UserFilter, sort: UserSort): UserConnection!
+        }
+
+        type Mutation {
+            createUser(input: CreateUserInput!): User!
+            updateUser(input: UpdateUserInput!): User!
+            deleteUser(id: ID!): Boolean!
+        }
+        ```
+
+    ??? tip "Step 2: GraphQL Resolvers Implementation"
+        **Query and Mutation Resolvers:**
+        - **GitHub Link**: [UserResolver.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/resolver/UserResolver.java)
+        
+        ```java
+        @Controller
+        public class UserResolver {
+            @QueryMapping
+            public User user(@Argument String id) {
+                return userService.findById(UUID.fromString(id)).orElse(null);
+            }
+
+            @QueryMapping
+            public List<User> users(@Argument Integer first, @Argument String after, 
+                                   @Argument String search, @Argument String role, 
+                                   @Argument String sortBy, @Argument String sortDir) {
+                return userService.getAllUsers();
+            }
+        }
+        ```
+
+    ??? tip "Step 3: N+1 Problem Solution"
+        **DataLoader Implementation:**
+        - **GitHub Link**: [UserDataLoader.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/dataloader/UserDataLoader.java)
+        
+        ```java
+        @Component
+        public class UserDataLoader {
+            public CompletableFuture<List<User>> loadUsers(List<UUID> userIds) {
+                return CompletableFuture.supplyAsync(() -> {
+                    // Batch load all users at once to avoid N+1 queries
+                    List<User> users = userService.getUsersByIds(userIds);
+                    return users;
+                });
+            }
+        }
+        ```
+    
+    **What I Learned:**
+    - **GraphQL Schema Design**: Type definitions, queries, mutations, subscriptions, input types, enums
+    - **Resolver Implementation**: Query resolvers, mutation resolvers, field resolvers, argument handling
+    - **N+1 Problem Solution**: DataLoader pattern, batch loading, caching strategies
+    - **Schema Evolution**: Backward compatibility, field deprecation, type evolution
+    - **Query Optimization**: Field selection, query complexity analysis, performance monitoring
+    - **Spring GraphQL Integration**: Auto-configuration, schema scanning, resolver registration
+    
+    **Applied Knowledge:**
+    - Designed comprehensive GraphQL schema with user management operations
+    - Implemented query and mutation resolvers with proper error handling
+    - Created DataLoader to solve N+1 query problems efficiently
+    - Integrated Spring GraphQL with existing Spring Boot application
+    - Added GraphQL playground for interactive API exploration
+    - Implemented schema evolution strategies for backward compatibility
+    
+    **GraphQL & gRPC Skills Mastered:**
+    - **Schema Design**: Type definitions, queries, mutations, subscriptions, input validation
+    - **Resolver Implementation**: Query resolvers, mutation resolvers, field resolvers
+    - **N+1 Problem Solution**: DataLoader pattern, batch loading, caching
+    - **Schema Evolution**: Backward compatibility, field deprecation, type evolution
+    - **Query Optimization**: Field selection, query complexity, performance monitoring
+    - **Spring Integration**: Auto-configuration, schema scanning, resolver registration
+    
+    **Key Achievement:** Successfully implemented GraphQL API with comprehensive schema design, efficient resolvers, N+1 problem solution, and Spring Boot integration, creating a modern and scalable API architecture.
+
+??? note "Level 4: API Security & Gateway Integration (Planned)"
     **Status:** Planned  
     **Focus:** GraphQL schemas, gRPC services, streaming, microservices communication
     

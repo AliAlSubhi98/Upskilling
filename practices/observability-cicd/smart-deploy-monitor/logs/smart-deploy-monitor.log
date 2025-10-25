@@ -3111,3 +3111,21 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-10-25 14:43:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 840s, Memory: 109.16/138.00MB, CPU Cores: 8, Requests: 0, Connections: 45
 2025-10-25 14:44:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 900s, Memory: 109.16/138.00MB, CPU Cores: 8, Requests: 0, Connections: 38
 2025-10-25 14:45:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 960s, Memory: 109.58/138.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-25 14:46:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1021s, Memory: 109.58/138.00MB, CPU Cores: 8, Requests: 0, Connections: 5
+2025-10-25 14:47:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1080s, Memory: 109.65/138.00MB, CPU Cores: 8, Requests: 0, Connections: 29
+2025-10-25 14:48:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1140s, Memory: 109.71/138.00MB, CPU Cores: 8, Requests: 0, Connections: 7
+2025-10-25 14:49:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1200s, Memory: 109.77/138.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-25 14:50:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1260s, Memory: 109.77/138.00MB, CPU Cores: 8, Requests: 0, Connections: 6
+2025-10-25 14:51:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1320s, Memory: 109.97/138.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-25 14:52:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1380s, Memory: 110.17/138.00MB, CPU Cores: 8, Requests: 0, Connections: 21
+2025-10-25 14:53:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1440s, Memory: 110.17/138.00MB, CPU Cores: 8, Requests: 0, Connections: 7
+2025-10-25 14:54:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1500s, Memory: 110.17/138.00MB, CPU Cores: 8, Requests: 0, Connections: 17
+2025-10-25 14:55:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1560s, Memory: 110.23/138.00MB, CPU Cores: 8, Requests: 0, Connections: 26
+2025-10-25 14:56:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1620s, Memory: 110.23/138.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-25 14:57:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1680s, Memory: 110.23/138.00MB, CPU Cores: 8, Requests: 0, Connections: 10
+2025-10-25 14:58:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 1740s, Memory: 110.39/138.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-25 14:59:03 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-25 14:59:03 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-25 14:59:03 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25 14:59:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-25 14:59:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
