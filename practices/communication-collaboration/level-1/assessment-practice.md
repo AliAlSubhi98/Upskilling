@@ -353,21 +353,21 @@ implementation!"
 
 ## Level 1 Mastery Checklist
 
-### ✅ **Communication Fundamentals:**
+###   **Communication Fundamentals:**
 - [ ] Write clear, professional emails
 - [ ] Participate effectively in meetings
 - [ ] Practice active listening
 - [ ] Use appropriate communication channels
 - [ ] Provide context and background
 
-### ✅ **Team Collaboration:**
+###   **Team Collaboration:**
 - [ ] Share updates regularly
 - [ ] Contribute to team discussions
 - [ ] Give and receive feedback
 - [ ] Help teammates when possible
 - [ ] Build positive relationships
 
-### ✅ **Professional Presence:**
+###   **Professional Presence:**
 - [ ] Maintain professional tone
 - [ ] Respect others' time
 - [ ] Follow meeting etiquette

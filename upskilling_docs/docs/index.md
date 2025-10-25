@@ -11,7 +11,7 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 | Communication & Collaboration | Improve team communication skills       | Level 1 (In Progress) |
 | Documentation               | Write and maintain clear docs           | Level 1 (Complete) |
 | Containers & Orchestration  | Deploy/manage containers & clusters     | Level 1 (Complete) |
-| Linux                       | Confident Linux user/admin              | Level 1       |
+| Linux                       | Confident Linux user/admin              | Level 3 (Complete) ✅ |
 | CI/CD                       | Automate build, test, deploy            | Level 1 (Complete) |
 | Observability               | Monitor and troubleshoot systems        | Level 1 (Complete) |
 | Redundancy & DR             | Ensure system reliability & recovery    | Level 1       |

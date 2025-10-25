@@ -6,37 +6,37 @@ This guide covers the database setup and functionality added to the Smart Deploy
 
 ## 📋 **What We've Implemented**
 
-### ✅ **Database Dependencies**
+###   **Database Dependencies**
 - **Spring Data JPA** - For database operations
 - **PostgreSQL Driver** - Database connectivity
 - **Flyway** - Database migrations (optional)
 - **Spring Security Crypto** - Password encryption
 
-### ✅ **Database Configuration**
+###   **Database Configuration**
 - **PostgreSQL** database connection
 - **JPA/Hibernate** configuration
 - **Connection pooling** and performance settings
 - **SQL logging** for development
 
-### ✅ **Entity Layer**
+###   **Entity Layer**
 - **User Entity** with JPA annotations
 - **UserRole Enum** for role management
 - **UUID primary keys** for better security
 - **Audit fields** (created_at, updated_at)
 
-### ✅ **Repository Layer**
+###   **Repository Layer**
 - **UserRepository** with Spring Data JPA
 - **Custom query methods** for common operations
 - **Advanced queries** with @Query annotations
 - **Pagination and sorting** support
 
-### ✅ **Service Layer**
+###   **Service Layer**
 - **UserService** with business logic
 - **Password encryption** with BCrypt
 - **User management** operations
 - **Statistics and reporting**
 
-### ✅ **Controller Layer**
+###   **Controller Layer**
 - **RESTful API** endpoints
 - **User CRUD operations**
 - **Password management**

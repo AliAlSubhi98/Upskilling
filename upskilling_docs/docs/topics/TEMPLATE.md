@@ -112,14 +112,14 @@
     - [Demonstration 3]
     
     **Key Features:**
-    - ✅ [Feature 1]
-    - ✅ [Feature 2]
-    - ✅ [Feature 3]
+    -   [Feature 1]
+    -   [Feature 2]
+    -   [Feature 3]
     
     **Testing Results:**
-    - ✅ [Test result 1]
-    - ✅ [Test result 2]
-    - ✅ [Test result 3]
+    -   [Test result 1]
+    -   [Test result 2]
+    -   [Test result 3]
 
 ---
 

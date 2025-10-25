@@ -8,7 +8,7 @@ This guide walks you through:
 
 ---
 
-## ✅ Prerequisites
+##   Prerequisites
 
 - Python ≥ 3.7 installed
 - Git installed and configured
@@ -133,7 +133,7 @@ Go to:
 
 - **Source**: Select `gh-pages` branch
 - **Directory**: `/ (root)`
-- Save ✅
+- Save  
 
 ---
 
@@ -186,7 +186,7 @@ This means another process is using the default port `8000`. You have two ways t
 
 ---
 
-### ✅ Option 1: Kill the Process Using the Port
+###   Option 1: Kill the Process Using the Port
 
 Run the following to find the process ID:
 
@@ -210,7 +210,7 @@ kill -9 12345
 
 ---
 
-### ✅ Option 2: Use a Different Port
+###   Option 2: Use a Different Port
 
 If you don’t want to kill the running process, simply use another port:
 

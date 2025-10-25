@@ -26,7 +26,7 @@ By mastering these meeting etiquette skills, you will:
 
 ## Pre-Meeting Preparation
 
-### ✅ **Before Every Meeting:**
+###   **Before Every Meeting:**
 
 1. **Review the Agenda**
    - Understand the meeting purpose and objectives
@@ -358,20 +358,20 @@ Ali
 
 ## Quick Reference: Meeting Etiquette Checklist
 
-### ✅ **Before the Meeting:**
+###   **Before the Meeting:**
 - [ ] Review agenda and materials
 - [ ] Test technology (video/audio)
 - [ ] Prepare your environment
 - [ ] Arrive/join on time
 
-### ✅ **During the Meeting:**
+###   **During the Meeting:**
 - [ ] Maintain professional presence
 - [ ] Listen actively
 - [ ] Contribute meaningfully
 - [ ] Respect others' time
 - [ ] Take notes on key points
 
-### ✅ **After the Meeting:**
+###   **After the Meeting:**
 - [ ] Complete your action items
 - [ ] Follow up on commitments
 - [ ] Update documentation

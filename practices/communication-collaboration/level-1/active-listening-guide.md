@@ -181,7 +181,7 @@ Practice recognizing and acknowledging emotions:
 
 ## Quick Reference Card
 
-### ✅ **DO:**
+###   **DO:**
 - Give full attention
 - Show you're listening
 - Ask clarifying questions

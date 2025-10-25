@@ -3,7 +3,7 @@
 ## 🖥️ **Service UIs and Testing Methods**
 
 ### 1. **PostgreSQL** - Spring Boot API + Swagger UI
-**✅ Has UI: Swagger UI**
+**  Has UI: Swagger UI**
 - **URL:** http://localhost:8080/swagger-ui/index.html
 - **Features:** Interactive API documentation with "Try it out" buttons
 - **Test Endpoints:**
@@ -46,7 +46,7 @@ docker exec smart-deploy-redis redis-cli get "test:key"
 ```
 
 ### 3. **Elasticsearch** - REST API + Dev Tools
-**✅ Has UI: Dev Tools**
+**  Has UI: Dev Tools**
 - **URL:** http://localhost:9200/_cat/indices
 - **Search UI:** http://localhost:9200/_search?pretty
 - **Cluster Health:** http://localhost:9200/_cluster/health
@@ -89,7 +89,7 @@ curl -X GET "localhost:9200/my-index/_search?pretty" -H 'Content-Type: applicati
 ```
 
 ### 4. **Qdrant** - REST API + Web UI
-**✅ Has UI: Web Interface**
+**  Has UI: Web Interface**
 - **URL:** http://localhost:6333/dashboard
 - **Collections:** http://localhost:6333/collections
 - **Health:** http://localhost:6333/health
@@ -155,10 +155,10 @@ curl http://localhost:6333/collections
 
 | Service | UI Available | Testing Method | Status |
 |---------|-------------|----------------|---------|
-| **PostgreSQL** | ✅ Swagger UI | REST API | ✅ Working |
-| **Redis** | ❌ CLI Only | Command Line | ✅ Working |
-| **Elasticsearch** | ✅ Dev Tools | REST API | ✅ Working |
-| **Qdrant** | ✅ Web UI | REST API | ✅ Working |
+| **PostgreSQL** |   Swagger UI | REST API |   Working |
+| **Redis** | ❌ CLI Only | Command Line |   Working |
+| **Elasticsearch** |   Dev Tools | REST API |   Working |
+| **Qdrant** |   Web UI | REST API |   Working |
 
 ## 🎉 **All Level 1 Database Fundamentals: COMPLETE!**
 
