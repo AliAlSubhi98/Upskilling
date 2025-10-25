@@ -279,6 +279,8 @@
     - [GraphQL Resolvers](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/resolver/UserResolver.java) - Query and mutation resolvers
     - [GraphQL Testing](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/test-graphql-grpc.sh) - Comprehensive GraphQL testing script
     - [Spring GraphQL Integration](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/resources/application.yml) - GraphQL configuration
+    - [Postman Collections](https://github.com/AliAlSubhi98/Upskilling/tree/main/api-collections) - Complete API testing collections for both REST and GraphQL
+    - [Real-World Testing](https://github.com/AliAlSubhi98/Upskilling/blob/main/api-collections/test-api-collections.sh) - Automated testing script demonstrating mobile vs admin scenarios
 
     ??? tip "Step 1: GraphQL Schema Design"
         **Schema Implementation:**
@@ -430,6 +432,29 @@
 - [OpenAPI Specification](https://swagger.io/specification/)
 - [Spring Boot REST API Guide](https://spring.io/guides/gs/rest-service/)
 
+## Testing & Collections
+
+### Postman Collections
+Complete API testing collections are available at `/Users/alialsubhi/Desktop/Upskilling/api-collections/`:
+
+- **GraphQL-API-Collection.postman_collection.json** - Comprehensive GraphQL testing
+- **REST-API-Collection.postman_collection.json** - Complete REST API testing  
+- **Smart-Deploy-Monitor-Environment.postman_environment.json** - Environment variables
+- **test-api-collections.sh** - Automated testing script
+
+### Collection Features
+- **Real-World Scenarios**: Mobile app vs Admin dashboard queries
+- **Performance Testing**: Response time measurements and load testing
+- **Error Handling**: Edge cases and validation testing
+- **Schema Introspection**: GraphQL schema exploration
+- **CRUD Operations**: Complete user management testing
+
+### Quick Start
+1. Import collections into Postman
+2. Set environment to "Smart Deploy Monitor Environment"
+3. Start application: `mvn spring-boot:run`
+4. Run test script: `./test-api-collections.sh`
+
 ---
 
 ## Personal Notes
@@ -440,11 +465,31 @@
 
     **Level 2 Completed:** REST best practices including API versioning, pagination, filtering, enhanced documentation, and comprehensive validation.
 
+    **Level 3 Completed:** GraphQL implementation with schema design, resolvers, N+1 problem solution, and real-world testing scenarios.
+
     **Key Achievements:**
     - Built comprehensive Spring Boot REST API with versioned endpoints
     - Implemented pagination, filtering, and search functionality
     - Enhanced OpenAPI documentation with detailed schemas
     - Created automated testing scripts with 28/29 tests passing
     - Applied REST principles and best practices throughout
+    - **NEW:** Implemented GraphQL with UserConnection pattern for efficient data fetching
+    - **NEW:** Created GraphQL schema with proper type definitions and resolvers
+    - **NEW:** Solved N+1 query problem using DataLoader pattern
+    - **NEW:** Built comprehensive Postman collections for both REST and GraphQL APIs
+    - **NEW:** Demonstrated real-world scenarios (Mobile vs Admin dashboard queries)
 
-    **Next Steps:** Ready to move to advanced topics like GraphQL, gRPC, or API security when needed.
+    **Technical Implementation:**
+    - GraphQL schema with User, UserConnection, UserEdge, and PageInfo types
+    - Spring GraphQL integration with resolvers and mutations
+    - Security configuration allowing GraphQL endpoints
+    - Performance testing showing 0.014s response times
+    - Postman collections with 20+ test scenarios
+
+    **Real-World Benefits Demonstrated:**
+    - Mobile apps can fetch only needed fields (id, firstName, lastName)
+    - Admin dashboards can get full user data with relationships
+    - Single GraphQL endpoint serves multiple client needs
+    - Flexible data fetching reduces bandwidth and improves performance
+
+    **Next Steps:** Ready to move to advanced topics like gRPC, API security, or API federation when needed.

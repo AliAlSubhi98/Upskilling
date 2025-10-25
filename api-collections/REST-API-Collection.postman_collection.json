@@ -1,0 +1,403 @@
+{
+  "info": {
+    "name": "REST API Collection - Smart Deploy Monitor",
+    "description": "Complete REST API collection for testing Level 2 API implementation with pagination, filtering, and sorting",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "apiEndpoint",
+      "value": "{{baseUrl}}/api/v1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "User Management",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?page=0&size=10",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Users with Pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?page=0&size=5&sortBy=firstName&sortDir=asc",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "firstName"
+                },
+                {
+                  "key": "sortDir",
+                  "value": "asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Users with Search",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?search=john&page=0&size=10",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "john"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"firstName\": \"New\",\n  \"lastName\": \"User\",\n  \"role\": \"USER\"\n}"
+            },
+            "url": {
+              "raw": "{{apiEndpoint}}/users",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users/daff9e3a-1ca4-4734-afc4-b938f6b72daf",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users", "daff9e3a-1ca4-4734-afc4-b938f6b72daf"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Updated\",\n  \"lastName\": \"Name\",\n  \"email\": \"updated@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{apiEndpoint}}/users/daff9e3a-1ca4-4734-afc4-b938f6b72daf",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users", "daff9e3a-1ca4-4734-afc4-b938f6b72daf"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users/daff9e3a-1ca4-4734-afc4-b938f6b72daf",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users", "daff9e3a-1ca4-4734-afc4-b938f6b72daf"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "API Versioning Tests",
+      "item": [
+        {
+          "name": "V1 API - Get Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "V1 API - Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"v1user@example.com\",\n  \"password\": \"password123\",\n  \"firstName\": \"V1\",\n  \"lastName\": \"User\",\n  \"role\": \"USER\"\n}"
+            },
+            "url": {
+              "raw": "{{apiEndpoint}}/users",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Filtering & Sorting",
+      "item": [
+        {
+          "name": "Sort by First Name ASC",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?sortBy=firstName&sortDir=asc&page=0&size=10",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "sortBy",
+                  "value": "firstName"
+                },
+                {
+                  "key": "sortDir",
+                  "value": "asc"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sort by Created Date DESC",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?sortBy=createdAt&sortDir=desc&page=0&size=10",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "sortBy",
+                  "value": "createdAt"
+                },
+                {
+                  "key": "sortDir",
+                  "value": "desc"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search Users by Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?search=@example.com&page=0&size=10",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "@example.com"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Error Handling",
+      "item": [
+        {
+          "name": "Get Non-existent User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users/00000000-0000-0000-0000-000000000000",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users", "00000000-0000-0000-0000-000000000000"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User with Invalid Data",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"invalid-email\",\n  \"password\": \"\",\n  \"firstName\": \"\",\n  \"lastName\": \"\"\n}"
+            },
+            "url": {
+              "raw": "{{apiEndpoint}}/users",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Performance Tests",
+      "item": [
+        {
+          "name": "Large Page Size",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?page=0&size=100",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "100"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Multiple Requests (Load Test)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiEndpoint}}/users?page=0&size=5",
+              "host": ["{{apiEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

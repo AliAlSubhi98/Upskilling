@@ -54,6 +54,8 @@ public class SecurityConfig {
                 .requestMatchers("/api/gateway/**").permitAll()
                 .requestMatchers("/api/design/**").permitAll()
                 .requestMatchers("/api/v1/users/**").permitAll()  // Allow public access for Level 2 testing
+                .requestMatchers("/graphql").permitAll()  // GraphQL endpoint
+                .requestMatchers("/graphiql").permitAll()  // GraphQL playground
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/info").permitAll()
                 .requestMatchers("/swagger-ui/**").permitAll()

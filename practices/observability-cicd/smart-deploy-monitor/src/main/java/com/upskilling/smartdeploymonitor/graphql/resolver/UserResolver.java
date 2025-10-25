@@ -2,6 +2,9 @@ package com.upskilling.smartdeploymonitor.graphql.resolver;
 
 import com.upskilling.smartdeploymonitor.entity.User;
 import com.upskilling.smartdeploymonitor.entity.UserRole;
+import com.upskilling.smartdeploymonitor.graphql.dto.UserConnection;
+import com.upskilling.smartdeploymonitor.graphql.dto.UserEdge;
+import com.upskilling.smartdeploymonitor.graphql.dto.PageInfo;
 import com.upskilling.smartdeploymonitor.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
@@ -11,6 +14,7 @@ import org.springframework.stereotype.Controller;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Controller
 public class UserResolver {
@@ -24,11 +28,21 @@ public class UserResolver {
     }
 
     @QueryMapping
-    public List<User> users(@Argument Integer first, @Argument String after, 
-                           @Argument String search, @Argument String role, 
-                           @Argument String sortBy, @Argument String sortDir) {
+    public UserConnection users(@Argument Integer first, @Argument String after, 
+                               @Argument String search, @Argument String role, 
+                               @Argument String sortBy, @Argument String sortDir) {
         // Implementation for paginated user retrieval
-        return userService.getAllUsers();
+        List<User> users = userService.getAllUsers();
+        
+        // Convert to UserEdge list
+        List<UserEdge> edges = users.stream()
+            .map(user -> new UserEdge(user, user.getId().toString()))
+            .collect(Collectors.toList());
+        
+        // Create PageInfo
+        PageInfo pageInfo = new PageInfo(false, false, null, null);
+        
+        return new UserConnection(edges, pageInfo, users.size());
     }
 
     @SchemaMapping(typeName = "User")

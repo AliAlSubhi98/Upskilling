@@ -13,7 +13,7 @@ echo "Testing GraphQL user query..."
 curl -X POST "$GRAPHQL_URL" \
   -H "Content-Type: application/json" \
   -d '{
-    "query": "query { users { id email firstName lastName role isActive } }"
+    "query": "query { users { edges { node { id email firstName lastName role isActive } } pageInfo { hasNextPage hasPreviousPage } totalCount } }"
   }' | jq '.'
 
 echo ""
@@ -25,7 +25,7 @@ echo "Testing GraphQL user creation..."
 curl -X POST "$GRAPHQL_URL" \
   -H "Content-Type: application/json" \
   -d '{
-    "query": "mutation { createUser(email: \"graphql@example.com\", password: \"password123\", firstName: \"GraphQL\", lastName: \"User\", role: USER) { id email firstName lastName role } }"
+    "query": "mutation { createUser(input: { email: \"graphql@example.com\", password: \"password123\", firstName: \"GraphQL\", lastName: \"User\", role: USER }) { id email firstName lastName role } }"
   }' | jq '.'
 
 echo ""
@@ -37,7 +37,7 @@ echo "Testing GraphQL with variables..."
 curl -X POST "$GRAPHQL_URL" \
   -H "Content-Type: application/json" \
   -d '{
-    "query": "query GetUsers($first: Int) { users(first: $first) { id email firstName lastName } }",
+    "query": "query GetUsers($first: Int) { users(first: $first) { edges { node { id email firstName lastName } } pageInfo { hasNextPage } totalCount } }",
     "variables": { "first": 5 }
   }' | jq '.'
 

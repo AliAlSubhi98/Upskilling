@@ -31,11 +31,14 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/OpenApiConfig.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/SystemController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/dto/AuthResponse.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/dto/UserEdge.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/resolver/UserMutationResolver.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/dto/AuthRequest.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/entity/UserRole.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/dto/UserConnection.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/HealthController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/security/SecurityEventLogger.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/graphql/dto/PageInfo.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/repository/UserRepository.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/domain/NotificationDomainService.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/ElasticsearchService.java

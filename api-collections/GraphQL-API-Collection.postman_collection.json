@@ -1,0 +1,435 @@
+{
+  "info": {
+    "name": "GraphQL API Collection - Smart Deploy Monitor",
+    "description": "Complete GraphQL API collection for testing Level 3 GraphQL implementation with real-world scenarios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "graphqlEndpoint",
+      "value": "{{baseUrl}}/graphql",
+      "type": "string"
+    },
+    {
+      "key": "restEndpoint",
+      "value": "{{baseUrl}}/api/v1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "GraphQL Queries",
+      "item": [
+        {
+          "name": "Get All Users (Full Data)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { users { edges { node { id email firstName lastName role isActive createdAt updatedAt } } pageInfo { hasNextPage hasPreviousPage } totalCount } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Users (Mobile - Limited Data)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { users { edges { node { id firstName lastName } } totalCount } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User by ID",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { user(id: \\\"daff9e3a-1ca4-4734-afc4-b938f6b72daf\\\") { id email firstName lastName role isActive createdAt } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Users with Variables",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query GetUsers($first: Int, $filter: UserFilter) { users(first: $first, filter: $filter) { edges { node { id email firstName lastName role } } pageInfo { hasNextPage } totalCount } }\",\n  \"variables\": {\n    \"first\": 5,\n    \"filter\": {\n      \"isActive\": true\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "GraphQL Mutations",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"mutation { createUser(input: { email: \\\"newuser@example.com\\\", password: \\\"password123\\\", firstName: \\\"New\\\", lastName: \\\"User\\\", role: USER }) { id email firstName lastName role isActive } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"mutation { updateUser(input: { id: \\\"daff9e3a-1ca4-4734-afc4-b938f6b72daf\\\", firstName: \\\"Updated\\\", lastName: \\\"Name\\\" }) { id email firstName lastName role isActive } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"mutation { deleteUser(id: \\\"daff9e3a-1ca4-4734-afc4-b938f6b72daf\\\") }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "GraphQL Schema & Introspection",
+      "item": [
+        {
+          "name": "Schema Introspection",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { __schema { types { name description } } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Types",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { __schema { types { name } } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Query Type",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { __type(name: \\\"Query\\\") { name fields { name type { name } } } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Real-World Scenarios",
+      "item": [
+        {
+          "name": "Mobile App - User List",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { users { edges { node { id firstName lastName } } totalCount } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Dashboard - Full User Data",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { users { edges { node { id email firstName lastName role isActive createdAt updatedAt } } pageInfo { hasNextPage hasPreviousPage } totalCount } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Profile Page",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { user(id: \\\"daff9e3a-1ca4-4734-afc4-b938f6b72daf\\\") { id email firstName lastName role isActive createdAt } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Performance Test - Simple Query",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"query { users { totalCount } }\"\n}"
+            },
+            "url": {
+              "raw": "{{graphqlEndpoint}}",
+              "host": ["{{graphqlEndpoint}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "REST API (For Comparison)",
+      "item": [
+        {
+          "name": "Get All Users (REST)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{restEndpoint}}/users?page=0&size=10",
+              "host": ["{{restEndpoint}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User (REST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"restuser@example.com\",\n  \"password\": \"password123\",\n  \"firstName\": \"REST\",\n  \"lastName\": \"User\",\n  \"role\": \"USER\"\n}"
+            },
+            "url": {
+              "raw": "{{restEndpoint}}/users",
+              "host": ["{{restEndpoint}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Health & Monitoring",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/actuator/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["actuator", "health"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GraphQL Playground",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/graphiql",
+              "host": ["{{baseUrl}}"],
+              "path": ["graphiql"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Swagger UI",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/swagger-ui/index.html",
+              "host": ["{{baseUrl}}"],
+              "path": ["swagger-ui", "index.html"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
