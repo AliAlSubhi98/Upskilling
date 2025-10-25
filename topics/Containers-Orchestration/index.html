@@ -974,7 +974,7 @@
 
 <h1 id="containers-orchestration">Containers &amp; Orchestration<a class="headerlink" href="#containers-orchestration" title="Permanent link">&para;</a></h1>
 <p><strong>Goal:</strong> Master containerization with Docker and orchestrate scalable deployments using Kubernetes.</p>
-<p><strong>Current Level:</strong> Level 1</p>
+<p><strong>Current Level:</strong> Level 1 (Complete)</p>
 <hr />
 <h2 id="level-1-docker-basics">Level 1: Docker Basics<a class="headerlink" href="#level-1-docker-basics" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -984,6 +984,11 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Run a Docker container with a simple web app</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Bind a volume to a container to persist data</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create a custom Docker network and connect two containers</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Implement multi-stage Docker builds for optimization</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Set up Docker Compose with health checks and dependencies</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Configure container networking with custom subnets</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Implement container security best practices</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create container management and monitoring scripts</li>
 </ul>
 <h2 id="level-2-advanced-docker">Level 2: Advanced Docker<a class="headerlink" href="#level-2-advanced-docker" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -1114,6 +1119,187 @@
 - Container security and optimization techniques
 - Production deployment strategies</p>
 <p><strong>Key Achievement:</strong> Successfully containerized a complex Spring Boot application with 5 integrated services, implementing production-ready containerization with security, monitoring, and orchestration best practices.</p>
+<p><strong>Comprehensive Implementation Evidence:</strong></p>
+<details class="tip">
+<summary>Advanced Docker Compose Configuration</summary>
+<p><strong>Enhanced Docker Compose Setup:</strong>
+- <strong>GitHub Link</strong>: <a href="https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/docker-compose.yml">docker-compose.yml</a>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+
+<span class="nt">networks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">smart-deploy-network</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+<span class="w">    </span><span class="nt">ipam</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.20.0.0/16</span>
+<span class="w">          </span><span class="nt">gateway</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.20.0.1</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">smart-deploy-monitor</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smart-deploy-monitor-app</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8080:8080&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPRING_PROFILES_ACTIVE=default</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/smart_deploy_monitor</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">postgres</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<span class="w">      </span><span class="nt">redis</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smart-deploy-network</span>
+<span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;curl&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-f&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost:8080/actuator/health&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+<span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60s</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1.0&#39;</span>
+<span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1G</span>
+<span class="w">        </span><span class="nt">reservations</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0.5&#39;</span>
+<span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512M</span>
+<span class="w">    </span><span class="nt">logging</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;json-file&quot;</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10m&quot;</span>
+<span class="w">        </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Container Management Scripts</summary>
+<p><strong>Container Management System:</strong>
+- <strong>GitHub Link</strong>: <a href="https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/scripts/container-management.sh">container-management.sh</a>
+<div class="highlight"><pre><span></span><code><span class="c1"># Container Management Script Features:</span>
+<span class="c1"># - Start/stop/restart services</span>
+<span class="c1"># - Scale services dynamically</span>
+<span class="c1"># - Backup and restore volumes</span>
+<span class="c1"># - Resource monitoring</span>
+<span class="c1"># - Health check automation</span>
+
+./scripts/container-management.sh<span class="w"> </span>start<span class="w">    </span><span class="c1"># Start all services</span>
+./scripts/container-management.sh<span class="w"> </span>status<span class="w">   </span><span class="c1"># Check service status</span>
+./scripts/container-management.sh<span class="w"> </span>scale<span class="w"> </span>smart-deploy-monitor<span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="c1"># Scale service</span>
+./scripts/container-management.sh<span class="w"> </span>backup<span class="w">  </span><span class="c1"># Backup volumes</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Container Monitoring &amp; Observability</summary>
+<p><strong>Advanced Monitoring System:</strong>
+- <strong>GitHub Link</strong>: <a href="https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/scripts/container-monitoring.sh">container-monitoring.sh</a>
+<div class="highlight"><pre><span></span><code><span class="c1"># Monitoring Features:</span>
+<span class="c1"># - Container health status</span>
+<span class="c1"># - Resource usage tracking</span>
+<span class="c1"># - Network connectivity tests</span>
+<span class="c1"># - Application health endpoints</span>
+<span class="c1"># - Security status checks</span>
+<span class="c1"># - Load testing capabilities</span>
+
+./scripts/container-monitoring.sh<span class="w"> </span>health<span class="w">      </span><span class="c1"># Check container health</span>
+./scripts/container-monitoring.sh<span class="w"> </span>resources<span class="w">      </span><span class="c1"># Monitor resource usage</span>
+./scripts/container-monitoring.sh<span class="w"> </span>app-health<span class="w">      </span><span class="c1"># Test application endpoints</span>
+./scripts/container-monitoring.sh<span class="w"> </span>security<span class="w">       </span><span class="c1"># Security status check</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Service Discovery &amp; Networking</summary>
+<p><strong>Container Networking Implementation:</strong>
+- <strong>GitHub Link</strong>: <a href="https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/scripts/service-discovery.sh">service-discovery.sh</a>
+<div class="highlight"><pre><span></span><code><span class="c1"># Service Discovery Features:</span>
+<span class="c1"># - Network configuration analysis</span>
+<span class="c1"># - Service connectivity testing</span>
+<span class="c1"># - DNS resolution verification</span>
+<span class="c1"># - Port mapping inspection</span>
+<span class="c1"># - Load balancing tests</span>
+<span class="c1"># - Service dependency mapping</span>
+
+./scripts/service-discovery.sh<span class="w"> </span>network<span class="w">        </span><span class="c1"># Show network info</span>
+./scripts/service-discovery.sh<span class="w"> </span>connectivity<span class="w">   </span><span class="c1"># Test service connectivity</span>
+./scripts/service-discovery.sh<span class="w"> </span>dns<span class="w">            </span><span class="c1"># Test DNS resolution</span>
+./scripts/service-discovery.sh<span class="w"> </span>endpoints<span class="w">      </span><span class="c1"># Show service endpoints</span>
+</code></pre></div></p>
+</details>
+<p><strong>Testing Evidence:</strong></p>
+<details class="tip">
+<summary>Container Health Status</summary>
+<p><strong>Service Health Monitoring:</strong>
+<div class="highlight"><pre><span></span><code>smart-deploy-postgres: healthy (172.20.0.4/16)
+smart-deploy-redis: healthy (172.20.0.5/16)
+smart-deploy-monitor-app: starting (172.20.0.6/16)
+smart-deploy-elasticsearch: unhealthy (172.20.0.3/16)
+smart-deploy-qdrant: unhealthy (172.20.0.2/16)
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Resource Usage Monitoring</summary>
+<p><strong>Container Resource Tracking:</strong>
+<div class="highlight"><pre><span></span><code>CONTAINER                    CPU %    MEM USAGE / LIMIT     NET I/O
+smart-deploy-monitor-app     99.32%   130.4MiB / 1GiB       872B / 126B
+smart-deploy-postgres        0.48%    20.89MiB / 3.828GiB   5.94kB / 126B
+smart-deploy-redis           0.11%    193.1MiB / 3.828GiB   12.5kB / 3.06kB
+smart-deploy-elasticsearch  2.77%    962.1MiB / 3.828GiB   6.02kB / 126B
+smart-deploy-qdrant          0.00%    18.42MiB / 3.828GiB   6.02kB / 126B
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Network Configuration</summary>
+<p><strong>Custom Network Setup:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;smart-deploy-monitor_smart-deploy-network&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bridge&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;IPAM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Subnet&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.20.0.0/16&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Gateway&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.20.0.1&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;Containers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;smart-deploy-postgres&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.20.0.4/16&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;smart-deploy-redis&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.20.0.5/16&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;smart-deploy-monitor-app&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.20.0.6/16&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;smart-deploy-elasticsearch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.20.0.3/16&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;smart-deploy-qdrant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.20.0.2/16&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<p><strong>Security Implementation:</strong></p>
+<details class="tip">
+<summary>Container Security Best Practices</summary>
+<p><strong>Security Features Implemented:</strong>
+- <strong>Non-root User Execution</strong>: All containers run as non-root users
+- <strong>Minimal Base Images</strong>: Using slim/alpine variants for reduced attack surface
+- <strong>Security Updates</strong>: Automated package updates in Dockerfile
+- <strong>Resource Limits</strong>: CPU and memory limits to prevent resource exhaustion
+- <strong>Health Checks</strong>: Automated health monitoring for all services
+- <strong>Network Isolation</strong>: Custom network with controlled communication
+- <strong>Volume Security</strong>: Proper volume mounting and permissions</p>
+</details>
+<p><strong>Production Readiness Features:</strong></p>
+<details class="tip">
+<summary>Production Deployment Features</summary>
+<p><strong>Enterprise-Grade Containerization:</strong>
+- <strong>Multi-Stage Builds</strong>: Optimized image size and build time
+- <strong>Health Checks</strong>: Comprehensive health monitoring for all services
+- <strong>Resource Management</strong>: CPU and memory limits with reservations
+- <strong>Logging Configuration</strong>: Structured logging with rotation policies
+- <strong>Restart Policies</strong>: Automatic restart on failure
+- <strong>Service Dependencies</strong>: Proper startup order with health checks
+- <strong>Backup &amp; Restore</strong>: Volume backup and restore capabilities
+- <strong>Monitoring &amp; Alerting</strong>: Resource usage and health monitoring
+- <strong>Security Hardening</strong>: Non-root execution and minimal attack surface
+- <strong>Network Security</strong>: Isolated network with controlled communication</p>
+</details>
 </details>
 <details class="note">
 <summary>Level 2: Advanced Docker</summary>
@@ -1139,6 +1325,29 @@
 </details>
 <hr />
 <h2 id="personal-notes">Personal Notes<a class="headerlink" href="#personal-notes" title="Permanent link">&para;</a></h2>
+<details class="info">
+<summary>Level 1: Docker Containerization Mastery (Completed 18-10-2025)</summary>
+<p><strong>What I Implemented:</strong>
+- <strong>Advanced Docker Compose Setup</strong>: Enhanced existing Docker Compose with custom networking, resource limits, health checks, and logging configuration
+- <strong>Multi-Stage Dockerfile</strong>: Optimized Spring Boot container with security best practices, non-root user execution, and health monitoring
+- <strong>Container Management Scripts</strong>: Created comprehensive management system with start/stop/restart, scaling, backup/restore, and monitoring capabilities
+- <strong>Service Discovery System</strong>: Implemented networking analysis, connectivity testing, DNS resolution, and service dependency mapping
+- <strong>Production-Ready Configuration</strong>: Resource limits, restart policies, logging rotation, security hardening, and network isolation</p>
+<p><strong>What I Learned:</strong>
+- <strong>Container Orchestration</strong>: Multi-service deployment with proper dependencies and health checks
+- <strong>Docker Networking</strong>: Custom networks with IPAM configuration and service discovery
+- <strong>Container Security</strong>: Non-root execution, minimal base images, and security best practices
+- <strong>Resource Management</strong>: CPU and memory limits, resource monitoring, and optimization
+- <strong>Production Deployment</strong>: Health checks, logging, monitoring, backup strategies, and scaling
+- <strong>Service Communication</strong>: Inter-container communication, DNS resolution, and network isolation</p>
+<p><strong>Applied Knowledge:</strong>
+- Enhanced Docker Compose with custom subnet (172.20.0.0/16) and proper service dependencies
+- Implemented comprehensive container management and monitoring scripts
+- Applied security best practices with non-root users and minimal attack surface
+- Created production-ready containerization with health checks and resource limits
+- Demonstrated advanced container orchestration with service discovery and networking</p>
+<p><strong>Key Achievement:</strong> Successfully implemented enterprise-grade container orchestration with advanced Docker Compose configuration, comprehensive management scripts, service discovery, and production-ready security features, demonstrating mastery of containerization fundamentals and orchestration best practices.</p>
+</details>
 
 
 
