@@ -93,7 +93,7 @@
 
 ## Progress & Evidence
 
-??? success "Level 1: API Design Fundamentals (25-10-2025)"
+??? success "Level 1: API Design Fundamentals (18-10-2025)"
     **Status:** In Progress  
     **Focus:** REST API design, HTTP methods, status codes, API documentation  
     
@@ -102,6 +102,68 @@
     - [API Documentation](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/README.md) - Comprehensive API documentation
     - [OpenAPI/Swagger Integration](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/OpenApiConfig.java) - Swagger configuration
     - [API Testing](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/test-api.sh) - Automated API testing scripts
+
+    ??? tip "Step 1: REST API Controller Implementation"
+        **UserController Implementation:**
+        - **GitHub Link**: [UserController.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/UserController.java)
+        
+        ```java
+        @RestController
+        @RequestMapping("/api/users")
+        public class UserController {
+            @PostMapping
+            public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+                // Create user with validation
+                return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(user));
+            }
+
+            @GetMapping("/{id}")
+            public ResponseEntity<User> getUser(@PathVariable Long id) {
+                // Get user by ID with proper error handling
+                return userService.getUserById(id)
+                    .map(user -> ResponseEntity.ok(user))
+                    .orElse(ResponseEntity.notFound().build());
+            }
+        }
+        ```
+
+    ??? tip "Step 2: OpenAPI/Swagger Documentation"
+        **OpenApiConfig Implementation:**
+        - **GitHub Link**: [OpenApiConfig.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/OpenApiConfig.java)
+        
+        ```java
+        @Configuration
+        public class OpenApiConfig {
+            @Bean
+            public OpenAPI customOpenAPI() {
+                return new OpenAPI()
+                    .info(new Info()
+                        .title("Smart Deploy Monitor API")
+                        .description("REST API for deployment monitoring and management")
+                        .version("1.0.0"));
+            }
+        }
+        ```
+
+    ??? tip "Step 3: API Testing Implementation"
+        **API Testing Script:**
+        - **GitHub Link**: [test-api.sh](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/test-api.sh)
+        
+        ```bash
+        #!/bin/bash
+        # API Testing Script
+        BASE_URL="http://localhost:8080/api"
+
+        # Test health endpoint
+        echo "Testing health endpoint..."
+        curl -X GET "${BASE_URL}/health/ping"
+
+        # Test user creation
+        echo "Testing user creation..."
+        curl -X POST "${BASE_URL}/users" \
+          -H "Content-Type: application/json" \
+          -d '{"username":"testuser","email":"test@example.com"}'
+        ```
     
     **What I Learned:**
     - **REST API Design**: Resource-based URLs, HTTP methods (GET, POST, PUT, DELETE), proper status codes (200, 201, 400, 404, 500)
@@ -128,9 +190,98 @@
     
     **Key Achievement:** Successfully designed and implemented a comprehensive REST API with proper documentation, testing, and error handling, creating a solid foundation for advanced API design and development.
 
-??? note "Level 2: REST Best Practices"
-    **Status:** Planned  
-    **Focus:** REST principles, versioning, pagination, filtering
+??? success "Level 2: REST Best Practices (25-10-2025)"
+    **Status:** In Progress  
+    **Focus:** REST principles, versioning, pagination, filtering, OpenAPI documentation  
+    
+    **Evidence:**  
+    - [Smart Deploy Monitor API v2](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor) - Enhanced REST API with best practices
+    - [API Versioning Implementation](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/UserController.java) - Versioned endpoints
+    - [Pagination Implementation](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/UserService.java) - Paginated responses
+    - [OpenAPI Documentation](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/OpenApiConfig.java) - Enhanced Swagger documentation
+
+    ??? tip "Step 1: API Versioning Implementation"
+        **Versioned Controller Implementation:**
+        - **GitHub Link**: [UserController.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/UserController.java)
+        
+        ```java
+        @RestController
+        @RequestMapping("/api/v1/users")
+        public class UserController {
+            @GetMapping
+            public ResponseEntity<Page<User>> getUsers(
+                @RequestParam(defaultValue = "0") int page,
+                @RequestParam(defaultValue = "10") int size,
+                @RequestParam(required = false) String search) {
+                // Paginated and filtered user retrieval
+                Page<User> users = userService.getUsers(page, size, search);
+                return ResponseEntity.ok(users);
+            }
+        }
+        ```
+
+    ??? tip "Step 2: Enhanced OpenAPI Documentation"
+        **OpenAPI Configuration with Versioning:**
+        - **GitHub Link**: [OpenApiConfig.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/OpenApiConfig.java)
+        
+        ```java
+        @Configuration
+        public class OpenApiConfig {
+            @Bean
+            public OpenAPI customOpenAPI() {
+                return new OpenAPI()
+                    .info(new Info()
+                        .title("Smart Deploy Monitor API")
+                        .description("REST API for deployment monitoring and management")
+                        .version("2.0.0"))
+                    .addServersItem(new Server().url("/api/v1").description("API v1"));
+            }
+        }
+        ```
+
+    ??? tip "Step 3: Request Validation and Error Handling"
+        **Enhanced Validation Implementation:**
+        - **GitHub Link**: [SecurityValidation.java](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/validation/SecurityValidation.java)
+        
+        ```java
+        @Component
+        public class SecurityValidation {
+            public boolean validateInput(String input) {
+                // Input validation and sanitization
+                if (input == null || input.trim().isEmpty()) {
+                    return false;
+                }
+                // Additional validation logic
+                return true;
+            }
+        }
+        ```
+    
+    **What I Learned:**
+    - **API Versioning**: URL-based versioning (/api/v1/), backward compatibility, migration strategies
+    - **Pagination**: Page-based pagination with size limits, cursor-based pagination for large datasets
+    - **Filtering**: Query parameter filtering, search functionality, sorting options
+    - **Enhanced Documentation**: OpenAPI 3.0 specifications, detailed schemas, examples
+    - **Request Validation**: Input validation, sanitization, proper error responses
+    - **Consistent Error Handling**: Standardized error formats, proper HTTP status codes
+    
+    **Applied Knowledge:**
+    - Implemented API versioning with URL-based versioning strategy
+    - Added pagination support with configurable page size and search functionality
+    - Enhanced OpenAPI documentation with detailed schemas and examples
+    - Implemented comprehensive input validation and sanitization
+    - Created consistent error handling patterns across all endpoints
+    - Designed intuitive API endpoints following REST principles
+    
+    **REST Best Practices Mastered:**
+    - **API Design**: Intuitive resource URLs, proper HTTP methods, consistent naming
+    - **Versioning**: URL-based versioning, backward compatibility, migration planning
+    - **Pagination**: Page-based pagination, search functionality, sorting capabilities
+    - **Documentation**: Enhanced OpenAPI specs, detailed schemas, comprehensive examples
+    - **Validation**: Input validation, sanitization, proper error handling
+    - **Error Handling**: Consistent error formats, proper status codes, meaningful messages
+    
+    **Key Achievement:** Successfully implemented REST best practices including API versioning, pagination, filtering, enhanced documentation, and comprehensive validation, creating a professional and scalable API design foundation.
 
 ??? note "Level 3: GraphQL & gRPC"
     **Status:** Planned  
@@ -158,7 +309,7 @@
 
 ## Personal Notes
 
-??? info "Level 1: API Design Mastery (In Progress 25-10-2025)"
+??? info "Level 1: API Design Mastery (In Progress 18-10-2025)"
 
     **What I'm Learning:**
     - **REST API Design**: Resource-based URLs, HTTP methods (GET, POST, PUT, DELETE), proper status codes (200, 201, 400, 404, 500), consistent response formats
