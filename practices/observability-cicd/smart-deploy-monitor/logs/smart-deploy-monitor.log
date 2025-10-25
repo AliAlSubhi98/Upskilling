@@ -6997,3 +6997,34 @@ Caused by: java.net.ConnectException: Connection refused
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
+2025-10-25 18:04:38 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 121s, Memory: 112.04/135.00MB, CPU Cores: 8, Requests: 0, Connections: 34
+2025-10-25 18:05:38 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 181s, Memory: 112.09/135.00MB, CPU Cores: 8, Requests: 0, Connections: 27
+2025-10-25 18:06:38 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 241s, Memory: 112.09/135.00MB, CPU Cores: 8, Requests: 0, Connections: 14
+2025-10-25 18:07:38 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 301s, Memory: 112.09/135.00MB, CPU Cores: 8, Requests: 0, Connections: 29
+2025-10-25 18:08:38 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 361s, Memory: 112.09/135.00MB, CPU Cores: 8, Requests: 0, Connections: 8
+2025-10-25 18:09:38 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 421s, Memory: 112.09/135.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-25 18:10:38 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 481s, Memory: 112.19/135.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-25 18:49:36 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m1s183ms).
+2025-10-25 19:11:06 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m29s498ms).
+2025-10-25 19:11:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4112s, Memory: 112.19/135.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-25 19:12:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4172s, Memory: 112.19/135.00MB, CPU Cores: 8, Requests: 0, Connections: 26
+2025-10-25 19:13:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4232s, Memory: 112.34/135.00MB, CPU Cores: 8, Requests: 0, Connections: 10
+2025-10-25 19:14:09 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4292s, Memory: 112.34/135.00MB, CPU Cores: 8, Requests: 0, Connections: 49
+2025-10-25 19:14:49 [http-nio-8080-exec-8] WARN  c.u.s.security.RateLimitingFilter - Redis rate limiting failed, falling back to in-memory: Unable to connect to Redis
+2025-10-25 19:14:49 [http-nio-8080-exec-8] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 5, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:49 [http-nio-8080-exec-8] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 5, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:57 [http-nio-8080-exec-9] WARN  c.u.s.security.RateLimitingFilter - Redis rate limiting failed, falling back to in-memory: Unable to connect to Redis
+2025-10-25 19:14:57 [http-nio-8080-exec-9] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:57 [http-nio-8080-exec-9] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:57 [http-nio-8080-exec-2] WARN  c.u.s.security.RateLimitingFilter - Redis rate limiting failed, falling back to in-memory: Unable to connect to Redis
+2025-10-25 19:14:57 [http-nio-8080-exec-2] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:57 [http-nio-8080-exec-2] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:57 [http-nio-8080-exec-3] WARN  c.u.s.security.RateLimitingFilter - Redis rate limiting failed, falling back to in-memory: Unable to connect to Redis
+2025-10-25 19:14:57 [http-nio-8080-exec-3] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:57 [http-nio-8080-exec-3] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:58 [http-nio-8080-exec-5] WARN  c.u.s.security.RateLimitingFilter - Redis rate limiting failed, falling back to in-memory: Unable to connect to Redis
+2025-10-25 19:14:58 [http-nio-8080-exec-5] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:58 [http-nio-8080-exec-5] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:58 [http-nio-8080-exec-7] WARN  c.u.s.security.RateLimitingFilter - Redis rate limiting failed, falling back to in-memory: Unable to connect to Redis
+2025-10-25 19:14:58 [http-nio-8080-exec-7] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 19:14:58 [http-nio-8080-exec-7] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc

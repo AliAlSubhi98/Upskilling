@@ -7,7 +7,6 @@ com/upskilling/smartdeploymonitor/service/ElasticsearchService.class
 com/upskilling/smartdeploymonitor/config/ClientConfig.class
 com/upskilling/smartdeploymonitor/security/SecurityEventLogger.class
 com/upskilling/smartdeploymonitor/controller/KeycloakController.class
-com/upskilling/smartdeploymonitor/security/RateLimitingFilter$RequestCounter.class
 com/upskilling/smartdeploymonitor/service/UserService$UserStatistics.class
 com/upskilling/smartdeploymonitor/service/domain/UserDomainService.class
 com/upskilling/smartdeploymonitor/controller/AuthController.class
