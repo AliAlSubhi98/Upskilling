@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../API-Design/" class="md-nav__link">
+      <a href="../API/" class="md-nav__link">
         
   
   
@@ -774,7 +774,7 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Prerequisites
+      Prerequisites
     </span>
   </a>
   
@@ -889,7 +889,7 @@
           <li class="md-nav__item">
   <a href="#option-1-kill-the-process-using-the-port" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Option 1: Kill the Process Using the Port
+      Option 1: Kill the Process Using the Port
     </span>
   </a>
   
@@ -898,7 +898,7 @@
           <li class="md-nav__item">
   <a href="#option-2-use-a-different-port" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Option 2: Use a Different Port
+      Option 2: Use a Different Port
     </span>
   </a>
   
@@ -946,7 +946,7 @@
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Prerequisites
+      Prerequisites
     </span>
   </a>
   
@@ -1061,7 +1061,7 @@
           <li class="md-nav__item">
   <a href="#option-1-kill-the-process-using-the-port" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Option 1: Kill the Process Using the Port
+      Option 1: Kill the Process Using the Port
     </span>
   </a>
   
@@ -1070,7 +1070,7 @@
           <li class="md-nav__item">
   <a href="#option-2-use-a-different-port" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Option 2: Use a Different Port
+      Option 2: Use a Different Port
     </span>
   </a>
   
@@ -1107,7 +1107,7 @@
 3. Updating content
 4. Best practices</p>
 <hr />
-<h2 id="prerequisites">✅ Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Python ≥ 3.7 installed</li>
 <li>Git installed and configured</li>
@@ -1203,7 +1203,7 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <ul>
 <li><strong>Source</strong>: Select <code>gh-pages</code> branch</li>
 <li><strong>Directory</strong>: <code>/ (root)</code></li>
-<li>Save ✅</li>
+<li>Save  </li>
 </ul>
 <hr />
 <h2 id="5-how-to-update-the-docs">✏️ 5. How to Update the Docs<a class="headerlink" href="#5-how-to-update-the-docs" title="Permanent link">&para;</a></h2>
@@ -1240,7 +1240,7 @@ mkdocs<span class="w"> </span>serve<span class="w">  </span><span class="c1"># f
 </code></pre></div>
 <p>This means another process is using the default port <code>8000</code>. You have two ways to solve this:</p>
 <hr />
-<h3 id="option-1-kill-the-process-using-the-port">✅ Option 1: Kill the Process Using the Port<a class="headerlink" href="#option-1-kill-the-process-using-the-port" title="Permanent link">&para;</a></h3>
+<h3 id="option-1-kill-the-process-using-the-port">Option 1: Kill the Process Using the Port<a class="headerlink" href="#option-1-kill-the-process-using-the-port" title="Permanent link">&para;</a></h3>
 <p>Run the following to find the process ID:</p>
 <div class="highlight"><pre><span></span><code>lsof<span class="w"> </span>-i<span class="w"> </span>:8000
 </code></pre></div>
@@ -1252,7 +1252,7 @@ mkdocs<span class="w"> </span>serve<span class="w">  </span><span class="c1"># f
 <div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">12345</span>
 </code></pre></div>
 <hr />
-<h3 id="option-2-use-a-different-port">✅ Option 2: Use a Different Port<a class="headerlink" href="#option-2-use-a-different-port" title="Permanent link">&para;</a></h3>
+<h3 id="option-2-use-a-different-port">Option 2: Use a Different Port<a class="headerlink" href="#option-2-use-a-different-port" title="Permanent link">&para;</a></h3>
 <p>If you don’t want to kill the running process, simply use another port:</p>
 <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve<span class="w"> </span>-a<span class="w"> </span><span class="m">127</span>.0.0.1:8001
 </code></pre></div>

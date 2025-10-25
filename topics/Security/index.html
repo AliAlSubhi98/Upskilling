@@ -16,7 +16,7 @@
         <link rel="prev" href="../System-Design/">
       
       
-        <link rel="next" href="../API-Design/">
+        <link rel="next" href="../API/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -764,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../API-Design/" class="md-nav__link">
+      <a href="../API/" class="md-nav__link">
         
   
   
@@ -1241,45 +1241,45 @@
 <details class="tip">
 <summary>Security Headers Analysis</summary>
 <p><strong>Comprehensive Security Headers Testing:</strong>
-<div class="highlight"><pre><span></span><code>✅ X-Content-Type-Options: Present on all endpoints
-✅ X-Frame-Options: Present on all endpoints  
-✅ X-XSS-Protection: Present on all endpoints
-✅ Strict-Transport-Security: Present on all endpoints
-✅ Content-Security-Policy: Present on all endpoints
-✅ Referrer-Policy: Present on all endpoints
-✅ Permissions-Policy: Present on all endpoints
+<div class="highlight"><pre><span></span><code>  X-Content-Type-Options: Present on all endpoints
+  X-Frame-Options: Present on all endpoints  
+  X-XSS-Protection: Present on all endpoints
+  Strict-Transport-Security: Present on all endpoints
+  Content-Security-Policy: Present on all endpoints
+  Referrer-Policy: Present on all endpoints
+  Permissions-Policy: Present on all endpoints
 </code></pre></div></p>
 </details>
 <details class="tip">
 <summary>Input Validation Testing</summary>
 <p><strong>Security Validation Results:</strong>
-<div class="highlight"><pre><span></span><code>✅ SQL Injection Protection: All attempts blocked
-✅ XSS Protection: All attempts blocked
-✅ Path Traversal Protection: All attempts blocked
-✅ LDAP Injection Protection: All attempts blocked
-✅ Email Validation: Proper format validation
-✅ Password Strength: Strong password requirements
+<div class="highlight"><pre><span></span><code>  SQL Injection Protection: All attempts blocked
+  XSS Protection: All attempts blocked
+  Path Traversal Protection: All attempts blocked
+  LDAP Injection Protection: All attempts blocked
+  Email Validation: Proper format validation
+  Password Strength: Strong password requirements
 </code></pre></div></p>
 </details>
 <details class="tip">
 <summary>Authentication &amp; Authorization Testing</summary>
 <p><strong>Security Access Control Results:</strong>
-<div class="highlight"><pre><span></span><code>✅ Protected Endpoints: Properly secured (HTTP 403)
-✅ Authentication Bypass: All attempts blocked
-✅ Token Validation: Working correctly
-✅ Authorization Headers: Properly validated
-✅ IP Spoofing Protection: Headers properly handled
+<div class="highlight"><pre><span></span><code>  Protected Endpoints: Properly secured (HTTP 403)
+  Authentication Bypass: All attempts blocked
+  Token Validation: Working correctly
+  Authorization Headers: Properly validated
+  IP Spoofing Protection: Headers properly handled
 </code></pre></div></p>
 </details>
 <details class="tip">
 <summary>Information Disclosure Testing</summary>
 <p><strong>Sensitive Information Protection:</strong>
-<div class="highlight"><pre><span></span><code>✅ Actuator Endpoints: Protected (HTTP 403)
-✅ Admin Endpoints: Protected (HTTP 403)
-✅ Debug Endpoints: Protected (HTTP 403)
-✅ Configuration Files: Protected (HTTP 403)
-✅ Environment Variables: Not exposed
-✅ Database Credentials: Not accessible
+<div class="highlight"><pre><span></span><code>  Actuator Endpoints: Protected (HTTP 403)
+  Admin Endpoints: Protected (HTTP 403)
+  Debug Endpoints: Protected (HTTP 403)
+  Configuration Files: Protected (HTTP 403)
+  Environment Variables: Not exposed
+  Database Credentials: Not accessible
 </code></pre></div></p>
 </details>
 <p><strong>Security Assessment Tools:</strong></p>
