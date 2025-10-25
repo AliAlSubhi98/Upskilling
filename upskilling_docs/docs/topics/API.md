@@ -31,6 +31,42 @@
   - [x] Implement request validation
   - [x] Add API testing and monitoring
 
+## Level 3: GraphQL & gRPC
+- **Competencies:** Build GraphQL schemas and resolvers, use gRPC with Protobuf, understand streaming
+- **Tools:** Apollo Server, GraphQL tools, gRPC, Protocol Buffers
+- **Checklist:**
+  - [ ] Design GraphQL schemas
+  - [ ] Implement GraphQL resolvers
+  - [ ] Handle N+1 query problems
+  - [ ] Create gRPC service definitions
+  - [ ] Implement gRPC streaming
+  - [ ] Handle schema evolution
+  - [ ] Optimize query performance
+
+## Level 4: API Security & Gateway Integration
+- **Competencies:** Secure APIs with authentication, apply rate limiting, integrate with API gateways
+- **Tools:** JWT libraries, OAuth2, API Gateways, rate limiting tools
+- **Checklist:**
+  - [ ] Implement JWT authentication
+  - [ ] Add OAuth2 authorization
+  - [ ] Apply rate limiting and throttling
+  - [ ] Integrate with API gateways
+  - [ ] Implement input validation and sanitization
+  - [ ] Add security headers
+  - [ ] Monitor and log security events
+
+## Level 5: Federated & Evolvable APIs
+- **Competencies:** Federate APIs, manage multi-team APIs, design evolvable APIs
+- **Tools:** Apollo Federation, gRPC Gateway, schema registry tools
+- **Checklist:**
+  - [ ] Design federated API architecture
+  - [ ] Implement API federation
+  - [ ] Manage API versioning across teams
+  - [ ] Design backward-compatible changes
+  - [ ] Implement API governance
+  - [ ] Monitor API usage and performance
+  - [ ] Lead API design decisions
+
 ---
 
 ## Progress & Evidence
