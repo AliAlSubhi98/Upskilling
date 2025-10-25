@@ -8,7 +8,7 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 |-----------------------------|-----------------------------------------|--------------|
 | Git & GitHub                | Master version control & collaboration  | Level 2 (Complete) |
 | Project Management          | Understand dev project workflows        | Level 1 (Complete) |
-| Communication & Collaboration | Improve team communication skills       | Level 1       |
+| Communication & Collaboration | Improve team communication skills       | Level 1 (In Progress) |
 | Documentation               | Write and maintain clear docs           | Level 1 (Complete) |
 | Containers & Orchestration  | Deploy/manage containers & clusters     | Level 1 (Complete) |
 | Linux                       | Confident Linux user/admin              | Level 1       |
