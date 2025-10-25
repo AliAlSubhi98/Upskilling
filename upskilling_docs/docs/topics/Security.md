@@ -70,15 +70,15 @@
 
 ## Progress & Evidence
 
-??? success "Level 1: Basic Security (18-10-2025)"
+??? success "Level 1: Basic Security (25-10-2025)"
     **Status:** Completed  
     **Focus:** Spring Security, authentication, input validation, secure password storage  
     **Evidence:**  
     - [Smart Deploy Monitor Security Implementation](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/observability-cicd/smart-deploy-monitor)
-    - **Spring Security Integration** (Completed 18-10-2025): Implemented authentication and authorization
-    - **BCrypt Password Encryption** (Completed 18-10-2025): Secure password storage with BCrypt
-    - **Input Validation** (Completed 18-10-2025): Jakarta Bean Validation for request validation
-    - **Environment Security** (Completed 18-10-2025): No secrets in code, proper configuration management
+    - **Spring Security Integration** (Completed 25-10-2025): Implemented authentication and authorization
+    - **BCrypt Password Encryption** (Completed 25-10-2025): Secure password storage with BCrypt
+    - **Input Validation** (Completed 25-10-2025): Jakarta Bean Validation for request validation
+    - **Environment Security** (Completed 25-10-2025): No secrets in code, proper configuration management
     
     **What I Learned:**
     - **Spring Security**: Authentication and authorization framework for Spring Boot applications
@@ -383,7 +383,7 @@
 
 ## Personal Notes
 
-??? info "Level 1: Security Mastery (Completed 18-10-2025)"
+??? info "Level 1: Security Mastery (Completed 25-10-2025)"
 
     **What I Implemented:**
     - **Security Headers Configuration**: Comprehensive HTTP security headers including X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, and Permissions-Policy
