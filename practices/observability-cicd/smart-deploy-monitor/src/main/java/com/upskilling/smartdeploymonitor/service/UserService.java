@@ -16,10 +16,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 @Service
 @Transactional
@@ -270,5 +276,43 @@ public class UserService implements UserDetailsService {
         public long getAdminUsers() { return adminUsers; }
         public long getRegularUsers() { return regularUsers; }
         public long getInactiveUsers() { return totalUsers - activeUsers; }
+    }
+    
+    /**
+     * Get paginated users with filtering and sorting
+     */
+    public Map<String, Object> getUsersPaginated(int page, int size, String search, String sortBy, String sortDir) {
+        logger.info("Getting paginated users - page: {}, size: {}, search: {}, sortBy: {}, sortDir: {}", 
+                   page, size, search, sortBy, sortDir);
+        
+        // Create sort object
+        Sort sort = Sort.by(sortDir.equalsIgnoreCase("desc") ? Sort.Direction.DESC : Sort.Direction.ASC, sortBy);
+        Pageable pageable = PageRequest.of(page, size, sort);
+        
+        Page<User> userPage;
+        
+        // Apply search filter if provided
+        if (search != null && !search.trim().isEmpty()) {
+            userPage = userRepository.findBySearchTerm(search.trim(), pageable);
+        } else {
+            userPage = userRepository.findAll(pageable);
+        }
+        
+        // Create pagination info
+        Map<String, Object> pagination = new HashMap<>();
+        pagination.put("page", userPage.getNumber());
+        pagination.put("size", userPage.getSize());
+        pagination.put("totalElements", userPage.getTotalElements());
+        pagination.put("totalPages", userPage.getTotalPages());
+        pagination.put("first", userPage.isFirst());
+        pagination.put("last", userPage.isLast());
+        pagination.put("numberOfElements", userPage.getNumberOfElements());
+        
+        // Create response
+        Map<String, Object> result = new HashMap<>();
+        result.put("users", userPage.getContent());
+        result.put("pagination", pagination);
+        
+        return result;
     }
 }

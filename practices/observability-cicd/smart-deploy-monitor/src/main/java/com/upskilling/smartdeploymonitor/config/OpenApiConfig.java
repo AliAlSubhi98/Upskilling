@@ -18,8 +18,8 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("Smart Deploy Monitor API")
-                        .description("A comprehensive Spring Boot application demonstrating CI/CD, Observability, and Database integration with user management capabilities.")
-                        .version("1.0.0")
+                        .description("A comprehensive Spring Boot application demonstrating CI/CD, Observability, and Database integration with user management capabilities. Features REST best practices including API versioning, pagination, filtering, and enhanced documentation.")
+                        .version("2.0.0")
                         .contact(new Contact()
                                 .name("Ali Al Subhi")
                                 .email("ali@example.com")
@@ -29,11 +29,11 @@ public class OpenApiConfig {
                                 .url("https://opensource.org/licenses/MIT")))
                 .servers(List.of(
                         new Server()
-                                .url("http://localhost:8080")
-                                .description("Development Server"),
+                                .url("http://localhost:8080/api/v1")
+                                .description("Development Server - API v1"),
                         new Server()
-                                .url("https://api.smartdeploymonitor.com")
-                                .description("Production Server")
+                                .url("https://api.smartdeploymonitor.com/api/v1")
+                                .description("Production Server - API v1")
                 ));
     }
 }

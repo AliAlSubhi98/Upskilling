@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/v1/users")
 @Tag(name = "User Management", description = "APIs for managing users in the Smart Deploy Monitor system")
 public class UserController {
     
@@ -146,11 +146,11 @@ public class UserController {
     }
     
     /**
-     * Get all users
+     * Get all users with pagination and filtering
      */
     @Operation(
-        summary = "Get all users",
-        description = "Retrieves a list of all users in the system with their basic information."
+        summary = "Get all users with pagination",
+        description = "Retrieves a paginated list of users with optional filtering and sorting capabilities."
     )
     @ApiResponses(value = {
         @ApiResponse(
@@ -160,8 +160,16 @@ public class UserController {
                 mediaType = "application/json",
                 schema = @Schema(implementation = Map.class),
                 examples = @ExampleObject(
-                    value = "{\"success\": true, \"count\": 2, \"users\": [{\"id\": \"uuid\", \"email\": \"john@example.com\", \"firstName\": \"John\", \"lastName\": \"Doe\", \"role\": \"USER\"}]}"
+                    value = "{\"success\": true, \"data\": [{\"id\": \"uuid\", \"email\": \"john@example.com\", \"firstName\": \"John\", \"lastName\": \"Doe\", \"role\": \"USER\"}], \"pagination\": {\"page\": 0, \"size\": 10, \"totalElements\": 25, \"totalPages\": 3}}"
                 )
+            )
+        ),
+        @ApiResponse(
+            responseCode = "400",
+            description = "Bad request - Invalid pagination parameters",
+            content = @Content(
+                mediaType = "application/json",
+                schema = @Schema(implementation = Map.class)
             )
         ),
         @ApiResponse(
@@ -174,15 +182,43 @@ public class UserController {
         )
     })
     @GetMapping
-    public ResponseEntity<Map<String, Object>> getAllUsers() {
-        logger.info("Fetching all users");
+    public ResponseEntity<Map<String, Object>> getAllUsers(
+            @Parameter(description = "Page number (0-based)", example = "0")
+            @RequestParam(defaultValue = "0") int page,
+            @Parameter(description = "Page size", example = "10")
+            @RequestParam(defaultValue = "10") int size,
+            @Parameter(description = "Search term for filtering users", example = "john")
+            @RequestParam(required = false) String search,
+            @Parameter(description = "Sort field", example = "firstName")
+            @RequestParam(defaultValue = "firstName") String sortBy,
+            @Parameter(description = "Sort direction", example = "asc")
+            @RequestParam(defaultValue = "asc") String sortDir) {
         
-        List<User> users = userService.getAllUsers();
+        logger.info("Fetching users - page: {}, size: {}, search: {}, sortBy: {}, sortDir: {}", 
+                   page, size, search, sortBy, sortDir);
+        
+        // Validate pagination parameters
+        if (page < 0) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", false);
+            response.put("message", "Page number must be non-negative");
+            return ResponseEntity.badRequest().body(response);
+        }
+        
+        if (size < 1 || size > 100) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", false);
+            response.put("message", "Page size must be between 1 and 100");
+            return ResponseEntity.badRequest().body(response);
+        }
+        
+        // Get paginated users
+        Map<String, Object> result = userService.getUsersPaginated(page, size, search, sortBy, sortDir);
         
         Map<String, Object> response = new HashMap<>();
         response.put("success", true);
-        response.put("count", users.size());
-        response.put("users", users.stream().map(this::createUserResponse).toList());
+        response.put("data", result.get("users"));
+        response.put("pagination", result.get("pagination"));
         
         return ResponseEntity.ok(response);
     }
