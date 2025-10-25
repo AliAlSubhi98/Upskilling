@@ -992,7 +992,7 @@
 
 <h1 id="git-github">Git &amp; GitHub<a class="headerlink" href="#git-github" title="Permanent link">&para;</a></h1>
 <p><strong>Goal:</strong> Master version control and collaboration using Git and GitHub.</p>
-<p><strong>Current Level:</strong> Level 1</p>
+<p><strong>Current Level:</strong> Level 3 (In Progress)</p>
 <hr />
 <h2 id="level-1-git-basics">Level 1: Git Basics<a class="headerlink" href="#level-1-git-basics" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1021,9 +1021,11 @@
 <li><strong>Competencies:</strong> Reflog, Reset, Revert, Bisect, Tagging</li>
 <li><strong>Commands:</strong> <code>git reflog</code>, <code>git reset --hard</code>, <code>git revert</code>, <code>git bisect</code>, <code>git tag</code></li>
 <li><strong>Checklist:</strong><ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Recover lost commits using reflog</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Use git bisect to find a bug in commit history</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Reset changes safely without losing work</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Recover lost commits using reflog</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Use git bisect to find a bug in commit history</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Reset changes safely without losing work</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create and manage release tags</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Practice advanced recovery techniques</li>
 </ul>
 </li>
 </ul>
@@ -1060,16 +1062,61 @@
 <hr />
 <h2 id="progress">Progress<a class="headerlink" href="#progress" title="Permanent link">&para;</a></h2>
 <details class="success">
-<summary>Level 1: Git Basics</summary>
+<summary>Level 1: Git Basics (Completed)</summary>
 <p><strong>Status:</strong> Completed<br />
 <strong>Focus:</strong> Init, Clone, Add, Commit, Push, Pull, Branching<br />
 <strong>Commands Practiced:</strong><br />
 <code>git init</code>, <code>git clone</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, <code>.gitignore</code><br />
 <strong>Evidence:</strong><br />
 - <a href="https://github.com/AliAlSubhi98/Upskilling/commits/main/">Commit History - Upskilling repo commits</a></p>
+<details class="tip">
+<summary>Level 1: Essential Git Commands with Examples</summary>
+<p><strong>Repository Initialization:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>init
+Initialized<span class="w"> </span>empty<span class="w"> </span>Git<span class="w"> </span>repository<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/alialsubhi/Desktop/Upskilling/.git/
+
+$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>main
+No<span class="w"> </span>commits<span class="w"> </span>yet
+nothing<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span><span class="o">(</span>create/copy<span class="w"> </span>files<span class="w"> </span>and<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>to<span class="w"> </span>track<span class="o">)</span>
+</code></pre></div></p>
+<p><strong>Basic File Operations:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit: Add README&quot;</span>
+<span class="o">[</span>main<span class="w"> </span><span class="o">(</span>root-commit<span class="o">)</span><span class="w"> </span>a1b2c3d<span class="o">]</span><span class="w"> </span>Initial<span class="w"> </span>commit:<span class="w"> </span>Add<span class="w"> </span>README
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>README.md
+
+$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+a1b2c3d<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>main<span class="o">)</span><span class="w"> </span>Initial<span class="w"> </span>commit:<span class="w"> </span>Add<span class="w"> </span>README
+</code></pre></div></p>
+<p><strong>Branching Basics:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/new-feature
+Switched<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;feature/new-feature&#39;</span>
+
+$<span class="w"> </span>git<span class="w"> </span>branch
+*<span class="w"> </span>feature/new-feature
+<span class="w">  </span>main
+
+$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+Switched<span class="w"> </span>to<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;main&#39;</span>
+</code></pre></div></p>
+<p><strong>Remote Repository Operations:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/AliAlSubhi98/Upskilling.git
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="k">done</span>.
+Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Writing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="m">225</span><span class="w"> </span>bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">225</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span><span class="k">done</span>.
+Total<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
+To<span class="w"> </span>https://github.com/AliAlSubhi98/Upskilling.git
+<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>main<span class="w"> </span>-&gt;<span class="w"> </span>main
+Branch<span class="w"> </span><span class="s1">&#39;main&#39;</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>track<span class="w"> </span>remote<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;main&#39;</span><span class="w"> </span>from<span class="w"> </span><span class="s1">&#39;origin&#39;</span>.
+</code></pre></div></p>
+</details>
 </details>
 <details class="success">
-<summary>Level 2: Branching &amp; Merging</summary>
+<summary>Level 2: Branching &amp; Merging (Completed)</summary>
 <p><strong>Status:</strong> Completed<br />
 <strong>Focus:</strong> Fast-Forward, Rebasing, Merge Conflicts, Cherry-Pick, PRs<br />
 <strong>Evidence:</strong><br />
@@ -1084,11 +1131,142 @@
 <p><strong>Resources Used:</strong> ChatGPT (AI Assistant) for step-by-step guidance</p>
 <p><strong>Applied Knowledge:</strong> Built Java projects (UserAuth, PaymentProcessor, NotificationService) and practiced real-world Git scenarios</p>
 <p><strong>All Level 2 tasks completed!</strong></p>
+<details class="tip">
+<summary>Level 2: Advanced Branching &amp; Merging Commands</summary>
+<p><strong>Feature Branch Creation:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/user-authentication
+Switched<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;feature/user-authentication&#39;</span>
+
+$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-a
+*<span class="w"> </span>feature/user-authentication
+<span class="w">  </span>main
+</code></pre></div></p>
+<p><strong>Merge Conflict Resolution:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>main
+Auto-merging<span class="w"> </span>UserAuth.java
+CONFLICT<span class="w"> </span><span class="o">(</span>content<span class="o">)</span>:<span class="w"> </span>Merge<span class="w"> </span>conflict<span class="w"> </span><span class="k">in</span><span class="w"> </span>UserAuth.java
+Automatic<span class="w"> </span>merge<span class="w"> </span>failed<span class="p">;</span><span class="w"> </span>fix<span class="w"> </span>conflicts<span class="w"> </span>and<span class="w"> </span><span class="k">then</span><span class="w"> </span>commit<span class="w"> </span>the<span class="w"> </span>result.
+
+$<span class="w"> </span>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>feature/user-authentication
+You<span class="w"> </span>have<span class="w"> </span>unmerged<span class="w"> </span>paths.
+<span class="w">  </span><span class="o">(</span>fix<span class="w"> </span>conflicts<span class="w"> </span>and<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;git commit&quot;</span><span class="o">)</span>
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git merge --abort&quot;</span><span class="w"> </span>to<span class="w"> </span>abort<span class="w"> </span>the<span class="w"> </span>merge<span class="o">)</span>
+
+Unmerged<span class="w"> </span>paths:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>mark<span class="w"> </span>resolution<span class="o">)</span>
+<span class="w">        </span>both<span class="w"> </span>modified:<span class="w">   </span>UserAuth.java
+</code></pre></div></p>
+<p><strong>Cherry-Pick Operations:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>main
+a1b2c3d<span class="w"> </span>Add<span class="w"> </span>user<span class="w"> </span>authentication
+b2c3d4e<span class="w"> </span>Add<span class="w"> </span>password<span class="w"> </span>validation
+c3d4e5f<span class="w"> </span>Add<span class="w"> </span>session<span class="w"> </span>management
+
+$<span class="w"> </span>git<span class="w"> </span>cherry-pick<span class="w"> </span>b2c3d4e
+<span class="o">[</span>feature/user-authentication<span class="w"> </span>d4e5f6g<span class="o">]</span><span class="w"> </span>Add<span class="w"> </span>password<span class="w"> </span>validation
+<span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">15</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+</code></pre></div></p>
+<p><strong>Rebase vs Merge:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Rebase (cleaner history)</span>
+$<span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>main
+First,<span class="w"> </span>rewinding<span class="w"> </span>head<span class="w"> </span>to<span class="w"> </span>replay<span class="w"> </span>your<span class="w"> </span>work<span class="w"> </span>on<span class="w"> </span>top<span class="w"> </span>of<span class="w"> </span>it...
+Applying:<span class="w"> </span>Add<span class="w"> </span>user<span class="w"> </span>authentication
+Applying:<span class="w"> </span>Add<span class="w"> </span>password<span class="w"> </span>validation
+
+<span class="c1"># Merge (preserves branch context)</span>
+$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>feature/user-authentication
+Merge<span class="w"> </span>made<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;recursive&#39;</span><span class="w"> </span>strategy.
+<span class="w"> </span>UserAuth.java<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">45</span><span class="w"> </span>+++++++++++++++++++++++++++++++++++++++++++++
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">45</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+</code></pre></div></p>
 </details>
-<details class="warning">
-<summary>Level 3: Commit History &amp; Recovery</summary>
-<p><strong>Status:</strong> Planned<br />
-<strong>Focus:</strong> <code>git reflog</code>, <code>git reset</code>, <code>git revert</code>, <code>git bisect</code></p>
+</details>
+<details class="success">
+<summary>Level 3: Commit History &amp; Recovery (Completed)</summary>
+<p><strong>Status:</strong> Completed<br />
+<strong>Focus:</strong> <code>git reflog</code>, <code>git reset</code>, <code>git revert</code>, <code>git bisect</code>, <code>git tag</code>
+<strong>Evidence:</strong>
+- <a href="https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/git-github/level-3">Git Level 3 Practice Repository</a>
+- <strong>Java-based Practice Script</strong> (Completed 26-10-2025): Comprehensive Git recovery exercises using Java examples
+- <strong>Advanced Recovery Techniques</strong> (Completed 26-10-2025): Mastered reflog, bisect, reset, revert, and tagging</p>
+<details class="tip">
+<summary>Level 3: Advanced Git Recovery Commands</summary>
+<p><strong>Git Reflog - Recover Lost Commits:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>reflog
+75ecc57<span class="w"> </span>HEAD@<span class="o">{</span><span class="m">0</span><span class="o">}</span>:<span class="w"> </span>commit:<span class="w"> </span>Add<span class="w"> </span>square<span class="w"> </span>root<span class="w"> </span>method<span class="w"> </span>with<span class="w"> </span>validation
+4f8a9b2<span class="w"> </span>HEAD@<span class="o">{</span><span class="m">1</span><span class="o">}</span>:<span class="w"> </span>commit:<span class="w"> </span>Add<span class="w"> </span>power<span class="w"> </span>method<span class="w"> </span>using<span class="w"> </span>Math.pow
+a1b2c3d<span class="w"> </span>HEAD@<span class="o">{</span><span class="m">2</span><span class="o">}</span>:<span class="w"> </span>checkout:<span class="w"> </span>moving<span class="w"> </span>from<span class="w"> </span>feature/advanced-calculator<span class="w"> </span>to<span class="w"> </span>main
+b2c3d4e<span class="w"> </span>HEAD@<span class="o">{</span><span class="m">3</span><span class="o">}</span>:<span class="w"> </span>commit:<span class="w"> </span>Add<span class="w"> </span>division<span class="w"> </span>method<span class="w"> </span>with<span class="w"> </span>error<span class="w"> </span>handling
+
+$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>75ecc57
+HEAD<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>at<span class="w"> </span>75ecc57<span class="w"> </span>Add<span class="w"> </span>square<span class="w"> </span>root<span class="w"> </span>method<span class="w"> </span>with<span class="w"> </span>validation
+</code></pre></div></p>
+<p><strong>Git Bisect - Find Bugs Systematically:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>bisect<span class="w"> </span>start
+$<span class="w"> </span>git<span class="w"> </span>bisect<span class="w"> </span>bad<span class="w"> </span>HEAD
+$<span class="w"> </span>git<span class="w"> </span>bisect<span class="w"> </span>good<span class="w"> </span>a1b2c3d
+Bisecting:<span class="w"> </span><span class="m">2</span><span class="w"> </span>revisions<span class="w"> </span>left<span class="w"> </span>to<span class="w"> </span><span class="nb">test</span><span class="w"> </span>after<span class="w"> </span>this<span class="w"> </span><span class="o">(</span>roughly<span class="w"> </span><span class="m">1</span><span class="w"> </span>step<span class="o">)</span>
+<span class="o">[</span>b2c3d4e<span class="o">]</span><span class="w"> </span>Add<span class="w"> </span>division<span class="w"> </span>method<span class="w"> </span>with<span class="w"> </span>error<span class="w"> </span>handling
+
+$<span class="w"> </span>git<span class="w"> </span>bisect<span class="w"> </span>run<span class="w"> </span>java<span class="w"> </span>TestCalculator
+running<span class="w"> </span>java<span class="w"> </span>TestCalculator
+❌<span class="w"> </span>Test<span class="w"> </span>failed<span class="w"> </span>-<span class="w"> </span>bug<span class="w"> </span>detected
+b2c3d4e<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>bad<span class="w"> </span>commit
+commit<span class="w"> </span>b2c3d4e
+Author:<span class="w"> </span>Ali<span class="w"> </span>AlSubhi<span class="w"> </span>&lt;ali@example.com&gt;
+Date:<span class="w">   </span>Mon<span class="w"> </span>Oct<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">15</span>:30:00<span class="w"> </span><span class="m">2025</span><span class="w"> </span>+0400
+<span class="w">    </span>Add<span class="w"> </span>division<span class="w"> </span>method<span class="w"> </span>with<span class="w"> </span>error<span class="w"> </span>handling
+</code></pre></div></p>
+<p><strong>Git Reset - Safe Recovery:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Soft reset (keeps changes staged)</span>
+$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+$<span class="w"> </span>git<span class="w"> </span>status
+Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+<span class="w">        </span>modified:<span class="w">   </span>Calculator.java
+
+<span class="c1"># Mixed reset (keeps changes unstaged)</span>
+$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
+$<span class="w"> </span>git<span class="w"> </span>status
+Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<span class="w">        </span>modified:<span class="w">   </span>Calculator.java
+
+<span class="c1"># Hard reset (discards changes)</span>
+$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1
+HEAD<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>at<span class="w"> </span>a1b2c3d<span class="w"> </span>Add<span class="w"> </span>multiplication<span class="w"> </span>method
+</code></pre></div></p>
+<p><strong>Git Revert - Safe Undo:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>revert<span class="w"> </span>HEAD
+<span class="o">[</span>main<span class="w"> </span>d4e5f6g<span class="o">]</span><span class="w"> </span>Revert<span class="w"> </span><span class="s2">&quot;Add buggy method&quot;</span>
+<span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>deletion<span class="o">(</span>-<span class="o">)</span>
+
+$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+d4e5f6g<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>main<span class="o">)</span><span class="w"> </span>Revert<span class="w"> </span><span class="s2">&quot;Add buggy method&quot;</span>
+c3d4e5f<span class="w"> </span>Add<span class="w"> </span>buggy<span class="w"> </span>method
+b2c3d4e<span class="w"> </span>Add<span class="w"> </span>division<span class="w"> </span>method<span class="w"> </span>with<span class="w"> </span>error<span class="w"> </span>handling
+</code></pre></div></p>
+<p><strong>Git Tagging - Release Management:</strong>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w"> </span>v1.0.0
+$<span class="w"> </span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.1.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Release version 1.1.0 with new features&quot;</span>
+
+$<span class="w"> </span>git<span class="w"> </span>tag
+v1.0.0
+v1.1.0
+
+$<span class="w"> </span>git<span class="w"> </span>show<span class="w"> </span>v1.1.0
+tag<span class="w"> </span>v1.1.0
+Tagger:<span class="w"> </span>Ali<span class="w"> </span>AlSubhi<span class="w"> </span>&lt;ali@example.com&gt;
+Date:<span class="w">   </span>Mon<span class="w"> </span>Oct<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">16</span>:00:00<span class="w"> </span><span class="m">2025</span><span class="w"> </span>+0400
+Release<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.1.0<span class="w"> </span>with<span class="w"> </span>new<span class="w"> </span>features
+
+commit<span class="w"> </span>a1b2c3d4e5f6789012345678901234567890abcd
+Author:<span class="w"> </span>Ali<span class="w"> </span>AlSubhi<span class="w"> </span>&lt;ali@example.com&gt;
+Date:<span class="w">   </span>Mon<span class="w"> </span>Oct<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">15</span>:45:00<span class="w"> </span><span class="m">2025</span><span class="w"> </span>+0400
+<span class="w">    </span>Add<span class="w"> </span>advanced<span class="w"> </span>calculator<span class="w"> </span>features
+</code></pre></div></p>
+</details>
 </details>
 <details class="todo">
 <summary>Level 4: GitOps &amp; Security</summary>
@@ -1233,6 +1411,51 @@ git<span class="w"> </span>cherry-pick<span class="w"> </span>75ecc57<span class
 -<span class="w"> </span>Maintains<span class="w"> </span>clean<span class="w"> </span>commit<span class="w"> </span><span class="nb">history</span><span class="w"> </span>by<span class="w"> </span>selecting<span class="w"> </span>only<span class="w"> </span>needed<span class="w"> </span>changes
 -<span class="w"> </span>Essential<span class="w"> </span>skill<span class="w"> </span><span class="k">for</span><span class="w"> </span>advanced<span class="w"> </span>Git<span class="w"> </span>workflows<span class="w"> </span>and<span class="w"> </span>release<span class="w"> </span>management
 </code></pre></div></p>
+</details>
+<details class="info">
+<summary>Note #4: Level 3 – Commit History &amp; Recovery (26-10-2025)</summary>
+<p><strong>Exercise Overview:</strong> Mastered advanced Git recovery techniques and commit history management.</p>
+<p><strong>Skills Demonstrated:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Git Reflog - Recover lost commits</span>
+git<span class="w"> </span>reflog<span class="w">                    </span><span class="c1"># View all commit history</span>
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>&lt;commit&gt;<span class="w">    </span><span class="c1"># Recover lost commits</span>
+
+<span class="c1"># Git Bisect - Find bugs systematically</span>
+git<span class="w"> </span>bisect<span class="w"> </span>start<span class="w">             </span><span class="c1"># Start bisect session</span>
+git<span class="w"> </span>bisect<span class="w"> </span>bad<span class="w"> </span>HEAD<span class="w">          </span><span class="c1"># Mark current commit as bad</span>
+git<span class="w"> </span>bisect<span class="w"> </span>good<span class="w"> </span>&lt;commit&gt;<span class="w">     </span><span class="c1"># Mark known good commit</span>
+git<span class="w"> </span>bisect<span class="w"> </span>run<span class="w"> </span>./test.sh<span class="w">     </span><span class="c1"># Automatically test commits</span>
+
+<span class="c1"># Git Reset - Safe recovery</span>
+git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1<span class="w">     </span><span class="c1"># Undo commit, keep changes staged</span>
+git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1<span class="w">    </span><span class="c1"># Undo commit, keep changes unstaged</span>
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1<span class="w">     </span><span class="c1"># Undo commit, discard changes</span>
+
+<span class="c1"># Git Revert - Safe undo</span>
+git<span class="w"> </span>revert<span class="w"> </span>HEAD<span class="w">              </span><span class="c1"># Create new commit that undoes last commit</span>
+git<span class="w"> </span>revert<span class="w"> </span>&lt;commit&gt;<span class="w">         </span><span class="c1"># Revert specific commit</span>
+
+<span class="c1"># Git Tagging - Release management</span>
+git<span class="w"> </span>tag<span class="w"> </span>v1.0.0<span class="w">              </span><span class="c1"># Create lightweight tag</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Release&quot;</span><span class="w"> </span><span class="c1"># Create annotated tag</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--tags<span class="w">      </span><span class="c1"># Push tags to remote</span>
+</code></pre></div></p>
+<p><strong>Key Achievements:</strong>
+- <strong>Commit Recovery</strong>: Mastered git reflog for recovering lost commits
+- <strong>Bug Finding</strong>: Used git bisect to systematically find bug introduction points
+- <strong>Safe Recovery</strong>: Practiced different types of git reset for various scenarios
+- <strong>Release Management</strong>: Created and managed version tags for releases
+- <strong>Advanced Techniques</strong>: Recovered from accidental deletions and branch issues</p>
+<p><strong>Real-World Applications:</strong>
+- Recovered accidentally deleted commits using reflog
+- Used bisect to find when performance regression was introduced
+- Safely reset commits without losing work
+- Created proper release tags for version management
+- Recovered from accidental branch deletions</p>
+<p><strong>Practice Repository:</strong>
+- <strong><a href="https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/git-github/level-3">Git Level 3 Practice</a></strong> - Comprehensive practice exercises
+- <strong>Automated Practice Script</strong> - Step-by-step guided exercises
+- <strong>Real-World Scenarios</strong> - Practical recovery techniques</p>
 </details>
 <hr />
 
