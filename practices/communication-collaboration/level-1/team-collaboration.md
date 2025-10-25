@@ -56,7 +56,7 @@ Team collaboration is the process of working together effectively to achieve com
 
 ## Collaboration Tools & Best Practices
 
-### 📧 **Email Communication**
+### **Email Communication**
 
 #### **When to Use Email:**
 - Formal communications
@@ -96,7 +96,7 @@ Best regards,
 Ali
 ```
 
-### 💬 **Slack/Teams Communication**
+### **Slack/Teams Communication**
 
 #### **When to Use Chat:**
 - Quick questions and clarifications
@@ -123,7 +123,7 @@ Thanks for the help!
 Can we hop on a quick call to troubleshoot?
 ```
 
-### 📋 **Project Management Tools**
+### **Project Management Tools**
 
 #### **Using Jira/Trello/Asana:**
 - **Update status regularly** - Keep tasks current
@@ -155,7 +155,7 @@ Can we hop on a quick call to troubleshoot?
 - Security review meeting
 ```
 
-### 📚 **Documentation Collaboration**
+### **Documentation Collaboration**
 
 #### **Shared Documentation Best Practices:**
 - **Use clear headings** and structure
@@ -425,7 +425,7 @@ I'm open to discussing this further and finding a solution that works for everyo
 
 ## Building Trust in Teams
 
-### 🤝 **Trust-Building Behaviors:**
+### **Trust-Building Behaviors:**
 
 1. **Be Reliable**
    - Meet deadlines
@@ -451,7 +451,7 @@ I'm open to discussing this further and finding a solution that works for everyo
    - Give credit where it's due
    - Be patient with different working styles
 
-### 🚫 **Trust-Destroying Behaviors:**
+### **Trust-Destroying Behaviors:**
 
 - **Gossiping** about team members
 - **Taking credit** for others' work
@@ -462,7 +462,7 @@ I'm open to discussing this further and finding a solution that works for everyo
 
 ## Remote Collaboration Best Practices
 
-### 🌐 **Working with Remote Teams:**
+### **Working with Remote Teams:**
 
 1. **Over-communicate**
    - Share updates regularly
@@ -490,21 +490,21 @@ I'm open to discussing this further and finding a solution that works for everyo
 
 ## Collaboration Assessment
 
-### ✅ **Excellent Collaboration:**
+### **Excellent Collaboration:**
 - Consistently contributes valuable ideas
 - Helps others succeed
 - Communicates clearly and regularly
 - Takes ownership of responsibilities
 - Builds positive relationships
 
-### ✅ **Good Collaboration:**
+### **Good Collaboration:**
 - Usually contributes to discussions
 - Generally helpful to teammates
 - Communicates most of the time
 - Meets most commitments
 - Gets along well with others
 
-### ❌ **Needs Improvement:**
+### **Needs Improvement:**
 - Rarely contributes to discussions
 - Doesn't help others
 - Poor communication
@@ -707,21 +707,110 @@ I'm open to discussing this further and finding a solution that works for everyo
 
 Remember: Team collaboration mastery is about creating productive, supportive environments where everyone can contribute their best work. Focus on communication, respect, and continuous improvement to become an invaluable team member and collaborative leader.
 
+## Evidence Documentation
+
+### Progress Tracking Evidence
+
+#### **Week 1-2: Foundation Building Evidence**
+- **Help Request Examples**: Document 3-5 help requests you made with context, what you tried, and outcomes
+- **Knowledge Sharing Examples**: Document 2-3 knowledge sharing instances with team members
+- **Feedback Given/Received**: Document constructive feedback you gave and received
+- **Basic Collaboration**: Document instances of working with others on shared tasks
+
+#### **Week 3-4: Skill Development Evidence**
+- **Conflict Resolution**: Document how you handled disagreements professionally
+- **Team Building**: Document relationship building activities and informal conversations
+- **Advanced Communication**: Document cross-channel communication examples
+- **Tool Mastery**: Document effective use of collaboration tools and documentation
+
+#### **Week 5-6: Mastery and Integration Evidence**
+- **Leadership Collaboration**: Document leading team discussions and facilitating meetings
+- **Knowledge Transfer**: Document teaching others and creating resources
+- **Team Optimization**: Document process improvements and team retrospectives
+- **Cross-Team Work**: Document collaboration with other teams and departments
+
+#### **Week 7-8: Level 1 Mastery Evidence**
+- **Team Leadership**: Document leading team initiatives and building high-performing teams
+- **Organizational Collaboration**: Document influencing organizational change and building senior relationships
+- **Continuous Improvement**: Document implementing team improvements and mentoring others
+
+### Evidence Collection Template
+
+#### **Help Request Evidence:**
+```
+Date: [Date]
+Context: [What you were working on]
+Request: [Your help request message]
+Response: [How team members responded]
+Outcome: [What was resolved]
+Learning: [What you learned from the experience]
+```
+
+#### **Knowledge Sharing Evidence:**
+```
+Date: [Date]
+Topic: [What you shared]
+Audience: [Who you shared with]
+Format: [How you shared it - email, meeting, documentation]
+Impact: [How it helped the team]
+Follow-up: [Any questions or further discussion]
+```
+
+#### **Feedback Evidence:**
+```
+Date: [Date]
+Type: [Given/Received]
+Context: [What work was being reviewed]
+Feedback: [Specific feedback provided/received]
+Response: [How it was received/given]
+Outcome: [Changes made or improvements]
+```
+
+#### **Collaboration Evidence:**
+```
+Date: [Date]
+Activity: [What you collaborated on]
+Team Members: [Who you worked with]
+Your Contribution: [What you contributed]
+Team Outcome: [What the team achieved]
+Your Learning: [What you learned about collaboration]
+```
+
+### Assessment Evidence
+
+#### **Self-Assessment Scores (Rate 1-4):**
+- **Week 1**: Communication: ___/4, Participation: ___/4, Respect: ___/4, Accountability: ___/4, Improvement: ___/4
+- **Week 2**: Communication: ___/4, Participation: ___/4, Respect: ___/4, Accountability: ___/4, Improvement: ___/4
+- **Week 3**: Communication: ___/4, Participation: ___/4, Respect: ___/4, Accountability: ___/4, Improvement: ___/4
+- **Week 4**: Communication: ___/4, Participation: ___/4, Respect: ___/4, Accountability: ___/4, Improvement: ___/4
+
+#### **Peer Feedback Evidence:**
+- **Feedback Received**: Document specific feedback from teammates about your collaboration
+- **Feedback Given**: Document feedback you provided to teammates
+- **Team Dynamics**: Document how you contributed to positive team dynamics
+- **Relationship Building**: Document relationships you built with team members
+
+#### **Achievement Evidence:**
+- **Goals Met**: Document specific collaboration goals you achieved
+- **Skills Developed**: Document new collaboration skills you developed
+- **Impact Made**: Document positive impact you had on team collaboration
+- **Leadership Demonstrated**: Document instances where you demonstrated collaboration leadership
+
 ## Quick Reference: Collaboration Checklist
 
-### ✅ **Daily:**
+### **Daily:**
 - [ ] Check team communication channels
 - [ ] Update others on your progress
 - [ ] Help someone if you can
 - [ ] Ask questions when you need clarification
 
-### ✅ **Weekly:**
+### **Weekly:**
 - [ ] Share something you've learned
 - [ ] Give feedback on someone's work
 - [ ] Review team goals and progress
 - [ ] Celebrate team achievements
 
-### ✅ **Monthly:**
+### **Monthly:**
 - [ ] Reflect on team collaboration
 - [ ] Identify areas for improvement
 - [ ] Share knowledge with the team
