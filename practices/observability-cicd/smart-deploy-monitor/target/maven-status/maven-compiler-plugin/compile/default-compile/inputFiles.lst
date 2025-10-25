@@ -1,5 +1,6 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/RedisConfig.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/security/JwtAuthenticationFilter.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/security/InputValidationFilter.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/dto/RegisterRequest.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/SecurityConfig.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/ClientConfig.java
@@ -15,6 +16,7 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/MetricsController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/AuthController.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/AuthService.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/security/SecurityHeadersFilter.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/dto/ApiResponse.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/entity/User.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/DatabaseController.java
@@ -23,6 +25,7 @@
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/SmartDeployMonitorApplication.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/config/KeycloakConfig.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/controller/ApiDesignController.java
+/Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/security/RateLimitingFilter.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/UserService.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/JwtService.java
 /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deploy-monitor/src/main/java/com/upskilling/smartdeploymonitor/service/domain/UserDomainService.java

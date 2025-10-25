@@ -1,6 +1,9 @@
 package com.upskilling.smartdeploymonitor.config;
 
 import com.upskilling.smartdeploymonitor.security.JwtAuthenticationFilter;
+import com.upskilling.smartdeploymonitor.security.SecurityHeadersFilter;
+import com.upskilling.smartdeploymonitor.security.RateLimitingFilter;
+import com.upskilling.smartdeploymonitor.security.InputValidationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -43,6 +46,21 @@ public class SecurityConfig {
     }
 
     @Bean
+    public SecurityHeadersFilter securityHeadersFilter() {
+        return new SecurityHeadersFilter();
+    }
+
+    @Bean
+    public RateLimitingFilter rateLimitingFilter() {
+        return new RateLimitingFilter();
+    }
+
+    @Bean
+    public InputValidationFilter inputValidationFilter() {
+        return new InputValidationFilter();
+    }
+
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
             .csrf(AbstractHttpConfigurer::disable)
@@ -72,6 +90,9 @@ public class SecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             )
             .authenticationProvider(authenticationProvider())
+            .addFilterBefore(inputValidationFilter(), UsernamePasswordAuthenticationFilter.class)
+            .addFilterBefore(rateLimitingFilter(), UsernamePasswordAuthenticationFilter.class)
+            .addFilterBefore(securityHeadersFilter(), UsernamePasswordAuthenticationFilter.class)
             .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

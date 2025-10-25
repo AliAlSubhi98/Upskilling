@@ -4778,3 +4778,149 @@ Caused by: java.net.ConnectException: Connection refused
 2025-10-25 16:40:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4794s, Memory: 81.52/155.00MB, CPU Cores: 8, Requests: 0, Connections: 21
 2025-10-25 16:41:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4854s, Memory: 81.57/155.00MB, CPU Cores: 8, Requests: 0, Connections: 40
 2025-10-25 16:42:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4914s, Memory: 81.62/155.00MB, CPU Cores: 8, Requests: 0, Connections: 20
+2025-10-25 16:43:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 4974s, Memory: 81.67/155.00MB, CPU Cores: 8, Requests: 0, Connections: 42
+2025-10-25 16:44:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5034s, Memory: 81.77/155.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-25 16:45:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5094s, Memory: 82.20/155.00MB, CPU Cores: 8, Requests: 0, Connections: 26
+2025-10-25 16:46:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5154s, Memory: 82.25/155.00MB, CPU Cores: 8, Requests: 0, Connections: 16
+2025-10-25 16:47:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5214s, Memory: 82.25/155.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-25 16:48:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5274s, Memory: 82.30/155.00MB, CPU Cores: 8, Requests: 0, Connections: 6
+2025-10-25 16:49:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5334s, Memory: 82.35/155.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-25 16:50:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5394s, Memory: 84.76/155.00MB, CPU Cores: 8, Requests: 0, Connections: 28
+2025-10-25 16:51:01 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5454s, Memory: 85.42/155.00MB, CPU Cores: 8, Requests: 0, Connections: 16
+2025-10-25 16:51:53 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s657ms).
+2025-10-25 16:52:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5534s, Memory: 85.49/155.00MB, CPU Cores: 8, Requests: 0, Connections: 31
+2025-10-25 16:53:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5594s, Memory: 85.54/155.00MB, CPU Cores: 8, Requests: 0, Connections: 11
+2025-10-25 16:54:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5654s, Memory: 85.54/155.00MB, CPU Cores: 8, Requests: 0, Connections: 29
+2025-10-25 16:55:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5714s, Memory: 85.76/155.00MB, CPU Cores: 8, Requests: 0, Connections: 46
+2025-10-25 16:56:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5774s, Memory: 85.96/155.00MB, CPU Cores: 8, Requests: 0, Connections: 11
+2025-10-25 16:57:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5834s, Memory: 85.96/155.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-25 16:58:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5894s, Memory: 85.96/155.00MB, CPU Cores: 8, Requests: 0, Connections: 27
+2025-10-25 16:59:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 5954s, Memory: 85.96/155.00MB, CPU Cores: 8, Requests: 0, Connections: 44
+2025-10-25 17:00:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6014s, Memory: 86.00/155.00MB, CPU Cores: 8, Requests: 0, Connections: 6
+2025-10-25 17:01:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6074s, Memory: 86.30/155.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-25 17:02:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6134s, Memory: 86.40/155.00MB, CPU Cores: 8, Requests: 0, Connections: 25
+2025-10-25 17:03:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6194s, Memory: 86.45/155.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-25 17:04:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6254s, Memory: 86.45/155.00MB, CPU Cores: 8, Requests: 0, Connections: 41
+2025-10-25 17:05:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6314s, Memory: 86.45/155.00MB, CPU Cores: 8, Requests: 0, Connections: 11
+2025-10-25 17:06:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6374s, Memory: 86.65/155.00MB, CPU Cores: 8, Requests: 0, Connections: 33
+2025-10-25 17:07:20 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6434s, Memory: 86.70/155.00MB, CPU Cores: 8, Requests: 0, Connections: 30
+2025-10-25 17:13:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6815s, Memory: 86.70/155.00MB, CPU Cores: 8, Requests: 0, Connections: 42
+2025-10-25 17:13:44 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m51s256ms).
+2025-10-25 17:14:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6875s, Memory: 86.94/155.00MB, CPU Cores: 8, Requests: 0, Connections: 21
+2025-10-25 17:15:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6935s, Memory: 86.99/155.00MB, CPU Cores: 8, Requests: 0, Connections: 44
+2025-10-25 17:16:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 6995s, Memory: 86.99/155.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-25 17:17:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7055s, Memory: 86.99/155.00MB, CPU Cores: 8, Requests: 0, Connections: 8
+2025-10-25 17:18:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7115s, Memory: 87.05/155.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-25 17:19:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7175s, Memory: 87.05/155.00MB, CPU Cores: 8, Requests: 0, Connections: 37
+2025-10-25 17:20:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7235s, Memory: 87.05/155.00MB, CPU Cores: 8, Requests: 0, Connections: 41
+2025-10-25 17:21:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7295s, Memory: 87.15/155.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-25 17:22:42 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7355s, Memory: 87.30/155.00MB, CPU Cores: 8, Requests: 0, Connections: 34
+2025-10-25 17:26:04 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m19s203ms).
+2025-10-25 17:26:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7584s, Memory: 87.70/155.00MB, CPU Cores: 8, Requests: 0, Connections: 39
+2025-10-25 17:27:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7644s, Memory: 88.33/155.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-25 17:28:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7704s, Memory: 90.51/155.00MB, CPU Cores: 8, Requests: 0, Connections: 33
+2025-10-25 17:29:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7764s, Memory: 90.83/155.00MB, CPU Cores: 8, Requests: 0, Connections: 46
+2025-10-25 17:30:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7824s, Memory: 90.83/155.00MB, CPU Cores: 8, Requests: 0, Connections: 10
+2025-10-25 17:31:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7884s, Memory: 90.93/155.00MB, CPU Cores: 8, Requests: 0, Connections: 9
+2025-10-25 17:32:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 7944s, Memory: 91.05/155.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-25 17:33:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8004s, Memory: 91.05/155.00MB, CPU Cores: 8, Requests: 0, Connections: 23
+2025-10-25 17:34:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8064s, Memory: 91.18/155.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-25 17:35:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8124s, Memory: 91.18/155.00MB, CPU Cores: 8, Requests: 0, Connections: 11
+2025-10-25 17:36:01 [http-nio-8080-exec-5] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 5, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:36:01 [http-nio-8080-exec-5] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 5, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:36:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8184s, Memory: 91.52/155.00MB, CPU Cores: 8, Requests: 0, Connections: 46
+2025-10-25 17:36:44 [http-nio-8080-exec-6] INFO  o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/api/v1/users?search=<script>alert('xss')</script> ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:482)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2025-10-25 17:37:10 [http-nio-8080-exec-7] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 10, search: 1' OR '1'='1, sortBy: firstName, sortDir: asc
+2025-10-25 17:37:10 [http-nio-8080-exec-7] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 10, search: 1' OR '1'='1, sortBy: firstName, sortDir: asc
+2025-10-25 17:37:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8244s, Memory: 92.21/155.00MB, CPU Cores: 8, Requests: 0, Connections: 48
+2025-10-25 17:38:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8304s, Memory: 92.21/155.00MB, CPU Cores: 8, Requests: 0, Connections: 43
+2025-10-25 17:39:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8364s, Memory: 92.26/155.00MB, CPU Cores: 8, Requests: 0, Connections: 22
+2025-10-25 17:40:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8424s, Memory: 92.31/155.00MB, CPU Cores: 8, Requests: 0, Connections: 27
+2025-10-25 17:41:31 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 8484s, Memory: 92.31/155.00MB, CPU Cores: 8, Requests: 0, Connections: 17
+2025-10-25 17:41:44 [http-nio-8080-exec-8] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 5, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-8] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 5, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-10] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 10, search: 1' OR '1'='1, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-10] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 10, search: 1' OR '1'='1, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-4] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-4] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-6] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-6] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-8] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-8] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-10] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-10] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-1] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-1] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-4] INFO  SECURITY - HTTP_ERROR: SecurityEvent{timestamp=2025-10-25T17:41:44.861417, clientIp='0:0:0:0:0:0:0:1', userAgent='curl/8.7.1', method='HEAD', requestUri='/graphql', statusCode=404, duration=21ms, suspicious=false}
+2025-10-25 17:41:44 [http-nio-8080-exec-8] WARN  o.s.b.a.d.e.ElasticsearchReactiveHealthIndicator - Elasticsearch health check failed
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1062)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2025-10-25 17:41:44 [boundedElastic-4] WARN  o.s.b.a.d.r.RedisReactiveHealthIndicator - Redis health check failed
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1805)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1736)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1538)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1518)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1478)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1515)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:1224)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:1099)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:130)
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:67)
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:228)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:350)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:215)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1734)
+	... 16 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1062)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2025-10-25 17:41:44 [http-nio-8080-exec-8] INFO  SECURITY - HTTP_ERROR: SecurityEvent{timestamp=2025-10-25T17:41:44.931904, clientIp='0:0:0:0:0:0:0:1', userAgent='curl/8.7.1', method='HEAD', requestUri='/actuator/health', statusCode=503, duration=34ms, suspicious=false}
+2025-10-25 17:41:44 [http-nio-8080-exec-8] INFO  SECURITY - ADMIN_ACCESS: SecurityEvent{timestamp=2025-10-25T17:41:44.931904, clientIp='0:0:0:0:0:0:0:1', userAgent='curl/8.7.1', method='HEAD', requestUri='/actuator/health', statusCode=503, duration=34ms, suspicious=false}
+2025-10-25 17:41:44 [http-nio-8080-exec-9] INFO  c.u.s.controller.UserController - Fetching users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
+2025-10-25 17:41:44 [http-nio-8080-exec-9] INFO  c.u.s.service.UserService - Getting paginated users - page: 0, size: 1, search: null, sortBy: firstName, sortDir: asc
