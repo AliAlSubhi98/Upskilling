@@ -234,6 +234,54 @@
     
     **Key Achievement:** Successfully implemented REST best practices including API versioning, pagination, filtering, enhanced documentation, and comprehensive validation, creating a professional and scalable API design foundation.
 
+??? note "Level 3: GraphQL & gRPC (Planned)"
+    **Status:** Planned  
+    **Focus:** GraphQL schemas, gRPC services, streaming, microservices communication
+    
+    **Competencies:**
+    - **GraphQL**: Schema design, resolvers, subscriptions, federation
+    - **gRPC**: Protocol buffers, streaming, service definitions
+    - **Microservices**: Inter-service communication, service mesh
+    - **Performance**: Query optimization, caching strategies
+    
+    **Tools:**
+    - GraphQL (Apollo, Spring GraphQL)
+    - gRPC (Protocol Buffers, Spring gRPC)
+    - Service Mesh (Istio, Linkerd)
+    - API Gateway (Kong, Zuul)
+
+??? note "Level 4: API Security & Gateway Integration (Planned)"
+    **Status:** Planned  
+    **Focus:** Advanced security, API gateways, rate limiting, monitoring
+    
+    **Competencies:**
+    - **Security**: OAuth2, JWT, API security patterns
+    - **Gateway**: Routing, load balancing, circuit breakers
+    - **Rate Limiting**: Throttling, quotas, burst handling
+    - **Monitoring**: API analytics, performance metrics
+    
+    **Tools:**
+    - API Gateway (Kong, AWS API Gateway, Azure API Management)
+    - Security (OAuth2, JWT, Spring Security)
+    - Monitoring (Prometheus, Grafana, Jaeger)
+    - Rate Limiting (Redis, Guava RateLimiter)
+
+??? note "Level 5: Federated & Evolvable APIs (Planned)"
+    **Status:** Planned  
+    **Focus:** API federation, multi-team APIs, evolvable design, API strategy
+    
+    **Competencies:**
+    - **Federation**: Multi-team API coordination, schema stitching
+    - **Evolution**: Backward compatibility, versioning strategies
+    - **Strategy**: API governance, developer experience
+    - **Leadership**: API team management, best practices
+    
+    **Tools:**
+    - GraphQL Federation (Apollo Federation)
+    - API Management (Kong, AWS API Gateway)
+    - Documentation (GitBook, Notion, Confluence)
+    - Analytics (Mixpanel, Amplitude, Custom dashboards)
+
 ---
 
 ## Resources
