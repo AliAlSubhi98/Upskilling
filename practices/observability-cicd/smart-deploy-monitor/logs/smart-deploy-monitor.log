@@ -3104,3 +3104,5 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-10-25 14:36:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 420s, Memory: 108.87/138.00MB, CPU Cores: 8, Requests: 0, Connections: 38
 2025-10-25 14:37:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 480s, Memory: 108.87/138.00MB, CPU Cores: 8, Requests: 0, Connections: 23
 2025-10-25 14:38:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 540s, Memory: 108.97/138.00MB, CPU Cores: 8, Requests: 0, Connections: 38
+2025-10-25 14:39:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 600s, Memory: 108.97/138.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-25 14:40:29 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 660s, Memory: 109.09/138.00MB, CPU Cores: 8, Requests: 0, Connections: 41
