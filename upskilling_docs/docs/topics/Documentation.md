@@ -2,7 +2,7 @@
 
 **Goal:** Write and maintain clear, effective documentation.
 
-**Current Level:** Level 2 (In Progress)
+**Current Level:** Level 3 (In Progress)
 
 ---
 
@@ -28,9 +28,11 @@
 - **Competencies:** Collaborative editing, versioned docs, changelogs, diagrams
 - **Tools:** Google Docs, Notion, Mermaid, PlantUML
 - **Checklist:**
-  - [ ] Collaborate on docs with teammates
-  - [ ] Maintain a changelog for your project
-  - [ ] Add diagrams to explain architecture or flows
+  - [x] Collaborate on docs with teammates
+  - [x] Maintain a changelog for your project
+  - [x] Add diagrams to explain architecture or flows
+  - [x] Implement versioned documentation
+  - [x] Set up collaborative workflows
 
 ## Level 4: Automation & Publishing
 - **Competencies:** Automated doc generation, publishing, continuous documentation
@@ -205,7 +207,118 @@
         [Detailed endpoint documentation with examples]
         ```
 
-??? note "Level 3: Advanced Documentation"
+??? success "Level 3: Collaborative & Living Docs (Completed)"
+    **Status:** Completed  
+    **Focus:** Collaborative editing, versioned docs, changelogs, diagrams  
+    **Evidence:**
+    - [Documentation Level 3 Practice](https://github.com/AliAlSubhi98/Upskilling/tree/main/practices/documentation/level-3)
+    - **Comprehensive Changelog** (Completed 26-10-2025): Complete project changelog following Keep a Changelog standards
+    - **Architecture Diagrams** (Completed 26-10-2025): Visual system architecture using Mermaid diagrams
+    - **Collaborative Workflows** (Completed 26-10-2025): Team collaboration processes and documentation workflows
+    - **Real-World Collaboration** (Completed 26-10-2025): Google Sheets project management with teammates (Adnan, Ali, Said, Nidhal)
+
+    ??? tip "Level 3: Collaborative Documentation Commands & Examples"
+        **Changelog Management:**
+        ```markdown
+        ## [2.1.0] - 2025-10-26
+        
+        ### Added
+        - Documentation Level 2: Comprehensive structured documentation
+        - JavaDoc examples
+        - API documentation template with cultural representation
+        
+        ### Changed
+        - Updated all documentation examples to use Arabic names
+        - Enhanced API documentation with Arabic phone numbers (+968)
+        
+        ### Fixed
+        - Documentation consistency across all examples
+        - API documentation formatting and structure
+        ```
+        
+        **Mermaid Architecture Diagrams:**
+        ```mermaid
+        graph TB
+            subgraph "Client Layer"
+                WEB[Web Application]
+                MOBILE[Mobile App]
+            end
+            
+            subgraph "Application Layer"
+                USER_SERVICE[User Service]
+                AUTH_SERVICE[Auth Service]
+            end
+            
+            subgraph "Data Layer"
+                POSTGRES[(PostgreSQL)]
+                REDIS[(Redis Cache)]
+            end
+            
+            WEB --> USER_SERVICE
+            MOBILE --> AUTH_SERVICE
+            USER_SERVICE --> POSTGRES
+            AUTH_SERVICE --> REDIS
+        ```
+        
+        **Collaborative Workflows:**
+        ```bash
+        # Branch naming for documentation
+        git checkout -b docs/feature/user-guide-update
+        git checkout -b docs/fix/api-documentation-typo
+        git checkout -b docs/update/architecture-diagrams
+        
+        # Commit message format
+        git commit -m "docs: Add user authentication guide"
+        git commit -m "docs: Fix broken links in API documentation"
+        git commit -m "docs: Update architecture diagrams"
+        ```
+        
+        **Version Control Strategy:**
+        ```mermaid
+        graph TB
+            MAIN[main branch]
+            MAIN --> FEATURE[docs/feature/*]
+            MAIN --> FIX[docs/fix/*]
+            MAIN --> UPDATE[docs/update/*]
+            
+            FEATURE --> REVIEW[Pull Request]
+            FIX --> REVIEW
+            UPDATE --> REVIEW
+            
+            REVIEW --> MERGE[Merge to main]
+            MERGE --> DEPLOY[Auto Deploy]
+        ```
+        
+        
+        **Real-World Collaborative Documentation:**
+        
+        ![Google Sheets Collaboration](../images/google-sheets-collaboration.png)
+        
+        ```markdown
+        # Google Sheets Project Management
+        
+        ## Team Collaboration Features
+        - **Team Members**: Adnan, Ali, Said, Nidhal
+        - **Task Assignment**: Multiple assignees per task
+        - **Real-time Updates**: Live collaboration on project status
+        - **Progress Tracking**: Percentage completion (100%, 75%, 50%)
+        - **Status Management**: Completed, In Progress tracking
+        
+        ## Project Organization
+        - **Module-based**: All, Admin, Customer, Rider, Vendor
+        - **Priority Levels**: High, Medium, Low with color coding
+        - **Date Tracking**: Start dates and due dates
+        - **Progress Visualization**: Color-coded progress bars
+        
+        ## Collaborative Features Demonstrated
+        - **Shared Document**: Multiple team members editing simultaneously
+        - **Task Ownership**: Clear assignment and accountability
+        - **Progress Updates**: Real-time status changes
+        - **Visual Organization**: Color-coded priorities and status
+        - **Team Communication**: Comments and progress notes
+        ```
+
+??? note "Level 4: Automation & Publishing"
     **Status:** Planned  
     **Focus:** Documentation as code, automated generation
 

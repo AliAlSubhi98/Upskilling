@@ -92,7 +92,7 @@ public class UserService {
      * Map<String, Object> updates = new HashMap<>();
      * updates.put("firstName", "محمد");
      * updates.put("lastName", "علي");
-     * updates.put("phoneNumber", "+966501234567");
+     * updates.put("phoneNumber", "+968501234567");
      * 
      * User updatedUser = userService.updateUser(userId, updates);
      * }</pre>

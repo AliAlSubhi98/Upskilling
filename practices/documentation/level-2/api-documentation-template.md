@@ -120,7 +120,7 @@ Update an existing user.
 {
   "firstName": "سارة",
   "lastName": "محمد",
-  "phoneNumber": "+966501234567"
+  "phoneNumber": "+968501234567"
 }
 ```
 
@@ -131,7 +131,7 @@ Update an existing user.
   "email": "sara.mohammed@example.com",
   "firstName": "سارة",
   "lastName": "محمد",
-  "phoneNumber": "+966501234567",
+  "phoneNumber": "+968501234567",
   "role": "USER",
   "isActive": true,
   "createdAt": "2025-10-26T10:00:00Z",
