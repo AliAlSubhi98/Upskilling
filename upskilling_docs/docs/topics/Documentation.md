@@ -217,26 +217,23 @@
     - **Collaborative Workflows** (Completed 26-10-2025): Team collaboration processes and documentation workflows
     - **Real-World Collaboration** (Completed 26-10-2025): Google Sheets project management with teammates (Adnan, Ali, Said, Nidhal)
 
-    ??? tip "Level 3: Collaborative Documentation Commands & Examples"
-        **Changelog Management:**
+    ??? tip "Level 3: Changelog Management"
+        **Keep a Changelog Standards:**
         ```markdown
         ## [2.1.0] - 2025-10-26
-        
         ### Added
         - Documentation Level 2: Comprehensive structured documentation
         - JavaDoc examples
-        - API documentation template with cultural representation
         
         ### Changed
-        - Updated all documentation examples to use Arabic names
-        - Enhanced API documentation with Arabic phone numbers (+968)
+        - Enhanced API documentation with phone numbers (+968)
         
         ### Fixed
         - Documentation consistency across all examples
-        - API documentation formatting and structure
         ```
         
-        **Mermaid Architecture Diagrams:**
+    ??? tip "Level 3: Architecture Diagrams"
+        **Mermaid System Architecture:**
         ```mermaid
         graph TB
             subgraph "Client Layer"
@@ -260,67 +257,310 @@
             AUTH_SERVICE --> REDIS
         ```
         
-        **Collaborative Workflows:**
+    ??? tip "Level 3: Collaborative Workflows"
+        **Git Branch Strategy:**
         ```bash
-        # Branch naming for documentation
+        # Documentation branches
         git checkout -b docs/feature/user-guide-update
         git checkout -b docs/fix/api-documentation-typo
         git checkout -b docs/update/architecture-diagrams
         
-        # Commit message format
+        # Commit messages
         git commit -m "docs: Add user authentication guide"
         git commit -m "docs: Fix broken links in API documentation"
-        git commit -m "docs: Update architecture diagrams"
         ```
         
-        **Version Control Strategy:**
-        ```mermaid
-        graph TB
-            MAIN[main branch]
-            MAIN --> FEATURE[docs/feature/*]
-            MAIN --> FIX[docs/fix/*]
-            MAIN --> UPDATE[docs/update/*]
-            
-            FEATURE --> REVIEW[Pull Request]
-            FIX --> REVIEW
-            UPDATE --> REVIEW
-            
-            REVIEW --> MERGE[Merge to main]
-            MERGE --> DEPLOY[Auto Deploy]
-        ```
-        
-        
-        **Real-World Collaborative Documentation:**
-        
+    ??? tip "Level 3: Real-World Collaboration"
         ![Google Sheets Collaboration](../images/google-sheets-collaboration.png)
         
-        ```markdown
-        # Google Sheets Project Management
-        
-        ## Team Collaboration Features
+        **Team Collaboration Features:**
         - **Team Members**: Adnan, Ali, Said, Nidhal
         - **Task Assignment**: Multiple assignees per task
         - **Real-time Updates**: Live collaboration on project status
         - **Progress Tracking**: Percentage completion (100%, 75%, 50%)
         - **Status Management**: Completed, In Progress tracking
         
-        ## Project Organization
-        - **Module-based**: All, Admin, Customer, Rider, Vendor
-        - **Priority Levels**: High, Medium, Low with color coding
-        - **Date Tracking**: Start dates and due dates
-        - **Progress Visualization**: Color-coded progress bars
+    ??? tip "Level 3: Versioned Documentation"
+        **Git-Based Versioning Strategy:**
+        ```bash
+        # Create version tags
+        git tag -a v1.0.0 -m "Initial documentation release"
+        git tag -a v2.0.0 -m "Added API documentation and JavaDoc examples"
+        git tag -a v3.0.0 -m "Collaborative documentation with Mermaid diagrams"
         
-        ## Collaborative Features Demonstrated
-        - **Shared Document**: Multiple team members editing simultaneously
-        - **Task Ownership**: Clear assignment and accountability
-        - **Progress Updates**: Real-time status changes
-        - **Visual Organization**: Color-coded priorities and status
-        - **Team Communication**: Comments and progress notes
+        # Push tags to remote
+        git push origin v1.0.0
+        git push origin v2.0.0
+        git push origin v3.0.0
+        
+        # Create version branches for maintenance
+        git checkout -b docs/v1.0
+        git checkout -b docs/v2.0
+        git checkout -b docs/latest
+        
+        # Switch between versions
+        git checkout docs/v1.0  # Work on v1.0 maintenance
+        git checkout docs/latest # Work on latest features
         ```
+        
+        **Semantic Versioning Implementation:**
+        ```markdown
+        ## Version Strategy
+        
+        ### MAJOR (X.0.0) - Breaking Changes
+        - Complete documentation restructure
+        - New documentation framework
+        - Breaking API changes
+        
+        ### MINOR (X.Y.0) - New Features
+        - New documentation sections
+        - Additional examples
+        - Enhanced diagrams
+        
+        ### PATCH (X.Y.Z) - Bug Fixes
+        - Typo corrections
+        - Link fixes
+        - Formatting improvements
+        ```
+        
+        **Version Management Workflow:**
+        ```bash
+        # 1. Create feature branch for new version
+        git checkout -b docs/version-4.0.0
+        
+        # 2. Make documentation changes
+        git add .
+        git commit -m "docs: Add Level 4 automation documentation"
+        
+        # 3. Create release tag
+        git tag -a v4.0.0 -m "Added automation and publishing features"
+        
+        # 4. Merge to main and push
+        git checkout main
+        git merge docs/version-4.0.0
+        git push origin main
+        git push origin v4.0.0
+        ```
+        
+        **Documentation Versioning Best Practices:**
+        - **Version Branches**: Maintain separate branches for each major version
+        - **Tagging Strategy**: Use semantic versioning for all releases
+        - **Change Logs**: Document all changes in CHANGELOG.md
+        - **Backward Compatibility**: Maintain older versions for reference
+        - **Release Notes**: Create detailed release notes for each version
 
-??? note "Level 4: Automation & Publishing"
-    **Status:** Planned  
-    **Focus:** Documentation as code, automated generation
+??? success "Level 4: Automation & Publishing (In Progress)"
+    **Status:** In Progress  
+    **Focus:** Documentation as code, automated generation, CI/CD integration
+    
+    **Skills Demonstrated:**
+    - **Automated Documentation Generation** (In Progress): CI/CD pipeline integration
+    - **Documentation as Code** (In Progress): Version-controlled documentation workflows
+    - **Automated Publishing** (In Progress): GitHub Pages deployment automation
+    - **Quality Assurance Automation** (In Progress): Automated testing and validation
+    - **Multi-Environment Deployment** (In Progress): Staging and production documentation
+
+    ??? tip "Level 4: Documentation as Code"
+        **GitHub Actions Workflow:**
+        ```yaml
+        name: Documentation CI/CD
+        
+        on:
+          push:
+            branches: [ main, develop ]
+          pull_request:
+            branches: [ main ]
+        
+        jobs:
+          build-and-deploy:
+            runs-on: ubuntu-latest
+            
+            steps:
+            - uses: actions/checkout@v3
+            
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.9'
+            
+            - name: Install dependencies
+              run: |
+                pip install mkdocs
+                pip install mkdocs-material
+                pip install mkdocs-mermaid2-plugin
+            
+            - name: Build documentation
+              run: mkdocs build
+            
+            - name: Deploy to GitHub Pages
+              if: github.ref == 'refs/heads/main'
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./site
+        ```
+        
+        **Automated Quality Checks:**
+        ```bash
+        # Pre-commit hooks
+        pip install pre-commit
+        pre-commit install
+        
+        # .pre-commit-config.yaml
+        repos:
+        - repo: https://github.com/pre-commit/pre-commit-hooks
+          rev: v4.4.0
+          hooks:
+          - id: trailing-whitespace
+          - id: end-of-file-fixer
+          - id: check-yaml
+          - id: check-json
+        ```
+        
+    ??? tip "Level 4: Automated Publishing"
+        **Multi-Environment Deployment:**
+        ```yaml
+        # .github/workflows/docs-staging.yml
+        name: Deploy to Staging
+        
+        on:
+          push:
+            branches: [ develop ]
+        
+        jobs:
+          deploy-staging:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v3
+            - name: Deploy to staging
+              run: |
+                mkdocs build
+                # Deploy to staging environment
+                rsync -avz site/ user@staging-server:/var/www/docs-staging/
+        ```
+        
+        **Production Deployment:**
+        ```yaml
+        # .github/workflows/docs-production.yml
+        name: Deploy to Production
+        
+        on:
+          push:
+            tags: [ 'v*' ]
+        
+        jobs:
+          deploy-production:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v3
+            - name: Deploy to production
+              run: |
+                mkdocs build
+                # Deploy to production
+                rsync -avz site/ user@prod-server:/var/www/docs/
+        ```
+        
+    ??? tip "Level 4: Documentation Generation"
+        **Automated API Documentation:**
+        ```bash
+        # Generate JavaDoc automatically
+        mvn javadoc:javadoc
+        
+        # Generate API documentation
+        swagger-codegen generate -i api-spec.yaml -l html2 -o docs/api/
+        
+        # Update documentation index
+        python scripts/update-api-docs.py
+        ```
+        
+        **Automated Diagram Generation:**
+        ```python
+        # scripts/generate-diagrams.py
+        import subprocess
+        import os
+        
+        def generate_mermaid_diagrams():
+            """Generate Mermaid diagrams from source files"""
+            diagram_files = [
+                'docs/diagrams/architecture.mmd',
+                'docs/diagrams/flowchart.mmd',
+                'docs/diagrams/sequence.mmd'
+            ]
+            
+            for diagram in diagram_files:
+                if os.path.exists(diagram):
+                    subprocess.run(['mmdc', '-i', diagram, '-o', diagram.replace('.mmd', '.png')])
+        
+        if __name__ == "__main__":
+            generate_mermaid_diagrams()
+        ```
+        
+    ??? tip "Level 4: Quality Assurance Automation"
+        **Automated Testing:**
+        ```bash
+        # Test documentation links
+        mkdocs build
+        linkchecker site/
+        
+        # Test markdown formatting
+        markdownlint docs/
+        
+        # Test spelling
+        cspell "docs/**/*.md"
+        ```
+        
+        **Automated Validation:**
+        ```yaml
+        # .github/workflows/docs-validation.yml
+        name: Documentation Validation
+        
+        on: [push, pull_request]
+        
+        jobs:
+          validate:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v3
+            - name: Validate links
+              run: |
+                mkdocs build
+                linkchecker site/ --check-extern
+            - name: Validate markdown
+              run: markdownlint docs/
+            - name: Validate spelling
+              run: cspell "docs/**/*.md"
+        ```
+        
+    ??? tip "Level 4: Advanced Publishing Features"
+        **Multi-Version Documentation:**
+        ```yaml
+        # mkdocs.yml
+        plugins:
+        - mike:
+            version_selector: true
+            deploy_prefix: docs
+            aliases:
+              latest: main
+              stable: v2.0.0
+        ```
+        
+        **Automated Release Notes:**
+        ```bash
+        # Generate release notes from commits
+        git log --oneline v2.0.0..v3.0.0 > release-notes.md
+        
+        # Generate changelog
+        conventional-changelog -p angular -i CHANGELOG.md -s
+        ```
+        
+        **Documentation Analytics:**
+        ```javascript
+        // Track documentation usage
+        gtag('config', 'GA_TRACKING_ID', {
+          page_title: 'Documentation',
+          page_location: window.location.href
+        });
+        ```
 
 ??? note "Level 4: Documentation Systems"
     **Status:** Planned  

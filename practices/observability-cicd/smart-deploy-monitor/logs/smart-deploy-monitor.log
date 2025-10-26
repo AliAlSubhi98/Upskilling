@@ -225,3 +225,21 @@
 2025-10-26 03:44:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30434s, Memory: 120.90/135.00MB, CPU Cores: 8, Requests: 0, Connections: 20
 2025-10-26 03:45:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30494s, Memory: 120.90/135.00MB, CPU Cores: 8, Requests: 0, Connections: 9
 2025-10-26 03:46:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30554s, Memory: 121.11/135.00MB, CPU Cores: 8, Requests: 0, Connections: 19
+2025-10-26 03:47:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30614s, Memory: 121.15/135.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-26 03:48:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30674s, Memory: 121.19/135.00MB, CPU Cores: 8, Requests: 0, Connections: 20
+2025-10-26 03:49:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30734s, Memory: 121.30/135.00MB, CPU Cores: 8, Requests: 0, Connections: 42
+2025-10-26 03:50:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30794s, Memory: 121.33/135.00MB, CPU Cores: 8, Requests: 0, Connections: 39
+2025-10-26 03:51:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30854s, Memory: 121.46/135.00MB, CPU Cores: 8, Requests: 0, Connections: 8
+2025-10-26 03:52:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30914s, Memory: 121.50/135.00MB, CPU Cores: 8, Requests: 0, Connections: 40
+2025-10-26 03:53:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 30974s, Memory: 121.58/135.00MB, CPU Cores: 8, Requests: 0, Connections: 13
+2025-10-26 03:54:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 31034s, Memory: 122.90/135.00MB, CPU Cores: 8, Requests: 0, Connections: 49
+2025-10-26 03:55:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 31094s, Memory: 65.40/135.00MB, CPU Cores: 8, Requests: 0, Connections: 45
+2025-10-26 03:56:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 31154s, Memory: 65.40/135.00MB, CPU Cores: 8, Requests: 0, Connections: 35
+2025-10-26 03:57:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 31214s, Memory: 65.40/135.00MB, CPU Cores: 8, Requests: 0, Connections: 34
+2025-10-26 03:58:43 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 31274s, Memory: 65.40/135.00MB, CPU Cores: 8, Requests: 0, Connections: 26
+2025-10-26 03:59:44 [scheduling-1] INFO  c.u.s.service.MonitoringService - System Status - Uptime: 31335s, Memory: 66.19/135.00MB, CPU Cores: 8, Requests: 0, Connections: 47
+2025-10-26 03:59:45 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2025-10-26 03:59:46 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-10-26 03:59:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-26 03:59:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-26 03:59:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
