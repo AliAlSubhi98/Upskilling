@@ -1186,24 +1186,23 @@ Describe how to authenticate with the API.
 - <strong>Collaborative Workflows</strong> (Completed 26-10-2025): Team collaboration processes and documentation workflows
 - <strong>Real-World Collaboration</strong> (Completed 26-10-2025): Google Sheets project management with teammates (Adnan, Ali, Said, Nidhal)</p>
 <details class="tip">
-<summary>Level 3: Collaborative Documentation Commands &amp; Examples</summary>
-<p><strong>Changelog Management:</strong>
+<summary>Level 3: Changelog Management</summary>
+<p><strong>Keep a Changelog Standards:</strong>
 <div class="highlight"><pre><span></span><code><span class="gu">## [2.1.0] - 2025-10-26</span>
-
 <span class="gu">### Added</span>
 <span class="k">-</span><span class="w"> </span>Documentation Level 2: Comprehensive structured documentation
 <span class="k">-</span><span class="w"> </span>JavaDoc examples
-<span class="k">-</span><span class="w"> </span>API documentation template with cultural representation
 
 <span class="gu">### Changed</span>
-<span class="k">-</span><span class="w"> </span>Updated all documentation examples to use Arabic names
-<span class="k">-</span><span class="w"> </span>Enhanced API documentation with Arabic phone numbers (+968)
+<span class="k">-</span><span class="w"> </span>Enhanced API documentation with phone numbers (+968)
 
 <span class="gu">### Fixed</span>
 <span class="k">-</span><span class="w"> </span>Documentation consistency across all examples
-<span class="k">-</span><span class="w"> </span>API documentation formatting and structure
 </code></pre></div></p>
-<p><strong>Mermaid Architecture Diagrams:</strong>
+</details>
+<details class="tip">
+<summary>Level 3: Architecture Diagrams</summary>
+<p><strong>Mermaid System Architecture:</strong>
 <pre class="mermaid"><code>graph TB
     subgraph "Client Layer"
         WEB[Web Application]
@@ -1224,60 +1223,295 @@ Describe how to authenticate with the API.
     MOBILE --&gt; AUTH_SERVICE
     USER_SERVICE --&gt; POSTGRES
     AUTH_SERVICE --&gt; REDIS</code></pre></p>
-<p><strong>Collaborative Workflows:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Branch naming for documentation</span>
+</details>
+<details class="tip">
+<summary>Level 3: Collaborative Workflows</summary>
+<p><strong>Git Branch Strategy:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Documentation branches</span>
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/feature/user-guide-update
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/fix/api-documentation-typo
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/update/architecture-diagrams
 
-<span class="c1"># Commit message format</span>
+<span class="c1"># Commit messages</span>
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;docs: Add user authentication guide&quot;</span>
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;docs: Fix broken links in API documentation&quot;</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;docs: Update architecture diagrams&quot;</span>
 </code></pre></div></p>
-<p><strong>Version Control Strategy:</strong>
-<pre class="mermaid"><code>graph TB
-    MAIN[main branch]
-    MAIN --&gt; FEATURE[docs/feature/*]
-    MAIN --&gt; FIX[docs/fix/*]
-    MAIN --&gt; UPDATE[docs/update/*]
-
-    FEATURE --&gt; REVIEW[Pull Request]
-    FIX --&gt; REVIEW
-    UPDATE --&gt; REVIEW
-
-    REVIEW --&gt; MERGE[Merge to main]
-    MERGE --&gt; DEPLOY[Auto Deploy]</code></pre></p>
-<p><strong>Real-World Collaborative Documentation:</strong></p>
+</details>
+<details class="tip">
+<summary>Level 3: Real-World Collaboration</summary>
 <p><img alt="Google Sheets Collaboration" src="../../images/google-sheets-collaboration.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="gh"># Google Sheets Project Management</span>
+<p><strong>Team Collaboration Features:</strong>
+- <strong>Team Members</strong>: Adnan, Ali, Said, Nidhal
+- <strong>Task Assignment</strong>: Multiple assignees per task
+- <strong>Real-time Updates</strong>: Live collaboration on project status
+- <strong>Progress Tracking</strong>: Percentage completion (100%, 75%, 50%)
+- <strong>Status Management</strong>: Completed, In Progress tracking</p>
+</details>
+<details class="tip">
+<summary>Level 3: Versioned Documentation</summary>
+<p><strong>Git-Based Versioning Strategy:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create version tags</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial documentation release&quot;</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v2.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added API documentation and JavaDoc examples&quot;</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v3.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Collaborative documentation with Mermaid diagrams&quot;</span>
 
-<span class="gu">## Team Collaboration Features</span>
-<span class="k">-</span><span class="w"> </span><span class="gs">**Team Members**</span>: Adnan, Ali, Said, Nidhal
-<span class="k">-</span><span class="w"> </span><span class="gs">**Task Assignment**</span>: Multiple assignees per task
-<span class="k">-</span><span class="w"> </span><span class="gs">**Real-time Updates**</span>: Live collaboration on project status
-<span class="k">-</span><span class="w"> </span><span class="gs">**Progress Tracking**</span>: Percentage completion (100%, 75%, 50%)
-<span class="k">-</span><span class="w"> </span><span class="gs">**Status Management**</span>: Completed, In Progress tracking
+<span class="c1"># Push tags to remote</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v2.0.0
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v3.0.0
 
-<span class="gu">## Project Organization</span>
-<span class="k">-</span><span class="w"> </span><span class="gs">**Module-based**</span>: All, Admin, Customer, Rider, Vendor
-<span class="k">-</span><span class="w"> </span><span class="gs">**Priority Levels**</span>: High, Medium, Low with color coding
-<span class="k">-</span><span class="w"> </span><span class="gs">**Date Tracking**</span>: Start dates and due dates
-<span class="k">-</span><span class="w"> </span><span class="gs">**Progress Visualization**</span>: Color-coded progress bars
+<span class="c1"># Create version branches for maintenance</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/v1.0
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/v2.0
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/latest
 
-<span class="gu">## Collaborative Features Demonstrated</span>
-<span class="k">-</span><span class="w"> </span><span class="gs">**Shared Document**</span>: Multiple team members editing simultaneously
-<span class="k">-</span><span class="w"> </span><span class="gs">**Task Ownership**</span>: Clear assignment and accountability
-<span class="k">-</span><span class="w"> </span><span class="gs">**Progress Updates**</span>: Real-time status changes
-<span class="k">-</span><span class="w"> </span><span class="gs">**Visual Organization**</span>: Color-coded priorities and status
-<span class="k">-</span><span class="w"> </span><span class="gs">**Team Communication**</span>: Comments and progress notes
-</code></pre></div>
+<span class="c1"># Switch between versions</span>
+git<span class="w"> </span>checkout<span class="w"> </span>docs/v1.0<span class="w">  </span><span class="c1"># Work on v1.0 maintenance</span>
+git<span class="w"> </span>checkout<span class="w"> </span>docs/latest<span class="w"> </span><span class="c1"># Work on latest features</span>
+</code></pre></div></p>
+<p><strong>Semantic Versioning Implementation:</strong>
+<div class="highlight"><pre><span></span><code><span class="gu">## Version Strategy</span>
+
+<span class="gu">### MAJOR (X.0.0) - Breaking Changes</span>
+<span class="k">-</span><span class="w"> </span>Complete documentation restructure
+<span class="k">-</span><span class="w"> </span>New documentation framework
+<span class="k">-</span><span class="w"> </span>Breaking API changes
+
+<span class="gu">### MINOR (X.Y.0) - New Features</span>
+<span class="k">-</span><span class="w"> </span>New documentation sections
+<span class="k">-</span><span class="w"> </span>Additional examples
+<span class="k">-</span><span class="w"> </span>Enhanced diagrams
+
+<span class="gu">### PATCH (X.Y.Z) - Bug Fixes</span>
+<span class="k">-</span><span class="w"> </span>Typo corrections
+<span class="k">-</span><span class="w"> </span>Link fixes
+<span class="k">-</span><span class="w"> </span>Formatting improvements
+</code></pre></div></p>
+<p><strong>Version Management Workflow:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Create feature branch for new version</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/version-4.0.0
+
+<span class="c1"># 2. Make documentation changes</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;docs: Add Level 4 automation documentation&quot;</span>
+
+<span class="c1"># 3. Create release tag</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v4.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added automation and publishing features&quot;</span>
+
+<span class="c1"># 4. Merge to main and push</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>docs/version-4.0.0
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v4.0.0
+</code></pre></div></p>
+<p><strong>Documentation Versioning Best Practices:</strong>
+- <strong>Version Branches</strong>: Maintain separate branches for each major version
+- <strong>Tagging Strategy</strong>: Use semantic versioning for all releases
+- <strong>Change Logs</strong>: Document all changes in CHANGELOG.md
+- <strong>Backward Compatibility</strong>: Maintain older versions for reference
+- <strong>Release Notes</strong>: Create detailed release notes for each version</p>
 </details>
 </details>
-<details class="note">
-<summary>Level 4: Automation &amp; Publishing</summary>
-<p><strong>Status:</strong> Planned<br />
-<strong>Focus:</strong> Documentation as code, automated generation</p>
+<details class="success">
+<summary>Level 4: Automation &amp; Publishing (In Progress)</summary>
+<p><strong>Status:</strong> In Progress<br />
+<strong>Focus:</strong> Documentation as code, automated generation, CI/CD integration</p>
+<p><strong>Skills Demonstrated:</strong>
+- <strong>Automated Documentation Generation</strong> (In Progress): CI/CD pipeline integration
+- <strong>Documentation as Code</strong> (In Progress): Version-controlled documentation workflows
+- <strong>Automated Publishing</strong> (In Progress): GitHub Pages deployment automation
+- <strong>Quality Assurance Automation</strong> (In Progress): Automated testing and validation
+- <strong>Multi-Environment Deployment</strong> (In Progress): Staging and production documentation</p>
+<details class="tip">
+<summary>Level 4: Documentation as Code</summary>
+<p><strong>GitHub Actions Workflow:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation CI/CD</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">develop</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build-and-deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Python</span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
+<span class="w">      </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.9&#39;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">pip install mkdocs</span>
+<span class="w">        </span><span class="no">pip install mkdocs-material</span>
+<span class="w">        </span><span class="no">pip install mkdocs-mermaid2-plugin</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build documentation</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs build</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span>
+<span class="w">      </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">        </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./site</span>
+</code></pre></div></p>
+<p><strong>Automated Quality Checks:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pre-commit hooks</span>
+pip<span class="w"> </span>install<span class="w"> </span>pre-commit
+pre-commit<span class="w"> </span>install
+
+<span class="c1"># .pre-commit-config.yaml</span>
+repos:
+-<span class="w"> </span>repo:<span class="w"> </span>https://github.com/pre-commit/pre-commit-hooks
+<span class="w">  </span>rev:<span class="w"> </span>v4.4.0
+<span class="w">  </span>hooks:
+<span class="w">  </span>-<span class="w"> </span>id:<span class="w"> </span>trailing-whitespace
+<span class="w">  </span>-<span class="w"> </span>id:<span class="w"> </span>end-of-file-fixer
+<span class="w">  </span>-<span class="w"> </span>id:<span class="w"> </span>check-yaml
+<span class="w">  </span>-<span class="w"> </span>id:<span class="w"> </span>check-json
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Level 4: Automated Publishing</summary>
+<p><strong>Multi-Environment Deployment:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># .github/workflows/docs-staging.yml</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to Staging</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">develop</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deploy-staging</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to staging</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">mkdocs build</span>
+<span class="w">        </span><span class="no"># Deploy to staging environment</span>
+<span class="w">        </span><span class="no">rsync -avz site/ user@staging-server:/var/www/docs-staging/</span>
+</code></pre></div></p>
+<p><strong>Production Deployment:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># .github/workflows/docs-production.yml</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to Production</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&#39;v*&#39;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deploy-production</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to production</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">mkdocs build</span>
+<span class="w">        </span><span class="no"># Deploy to production</span>
+<span class="w">        </span><span class="no">rsync -avz site/ user@prod-server:/var/www/docs/</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Level 4: Documentation Generation</summary>
+<p><strong>Automated API Documentation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate JavaDoc automatically</span>
+mvn<span class="w"> </span>javadoc:javadoc
+
+<span class="c1"># Generate API documentation</span>
+swagger-codegen<span class="w"> </span>generate<span class="w"> </span>-i<span class="w"> </span>api-spec.yaml<span class="w"> </span>-l<span class="w"> </span>html2<span class="w"> </span>-o<span class="w"> </span>docs/api/
+
+<span class="c1"># Update documentation index</span>
+python<span class="w"> </span>scripts/update-api-docs.py
+</code></pre></div></p>
+<p><strong>Automated Diagram Generation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># scripts/generate-diagrams.py</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_mermaid_diagrams</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate Mermaid diagrams from source files&quot;&quot;&quot;</span>
+    <span class="n">diagram_files</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;docs/diagrams/architecture.mmd&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;docs/diagrams/flowchart.mmd&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;docs/diagrams/sequence.mmd&#39;</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">diagram</span> <span class="ow">in</span> <span class="n">diagram_files</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">diagram</span><span class="p">):</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;mmdc&#39;</span><span class="p">,</span> <span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="n">diagram</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">diagram</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.mmd&#39;</span><span class="p">,</span> <span class="s1">&#39;.png&#39;</span><span class="p">)])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">generate_mermaid_diagrams</span><span class="p">()</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Level 4: Quality Assurance Automation</summary>
+<p><strong>Automated Testing:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Test documentation links</span>
+mkdocs<span class="w"> </span>build
+linkchecker<span class="w"> </span>site/
+
+<span class="c1"># Test markdown formatting</span>
+markdownlint<span class="w"> </span>docs/
+
+<span class="c1"># Test spelling</span>
+cspell<span class="w"> </span><span class="s2">&quot;docs/**/*.md&quot;</span>
+</code></pre></div></p>
+<p><strong>Automated Validation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># .github/workflows/docs-validation.yml</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation Validation</span>
+
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">validate</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Validate links</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">mkdocs build</span>
+<span class="w">        </span><span class="no">linkchecker site/ --check-extern</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Validate markdown</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">markdownlint docs/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Validate spelling</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cspell &quot;docs/**/*.md&quot;</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Level 4: Advanced Publishing Features</summary>
+<p><strong>Multi-Version Documentation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># mkdocs.yml</span>
+<span class="nt">plugins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mike</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">version_selector</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">deploy_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
+<span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">latest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">      </span><span class="nt">stable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2.0.0</span>
+</code></pre></div></p>
+<p><strong>Automated Release Notes:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate release notes from commits</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>v2.0.0..v3.0.0<span class="w"> </span>&gt;<span class="w"> </span>release-notes.md
+
+<span class="c1"># Generate changelog</span>
+conventional-changelog<span class="w"> </span>-p<span class="w"> </span>angular<span class="w"> </span>-i<span class="w"> </span>CHANGELOG.md<span class="w"> </span>-s
+</code></pre></div></p>
+<p><strong>Documentation Analytics:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Track documentation usage</span>
+<span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;config&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;GA_TRACKING_ID&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">page_title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Documentation&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">page_location</span><span class="o">:</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span>
+<span class="p">});</span>
+</code></pre></div></p>
+</details>
 </details>
 <details class="note">
 <summary>Level 4: Documentation Systems</summary>
