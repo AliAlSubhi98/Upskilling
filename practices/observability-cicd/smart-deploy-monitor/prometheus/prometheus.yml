@@ -1,0 +1,35 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'smart-deploy-monitor'
+    environment: 'development'
+
+# Alertmanager configuration (optional for Level 2)
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets: []
+
+# Load rules once and periodically evaluate them (optional for Level 2)
+# rule_files:
+#   - "alert_rules.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Scrape Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Scrape Spring Boot application metrics
+  - job_name: 'smart-deploy-monitor'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['smart-deploy-monitor-app:8080']
+        labels:
+          application: 'smart-deploy-monitor'
+          service: 'backend'
+    scrape_interval: 15s
+    scrape_timeout: 10s
+
