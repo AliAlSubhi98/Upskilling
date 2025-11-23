@@ -74,8 +74,11 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/users/**").permitAll()  // Allow public access for Level 2 testing
                 .requestMatchers("/graphql").permitAll()  // GraphQL endpoint
                 .requestMatchers("/graphiql").permitAll()  // GraphQL playground
+                // Public actuator endpoints (must be before /actuator/** rule)
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/info").permitAll()
+                .requestMatchers("/actuator/prometheus").permitAll()
+                .requestMatchers("/actuator/metrics").permitAll()
                 .requestMatchers("/swagger-ui/**").permitAll()
                 .requestMatchers("/v3/api-docs/**").permitAll()
                 .requestMatchers("/swagger-ui.html").permitAll()

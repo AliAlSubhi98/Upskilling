@@ -101,15 +101,15 @@ management:
         demo.response.time: 0.5, 0.95, 0.99
 
 logging:
+  config: classpath:logback-spring.xml
   level:
     com.upskilling.smartdeploymonitor: INFO
     org.springframework.web: INFO
     org.springframework.scheduling: DEBUG
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   file:
     name: logs/smart-deploy-monitor.log
+    max-size: 10MB
+    max-history: 30
 
 # Qdrant Configuration
 qdrant:
