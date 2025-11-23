@@ -147,6 +147,13 @@
         </dependency>
         
         <!-- GraphQL DataLoader for N+1 problem solving (using Spring's built-in support) -->
+        
+        <!-- Logstash Logback Encoder for JSON logging -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>7.4</version>
+        </dependency>
     </dependencies>
     
     <build>
