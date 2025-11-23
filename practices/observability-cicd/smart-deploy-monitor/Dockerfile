@@ -1,5 +1,5 @@
 # Simple Dockerfile for Spring Boot application
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
 # Install curl for health checks
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
@@ -7,13 +7,16 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 # Set working directory
 WORKDIR /app
 
+# Create logs directory
+RUN mkdir -p /app/logs
+
 # Copy the JAR file
 COPY target/smart-deploy-monitor-1.0.0.jar app.jar
 
 # Create non-root user for security
 RUN groupadd -g 1001 appuser && \
     useradd -r -u 1001 -g appuser appuser && \
-    chown appuser:appuser app.jar
+    chown -R appuser:appuser /app
 
 # Switch to non-root user
 USER appuser
