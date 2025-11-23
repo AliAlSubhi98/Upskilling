@@ -9,5 +9,5 @@ datasources:
     editable: true
     jsonData:
       timeInterval: "15s"
-      httpMethod: POST
+      httpMethod: GET
 
