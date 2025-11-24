@@ -1,9 +1,10 @@
 {
+  "uid": "d896e617-e251-440b-a9a2-cc3d6390086f",
   "title": "Smart Deploy Monitor - JVM Metrics",
   "tags": ["jvm", "java", "memory", "gc"],
   "timezone": "browser",
   "schemaVersion": 38,
-  "version": 1,
+  "version": 2,
   "refresh": "10s",
   "panels": [
     {
@@ -16,19 +17,19 @@
           "expr": "jvm_memory_used_bytes{area=\"heap\"}",
           "legendFormat": "Heap Used",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
           "expr": "jvm_memory_committed_bytes{area=\"heap\"}",
           "legendFormat": "Heap Committed",
           "refId": "B",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
           "expr": "jvm_memory_max_bytes{area=\"heap\"}",
           "legendFormat": "Heap Max",
           "refId": "C",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -48,13 +49,13 @@
           "expr": "jvm_memory_used_bytes{area=\"nonheap\"}",
           "legendFormat": "Non-Heap Used",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
           "expr": "jvm_memory_committed_bytes{area=\"nonheap\"}",
           "legendFormat": "Non-Heap Committed",
           "refId": "B",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -74,7 +75,7 @@
           "expr": "rate(jvm_gc_pause_seconds_count[5m])",
           "legendFormat": "{{gc}}",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -94,7 +95,7 @@
           "expr": "rate(jvm_gc_pause_seconds_sum[5m]) / rate(jvm_gc_pause_seconds_count[5m])",
           "legendFormat": "{{gc}} Avg Pause",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -114,19 +115,19 @@
           "expr": "jvm_threads_live_threads",
           "legendFormat": "Live Threads",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
           "expr": "jvm_threads_daemon_threads",
           "legendFormat": "Daemon Threads",
           "refId": "B",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
           "expr": "jvm_threads_peak_threads",
           "legendFormat": "Peak Threads",
           "refId": "C",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -146,13 +147,13 @@
           "expr": "jvm_classes_loaded_classes",
           "legendFormat": "Loaded Classes",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
           "expr": "jvm_classes_unloaded_classes_total",
           "legendFormat": "Unloaded Classes",
           "refId": "B",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {

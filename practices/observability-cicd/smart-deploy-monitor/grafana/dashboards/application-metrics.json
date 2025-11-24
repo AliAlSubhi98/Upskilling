@@ -1,4 +1,5 @@
 {
+  "uid": "app-metrics",
   "title": "Smart Deploy Monitor - Application Metrics",
   "tags": ["application", "metrics", "spring-boot"],
   "timezone": "browser",
@@ -13,10 +14,10 @@
       "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
       "targets": [
         {
-          "expr": "rate(http_server_requests_seconds_count[5m])",
+          "expr": "sum(rate(http_server_requests_seconds_bucket[5m])) by (method, uri)",
           "legendFormat": "{{method}} {{uri}}",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -36,7 +37,7 @@
           "expr": "histogram_quantile(0.95, rate(http_server_requests_seconds_bucket[5m]))",
           "legendFormat": "p95",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -56,7 +57,7 @@
           "expr": "system_cpu_usage",
           "legendFormat": "CPU Usage",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -78,13 +79,13 @@
           "expr": "jvm_memory_used_bytes{area=\"heap\"}",
           "legendFormat": "Heap Used",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
           "expr": "jvm_memory_max_bytes{area=\"heap\"}",
           "legendFormat": "Heap Max",
           "refId": "B",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -101,16 +102,16 @@
       "gridPos": {"h": 8, "w": 12, "x": 0, "y": 16},
       "targets": [
         {
-          "expr": "rate(http_server_requests_seconds_count{status=~\"5..\"}[5m])",
+            "expr": "sum(rate(http_server_requests_seconds_bucket{status=~\"5..\"}[5m]))",
           "legendFormat": "5xx Errors",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         },
         {
-          "expr": "rate(http_server_requests_seconds_count{status=~\"4..\"}[5m])",
+            "expr": "sum(rate(http_server_requests_seconds_bucket{status=~\"4..\"}[5m]))",
           "legendFormat": "4xx Errors",
           "refId": "B",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "fieldConfig": {
@@ -129,7 +130,7 @@
         {
           "expr": "application_connections_active",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "options": {
@@ -152,7 +153,7 @@
         {
           "expr": "application_requests_total",
           "refId": "A",
-          "datasource": {"type": "prometheus", "uid": "${DS_PROMETHEUS}"}
+          "datasource": {"type": "prometheus", "uid": "PBFA97CFB590B2093"}
         }
       ],
       "options": {
