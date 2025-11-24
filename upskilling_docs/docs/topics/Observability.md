@@ -116,6 +116,22 @@
     
     **Key Achievement:** Successfully implemented a complete centralized observability stack with ELK for logs, Prometheus for metrics, and Grafana for visualization, enabling full visibility into application health and performance.
     
+    **Visual Documentation:**
+    
+    ![Grafana Application Metrics Dashboard](../images/level-2-advanced-logging-metrics/01-grafana-application-metrics.png)
+    
+    ![Grafana JVM Metrics Dashboard](../images/level-2-advanced-logging-metrics/02-grafana-jvm-metrics.png)
+    
+    ![Prometheus Targets](../images/level-2-advanced-logging-metrics/03-prometheus-targets.png)
+    
+    ![Prometheus Query Example](../images/level-2-advanced-logging-metrics/04-prometheus-query.png)
+    
+    ![Kibana Logs View](../images/level-2-advanced-logging-metrics/05-kibana-logs.png)
+    
+    ![Docker Services Running](../images/level-2-advanced-logging-metrics/06-docker-services.png)
+    
+    ![Docker Services Details](../images/level-2-advanced-logging-metrics/07-docker-services2.png)
+    
     **All Level 2 tasks completed!**
 
 ??? todo "Level 3: Distributed Tracing & Centralized Monitoring"
