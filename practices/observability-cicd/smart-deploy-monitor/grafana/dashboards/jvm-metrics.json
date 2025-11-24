@@ -1,5 +1,5 @@
 {
-  "uid": "d896e617-e251-440b-a9a2-cc3d6390086f",
+  "uid": "jvm-metrics",
   "title": "Smart Deploy Monitor - JVM Metrics",
   "tags": ["jvm", "java", "memory", "gc"],
   "timezone": "browser",
