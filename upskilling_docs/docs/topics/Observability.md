@@ -2,7 +2,7 @@
 
 **Goal:** Gain complete visibility into system health using logs, metrics, and traces.
 
-**Current Level:** Level 1
+**Current Level:** Level 2
 
 ---
 
@@ -42,9 +42,39 @@
 - **Competencies:** Centralized Logging, Structured Logs, Metrics Dashboards
 - **Tools:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Fluentd
 - **Checklist:**
-  - [ ] Set up an ELK Stack and aggregate logs from multiple sources
-  - [ ] Create a Prometheus-based metrics dashboard
-  - [ ] Implement structured logging with JSON
+  - [x] Set up an ELK Stack and aggregate logs from multiple sources
+  - [x] Create a Prometheus-based metrics dashboard
+  - [x] Implement structured logging with JSON
+
+### Progress
+**Completed:** Full Level 2 Observability Implementation
+
+**What I Learned:**
+- **ELK Stack**: Set up Elasticsearch, Logstash, and Kibana for centralized log aggregation
+- **Structured JSON Logging**: Configured Logback with logstash-logback-encoder for JSON-formatted logs
+- **Logstash Pipeline**: Created log processing pipeline to parse JSON logs and send to Elasticsearch
+- **Prometheus Integration**: Configured Prometheus to scrape Spring Boot Actuator metrics endpoints
+- **Grafana Dashboards**: Created provisioned dashboards for application metrics and JVM metrics
+- **Docker Compose Orchestration**: Integrated all observability services into docker-compose.yml
+- **Grafana Provisioning**: Configured datasources and dashboards via provisioning files for automation
+
+**Resources Used:**
+- ELK Stack documentation
+- Prometheus configuration guides
+- Grafana dashboard provisioning documentation
+- Logstash pipeline configuration examples
+- Docker Compose networking and volume management
+
+**How I Applied This Knowledge:**
+- Configured Logback with JSON encoder for structured logging
+- Set up Logstash pipeline to process application logs and forward to Elasticsearch
+- Created Prometheus scrape configuration for Spring Boot Actuator endpoints
+- Built Grafana dashboards with PromQL queries for application and JVM metrics
+- Configured Grafana datasource and dashboard provisioning for automated setup
+- Integrated all services with proper health checks and dependencies in Docker Compose
+- Fixed datasource UID references to ensure dashboards display data correctly
+
+**Key Achievement:** Successfully implemented a complete centralized observability stack with ELK for logs, Prometheus for metrics, and Grafana for visualization, enabling full visibility into application health and performance.
 
 ## Level 3: Distributed Tracing & Centralized Monitoring
 - **Competencies:** OpenTelemetry, Jaeger, Log Aggregation, Alerting
@@ -88,8 +118,9 @@
     **Next Task:** Set up basic logging and metrics collection
 
 ??? note "Level 2: Centralized Monitoring"
-    **Status:** Planned  
+    **Status:** ✅ Completed  
     **Focus:** Centralized logging, ELK stack, Prometheus
+    **Completed:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus metrics collection, Grafana dashboards, structured JSON logging
 
 ??? note "Level 3: Full Stack Observability"
     **Status:** Planned  
