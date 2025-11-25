@@ -1,5 +1,5 @@
 {
-  "uid": "app-metrics",
+  "uid": "bb20eef2-c5fc-43a2-8739-296a3a071f9c",
   "title": "Smart Deploy Monitor - Application Metrics",
   "tags": ["application", "metrics", "spring-boot"],
   "timezone": "browser",

@@ -26,6 +26,13 @@ public class RateLimitingFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, 
                                     FilterChain filterChain) throws ServletException, IOException {
         
+        // Skip rate limiting for Prometheus metrics endpoint
+        String requestPath = request.getRequestURI();
+        if (requestPath != null && requestPath.startsWith("/actuator/prometheus")) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+        
         String clientIp = getClientIpAddress(request);
         
         // Redis-based rate limiting only
