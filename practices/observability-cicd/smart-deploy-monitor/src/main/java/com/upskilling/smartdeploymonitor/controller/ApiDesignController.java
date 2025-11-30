@@ -3,6 +3,8 @@ package com.upskilling.smartdeploymonitor.controller;
 import com.upskilling.smartdeploymonitor.dto.ApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,17 +30,21 @@ import java.util.Map;
 @Tag(name = "API Design", description = "Basic API design patterns demonstration")
 public class ApiDesignController {
 
+    private static final Logger logger = LoggerFactory.getLogger(ApiDesignController.class);
+
     /**
      * GET endpoint - Demonstrates proper GET response
      */
     @GetMapping("/info")
     @Operation(summary = "Get API info", description = "Returns basic API information")
     public ResponseEntity<ApiResponse<Map<String, Object>>> getInfo() {
+        logger.info("GET /api/design/info endpoint called");
         Map<String, Object> info = new HashMap<>();
         info.put("name", "Smart Deploy Monitor API");
         info.put("version", "1.0.0");
         info.put("status", "operational");
         
+        logger.info("API info retrieved successfully");
         return ResponseEntity.ok(ApiResponse.success("API information retrieved", info));
     }
 

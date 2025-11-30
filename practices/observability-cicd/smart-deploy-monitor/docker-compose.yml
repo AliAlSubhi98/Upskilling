@@ -250,6 +250,8 @@ services:
       - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
       - QDRANT_HOST=qdrant
       - QDRANT_PORT=6333
+    volumes:
+      - ./logs:/app/logs
     depends_on:
       postgres:
         condition: service_healthy
