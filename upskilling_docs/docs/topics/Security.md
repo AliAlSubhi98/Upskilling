@@ -363,9 +363,58 @@
 
     **Key Achievement:** Successfully implemented enterprise-grade security measures including comprehensive security headers, advanced input validation, rate limiting, security monitoring, and automated vulnerability assessment, achieving a security score of 95/100 and demonstrating mastery of application security best practices.
 
-??? note "Level 2: Secure Development"
-    **Status:** Planned  
-    **Focus:** Secure coding practices, dependency scanning
+??? success "Level 2: Secure Development Practices (Completed)"
+    **Status:** Completed  
+    **Focus:** OWASP Top 10 protection, RBAC, dependency scanning, secrets management  
+    **Evidence:**  
+    - [Dependabot Configuration](https://github.com/AliAlSubhi98/Upskilling/blob/main/.github/dependabot.yml)
+    - [Secrets Management Guide](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/SECRETS-MANAGEMENT.md)
+    - [OWASP Top 10 Protection](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/OWASP-TOP-10-PROTECTION.md)
+    - **Role-Based Access Control (RBAC)** (Completed): Implemented with Spring Security, method-level security annotations
+    - **Dependency Vulnerability Scanning** (Completed): Dependabot configured for automated security updates
+    - **Secrets Management** (Completed): Environment variables with Vault integration guide
+    - **OWASP Top 10 Protection** (Completed): Comprehensive protection against all OWASP Top 10 risks
+    
+    **What I Learned:**
+    - **RBAC Implementation**: Method-level security with @PreAuthorize annotations for fine-grained access control
+    - **Dependabot Configuration**: Automated dependency vulnerability scanning and security updates
+    - **Secrets Management**: Best practices for managing secrets using environment variables and Vault
+    - **OWASP Top 10**: Comprehensive protection against injection, XSS, CSRF, broken access control, and other common vulnerabilities
+    - **Security Headers**: HTTP security headers for defense against various attack vectors
+    - **Input Validation**: Advanced pattern-based validation for SQL injection, XSS, and path traversal
+    
+    **Applied Knowledge:**
+    - Implemented method-level security annotations (@PreAuthorize) on sensitive endpoints
+    - Configured Dependabot for weekly security updates with grouping
+    - Created comprehensive secrets management documentation with Vault integration examples
+    - Documented OWASP Top 10 protection implementation with evidence
+    - Enhanced RBAC with fine-grained permissions (ADMIN, USER, MODERATOR roles)
+    - Applied security best practices throughout the application
+    
+    **Code Examples:**
+    ```java
+    // Method-level security
+    @PreAuthorize("hasRole('ADMIN')")
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> deleteUser(@PathVariable UUID id) {
+        // Only admins can delete users
+    }
+    
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
+    @PutMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> updateUser(...) {
+        // Authenticated users can update
+    }
+    ```
+    
+    **Security Checklist Completed:**
+    - [x] Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)
+    - [x] Role-based access control (RBAC) with Spring Security
+    - [x] Rate limiting / brute-force protection
+    - [x] Secrets management system in place (environment variables with Vault guide)
+    - [x] Dependency vulnerability scanning (Dependabot)
+    
+    **Key Achievement:** Successfully implemented Security Level 2 practices including comprehensive OWASP Top 10 protection, fine-grained RBAC with method-level security, automated dependency scanning with Dependabot, and enterprise-grade secrets management documentation, demonstrating mastery of secure development practices.
 
 ??? note "Level 3: Application Security"
     **Status:** Planned  
