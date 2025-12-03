@@ -3,22 +3,22 @@
 # Git Level 3: Commit History & Recovery Practice
 # This script guides you through advanced Git recovery and history management
 
-echo "🎯 Git Level 3: Commit History & Recovery Practice"
+echo "Git Level 3: Commit History & Recovery Practice"
 echo "=================================================="
 echo ""
 
 # Create a practice repository
-echo "📁 Setting up practice repository..."
+echo "Setting up practice repository..."
 mkdir -p git-level3-practice
 cd git-level3-practice
 
 # Initialize repository
 git init
-echo "✅ Repository initialized"
+echo "Repository initialized"
 
 # Create initial files and commits
 echo ""
-echo "📝 Creating initial commits for practice..."
+echo "Creating initial commits for practice..."
 echo "Hello World" > app.py
 git add app.py
 git commit -m "Initial commit: Hello World app"
@@ -45,15 +45,15 @@ echo "    return a - b" >> app.py
 git add app.py
 git commit -m "Add subtraction function"
 
-echo "✅ Created 5 commits for practice"
+echo "Created 5 commits for practice"
 echo ""
 
 # Show current status
-echo "📊 Current repository status:"
+echo "Current repository status:"
 git log --oneline
 echo ""
 
-echo "🎯 EXERCISE 1: Git Reflog - Recover Lost Commits"
+echo "EXERCISE 1: Git Reflog - Recover Lost Commits"
 echo "================================================"
 echo ""
 echo "Let's practice recovering lost commits using git reflog:"
@@ -73,7 +73,7 @@ echo "    return math.sqrt(a)" >> app.py
 git add app.py
 git commit -m "Add square root function"
 
-echo "✅ Created feature branch with 2 commits"
+echo "Created feature branch with 2 commits"
 echo ""
 
 # Show reflog
@@ -84,7 +84,7 @@ echo ""
 # Simulate losing commits (reset to previous commit)
 echo "3. Simulating lost commits (resetting to previous state)..."
 git reset --hard HEAD~2
-echo "✅ Reset to 2 commits ago (commits 'lost')"
+echo "Reset to 2 commits ago (commits 'lost')"
 echo ""
 
 echo "4. Current status after reset:"
@@ -101,14 +101,14 @@ LOST_COMMIT=$(git reflog | grep "Add square root function" | awk '{print $1}')
 if [ ! -z "$LOST_COMMIT" ]; then
     echo "6. Recovering lost commits using reflog:"
     git reset --hard $LOST_COMMIT
-    echo "✅ Successfully recovered lost commits!"
+    echo "Successfully recovered lost commits!"
     echo ""
     echo "7. Current status after recovery:"
     git log --oneline
     echo ""
 fi
 
-echo "🎯 EXERCISE 2: Git Bisect - Find Bug in History"
+echo "EXERCISE 2: Git Bisect - Find Bug in History"
 echo "==============================================="
 echo ""
 echo "Let's practice using git bisect to find when a bug was introduced:"
@@ -122,7 +122,7 @@ echo "    return 1 / 0  # This will cause an error" >> app.py
 git add app.py
 git commit -m "Introduce bug: division by zero"
 
-echo "✅ Created buggy commit"
+echo "Created buggy commit"
 echo ""
 
 # Create a test script
@@ -138,13 +138,13 @@ def test_app():
         result = subprocess.run(['python3', 'app.py'], 
                              capture_output=True, text=True, timeout=5)
         if result.returncode != 0:
-            print("❌ Test failed - bug detected")
+            print("Test failed - bug detected")
             return 1
         else:
-            print("✅ Test passed - no bug")
+            print("Test passed - no bug")
             return 0
     except Exception as e:
-        print(f"❌ Test failed with exception: {e}")
+        print(f"Test failed with exception: {e}")
         return 1
 
 if __name__ == "__main__":
@@ -155,7 +155,7 @@ chmod +x test_app.py
 git add test_app.py
 git commit -m "Add test script for bisect"
 
-echo "✅ Created test script"
+echo "Created test script"
 echo ""
 
 echo "3. Starting git bisect to find the bug:"
@@ -167,7 +167,7 @@ echo "   git bisect run ./test_app.py  # Automatically test each commit"
 echo "   git bisect reset  # Reset when done"
 echo ""
 
-echo "🎯 EXERCISE 3: Git Reset - Safe Recovery"
+echo "EXERCISE 3: Git Reset - Safe Recovery"
 echo "======================================="
 echo ""
 echo "Let's practice different types of git reset:"
@@ -186,7 +186,7 @@ echo ""
 echo "3. Hard reset (discards all changes):"
 echo "   git reset --hard HEAD~1"
 echo "   # This undoes the last commit and discards all changes"
-echo "   # ⚠️ WARNING: This is destructive!"
+echo "   # WARNING: This is destructive!"
 echo ""
 
 echo "4. Reset to specific commit:"
@@ -194,7 +194,7 @@ echo "   git reset --hard <commit-hash>"
 echo "   # This resets to a specific commit"
 echo ""
 
-echo "🎯 EXERCISE 4: Git Revert - Safe Undo"
+echo "EXERCISE 4: Git Revert - Safe Undo"
 echo "====================================="
 echo ""
 echo "Let's practice using git revert to safely undo commits:"
@@ -215,7 +215,7 @@ echo "   git revert <commit1> <commit2> <commit3>"
 echo "   # This reverts multiple commits"
 echo ""
 
-echo "🎯 EXERCISE 5: Git Tagging - Release Management"
+echo "EXERCISE 5: Git Tagging - Release Management"
 echo "======================================="
 echo ""
 echo "Let's practice creating and managing release tags:"
@@ -253,7 +253,7 @@ echo "   git push origin --delete v1.0.0"
 echo "   # Deletes remote tag"
 echo ""
 
-echo "🎯 EXERCISE 6: Advanced Recovery Techniques"
+echo "EXERCISE 6: Advanced Recovery Techniques"
 echo "=========================================="
 echo ""
 echo "Let's practice advanced recovery techniques:"
@@ -286,25 +286,25 @@ echo "   git commit --amend -m 'New commit message'"
 echo "   # Changes the last commit message"
 echo ""
 
-echo "🎉 Git Level 3 Practice Complete!"
+echo "Git Level 3 Practice Complete!"
 echo "================================="
 echo ""
-echo "📋 What you've practiced:"
-echo "✅ Git reflog for commit recovery"
-echo "✅ Git bisect for bug finding"
-echo "✅ Git reset for safe recovery"
-echo "✅ Git revert for safe undo"
-echo "✅ Git tagging for release management"
-echo "✅ Advanced recovery techniques"
+echo "What you've practiced:"
+echo "Git reflog for commit recovery"
+echo "Git bisect for bug finding"
+echo "Git reset for safe recovery"
+echo "Git revert for safe undo"
+echo "Git tagging for release management"
+echo "Advanced recovery techniques"
 echo ""
-echo "🚀 Next steps:"
+echo "Next steps:"
 echo "- Practice these commands in real projects"
 echo "- Use git reflog when you lose commits"
 echo "- Use git bisect to find bugs systematically"
 echo "- Use git revert for safe undos in shared repositories"
 echo "- Use git tags for proper release management"
 echo ""
-echo "📚 Additional resources:"
+echo "Additional resources:"
 echo "- Git documentation: https://git-scm.com/doc"
 echo "- GitHub documentation: https://docs.github.com"
 echo "- Pro Git book: https://git-scm.com/book"

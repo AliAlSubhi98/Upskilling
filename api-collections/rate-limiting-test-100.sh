@@ -8,7 +8,7 @@ ENDPOINT="$BASE_URL/api/v1/users?page=0&size=1"
 MAX_REQUESTS=110  # Test with 110 requests (limit is 100/minute)
 DELAY=0.05        # 50ms delay between requests
 
-echo "🚀 Testing Rate Limiting - 100 Requests Test"
+echo "Testing Rate Limiting - 100 Requests Test"
 echo "=============================================="
 echo "Endpoint: $ENDPOINT"
 echo "Max Requests: $MAX_REQUESTS"
@@ -45,11 +45,11 @@ done
 echo ""
 echo "=== Results ==="
 if [ "$rate_limited" = true ]; then
-    echo "✅ Rate limiting is WORKING!"
+    echo "Rate limiting is WORKING!"
     echo "🚫 Rate limit triggered at request $rate_limit_triggered_at"
-    echo "📊 Expected: Rate limit should trigger around request 100-101"
+    echo "Expected: Rate limit should trigger around request 100-101"
 else
-    echo "❌ Rate limiting is NOT working"
+    echo "Rate limiting is NOT working"
     echo "🔍 All requests returned 200 (should have 429 errors)"
 fi
 
@@ -68,12 +68,12 @@ if [ ! -z "$redis_keys" ]; then
 fi
 
 echo ""
-echo "🎯 Rate Limiting Test Complete!"
+echo "Rate Limiting Test Complete!"
 echo "==============================="
 echo ""
 echo "Expected Results:"
-echo "✅ First ~100 requests: HTTP 200"
-echo "✅ Request 101+: HTTP 429 (rate limited)"
+echo "First ~100 requests: HTTP 200"
+echo "Request 101+: HTTP 429 (rate limited)"
 echo ""
 echo "If you see 429 errors, rate limiting is working!"
 echo "If all requests return 200, rate limiting may not be active."

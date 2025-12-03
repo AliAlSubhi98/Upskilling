@@ -3,7 +3,7 @@
 # Test API Collections - Smart Deploy Monitor
 # This script demonstrates the API collections functionality
 
-echo "🚀 Testing API Collections for Smart Deploy Monitor"
+echo "Testing API Collections for Smart Deploy Monitor"
 echo "=================================================="
 
 BASE_URL="http://localhost:8080"
@@ -61,10 +61,10 @@ curl -s -X POST "$REST_URL/users" \
   -d '{"email": "collection-test@example.com", "password": "password123", "firstName": "Collection", "lastName": "Test", "role": "USER"}' | jq '.'
 
 echo ""
-echo "🎉 API Collections Test Complete!"
+echo "API Collections Test Complete!"
 echo "================================="
 echo ""
-echo "📁 Collections Location: /Users/alialsubhi/Desktop/Upskilling/api-collections/"
+echo "Collections Location: /Users/alialsubhi/Desktop/Upskilling/api-collections/"
 echo "📋 Import these files into Postman:"
 echo "   - GraphQL-API-Collection.postman_collection.json"
 echo "   - REST-API-Collection.postman_collection.json"

@@ -77,22 +77,18 @@
     - **Documentation Structure**: Logical organization and navigation
     - **Technical Writing**: Clear, concise, and user-friendly documentation
     - **MkDocs Integration**: Static site generation and GitHub Pages deployment
-    - **Version Control**: Documentation as code with Git integration
+    - **Version Control**: Documentation as code with Git integration. Track changes just like code.
     
-    **Applied Knowledge:**
-    - Created comprehensive README files for all projects with setup and usage instructions
-    - Built professional MkDocs documentation site with proper navigation
-    - Implemented consistent documentation standards across all projects
-    - Used advanced Markdown features for professional presentation
-    - Integrated documentation with CI/CD for automated deployment
+    **What I Did:**
+    - Created README files for all projects with setup and usage instructions
+    - Built a MkDocs documentation site with proper navigation
+    - Made documentation standards consistent across projects
+    - Used advanced Markdown features for better presentation
+    - Integrated docs with CI/CD for automated deployment
     
-    **Resources Used:**
-    - MkDocs documentation and Material theme
-    - GitHub Pages for hosting
-    - Markdown best practices and formatting
-    - Technical writing principles
+    **Resources:** MkDocs docs and Material theme, GitHub Pages, Markdown best practices, technical writing principles
     
-    **Key Achievement:** Successfully created and maintained comprehensive documentation for multiple projects, demonstrating professional documentation skills and technical writing proficiency.
+    **Summary:** Got good at writing documentation! READMEs, MkDocs site, consistent standards. Good docs make projects way better.
 
 ??? success "Level 2: Structured Documentation (Completed)"
     **Status:** Completed  

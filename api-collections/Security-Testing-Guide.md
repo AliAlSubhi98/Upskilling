@@ -1,4 +1,4 @@
-# 🛡️ Security Level 1 Testing Guide for Postman
+# Security Level 1 Testing Guide for Postman
 
 ## 📋 **Step-by-Step Testing Instructions**
 
@@ -82,9 +82,9 @@ mvn spring-boot:run
 - **Expected**: 200 OK (request processed, but XSS blocked)
 - **Check**: User-Agent validation
 
-## 📊 **Expected Results**
+## **Expected Results**
 
-### **  Security Headers (All Requests)**
+### **Security Headers (All Requests)**
 ```
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
@@ -95,7 +95,7 @@ Referrer-Policy: strict-origin-when-cross-origin
 Permissions-Policy: geolocation=(), microphone=(), camera=()...
 ```
 
-### **  Input Validation (Attack Requests)**
+### **Input Validation (Attack Requests)**
 ```
 HTTP 400 Bad Request
 {
@@ -103,7 +103,7 @@ HTTP 400 Bad Request
 }
 ```
 
-### **  Rate Limiting (Excessive Requests)**
+### **Rate Limiting (Excessive Requests)**
 ```
 HTTP 429 Too Many Requests
 {
@@ -111,7 +111,7 @@ HTTP 429 Too Many Requests
 }
 ```
 
-### **  Normal Requests**
+### **Normal Requests**
 ```
 HTTP 200 OK
 {
@@ -181,7 +181,7 @@ docker run -d --name redis -p 6379:6379 redis:alpine
 - **Expected**: Fast rejection (low latency)
 - **Check**: Security doesn't impact performance
 
-## 🎯 **Success Criteria**
+## **Success Criteria**
 
 ### **  All Tests Pass When:**
 1. **Security Headers**: Present on all responses
@@ -206,4 +206,4 @@ docker run -d --name redis -p 6379:6379 redis:alpine
 
 ---
 
-**Happy Security Testing!** 🛡️
+**Happy Security Testing!**

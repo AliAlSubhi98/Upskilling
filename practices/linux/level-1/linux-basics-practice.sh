@@ -12,7 +12,7 @@ echo "=== Setting up practice environment ==="
 mkdir -p ~/linux-practice/{files,scripts,logs}
 cd ~/linux-practice
 
-echo "✅ Practice directory created: $(pwd)"
+echo "Practice directory created: $(pwd)"
 echo ""
 
 # 1. File System Navigation
@@ -193,19 +193,19 @@ echo "Files after cleanup:"
 ls -la
 echo ""
 
-echo "🎉 Linux Level 1 Practice Complete!"
+echo "Linux Level 1 Practice Complete!"
 echo "===================================="
 echo ""
 echo "What you've learned:"
-echo "✅ File system navigation (cd, ls, pwd)"
-echo "✅ File operations (touch, cp, mv, rm)"
-echo "✅ Directory operations (mkdir, rmdir)"
-echo "✅ File permissions (chmod, chown)"
-echo "✅ Text processing (cat, grep, wc)"
-echo "✅ System information (whoami, date, uptime)"
-echo "✅ Process management (ps, top)"
-echo "✅ File search (find)"
-echo "✅ Basic scripting"
+echo "File system navigation (cd, ls, pwd)"
+echo "File operations (touch, cp, mv, rm)"
+echo "Directory operations (mkdir, rmdir)"
+echo "File permissions (chmod, chown)"
+echo "Text processing (cat, grep, wc)"
+echo "System information (whoami, date, uptime)"
+echo "Process management (ps, top)"
+echo "File search (find)"
+echo "Basic scripting"
 echo ""
 echo "Next: Practice these commands manually to reinforce learning!"
 echo "Try: man <command> to learn more about any command"

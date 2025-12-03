@@ -38,7 +38,7 @@ export REDIS_PASSWORD=your_redis_password_here
 
 ## Secrets Management Best Practices
 
-### ✅ DO:
+### DO:
 - Store secrets in environment variables
 - Use `.env` files for local development (add to `.gitignore`)
 - Rotate secrets regularly
@@ -47,7 +47,7 @@ export REDIS_PASSWORD=your_redis_password_here
 - Use strong, randomly generated secrets
 - Limit access to secrets (principle of least privilege)
 
-### ❌ DON'T:
+### DON'T:
 - Hardcode secrets in source code
 - Commit secrets to Git repositories
 - Share secrets via email or chat

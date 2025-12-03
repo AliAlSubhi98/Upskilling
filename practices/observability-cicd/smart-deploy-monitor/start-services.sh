@@ -39,7 +39,7 @@ while [ $timeout -gt 0 ]; do
 done
 
 if [ $timeout -le 0 ]; then
-    echo -e "${RED}✗ Timeout${NC}"
+    echo -e "${RED}Timeout${NC}"
 fi
 
 # Wait for Elasticsearch
@@ -55,7 +55,7 @@ while [ $timeout -gt 0 ]; do
 done
 
 if [ $timeout -le 0 ]; then
-    echo -e "${RED}✗ Timeout${NC}"
+    echo -e "${RED}Timeout${NC}"
 fi
 
 # Wait for Qdrant
@@ -71,11 +71,11 @@ while [ $timeout -gt 0 ]; do
 done
 
 if [ $timeout -le 0 ]; then
-    echo -e "${RED}✗ Timeout${NC}"
+    echo -e "${RED}Timeout${NC}"
 fi
 
 echo ""
-echo -e "${GREEN}🎉 All services are ready!${NC}"
+echo -e "${GREEN}All services are ready!${NC}"
 echo ""
 echo -e "${YELLOW}Service URLs:${NC}"
 echo "• Redis: http://localhost:6379"

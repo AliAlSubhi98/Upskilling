@@ -102,21 +102,21 @@
     - [Active Listening Guide](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/communication-collaboration/level-1/active-listening-guide.md) - Listening skills development
     
     **What I Learned:**
-    - **Clear Written Communication**: Professional email structure, technical documentation, crisis communication, and feedback delivery with specific examples and best practices
-    - **Active Listening Skills**: 5 key elements of active listening (attention, acknowledgment, feedback, judgment deferral, appropriate response) with practical techniques like paraphrasing, clarifying questions, and reflective responses
-    - **Meeting Etiquette**: Pre-meeting preparation, professional presence, speaking guidelines, technology best practices, and effective follow-up procedures for different meeting types
-    - **Team Collaboration**: Trust-building behaviors, knowledge sharing practices, constructive feedback techniques, and remote collaboration tools for effective teamwork
-    - **Communication Channels**: Understanding when to use email vs chat vs meetings, appropriate tone for different contexts, and professional presence in various communication scenarios
+    - **Clear Written Communication**: Professional email structure, technical docs, crisis communication, and feedback delivery. Being clear and concise matters.
+    - **Active Listening Skills**: 5 key elements - attention, acknowledgment, feedback, judgment deferral, appropriate response. Techniques like paraphrasing and clarifying questions help a lot.
+    - **Meeting Etiquette**: Pre-meeting prep, professional presence, speaking guidelines, tech best practices. Good meetings need preparation.
+    - **Team Collaboration**: Trust-building, knowledge sharing, constructive feedback, remote collaboration tools. Teamwork makes the dream work!
+    - **Communication Channels**: When to use email vs chat vs meetings. Right tool for the right situation.
     
-    **Applied Knowledge:**
-    - Created comprehensive communication exercise scenarios for technical problem communication and crisis management
-    - Developed active listening techniques with practical examples and assessment criteria
-    - Established meeting etiquette guidelines for professional presence and effective participation
-    - Built team collaboration framework with trust-building behaviors and knowledge sharing practices
-    - Designed assessment tools for self-evaluation and continuous improvement in communication skills
-    - Applied communication best practices to daily work interactions and team collaboration scenarios
+    **What I Did:**
+    - Created communication exercise scenarios for technical problems and crisis management
+    - Developed active listening techniques with practical examples
+    - Established meeting etiquette guidelines
+    - Built a team collaboration framework with trust-building behaviors
+    - Designed assessment tools for self-evaluation
+    - Applied communication best practices to daily work
     
-    **Key Achievement:** Successfully developed comprehensive communication and collaboration skills including clear written communication, active listening, meeting etiquette, team collaboration, and professional presence, creating a solid foundation for advanced collaboration and leadership skills.
+    **Summary:** Got better at communication and collaboration! Clear writing, active listening, meeting etiquette, and team collaboration. Solid foundation for working with others.
 
 ??? note "Level 2: Team Collaboration"
     **Status:** Planned  

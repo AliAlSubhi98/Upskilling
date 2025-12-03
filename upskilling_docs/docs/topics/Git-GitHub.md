@@ -128,16 +128,20 @@
     - **Cherry-Pick Practice** (Completed 04-08-2024): Successfully demonstrated selective commit application across branches
     
     **What I Learned:**
-    - Feature branching with proper naming and workflow
-    - Merge vs rebase strategies and when to use each
-    - Complex conflict resolution by combining changes intelligently
-    - Cherry-pick for selective commit application across branches
+    - **Feature branching**: How to create branches with good naming conventions and follow a proper workflow
+    - **Merge vs rebase**: When to use each one. Merge keeps history, rebase makes it cleaner. Both have their place.
+    - **Conflict resolution**: Got good at resolving complex conflicts by understanding what each side was trying to do
+    - **Cherry-pick**: Super useful for grabbing specific commits from one branch and putting them in another
     
-    **Resources Used:** ChatGPT (AI Assistant) for step-by-step guidance
+    **What I Did:**
+    - Built a few Java projects (UserAuth, PaymentProcessor, NotificationService) to practice real Git scenarios
+    - Resolved merge conflicts across multiple files
+    - Used cherry-pick to move commits between branches
+    - Created and merged feature branches using both merge and rebase strategies
     
-    **Applied Knowledge:** Built Java projects (UserAuth, PaymentProcessor, NotificationService) and practiced real-world Git scenarios
+    **Resources:** Used ChatGPT for step-by-step guidance when I got stuck
     
-    **All Level 2 tasks completed!**
+    **All Level 2 tasks done.**
 
     ??? tip "Level 2: Advanced Branching & Merging Commands"
         **Feature Branch Creation:**
@@ -226,7 +230,7 @@
         
         $ git bisect run java TestCalculator
         running java TestCalculator
-        ❌ Test failed - bug detected
+        Test failed - bug detected
         b2c3d4e is the first bad commit
         commit b2c3d4e
         Author: Ali AlSubhi <ali@example.com>

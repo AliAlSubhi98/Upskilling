@@ -18,20 +18,14 @@
 **Completed:** Smart Deploy Monitor V2 Project Management Practice
 
 **What I Learned:**
-- **Task Breakdown**: Broke down a complex project into 5 manageable tasks with clear dependencies
-- **Eisenhower Matrix**: Categorized tasks by urgency and importance (Urgent/Important, Important/Not Urgent, etc.)
-- **Story Points**: Estimated tasks using story points (1-8 scale) for sprint planning
-- **Time Tracking**: Used Pomodoro technique (25-minute focused sessions) for productivity
-- **GitHub Issues**: Created issue templates for bugs and features with proper labeling
-- **Sprint Planning**: Planned a 2-week sprint with 17 story points capacity
+- **Task Breakdown**: Broke down a complex project into 5 manageable tasks with clear dependencies. Smaller tasks are easier to tackle.
+- **Eisenhower Matrix**: Categorized tasks by urgency and importance. Helps prioritize what actually matters.
+- **Story Points**: Estimated tasks using story points (1-8 scale) for sprint planning. Relative sizing is easier than hours.
+- **Time Tracking**: Used Pomodoro technique (25-minute focused sessions) for productivity. Short bursts help maintain focus.
+- **GitHub Issues**: Created issue templates for bugs and features with proper labeling. Makes tracking easier.
+- **Sprint Planning**: Planned a 2-week sprint with 17 story points capacity. Realistic planning prevents burnout.
 
-**Resources Used:**
-- GitHub Issues documentation
-- Pomodoro technique guides
-- Agile project management principles
-- ChatGPT for task breakdown examples
-
-**How I Applied This Knowledge:**
+**What I Did:**
 - Created a complete project plan for Smart Deploy Monitor V2
 - Implemented task tracking with status updates and time logging
 - Used Eisenhower Matrix to prioritize database setup over documentation

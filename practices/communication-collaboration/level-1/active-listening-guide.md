@@ -65,23 +65,23 @@ Active listening is the practice of fully concentrating on, understanding, and r
 
 ## Common Active Listening Mistakes
 
-### ❌ **Mistake 1: Planning Your Response**
+### **Mistake 1: Planning Your Response**
 - **What happens:** You're thinking about what to say next instead of listening
 - **Fix:** Focus entirely on understanding their message first
 
-### ❌ **Mistake 2: Interrupting**
+### **Mistake 2: Interrupting**
 - **What happens:** You cut them off to share your thoughts
 - **Fix:** Wait for natural pauses, use "Can I ask a question?" or "Let me make sure I understand..."
 
-### ❌ **Mistake 3: Jumping to Solutions**
+### **Mistake 3: Jumping to Solutions**
 - **What happens:** You immediately start offering solutions
 - **Fix:** First understand the problem completely, then ask if they want suggestions
 
-### ❌ **Mistake 4: Being Distracted**
+### **Mistake 4: Being Distracted**
 - **What happens:** You're checking messages, looking at other things
 - **Fix:** Give them your full attention, close other applications
 
-### ❌ **Mistake 5: Making It About You**
+### **Mistake 5: Making It About You**
 - **What happens:** You relate everything back to your own experiences
 - **Fix:** Keep the focus on them and their situation
 
@@ -189,7 +189,7 @@ Practice recognizing and acknowledging emotions:
 - Acknowledge emotions
 - Wait for natural pauses
 
-### ❌ **DON'T:**
+### **DON'T:**
 - Interrupt
 - Plan your response while listening
 - Jump to solutions immediately
@@ -197,5 +197,5 @@ Practice recognizing and acknowledging emotions:
 - Get distracted
 - Judge or criticize
 
-### 🎯 **Remember:**
+### **Remember:**
 The goal is to understand, not to respond. Listen first, understand second, respond third.
