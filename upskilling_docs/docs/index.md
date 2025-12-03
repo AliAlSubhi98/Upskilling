@@ -19,7 +19,7 @@ Welcome :) This site is my personal upskilling space, where I track my progress 
 | Code + Design Patterns      | Apply proven coding/design techniques   | Level 1       |
 | Databases                   | Use and optimize modern databases       | Level 1 (Complete) |
 | System Design               | Architect scalable, robust systems      | Level 1 (Complete) |
-| Security                    | Build and maintain secure systems       | Level 1 (Complete) |
+| Security                    | Build and maintain secure systems       | Level 2 (Complete) |
 | API                         | Design and implement robust APIs        | Level 3 (Complete) |
 | Authentication & Authorization | Securely manage user access             | Level 1 (Complete) |
 | Testing                     | Confidently test and validate software  | Level 1 (Complete) |

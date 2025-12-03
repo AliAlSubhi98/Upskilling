@@ -20,6 +20,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -114,7 +115,9 @@ public class UserController {
     
     /**
      * Create an admin user
+     * Only administrators can create admin users
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/admin")
     public ResponseEntity<Map<String, Object>> createAdminUser(@RequestBody CreateUserRequest request) {
         try {
@@ -304,7 +307,9 @@ public class UserController {
     
     /**
      * Update user
+     * Only authenticated users (USER or ADMIN role) can update users
      */
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     @PutMapping("/{id}")
     public ResponseEntity<Map<String, Object>> updateUser(
             @PathVariable UUID id,
@@ -339,7 +344,9 @@ public class UserController {
     
     /**
      * Change user password
+     * Only authenticated users (USER or ADMIN role) can change passwords
      */
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     @PutMapping("/{id}/password")
     public ResponseEntity<Map<String, Object>> changePassword(
             @PathVariable UUID id,
@@ -368,7 +375,9 @@ public class UserController {
     
     /**
      * Activate user
+     * Only administrators can activate users
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{id}/activate")
     public ResponseEntity<Map<String, Object>> activateUser(@PathVariable UUID id) {
         try {
@@ -395,7 +404,9 @@ public class UserController {
     
     /**
      * Deactivate user
+     * Only administrators can deactivate users
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{id}/deactivate")
     public ResponseEntity<Map<String, Object>> deactivateUser(@PathVariable UUID id) {
         try {
@@ -422,7 +433,9 @@ public class UserController {
     
     /**
      * Delete user
+     * Only administrators can delete users
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Map<String, Object>> deleteUser(@PathVariable UUID id) {
         try {
@@ -449,7 +462,9 @@ public class UserController {
     
     /**
      * Get user statistics
+     * Only administrators can view user statistics
      */
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/statistics")
     public ResponseEntity<Map<String, Object>> getUserStatistics() {
         logger.info("Fetching user statistics");
