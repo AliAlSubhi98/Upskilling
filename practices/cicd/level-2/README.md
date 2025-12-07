@@ -32,3 +32,5 @@ The workflow now builds and pushes the image automatically on every push to main
 
 Will document progress as I go through each step.
 
+Testing Docker build workflow - Dec 2025
+
