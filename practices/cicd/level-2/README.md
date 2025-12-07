@@ -12,7 +12,7 @@ Working on CI/CD Level 2: Automated Testing & Deployments.
 ## Tasks
 
 - [x] Docker image builds and push to GHCR
-- [ ] Secrets management
+- [x] Secrets management
 - [ ] Code linting in CI/CD
 - [ ] Automated deployment pipelines
 
@@ -30,13 +30,23 @@ The workflow now builds and pushes the image automatically on every push to main
 
 Verified: Workflow completed successfully, both test and build-docker jobs passed.
 
-### Step 2: Secrets Management (In Progress)
+### Step 2: Secrets Management (Done)
 
-Learning how to:
-- Set up GitHub Secrets
-- Use secrets securely in workflows
-- Manage environment-specific secrets
-- Best practices for secret rotation
+Added secrets management to CI/CD workflow:
+- Use secrets securely in workflows via environment variables
+- Check if secrets exist before using them (conditional execution)
+- Proper handling of optional secrets (webhook URL example)
+- Secrets are never exposed in logs or conditionals directly
+
+Verified: Workflow completed successfully with secrets management. The conditional step correctly skips when secret doesn't exist.
+
+### Step 3: Code Linting (In Progress)
+
+Adding code linting to CI/CD:
+- Integrate linting tools (Checkstyle, SpotBugs for Java)
+- Fail builds on linting errors
+- Generate linting reports
+- Fix linting issues
 
 ## Notes
 
