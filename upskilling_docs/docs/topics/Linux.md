@@ -507,10 +507,10 @@
     cat file.txt             # Display content
     ```
 
-    **Key Achievements:**
-    - Created comprehensive practice scripts for hands-on learning
-    - Mastered file system navigation and permissions
-    - Demonstrated text processing and file operations
+    **What I Did:**
+    - Created practice scripts for hands-on learning
+    - Got comfortable with file system navigation and permissions
+    - Learned text processing and file operations
     - Built automation scripts for system monitoring
 
 ??? info "Note #2: Level 2 – System Administration (26-10-2025)"
@@ -538,11 +538,11 @@
     sudo usermod -aG sudo user # Add to group
     ```
 
-    **Key Achievements:**
+    **What I Did:**
     - Advanced system administration and monitoring
-    - Log analysis and text processing with grep, awk, sed
-    - User management and security basics
-    - Backup automation and archiving
+    - Learned log analysis and text processing with grep, awk, sed
+    - Got comfortable with user management and security basics
+    - Built backup automation and archiving scripts
 
 ??? info "Note #3: Level 3 – Advanced Administration (26-10-2025)"
     **Exercise Overview:** Achieved expert-level Linux administration with performance tuning, security hardening, and automation.
@@ -570,11 +570,11 @@
     sudo fail2ban-client status # Intrusion prevention
     ```
 
-    **Key Achievements:**
+    **What I Did:**
     - Expert-level system administration
-    - Performance tuning and optimization techniques
-    - Advanced networking and security concepts
-    - Comprehensive automation and scripting
+    - Learned performance tuning and optimization techniques
+    - Got comfortable with advanced networking and security concepts
+    - Built comprehensive automation and scripting solutions
 
     **Real-World Applications:**
     - Created monitoring scripts for system health

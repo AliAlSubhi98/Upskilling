@@ -2,7 +2,7 @@
 
 This directory contains practice exercises for Git Level 3 using Java examples instead of Python.
 
-## 🎯 What You'll Learn
+## What You'll Learn
 
 - **Git Reflog** - Recover lost commits using `git reflog`
 - **Git Bisect** - Find bugs systematically with `git bisect`
@@ -11,7 +11,7 @@ This directory contains practice exercises for Git Level 3 using Java examples i
 - **Git Tagging** - Release management with `git tag`
 - **Advanced Recovery** - Handle accidental deletions and branch issues
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Git installed on your system
@@ -70,7 +70,7 @@ This directory contains practice exercises for Git Level 3 using Java examples i
 - Recover from accidental file deletion
 - Practice advanced recovery techniques
 
-## 🎯 Key Commands You'll Practice
+## Key Commands You'll Practice
 
 ```bash
 # Git Reflog
@@ -98,7 +98,7 @@ git tag -a v1.0.0 -m "Release" # Create annotated tag
 git push origin --tags        # Push tags to remote
 ```
 
-## 📚 What You'll Build
+## What You'll Build
 
 A simple Java Calculator application with methods for:
 - Addition
@@ -108,7 +108,7 @@ A simple Java Calculator application with methods for:
 - Power calculation
 - Square root (with validation)
 
-## 🎉 Benefits
+## Benefits
 
 - **No Python knowledge required** - Uses Java examples
 - **Real-world scenarios** - Practical Git recovery techniques
@@ -116,7 +116,7 @@ A simple Java Calculator application with methods for:
 - **Safe practice** - Learn without fear of losing work
 - **Professional skills** - Essential for advanced Git workflows
 
-## 🚀 Next Steps
+## Next Steps
 
 After completing these exercises:
 1. Practice these techniques in your real Java projects

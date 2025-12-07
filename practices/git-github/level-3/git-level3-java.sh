@@ -3,22 +3,22 @@
 # Git Level 3: Commit History & Recovery Practice (Java Version)
 # This script guides you through advanced Git recovery and history management using Java examples
 
-echo "🎯 Git Level 3: Commit History & Recovery Practice (Java)"
+echo "Git Level 3: Commit History & Recovery Practice (Java)"
 echo "========================================================="
 echo ""
 
 # Create a practice repository
-echo "📁 Setting up Java practice repository..."
+echo "Setting up Java practice repository..."
 mkdir -p git-level3-java-practice
 cd git-level3-java-practice
 
 # Initialize repository
 git init
-echo "✅ Repository initialized"
+echo "Repository initialized"
 
 # Create initial Java files and commits
 echo ""
-echo "📝 Creating Java application for practice..."
+echo "Creating Java application for practice..."
 echo ""
 
 # Create a simple Java calculator application
@@ -38,7 +38,7 @@ EOF
 git add Calculator.java
 git commit -m "Initial commit: Basic Calculator class"
 
-echo "✅ Created initial Calculator.java"
+echo "Created initial Calculator.java"
 
 # Add more methods
 echo "Adding multiplication method..."
@@ -61,7 +61,7 @@ EOF
 git add Calculator.java
 git commit -m "Add multiplication method"
 
-echo "✅ Added multiplication method"
+echo "Added multiplication method"
 
 # Add division method
 echo "Adding division method..."
@@ -91,7 +91,7 @@ EOF
 git add Calculator.java
 git commit -m "Add division method with error handling"
 
-echo "✅ Added division method"
+echo "Added division method"
 
 # Add subtraction method
 echo "Adding subtraction method..."
@@ -125,15 +125,15 @@ EOF
 git add Calculator.java
 git commit -m "Add subtraction method"
 
-echo "✅ Added subtraction method"
+echo "Added subtraction method"
 
 # Show current status
 echo ""
-echo "📊 Current repository status:"
+echo "Current repository status:"
 git log --oneline
 echo ""
 
-echo "🎯 EXERCISE 1: Git Reflog - Recover Lost Commits"
+echo "EXERCISE 1: Git Reflog - Recover Lost Commits"
 echo "================================================"
 echo ""
 echo "Let's practice recovering lost commits using git reflog:"
@@ -142,7 +142,7 @@ echo ""
 # Create a branch and make some commits
 echo "1. Creating a feature branch with Java improvements..."
 git checkout -b feature/advanced-calculator
-echo "✅ Created feature branch"
+echo "Created feature branch"
 
 # Add power method
 echo "Adding power method..."
@@ -180,7 +180,7 @@ EOF
 git add Calculator.java
 git commit -m "Add power method using Math.pow"
 
-echo "✅ Added power method"
+echo "Added power method"
 
 # Add square root method
 echo "Adding square root method..."
@@ -225,7 +225,7 @@ EOF
 git add Calculator.java
 git commit -m "Add square root method with validation"
 
-echo "✅ Added square root method"
+echo "Added square root method"
 echo ""
 
 # Show reflog
@@ -236,7 +236,7 @@ echo ""
 # Simulate losing commits (reset to previous commit)
 echo "3. Simulating lost commits (resetting to previous state)..."
 git reset --hard HEAD~2
-echo "✅ Reset to 2 commits ago (commits 'lost')"
+echo "Reset to 2 commits ago (commits 'lost')"
 echo ""
 
 echo "4. Current status after reset:"
@@ -253,14 +253,14 @@ LOST_COMMIT=$(git reflog | grep "Add square root method" | awk '{print $1}')
 if [ ! -z "$LOST_COMMIT" ]; then
     echo "6. Recovering lost commits using reflog:"
     git reset --hard $LOST_COMMIT
-    echo "✅ Successfully recovered lost commits!"
+echo "Successfully recovered lost commits!"
     echo ""
     echo "7. Current status after recovery:"
     git log --oneline
     echo ""
 fi
 
-echo "🎯 EXERCISE 2: Git Bisect - Find Bug in History"
+echo "EXERCISE 2: Git Bisect - Find Bug in History"
 echo "==============================================="
 echo ""
 echo "Let's practice using git bisect to find when a bug was introduced:"
@@ -315,7 +315,7 @@ EOF
 git add Calculator.java
 git commit -m "Introduce bug: division by zero in buggyMethod"
 
-echo "✅ Created buggy commit"
+echo "Created buggy commit"
 echo ""
 
 # Create a test script
@@ -330,7 +330,7 @@ public class TestCalculator {
             int compileResult = compileProcess.waitFor();
             
             if (compileResult != 0) {
-                System.out.println("❌ Compilation failed - bug detected");
+                System.out.println("Compilation failed - bug detected");
                 System.exit(1);
             }
             
@@ -340,15 +340,15 @@ public class TestCalculator {
             int runResult = runProcess.waitFor();
             
             if (runResult != 0) {
-                System.out.println("❌ Runtime error - bug detected");
+                System.out.println("Runtime error - bug detected");
                 System.exit(1);
             }
             
-            System.out.println("✅ Test passed - no bug");
+            System.out.println("Test passed - no bug");
             System.exit(0);
             
         } catch (Exception e) {
-            System.out.println("❌ Test failed with exception: " + e.getMessage());
+            System.out.println("Test failed with exception: " + e.getMessage());
             System.exit(1);
         }
     }
@@ -360,7 +360,7 @@ javac TestCalculator.java
 git add TestCalculator.java
 git commit -m "Add Java test script for bisect"
 
-echo "✅ Created Java test script"
+echo "Created Java test script"
 echo ""
 
 echo "3. Starting git bisect to find the bug:"
@@ -372,7 +372,7 @@ echo "   git bisect run java TestCalculator  # Automatically test each commit"
 echo "   git bisect reset  # Reset when done"
 echo ""
 
-echo "🎯 EXERCISE 3: Git Reset - Safe Recovery"
+echo "EXERCISE 3: Git Reset - Safe Recovery"
 echo "======================================="
 echo ""
 echo "Let's practice different types of git reset:"
@@ -391,7 +391,7 @@ echo ""
 echo "3. Hard reset (discards all changes):"
 echo "   git reset --hard HEAD~1"
 echo "   # This undoes the last commit and discards all changes"
-echo "   # ⚠️ WARNING: This is destructive!"
+echo "   # WARNING: This is destructive!"
 echo ""
 
 echo "4. Reset to specific commit:"
@@ -399,7 +399,7 @@ echo "   git reset --hard <commit-hash>"
 echo "   # This resets to a specific commit"
 echo ""
 
-echo "🎯 EXERCISE 4: Git Revert - Safe Undo"
+echo "EXERCISE 4: Git Revert - Safe Undo"
 echo "=================================="
 echo ""
 echo "Let's practice using git revert to safely undo commits:"
@@ -420,7 +420,7 @@ echo "   git revert <commit1> <commit2> <commit3>"
 echo "   # This reverts multiple commits"
 echo ""
 
-echo "🎯 EXERCISE 5: Git Tagging - Release Management"
+echo "EXERCISE 5: Git Tagging - Release Management"
 echo "=============================================="
 echo ""
 echo "Let's practice creating and managing release tags:"
@@ -458,7 +458,7 @@ echo "   git push origin --delete v1.0.0"
 echo "   # Deletes remote tag"
 echo ""
 
-echo "🎯 EXERCISE 6: Advanced Recovery Techniques"
+echo "EXERCISE 6: Advanced Recovery Techniques"
 echo "=========================================="
 echo ""
 echo "Let's practice advanced recovery techniques:"
@@ -491,25 +491,25 @@ echo "   git commit --amend -m 'New commit message'"
 echo "   # Changes the last commit message"
 echo ""
 
-echo "🎉 Git Level 3 Practice Complete!"
+echo "Git Level 3 Practice Complete!"
 echo "================================="
 echo ""
-echo "📋 What you've practiced:"
-echo "✅ Git reflog for commit recovery"
-echo "✅ Git bisect for bug finding"
-echo "✅ Git reset for safe recovery"
-echo "✅ Git revert for safe undo"
-echo "✅ Git tagging for release management"
-echo "✅ Advanced recovery techniques"
+echo "What you've practiced:"
+echo "Git reflog for commit recovery"
+echo "Git bisect for bug finding"
+echo "Git reset for safe recovery"
+echo "Git revert for safe undo"
+echo "Git tagging for release management"
+echo "Advanced recovery techniques"
 echo ""
-echo "🚀 Next steps:"
+echo "Next steps:"
 echo "- Practice these commands in real Java projects"
 echo "- Use git reflog when you lose commits"
 echo "- Use git bisect to find bugs systematically"
 echo "- Use git revert for safe undos in shared repositories"
 echo "- Use git tags for proper release management"
 echo ""
-echo "📚 Additional resources:"
+echo "Additional resources:"
 echo "- Git documentation: https://git-scm.com/doc"
 echo "- GitHub documentation: https://docs.github.com"
 echo "- Pro Git book: https://git-scm.com/book"

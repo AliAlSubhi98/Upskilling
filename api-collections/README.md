@@ -2,14 +2,14 @@
 
 This directory contains comprehensive Postman collections for testing the Smart Deploy Monitor API, including both REST and GraphQL endpoints.
 
-## 📁 Files Overview
+## Files Overview
 
 ### Collections
 - **`GraphQL-API-Collection.postman_collection.json`** - Complete GraphQL API testing
 - **`REST-API-Collection.postman_collection.json`** - Complete REST API testing
 - **`Smart-Deploy-Monitor-Environment.postman_environment.json`** - Environment variables
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Import Collections
 1. Open Postman
@@ -27,7 +27,7 @@ cd /Users/alialsubhi/Desktop/Upskilling/practices/observability-cicd/smart-deplo
 mvn spring-boot:run
 ```
 
-## 📊 Collection Structure
+## Collection Structure
 
 ### GraphQL API Collection
 - **GraphQL Queries**
@@ -79,7 +79,7 @@ mvn spring-boot:run
   - Large Page Size
   - Multiple Requests (Load Test)
 
-## 🎯 Real-World Testing Scenarios
+## Real-World Testing Scenarios
 
 ### 1. Mobile App Testing
 ```bash
@@ -157,7 +157,7 @@ Run the GraphQL queries to test different scenarios:
 ### 5. Compare REST vs GraphQL
 Use the comparison requests to see the differences between REST and GraphQL approaches.
 
-## 🎯 Key Testing Points
+## Key Testing Points
 
 ### GraphQL Benefits
 - **Flexible Data Fetching**: Request only the fields you need
@@ -171,7 +171,7 @@ Use the comparison requests to see the differences between REST and GraphQL appr
 - **Standards**: Follows HTTP standards
 - **Tools**: Wide ecosystem support
 
-## 🚀 Advanced Testing
+## Advanced Testing
 
 ### 1. Load Testing
 Use the performance test requests to simulate multiple concurrent requests.
@@ -185,7 +185,7 @@ Test various error scenarios:
 ### 3. Schema Evolution
 Use the introspection queries to understand the GraphQL schema structure.
 
-## 📝 Notes
+## Notes
 
 - All collections include pre-configured test data
 - Environment variables make it easy to switch between different environments
@@ -200,4 +200,4 @@ Use the introspection queries to understand the GraphQL schema structure.
 
 ---
 
-**Happy Testing!** 🎉
+**Happy Testing!**

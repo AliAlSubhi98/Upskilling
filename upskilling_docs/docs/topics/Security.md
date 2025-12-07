@@ -81,20 +81,20 @@
     - **Environment Security** (Completed 25-10-2025): No secrets in code, proper configuration management
     
     **What I Learned:**
-    - **Spring Security**: Authentication and authorization framework for Spring Boot applications
-    - **BCrypt Password Hashing**: Secure password storage with salt and hashing
-    - **Input Validation**: Jakarta Bean Validation annotations for request validation
-    - **Security Configuration**: Proper security configuration and best practices
-    - **Environment Variables**: Secure configuration management without hardcoded secrets
-    - **HTTPS Configuration**: SSL/TLS configuration for secure communication
+    - **Spring Security**: Framework for handling authentication and authorization in Spring Boot. Makes it way easier than doing it from scratch.
+    - **BCrypt Password Hashing**: How to store passwords securely using salt and hashing. Never store plain text passwords!
+    - **Input Validation**: Using Jakarta Bean Validation annotations like @Valid, @NotBlank, @Email to validate user input automatically.
+    - **Security Configuration**: How to set up Spring Security properly. There's a lot of configuration options, but once you get it, it makes sense.
+    - **Environment Variables**: Never put secrets in code! Use environment variables for sensitive stuff like database passwords, API keys, etc.
+    - **HTTPS Configuration**: Setting up SSL/TLS for secure communication. Important for production.
     
-    **Applied Knowledge:**
-    - Implemented BCryptPasswordEncoder for secure password storage
+    **What I Did:**
+    - Set up BCryptPasswordEncoder to hash passwords securely
     - Added input validation using @Valid, @NotBlank, @Email annotations
     - Configured Spring Security for authentication and authorization
-    - Used environment variables for sensitive configuration
-    - Implemented proper error handling for security-related issues
-    - Applied security best practices throughout the application
+    - Used environment variables for all sensitive configuration
+    - Added proper error handling for security issues
+    - Applied security best practices throughout the app
     
     **Code Examples:**
     ```java
@@ -124,7 +124,7 @@
     - Spring Boot security configuration
     - OWASP security guidelines
     
-    **Key Achievement:** Successfully implemented comprehensive security measures in Spring Boot application including authentication, authorization, secure password storage, and input validation, demonstrating professional security practices.
+    **Summary:** Got all the basic security stuff working! Authentication, authorization, secure password storage, and input validation are all in place. The app is way more secure now.
 
     **Comprehensive Security Implementation Evidence:**
 
@@ -366,55 +366,59 @@
 ??? success "Level 2: Secure Development Practices (Completed)"
     **Status:** Completed  
     **Focus:** OWASP Top 10 protection, RBAC, dependency scanning, secrets management  
-    **Evidence:**  
-    - [Dependabot Configuration](https://github.com/AliAlSubhi98/Upskilling/blob/main/.github/dependabot.yml)
-    - [Secrets Management Guide](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/SECRETS-MANAGEMENT.md)
-    - [OWASP Top 10 Protection](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/OWASP-TOP-10-PROTECTION.md)
-    - **Role-Based Access Control (RBAC)** (Completed): Implemented with Spring Security, method-level security annotations
-    - **Dependency Vulnerability Scanning** (Completed): Dependabot configured for automated security updates
-    - **Secrets Management** (Completed): Environment variables with Vault integration guide
-    - **OWASP Top 10 Protection** (Completed): Comprehensive protection against all OWASP Top 10 risks
+    
+    **What I Built:**
+    - **Dependabot Configuration**: Set up automated dependency scanning that checks for vulnerabilities every week
+    - **Secrets Management Guide**: Wrote documentation on how to handle secrets properly (using env vars now, with Vault guide for later)
+    - **OWASP Top 10 Protection**: Documented how we're protected against all the common attacks
+    - **RBAC with Spring Security**: Added method-level security so only admins can do admin stuff
+    - **Dependency Scanning**: Dependabot now automatically checks our dependencies for security issues
     
     **What I Learned:**
-    - **RBAC Implementation**: Method-level security with @PreAuthorize annotations for fine-grained access control
-    - **Dependabot Configuration**: Automated dependency vulnerability scanning and security updates
-    - **Secrets Management**: Best practices for managing secrets using environment variables and Vault
-    - **OWASP Top 10**: Comprehensive protection against injection, XSS, CSRF, broken access control, and other common vulnerabilities
-    - **Security Headers**: HTTP security headers for defense against various attack vectors
-    - **Input Validation**: Advanced pattern-based validation for SQL injection, XSS, and path traversal
+    - **RBAC**: How to use `@PreAuthorize` annotations to control who can access what endpoints. Pretty straightforward once you get the hang of it.
+    - **Dependabot**: Setting it up to automatically check dependencies every week saves a lot of manual work. It groups security updates together so you don't get spammed with PRs.
+    - **Secrets Management**: Never put secrets in code! Use environment variables for now, and Vault when you need something more robust.
+    - **OWASP Top 10**: Learned about all the common attacks (SQL injection, XSS, CSRF, etc.) and how to protect against them. Most of it was already covered in Level 1, but Level 2 made it more comprehensive.
+    - **Security Headers**: HTTP headers that protect against various attacks. We already had these in Level 1.
+    - **Input Validation**: Pattern-based validation to catch malicious input before it causes problems.
     
-    **Applied Knowledge:**
-    - Implemented method-level security annotations (@PreAuthorize) on sensitive endpoints
-    - Configured Dependabot for weekly security updates with grouping
-    - Created comprehensive secrets management documentation with Vault integration examples
-    - Documented OWASP Top 10 protection implementation with evidence
-    - Enhanced RBAC with fine-grained permissions (ADMIN, USER, MODERATOR roles)
-    - Applied security best practices throughout the application
+    **What I Did:**
+    - Added `@PreAuthorize` annotations to sensitive endpoints in UserController
+    - Configured Dependabot to check Maven dependencies weekly
+    - Created guides for secrets management and OWASP protection
+    - Made sure only admins can delete users, create admins, etc.
+    - Regular users can update their own profile and change their password
     
-    **Code Examples:**
+    **Code Example:**
     ```java
-    // Method-level security
+    // Only admins can delete users
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Map<String, Object>> deleteUser(@PathVariable UUID id) {
-        // Only admins can delete users
+        // ...
     }
     
+    // Authenticated users (admin or regular) can update
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     @PutMapping("/{id}")
     public ResponseEntity<Map<String, Object>> updateUser(...) {
-        // Authenticated users can update
+        // ...
     }
     ```
     
-    **Security Checklist Completed:**
+    **Checklist - All Done:**
     - [x] Protection against OWASP Top 10 (XSS, CSRF, SQLi, etc.)
     - [x] Role-based access control (RBAC) with Spring Security
-    - [x] Rate limiting / brute-force protection
-    - [x] Secrets management system in place (environment variables with Vault guide)
+    - [x] Rate limiting / brute-force protection (already done in Level 1)
+    - [x] Secrets management system in place (env vars with Vault guide)
     - [x] Dependency vulnerability scanning (Dependabot)
     
-    **Key Achievement:** Successfully implemented Security Level 2 practices including comprehensive OWASP Top 10 protection, fine-grained RBAC with method-level security, automated dependency scanning with Dependabot, and enterprise-grade secrets management documentation, demonstrating mastery of secure development practices.
+    **Links:**
+    - [Dependabot Config](https://github.com/AliAlSubhi98/Upskilling/blob/main/.github/dependabot.yml)
+    - [Secrets Management Guide](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/SECRETS-MANAGEMENT.md)
+    - [OWASP Top 10 Protection](https://github.com/AliAlSubhi98/Upskilling/blob/main/practices/observability-cicd/smart-deploy-monitor/OWASP-TOP-10-PROTECTION.md)
+    
+    **Summary:** Got all the Security Level 2 stuff done! The app is now protected against OWASP Top 10 attacks, has proper RBAC, automatically scans dependencies, and has good documentation on secrets management. Ready for Level 3!
 
 ??? note "Level 3: Application Security"
     **Status:** Planned  
@@ -434,30 +438,30 @@
 
 ??? info "Level 1: Security Mastery (Completed 25-10-2025)"
 
-    **What I Implemented:**
-    - **Security Headers Configuration**: Comprehensive HTTP security headers including X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, and Permissions-Policy
-    - **Advanced Input Validation**: Pattern-based security validation with SQL injection, XSS, path traversal, and LDAP injection protection
-    - **Rate Limiting System**: Redis-based rate limiting with endpoint-specific limits and DoS protection
-    - **Security Event Logging**: Comprehensive security monitoring with suspicious activity detection and event logging
-    - **Automated Security Testing**: Security assessment script with vulnerability scanning, authentication testing, and security reporting
-    - **OWASP Protection**: Protection against OWASP Top 10 vulnerabilities with comprehensive security measures
+    **What I Built:**
+    - **Security Headers**: Added all the important HTTP security headers (X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, etc.) to protect against common attacks
+    - **Input Validation**: Pattern-based validation to catch SQL injection, XSS, path traversal attempts before they cause problems
+    - **Rate Limiting**: Redis-based rate limiting with different limits for different endpoints. Prevents DoS attacks and brute force attempts
+    - **Security Logging**: Event logging that detects suspicious activity and tracks security events
+    - **Automated Testing**: Security assessment script that scans for vulnerabilities automatically
+    - **OWASP Protection**: Protected against all OWASP Top 10 vulnerabilities
 
     **What I Learned:**
-    - **Security Headers**: HTTP security headers for protection against XSS, CSRF, clickjacking, and MIME sniffing attacks
-    - **Input Validation**: Advanced sanitization and validation with pattern-based attack detection
-    - **Rate Limiting**: Redis-based rate limiting with different limits for authentication and API endpoints
-    - **Security Monitoring**: Event logging with suspicious activity detection and security event tracking
-    - **Vulnerability Assessment**: Automated security testing and comprehensive vulnerability scanning
-    - **OWASP Guidelines**: Implementation of OWASP security best practices and protection against common vulnerabilities
-    - **Defense in Depth**: Multi-layered security architecture with comprehensive protection measures
+    - **Security Headers**: HTTP headers that protect against XSS, CSRF, clickjacking, and other attacks. Easy to add but super important
+    - **Input Validation**: Pattern-based detection to catch malicious input. Better safe than sorry!
+    - **Rate Limiting**: Redis makes it easy to implement rate limiting. Different endpoints need different limits
+    - **Security Monitoring**: Logging suspicious activity helps catch attacks early
+    - **Vulnerability Assessment**: Automated scanning finds issues before attackers do
+    - **OWASP Guidelines**: Following OWASP best practices covers most common vulnerabilities
+    - **Defense in Depth**: Multiple layers of security are better than relying on one thing
 
-    **Applied Knowledge:**
-    - Implemented comprehensive security headers for all HTTP responses with proper configuration
-    - Created advanced input validation with pattern-based attack detection for SQL injection, XSS, and path traversal
-    - Configured Redis-based rate limiting with endpoint-specific limits and proper error handling
-    - Built security event logging with suspicious activity monitoring and comprehensive event tracking
-    - Developed automated security assessment tools with vulnerability scanning and security reporting
-    - Applied OWASP security guidelines and implemented protection against Top 10 vulnerabilities
-    - Created defense-in-depth security architecture with multiple layers of protection
+    **What I Did:**
+    - Added security headers to all HTTP responses
+    - Created input validation with pattern-based attack detection
+    - Set up Redis-based rate limiting with endpoint-specific limits
+    - Built security event logging with suspicious activity monitoring
+    - Created automated security assessment tools
+    - Applied OWASP guidelines and protected against Top 10 vulnerabilities
+    - Built a defense-in-depth security architecture
 
-    **Key Achievement:** Successfully implemented enterprise-grade security measures including comprehensive security headers, advanced input validation, rate limiting, security monitoring, and automated vulnerability assessment, achieving a security score of 95/100 and demonstrating mastery of application security best practices and OWASP guidelines.
+    **Summary:** Got enterprise-grade security working! Security headers, input validation, rate limiting, monitoring, and automated testing. Security score: 95/100. The app is way more secure now!

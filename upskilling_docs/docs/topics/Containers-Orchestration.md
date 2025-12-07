@@ -73,20 +73,20 @@
     - **Volume Persistence** (Completed 18-10-2025): Data persistence for all database services
     
     **What I Learned:**
-    - **Docker Fundamentals**: Container creation, multi-stage builds, image optimization
-    - **Docker Compose**: Multi-service orchestration, service dependencies, health checks
-    - **Container Networking**: Custom networks, service discovery, inter-container communication
-    - **Volume Management**: Data persistence, volume mounting, backup strategies
-    - **Security Best Practices**: Non-root users, minimal base images, security scanning
-    - **Production Readiness**: Health checks, logging, monitoring, graceful shutdowns
+    - **Docker Fundamentals**: Container creation, multi-stage builds, image optimization. Multi-stage builds make images way smaller.
+    - **Docker Compose**: Multi-service orchestration, service dependencies, health checks. Makes running multiple services together easy.
+    - **Container Networking**: Custom networks, service discovery, inter-container communication. Getting networking right is important.
+    - **Volume Management**: Data persistence, volume mounting, backup strategies. Don't lose your data!
+    - **Security Best Practices**: Non-root users, minimal base images, security scanning. Security matters even in containers.
+    - **Production Readiness**: Health checks, logging, monitoring, graceful shutdowns. Production needs more than just "it works on my machine".
     
-    **Applied Knowledge:**
-    - Created multi-stage Dockerfile for optimized Spring Boot application
+    **What I Did:**
+    - Created a multi-stage Dockerfile for the Spring Boot app
     - Orchestrated 5 services (App, PostgreSQL, Redis, Elasticsearch, Qdrant) with Docker Compose
-    - Implemented service discovery and health checks for all containers
+    - Added service discovery and health checks for all containers
     - Configured persistent volumes for database data
     - Applied security best practices with non-root user execution
-    - Set up environment-based configuration for different deployment stages
+    - Set up environment-based configuration for different stages
     
     **Container Architecture Examples:**
     ```dockerfile
@@ -153,7 +153,7 @@
     - Container security and optimization techniques
     - Production deployment strategies
     
-    **Key Achievement:** Successfully containerized a complex Spring Boot application with 5 integrated services, implementing production-ready containerization with security, monitoring, and orchestration best practices.
+    **Summary:** Containerized a complex Spring Boot app with 5 services! Got Docker Compose working with security, monitoring, and orchestration. Production-ready containerization done!
 
     **Comprehensive Implementation Evidence:**
 
@@ -370,14 +370,14 @@
     - **Production-Ready Configuration**: Resource limits, restart policies, logging rotation, security hardening, and network isolation
 
     **What I Learned:**
-    - **Container Orchestration**: Multi-service deployment with proper dependencies and health checks
-    - **Docker Networking**: Custom networks with IPAM configuration and service discovery
-    - **Container Security**: Non-root execution, minimal base images, and security best practices
-    - **Resource Management**: CPU and memory limits, resource monitoring, and optimization
-    - **Production Deployment**: Health checks, logging, monitoring, backup strategies, and scaling
-    - **Service Communication**: Inter-container communication, DNS resolution, and network isolation
+    - **Container Orchestration**: Multi-service deployment with proper dependencies and health checks. Services need to start in the right order.
+    - **Docker Networking**: Custom networks with IPAM configuration and service discovery. Getting networking right makes services talk to each other properly.
+    - **Container Security**: Non-root execution, minimal base images, and security best practices. Security matters even in containers.
+    - **Resource Management**: CPU and memory limits, resource monitoring, and optimization. Prevents one service from hogging everything.
+    - **Production Deployment**: Health checks, logging, monitoring, backup strategies, and scaling. Production needs more than just "it works".
+    - **Service Communication**: Inter-container communication, DNS resolution, and network isolation. Services need to find each other.
 
-    **Applied Knowledge:**
+    **What I Did:**
     - Enhanced Docker Compose with custom subnet (172.20.0.0/16) and proper service dependencies
     - Implemented comprehensive container management and monitoring scripts
     - Applied security best practices with non-root users and minimal attack surface

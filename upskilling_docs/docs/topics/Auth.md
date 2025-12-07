@@ -101,28 +101,28 @@
     - **Authentication Bug Fix** (Completed 18-10-2025): Resolved double password encoding issue causing login failures
     
     **What I Learned:**
-    - **JWT Fundamentals**: Token generation, validation, expiration, and refresh mechanisms
-    - **Spring Security**: Authentication filters, security configuration, and user details service
-    - **OAuth2 Integration**: External authentication providers and social login flows
-    - **RBAC Implementation**: Role-based access control with method-level security
-    - **Security Best Practices**: Password hashing, token storage, and secure communication
-    - **Authentication Flows**: Registration, login, token refresh, and logout processes
-    - **Keycloak Integration**: Enterprise identity management, realm configuration, and client setup
-    - **Dual Authentication**: Implementing both custom JWT and enterprise Keycloak authentication
-    - **Docker Orchestration**: Multi-service authentication with Docker Compose
-    - **Authentication Debugging**: Identifying and resolving double password encoding issues in authentication flows
+    - **JWT Fundamentals**: How tokens work - generation, validation, expiration, and refresh. Refresh tokens are key for good UX.
+    - **Spring Security**: Authentication filters, security config, and user details service. Lots of moving parts but powerful once you get it.
+    - **OAuth2 Integration**: External providers like Google and GitHub. Makes login way easier for users.
+    - **RBAC Implementation**: Role-based access control with method-level security. Only admins can do admin stuff.
+    - **Security Best Practices**: Password hashing (BCrypt), secure token storage, HTTPS. Never store passwords in plain text!
+    - **Authentication Flows**: Registration, login, token refresh, logout. Each step needs to be secure.
+    - **Keycloak Integration**: Enterprise identity management. More complex but powerful for bigger systems.
+    - **Dual Authentication**: Got both custom JWT and Keycloak working. Useful for different use cases.
+    - **Docker Orchestration**: Multi-service auth with Docker Compose. Getting all the services to talk to each other was tricky.
+    - **Authentication Debugging**: Found and fixed a double password encoding bug. Debugging auth issues requires patience!
     
-    **Applied Knowledge:**
-    - Implemented JWT-based authentication with access and refresh tokens
-    - Configured Spring Security with custom authentication filters
-    - Integrated OAuth2 providers (Google, GitHub) for external authentication
-    - Applied role-based access control to protect endpoints and resources
-    - Implemented secure password hashing with BCrypt
-    - Configured CORS and security headers for production deployment
-    - Integrated Keycloak for enterprise identity management
-    - Implemented dual authentication system (Spring Security + Keycloak)
-    - Configured Docker Compose for multi-service authentication architecture
-    - Debugged and resolved authentication issues with systematic problem-solving approach
+    **What I Did:**
+    - Implemented JWT auth with access and refresh tokens
+    - Set up Spring Security with custom filters
+    - Integrated OAuth2 providers (Google, GitHub)
+    - Added RBAC to protect endpoints
+    - Used BCrypt for password hashing
+    - Configured CORS and security headers
+    - Integrated Keycloak for enterprise auth
+    - Got dual authentication working (Spring Security + Keycloak)
+    - Set up Docker Compose for multi-service architecture
+    - Debugged and fixed authentication issues
     
     **Authentication Architecture Examples:**
     ```java
@@ -235,7 +235,7 @@
     
     **Authentication Fix (Completed 18-10-2025):** Resolved critical login endpoint issue where "Bad credentials" error occurred due to double password encoding during user registration. Fixed by removing redundant password encoding in AuthService.register() method, allowing UserService.createUser() to handle single encoding. This ensures proper password comparison during login authentication.
 
-    **Key Achievement:** Successfully implemented a comprehensive authentication and authorization system with JWT tokens, OAuth2 integration, role-based access control, Keycloak enterprise identity management, dual authentication architecture, and resolved critical login authentication issues, demonstrating professional-level authentication system design and debugging skills.
+    **Summary:** Built a complete auth system with JWT, OAuth2, RBAC, and Keycloak. Got dual authentication working and fixed some tricky bugs. Learned a ton about security!
 
 ??? note "Level 2: Session Management"
     **Status:** Planned  

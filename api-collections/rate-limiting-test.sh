@@ -8,7 +8,7 @@ ENDPOINT="$BASE_URL/api/v1/users?page=0&size=1"
 MAX_REQUESTS=15  # Test with 15 requests (limit is 100/minute)
 DELAY=0.1        # 100ms delay between requests
 
-echo "🚀 Testing Rate Limiting for Smart Deploy Monitor"
+echo "Testing Rate Limiting for Smart Deploy Monitor"
 echo "=================================================="
 echo "Endpoint: $ENDPOINT"
 echo "Max Requests: $MAX_REQUESTS"
@@ -59,13 +59,13 @@ redis_response=$(docker exec redis redis-cli keys "rate_limit:*" 2>/dev/null || 
 echo "Redis keys: $redis_response"
 echo ""
 
-echo "🎯 Rate Limiting Test Complete!"
+echo "Rate Limiting Test Complete!"
 echo "==============================="
 echo ""
 echo "Expected Results:"
-echo "✅ First 5 requests: HTTP 200"
-echo "✅ Rapid requests: HTTP 429 (rate limited)"
-echo "✅ After wait: HTTP 200 (rate limit reset)"
+echo "First 5 requests: HTTP 200"
+echo "Rapid requests: HTTP 429 (rate limited)"
+echo "After wait: HTTP 200 (rate limit reset)"
 echo ""
 echo "If you see 429 errors, rate limiting is working!"
 echo "If all requests return 200, rate limiting may not be active."

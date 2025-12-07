@@ -18,26 +18,22 @@
 **Completed:** Smart Deploy Monitor CI/CD Pipeline
 
 **What I Learned:**
-- **GitHub Actions**: Created YAML workflows for automated testing and building
-- **Maven Integration**: Configured Maven builds in CI/CD pipeline with dependency caching
-- **Java CI/CD**: Set up Java 17 environment with proper build and test automation
-- **Artifact Management**: Uploaded build artifacts for deployment
-- **Pipeline Debugging**: Fixed workflow issues and optimized for monorepo structure
-- **Conditional Triggers**: Configured workflows to run only on specific directory changes
+- **GitHub Actions**: Created YAML workflows for automated testing and building. The YAML syntax is a bit verbose but works well.
+- **Maven Integration**: Configured Maven builds in CI/CD with dependency caching. Caching speeds things up a lot!
+- **Java CI/CD**: Set up Java 17 environment with proper build and test automation. Getting the Java version right is important.
+- **Artifact Management**: Uploaded build artifacts so they're ready for deployment. Makes the deployment step easier.
+- **Pipeline Debugging**: Fixed workflow issues and optimized for monorepo structure. Debugging CI/CD can be frustrating but learned a lot.
+- **Conditional Triggers**: Made workflows run only when specific directories change. Saves CI minutes and makes builds faster.
 
-**Resources Used:**
-- GitHub Actions documentation
-- Maven documentation
-- ChatGPT for troubleshooting pipeline issues
-- Spring Boot Maven plugin documentation
-
-**How I Applied This Knowledge:**
-- Created a complete CI/CD pipeline for the Spring Boot application
-- Implemented automated testing with Maven Surefire
+**What I Did:**
+- Built a complete CI/CD pipeline for the Spring Boot app
+- Added automated testing with Maven Surefire
 - Set up dependency caching to speed up builds
-- Configured proper Java environment setup
-- Added artifact upload for deployment readiness
-- Integrated with the observability application for end-to-end testing
+- Configured proper Java environment
+- Added artifact upload for deployment
+- Integrated with the observability app for end-to-end testing
+
+**Resources:** GitHub Actions docs, Maven docs, ChatGPT when I got stuck, Spring Boot Maven plugin docs
 
 ## Level 2: Automated Testing & Deployments
 - **Competencies:** Unit Tests, Linting, Docker Builds, Secrets Management

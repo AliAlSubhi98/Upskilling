@@ -1,4 +1,4 @@
-# 🚀 GitHub Pages Deployment Guide using MkDocs
+# GitHub Pages Deployment Guide using MkDocs
 
 This guide walks you through:
 1. Initial setup
@@ -29,7 +29,7 @@ pip install mkdocs-git-revision-date-localized
 
 ---
 
-## 🏗️ 1. Project Structure
+## 1. Project Structure
 
 Your repo structure should look like this:
 
@@ -45,7 +45,7 @@ Upskilling/
 
 ---
 
-## ⚙️ 2. `mkdocs.yml` Example
+## 2. `mkdocs.yml` Example
 
 ```yaml
 site_name: Upskilling Journey
@@ -98,7 +98,7 @@ plugins:
 
 ---
 
-## 🚀 3. Initial Deployment to GitHub Pages
+## 3. Initial Deployment to GitHub Pages
 
 ### Step A: Initialize and Push Repo
 
@@ -137,7 +137,7 @@ Go to:
 
 ---
 
-## ✏️ 5. How to Update the Docs
+## 5. How to Update the Docs
 
 1. Edit or add Markdown files under `docs/`
 2. Run:
@@ -151,7 +151,7 @@ mkdocs gh-deploy
 
 ---
 
-## 🧼 Optional Cleanup
+## Optional Cleanup
 
 ```bash
 mkdocs build --clean
@@ -160,7 +160,7 @@ mkdocs serve  # for local preview
 
 ---
 
-## 🛡️ Best Practices
+## Best Practices
 
 - Commit changes regularly
 - Use clear folder structure (`docs/topics/...`)
@@ -168,7 +168,7 @@ mkdocs serve  # for local preview
 - Add `site/` to `.gitignore`
 - Store secrets in `.env` and ignore them
 
-## 🛠️ Common Error: Address Already in Use
+## Common Error: Address Already in Use
 
 If you get this error while running:
 

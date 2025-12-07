@@ -63,7 +63,7 @@ By mastering these meeting etiquette skills, you will:
 
 ## During the Meeting
 
-### 🎯 **Professional Presence**
+### **Professional Presence**
 
 #### **Video Calls:**
 - **Camera Position:** Eye level, centered in frame, appropriate distance
@@ -83,7 +83,7 @@ By mastering these meeting etiquette skills, you will:
 - **Body language:** Open posture, nod occasionally, lean slightly forward
 - **Personal space:** Respect others' personal space and comfort
 
-### 🗣️ **Speaking Guidelines**
+### **Speaking Guidelines**
 
 #### **When You Want to Speak:**
 1. **Wait for a natural pause**
@@ -126,7 +126,7 @@ Would you like me to investigate this angle?"
 
 ## Meeting Types & Specific Etiquette
 
-### 📊 **Daily Standups**
+### **Daily Standups**
 
 #### **Your Turn to Speak:**
 ```
@@ -151,7 +151,7 @@ No blockers currently."
 - **Listen for opportunities** to collaborate or assist others
 - **Follow up** on any commitments or help offered
 
-### 🎯 **Project Planning Meetings**
+### **Project Planning Meetings**
 
 #### **Contributing Ideas:**
 - **Build on others' ideas** before presenting new ones
@@ -207,7 +207,7 @@ while we investigate. What's everyone's thoughts on this approach?"
 - **Assign clear ownership** for next steps
 - **Set follow-up meetings** if needed for complex issues
 
-### 📝 **Code Review Meetings**
+### **Code Review Meetings**
 
 #### **Giving Feedback:**
 - **Start with positives** - acknowledge good work
@@ -243,7 +243,7 @@ Overall, solid work! These changes would make it more maintainable."
 
 ## Advanced Meeting Types
 
-### 🎯 **Sprint Planning Meetings**
+### **Sprint Planning Meetings**
 - **Preparation:** Review user stories, estimate effort, identify dependencies
 - **Participation:** Ask clarifying questions, provide realistic estimates
 - **Best Practices:** Focus on value delivery, consider technical debt, plan for testing
@@ -253,7 +253,7 @@ Overall, solid work! These changes would make it more maintainable."
 - **Participation:** Share honest feedback, suggest improvements, commit to changes
 - **Best Practices:** Focus on process, not people, be constructive, follow through
 
-### 📊 **Status Update Meetings**
+### **Status Update Meetings**
 - **Preparation:** Gather progress data, identify blockers, prepare updates
 - **Participation:** Share accurate status, ask for help when needed, offer assistance
 - **Best Practices:** Be honest about challenges, celebrate wins, plan next steps
@@ -265,43 +265,43 @@ Overall, solid work! These changes would make it more maintainable."
 
 ## Common Meeting Mistakes to Avoid
 
-### ❌ **Mistake 1: Being Late**
+### **Mistake 1: Being Late**
 - **Impact:** Disrupts the meeting, shows disrespect, wastes others' time
 - **Fix:** Set reminders, plan for travel time, join early, have backup plans
 
-### ❌ **Mistake 2: Not Muting on Video Calls**
+### **Mistake 2: Not Muting on Video Calls**
 - **Impact:** Background noise disrupts everyone, creates distractions
 - **Fix:** Always mute when not speaking, unmute to speak, test audio beforehand
 
-### ❌ **Mistake 3: Multitasking**
+### **Mistake 3: Multitasking**
 - **Impact:** Miss important information, appear disengaged, reduce meeting effectiveness
 - **Fix:** Close other applications, focus on the meeting, take notes actively
 
-### ❌ **Mistake 4: Dominating the Conversation**
+### **Mistake 4: Dominating the Conversation**
 - **Impact:** Others can't contribute, meeting becomes unproductive, reduces collaboration
 - **Fix:** Be concise, ask others for input, share the floor, listen actively
 
-### ❌ **Mistake 5: Not Preparing**
+### **Mistake 5: Not Preparing**
 - **Impact:** Can't contribute meaningfully, waste everyone's time, miss opportunities
 - **Fix:** Review agenda, prepare materials, think about contributions, set intentions
 
-### ❌ **Mistake 6: Interrupting**
+### **Mistake 6: Interrupting**
 - **Impact:** Disrupts flow, shows poor listening skills, creates tension
 - **Fix:** Wait for natural pauses, use proper signals, take notes on thoughts
 
-### ❌ **Mistake 7: Not Following Up**
+### **Mistake 7: Not Following Up**
 - **Impact:** Action items get lost, progress stalls, trust erodes
 - **Fix:** Take notes, send summaries, follow up on commitments, track progress
 
-### ❌ **Mistake 8: Negative Attitude**
+### **Mistake 8: Negative Attitude**
 - **Impact:** Creates toxic environment, reduces collaboration, affects team morale
 - **Fix:** Stay positive, focus on solutions, support others, maintain professionalism
 
-### ❌ **Mistake 9: Not Engaging**
+### **Mistake 9: Not Engaging**
 - **Impact:** Miss learning opportunities, appear disinterested, reduce team effectiveness
 - **Fix:** Ask questions, share ideas, participate actively, show interest
 
-### ❌ **Mistake 10: Poor Technology Use**
+### **Mistake 10: Poor Technology Use**
 - **Impact:** Technical issues disrupt meeting, waste time, create frustration
 - **Fix:** Test technology beforehand, have backups, know how to use features
 
@@ -379,19 +379,19 @@ Ali
 
 ## Benefits of Good Meeting Etiquette
 
-### 🎯 **For You:**
+### **For You:**
 - Builds professional reputation
 - Improves team relationships
 - Makes meetings more productive
 - Reduces stress and confusion
 
-### 🎯 **For Your Team:**
+### **For Your Team:**
 - More efficient meetings
 - Better collaboration
 - Clearer communication
 - Stronger relationships
 
-### 🎯 **For Your Career:**
+### **For Your Career:**
 - Demonstrates professionalism
 - Shows leadership potential
 - Builds trust with colleagues
