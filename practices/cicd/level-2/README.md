@@ -43,4 +43,5 @@ Learning how to:
 Will document progress as I go through each step.
 
 Testing Docker build workflow - Dec 2025
+Testing secrets management fix - Dec 2025
 
