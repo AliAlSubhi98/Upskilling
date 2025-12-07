@@ -96,4 +96,20 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+    
+    - name: Log deployment info
+      run: |
+        echo "Image pushed successfully"
+        echo "Tags: ${{ steps.meta.outputs.tags }}"
+        echo "Registry: ghcr.io/${{ github.repository_owner }}/smart-deploy-monitor"
+      env:
+        DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
+    
+    - name: Notify deployment (if secret exists)
+      if: ${{ secrets.DEPLOYMENT_WEBHOOK_URL != '' }}
+      run: |
+        echo "Deployment notification would be sent here"
+        echo "Using webhook URL from secrets"
+      env:
+        WEBHOOK_URL: ${{ secrets.DEPLOYMENT_WEBHOOK_URL }}
 

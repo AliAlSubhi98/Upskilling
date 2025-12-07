@@ -28,6 +28,16 @@ Added Docker build job to CI/CD workflow that:
 
 The workflow now builds and pushes the image automatically on every push to main/develop branches.
 
+Verified: Workflow completed successfully, both test and build-docker jobs passed.
+
+### Step 2: Secrets Management (In Progress)
+
+Learning how to:
+- Set up GitHub Secrets
+- Use secrets securely in workflows
+- Manage environment-specific secrets
+- Best practices for secret rotation
+
 ## Notes
 
 Will document progress as I go through each step.
