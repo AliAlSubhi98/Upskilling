@@ -11,10 +11,22 @@ Working on CI/CD Level 2: Automated Testing & Deployments.
 
 ## Tasks
 
-- [ ] Docker image builds and push to GHCR
+- [x] Docker image builds and push to GHCR
 - [ ] Secrets management
 - [ ] Code linting in CI/CD
 - [ ] Automated deployment pipelines
+
+## Progress
+
+### Step 1: Docker Build and Push to GHCR (Done)
+
+Added Docker build job to CI/CD workflow that:
+- Builds Docker image after tests pass
+- Pushes to GitHub Container Registry (GHCR)
+- Tags images with branch name, PR number, and commit SHA
+- Uses Docker Buildx for multi-platform support
+
+The workflow now builds and pushes the image automatically on every push to main/develop branches.
 
 ## Notes
 
