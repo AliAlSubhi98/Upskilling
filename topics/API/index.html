@@ -1362,26 +1362,20 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 </code></pre></div>
 </details>
 <p><strong>What I Learned:</strong>
-- <strong>REST API Design</strong>: Resource-based URLs, HTTP methods (GET, POST, PUT, DELETE), proper status codes (200, 201, 400, 404, 500)
-- <strong>API Documentation</strong>: OpenAPI/Swagger integration, clear endpoint documentation, request/response schemas
-- <strong>Error Handling</strong>: Consistent error responses, proper HTTP status codes, meaningful error messages
-- <strong>Input Validation</strong>: Request validation using Jakarta validation, proper error responses for invalid input
-- <strong>API Testing</strong>: Automated testing with curl scripts, Postman collections, integration testing
-- <strong>Response Formats</strong>: Consistent JSON responses, proper data structures, pagination support</p>
-<p><strong>Applied Knowledge:</strong>
-- Built comprehensive Spring Boot REST API with multiple endpoints (users, deployments, health checks)
-- Implemented proper HTTP methods and status codes for all CRUD operations
-- Added OpenAPI/Swagger documentation with detailed schemas and examples
-- Created automated testing scripts for API validation
+- <strong>REST API Design</strong>: How to design resource-based URLs, use HTTP methods properly (GET, POST, PUT, DELETE), and return the right status codes (200, 201, 400, 404, 500). Makes APIs way more intuitive.
+- <strong>API Documentation</strong>: OpenAPI/Swagger integration is super useful. Auto-generates docs from your code, which is awesome.
+- <strong>Error Handling</strong>: Keeping error responses consistent makes debugging easier. Always use proper HTTP status codes and meaningful messages.
+- <strong>Input Validation</strong>: Using Jakarta validation annotations to validate requests automatically. Saves a lot of boilerplate code.
+- <strong>API Testing</strong>: Automated testing with curl scripts and Postman collections. Makes testing way faster.
+- <strong>Response Formats</strong>: Keeping JSON responses consistent with proper data structures. Added pagination support too.</p>
+<p><strong>What I Did:</strong>
+- Built a Spring Boot REST API with multiple endpoints (users, deployments, health checks)
+- Used proper HTTP methods and status codes for all CRUD operations
+- Added OpenAPI/Swagger docs with detailed schemas and examples
+- Created automated testing scripts to validate the API
 - Implemented proper error handling and input validation
-- Designed consistent response formats across all endpoints</p>
-<p><strong>API Design Skills Mastered:</strong>
-- <strong>RESTful Design</strong>: Resource-based URLs (/api/users, /api/deployments), proper HTTP methods, status codes
-- <strong>Documentation</strong>: OpenAPI integration, clear schemas, comprehensive examples
-- <strong>Error Handling</strong>: Consistent error responses, proper status codes, meaningful messages
-- <strong>Testing</strong>: Automated API testing, integration testing, validation scripts
-- <strong>Security</strong>: Input validation, proper error handling, secure endpoints</p>
-<p><strong>Key Achievement:</strong> Successfully designed and implemented a comprehensive REST API with proper documentation, testing, and error handling, creating a solid foundation for advanced API design and development.</p>
+- Made sure all endpoints return consistent response formats</p>
+<p><strong>Summary:</strong> Got a solid REST API working with good documentation, testing, and error handling. Good foundation for building more advanced APIs!</p>
 </details>
 <details class="success">
 <summary>Level 2: REST Best Practices (25-10-2025)</summary>
@@ -1447,16 +1441,16 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 </code></pre></div>
 </details>
 <p><strong>What I Learned:</strong>
-- <strong>API Versioning</strong>: URL-based versioning (/api/v1/), backward compatibility, migration strategies
-- <strong>Pagination</strong>: Page-based pagination with size limits, cursor-based pagination for large datasets
-- <strong>Filtering</strong>: Query parameter filtering, search functionality, sorting options
-- <strong>Enhanced Documentation</strong>: OpenAPI 3.0 specifications, detailed schemas, examples
-- <strong>Request Validation</strong>: Input validation, sanitization, proper error responses
-- <strong>Consistent Error Handling</strong>: Standardized error formats, proper HTTP status codes</p>
-<p><strong>Applied Knowledge:</strong>
-- Implemented API versioning with URL-based versioning strategy
-- Added pagination support with configurable page size and search functionality
-- Enhanced OpenAPI documentation with detailed schemas and examples
+- <strong>API Versioning</strong>: Using URL-based versioning (/api/v1/) makes it easy to maintain backward compatibility. Important for when you need to change things later.
+- <strong>Pagination</strong>: Page-based pagination with size limits works well. Cursor-based is better for huge datasets, but page-based is simpler.
+- <strong>Filtering</strong>: Query parameters for filtering and search make APIs way more useful. Users can find what they need without getting everything.
+- <strong>Enhanced Documentation</strong>: OpenAPI 3.0 specs with detailed schemas and examples. Auto-generates nice docs.
+- <strong>Request Validation</strong>: Input validation and sanitization prevent bad data from getting in. Proper error responses help users fix issues.
+- <strong>Consistent Error Handling</strong>: Standardized error formats make debugging easier. Always use proper HTTP status codes.</p>
+<p><strong>What I Did:</strong>
+- Added API versioning using URL-based strategy
+- Implemented pagination with configurable page size and search
+- Enhanced OpenAPI docs with detailed schemas and examples
 - Implemented comprehensive input validation and sanitization
 - Created consistent error handling patterns across all endpoints
 - Designed intuitive API endpoints following REST principles</p>
@@ -1475,7 +1469,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 - Generate OpenAPI documentation (v2.0.0 with versioned servers)
 - Implement request validation (Jakarta Bean Validation)
 - Add API testing and monitoring (28/29 tests passing)</p>
-<p><strong>Key Achievement:</strong> Successfully implemented REST best practices including API versioning, pagination, filtering, enhanced documentation, and comprehensive validation, creating a professional and scalable API design foundation.</p>
+<p><strong>Summary:</strong> Implemented REST best practices - versioning, pagination, filtering, better docs, and validation. Solid foundation for building scalable APIs!</p>
 </details>
 <details class="success">
 <summary>Level 3: GraphQL &amp; gRPC (25-10-2025)</summary>
@@ -1552,16 +1546,16 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 </code></pre></div>
 </details>
 <p><strong>What I Learned:</strong>
-- <strong>GraphQL Schema Design</strong>: Type definitions, queries, mutations, subscriptions, input types, enums
-- <strong>Resolver Implementation</strong>: Query resolvers, mutation resolvers, field resolvers, argument handling
-- <strong>N+1 Problem Solution</strong>: DataLoader pattern, batch loading, caching strategies
+- <strong>GraphQL Schema Design</strong>: Type definitions, queries, mutations, subscriptions, input types, enums. The schema is like a contract for your API.
+- <strong>Resolver Implementation</strong>: Query resolvers, mutation resolvers, field resolvers. Each field can have its own resolver, which is powerful.
+- <strong>N+1 Problem Solution</strong>: DataLoader pattern for batch loading. Prevents making tons of database queries. Super important for performance.
 - <strong>Schema Evolution</strong>: Backward compatibility, field deprecation, type evolution
 - <strong>Query Optimization</strong>: Field selection, query complexity analysis, performance monitoring
 - <strong>Spring GraphQL Integration</strong>: Auto-configuration, schema scanning, resolver registration</p>
-<p><strong>Applied Knowledge:</strong>
-- Designed comprehensive GraphQL schema with user management operations
-- Implemented query and mutation resolvers with proper error handling
-- Created DataLoader to solve N+1 query problems efficiently
+<p><strong>What I Did:</strong>
+- Designed a GraphQL schema with user management operations
+- Built query and mutation resolvers with proper error handling
+- Created a DataLoader to solve N+1 query problems efficiently
 - Integrated Spring GraphQL with existing Spring Boot application
 - Added GraphQL playground for interactive API exploration
 - Implemented schema evolution strategies for backward compatibility</p>
@@ -1572,7 +1566,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </spa
 - <strong>Schema Evolution</strong>: Backward compatibility, field deprecation, type evolution
 - <strong>Query Optimization</strong>: Field selection, query complexity, performance monitoring
 - <strong>Spring Integration</strong>: Auto-configuration, schema scanning, resolver registration</p>
-<p><strong>Key Achievement:</strong> Successfully implemented GraphQL API with comprehensive schema design, efficient resolvers, N+1 problem solution, and Spring Boot integration, creating a modern and scalable API architecture.</p>
+<p><strong>Summary:</strong> Got GraphQL working! Schema design, resolvers, and solved the N+1 problem with DataLoader. Modern API architecture that's scalable.</p>
 </details>
 <details class="note">
 <summary>Level 4: API Security &amp; Gateway Integration (Planned)</summary>

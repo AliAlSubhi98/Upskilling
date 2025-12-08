@@ -1185,52 +1185,43 @@
 <p><strong>Status:</strong> Completed<br />
 <strong>Focus:</strong> Logging, metrics, application monitoring  </p>
 <p><strong>What I Learned:</strong>
-- <strong>Spring Boot Actuator</strong>: Built-in monitoring endpoints for health checks, metrics, and application info
-- <strong>Micrometer</strong>: Java metrics library for collecting application metrics (Counters, Timers, Gauges)
-- <strong>Structured Logging</strong>: Implemented SLF4J with Logback for consistent log formatting
-- <strong>Custom Metrics</strong>: Created custom metrics for request counting, response times, and system monitoring
-- <strong>Prometheus Integration</strong>: Exposed metrics in Prometheus format for monitoring systems
-- <strong>Scheduled Monitoring</strong>: Used Spring's @Scheduled to collect system metrics every 30 seconds</p>
-<p><strong>Resources Used:</strong>
-- Spring Boot Actuator documentation
-- Micrometer documentation
-- ChatGPT for code examples and troubleshooting
-- Maven for dependency management</p>
-<p><strong>Applied Knowledge:</strong>
-- Built a complete Spring Boot application with observability features
-- Implemented custom metrics collection using Micrometer
-- Created multiple monitoring endpoints for different types of system information
-- Added unit tests to ensure monitoring functionality works correctly
-- Integrated with CI/CD pipeline for automated testing and deployment</p>
-<p><strong>All Level 1 tasks completed!</strong></p>
+- <strong>Spring Boot Actuator</strong>: Super useful built-in endpoints for health checks, metrics, and app info. No need to build this stuff from scratch!
+- <strong>Micrometer</strong>: Java library for collecting metrics like counters, timers, and gauges. Makes it easy to track what your app is doing.
+- <strong>Structured Logging</strong>: Set up SLF4J with Logback to format logs consistently. Makes debugging way easier.
+- <strong>Custom Metrics</strong>: Created my own metrics to track requests, response times, and system stuff. Pretty straightforward once you get the hang of it.
+- <strong>Prometheus Integration</strong>: Exposed metrics in Prometheus format so monitoring tools can scrape them.
+- <strong>Scheduled Monitoring</strong>: Used Spring's @Scheduled to collect system metrics every 30 seconds automatically.</p>
+<p><strong>What I Did:</strong>
+- Built a Spring Boot app with all the observability features
+- Added custom metrics using Micrometer
+- Created different monitoring endpoints for different types of info
+- Added tests to make sure everything works
+- Integrated it with CI/CD so it gets tested automatically</p>
+<p><strong>Resources:</strong> Spring Boot Actuator docs, Micrometer docs, ChatGPT for examples when I got stuck, Maven for dependencies</p>
+<p><strong>All Level 1 tasks done.</strong></p>
 </details>
 <details class="success">
 <summary>Level 2: Advanced Logging &amp; Metrics Collection (Completed)</summary>
 <p><strong>Status:</strong> Completed<br />
 <strong>Focus:</strong> Centralized logging, ELK stack, Prometheus  </p>
 <p><strong>What I Learned:</strong>
-- <strong>ELK Stack</strong>: Set up Elasticsearch, Logstash, and Kibana for centralized log aggregation
-- <strong>Structured JSON Logging</strong>: Configured Logback with logstash-logback-encoder for JSON-formatted logs
-- <strong>Logstash Pipeline</strong>: Created log processing pipeline to parse JSON logs and send to Elasticsearch
-- <strong>Prometheus Integration</strong>: Configured Prometheus to scrape Spring Boot Actuator metrics endpoints
-- <strong>Grafana Dashboards</strong>: Created provisioned dashboards for application metrics and JVM metrics
-- <strong>Docker Compose Orchestration</strong>: Integrated all observability services into docker-compose.yml
-- <strong>Grafana Provisioning</strong>: Configured datasources and dashboards via provisioning files for automation</p>
-<p><strong>Resources Used:</strong>
-- ELK Stack documentation
-- Prometheus configuration guides
-- Grafana dashboard provisioning documentation
-- Logstash pipeline configuration examples
-- Docker Compose networking and volume management</p>
-<p><strong>Applied Knowledge:</strong>
-- Configured Logback with JSON encoder for structured logging
-- Set up Logstash pipeline to process application logs and forward to Elasticsearch
-- Created Prometheus scrape configuration for Spring Boot Actuator endpoints
-- Built Grafana dashboards with PromQL queries for application and JVM metrics
-- Configured Grafana datasource and dashboard provisioning for automated setup
-- Integrated all services with proper health checks and dependencies in Docker Compose
-- Fixed datasource UID references to ensure dashboards display data correctly</p>
-<p><strong>Key Achievement:</strong> Successfully implemented a complete centralized observability stack with ELK for logs, Prometheus for metrics, and Grafana for visualization, enabling full visibility into application health and performance.</p>
+- <strong>ELK Stack</strong>: Set up Elasticsearch, Logstash, and Kibana to collect logs from everywhere in one place. Took some time to get the config right, but worth it!
+- <strong>Structured JSON Logging</strong>: Configured Logback to output JSON logs. Makes it way easier for Logstash to parse them.
+- <strong>Logstash Pipeline</strong>: Built a pipeline that takes JSON logs, processes them, and sends them to Elasticsearch. The config file syntax is a bit weird at first, but you get used to it.
+- <strong>Prometheus</strong>: Set it up to automatically scrape metrics from Spring Boot Actuator endpoints. Pretty cool how it just pulls the data.
+- <strong>Grafana Dashboards</strong>: Created dashboards for app metrics and JVM metrics. PromQL queries took some learning, but the dashboards look great now.
+- <strong>Docker Compose</strong>: Put all the services together in docker-compose.yml. Getting the networking right was tricky, but once it works, it's smooth.
+- <strong>Grafana Provisioning</strong>: Set up datasources and dashboards via config files so they're automatically created. No more manual clicking!</p>
+<p><strong>What I Did:</strong>
+- Configured Logback to output JSON logs
+- Built a Logstash pipeline to process and forward logs to Elasticsearch
+- Set up Prometheus to scrape metrics from the app
+- Created Grafana dashboards with PromQL queries
+- Configured Grafana provisioning so everything sets up automatically
+- Put it all together in Docker Compose with proper health checks
+- Fixed a bunch of datasource UID issues (that was annoying but learned a lot!)</p>
+<p><strong>Resources:</strong> ELK Stack docs, Prometheus guides, Grafana provisioning docs, Logstash examples, Docker Compose networking docs</p>
+<p><strong>Summary:</strong> Got a complete observability stack working! ELK for logs, Prometheus for metrics, Grafana for pretty dashboards. Now I can see everything that's happening in the app.</p>
 <p><strong>Visual Documentation:</strong></p>
 <p><img alt="Grafana Application Metrics Dashboard" src="../../images/level-2-advanced-logging-metrics/01-grafana-application-metrics.png" /></p>
 <p><img alt="Grafana JVM Metrics Dashboard" src="../../images/level-2-advanced-logging-metrics/02-grafana-jvm-metrics.png" /></p>

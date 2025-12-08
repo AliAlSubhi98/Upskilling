@@ -1195,19 +1195,19 @@
 - <strong>Container Networking</strong> (Completed 18-10-2025): Custom network with service discovery and health checks
 - <strong>Volume Persistence</strong> (Completed 18-10-2025): Data persistence for all database services</p>
 <p><strong>What I Learned:</strong>
-- <strong>Docker Fundamentals</strong>: Container creation, multi-stage builds, image optimization
-- <strong>Docker Compose</strong>: Multi-service orchestration, service dependencies, health checks
-- <strong>Container Networking</strong>: Custom networks, service discovery, inter-container communication
-- <strong>Volume Management</strong>: Data persistence, volume mounting, backup strategies
-- <strong>Security Best Practices</strong>: Non-root users, minimal base images, security scanning
-- <strong>Production Readiness</strong>: Health checks, logging, monitoring, graceful shutdowns</p>
-<p><strong>Applied Knowledge:</strong>
-- Created multi-stage Dockerfile for optimized Spring Boot application
+- <strong>Docker Fundamentals</strong>: Container creation, multi-stage builds, image optimization. Multi-stage builds make images way smaller.
+- <strong>Docker Compose</strong>: Multi-service orchestration, service dependencies, health checks. Makes running multiple services together easy.
+- <strong>Container Networking</strong>: Custom networks, service discovery, inter-container communication. Getting networking right is important.
+- <strong>Volume Management</strong>: Data persistence, volume mounting, backup strategies. Don't lose your data!
+- <strong>Security Best Practices</strong>: Non-root users, minimal base images, security scanning. Security matters even in containers.
+- <strong>Production Readiness</strong>: Health checks, logging, monitoring, graceful shutdowns. Production needs more than just "it works on my machine".</p>
+<p><strong>What I Did:</strong>
+- Created a multi-stage Dockerfile for the Spring Boot app
 - Orchestrated 5 services (App, PostgreSQL, Redis, Elasticsearch, Qdrant) with Docker Compose
-- Implemented service discovery and health checks for all containers
+- Added service discovery and health checks for all containers
 - Configured persistent volumes for database data
 - Applied security best practices with non-root user execution
-- Set up environment-based configuration for different deployment stages</p>
+- Set up environment-based configuration for different stages</p>
 <p><strong>Container Architecture Examples:</strong>
 <div class="highlight"><pre><span></span><code><span class="c"># Multi-stage build for Spring Boot application</span>
 <span class="k">FROM</span><span class="w"> </span><span class="s">openjdk:17-jdk-slim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">builder</span>
@@ -1267,7 +1267,7 @@
 - Multi-service architecture patterns
 - Container security and optimization techniques
 - Production deployment strategies</p>
-<p><strong>Key Achievement:</strong> Successfully containerized a complex Spring Boot application with 5 integrated services, implementing production-ready containerization with security, monitoring, and orchestration best practices.</p>
+<p><strong>Summary:</strong> Containerized a complex Spring Boot app with 5 services! Got Docker Compose working with security, monitoring, and orchestration. Production-ready containerization done!</p>
 <p><strong>Comprehensive Implementation Evidence:</strong></p>
 <details class="tip">
 <summary>Advanced Docker Compose Configuration</summary>
@@ -1483,13 +1483,13 @@ smart-deploy-qdrant          0.00%    18.42MiB / 3.828GiB   6.02kB / 126B
 - <strong>Service Discovery System</strong>: Implemented networking analysis, connectivity testing, DNS resolution, and service dependency mapping
 - <strong>Production-Ready Configuration</strong>: Resource limits, restart policies, logging rotation, security hardening, and network isolation</p>
 <p><strong>What I Learned:</strong>
-- <strong>Container Orchestration</strong>: Multi-service deployment with proper dependencies and health checks
-- <strong>Docker Networking</strong>: Custom networks with IPAM configuration and service discovery
-- <strong>Container Security</strong>: Non-root execution, minimal base images, and security best practices
-- <strong>Resource Management</strong>: CPU and memory limits, resource monitoring, and optimization
-- <strong>Production Deployment</strong>: Health checks, logging, monitoring, backup strategies, and scaling
-- <strong>Service Communication</strong>: Inter-container communication, DNS resolution, and network isolation</p>
-<p><strong>Applied Knowledge:</strong>
+- <strong>Container Orchestration</strong>: Multi-service deployment with proper dependencies and health checks. Services need to start in the right order.
+- <strong>Docker Networking</strong>: Custom networks with IPAM configuration and service discovery. Getting networking right makes services talk to each other properly.
+- <strong>Container Security</strong>: Non-root execution, minimal base images, and security best practices. Security matters even in containers.
+- <strong>Resource Management</strong>: CPU and memory limits, resource monitoring, and optimization. Prevents one service from hogging everything.
+- <strong>Production Deployment</strong>: Health checks, logging, monitoring, backup strategies, and scaling. Production needs more than just "it works".
+- <strong>Service Communication</strong>: Inter-container communication, DNS resolution, and network isolation. Services need to find each other.</p>
+<p><strong>What I Did:</strong>
 - Enhanced Docker Compose with custom subnet (172.20.0.0/16) and proper service dependencies
 - Implemented comprehensive container management and monitoring scripts
 - Applied security best practices with non-root users and minimal attack surface

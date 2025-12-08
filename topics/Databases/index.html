@@ -1556,28 +1556,23 @@
 - <strong>Entity Design</strong>: Created User entity with UUID primary keys, audit fields, and relationships
 - <strong>Repository Pattern</strong>: Implemented UserRepository with custom query methods and Spring Data JPA
 - <strong>Service Layer</strong>: Built UserService with business logic, password encryption, and user management
-- <strong>REST API Development</strong>: Created comprehensive UserController with CRUD operations
-- <strong>Password Security</strong>: Implemented BCrypt password encryption for secure user authentication
-- <strong>Database Testing</strong>: Created automated testing scripts for database operations
-- <strong>Redis TTL-based Caching</strong>: Implemented Redis caching with Time To Live for performance optimization
-- <strong>Elasticsearch Search/Filter</strong>: Created search services with filters (exact matches) and queries (relevance scoring)
-- <strong>Qdrant Vector Operations</strong>: Implemented vector insert/search operations for similarity search
-- <strong>Multi-Database Integration</strong>: Successfully integrated PostgreSQL, Redis, Elasticsearch, and Qdrant</p>
-<p><strong>Resources Used:</strong>
-- Spring Data JPA documentation
-- PostgreSQL official documentation
-- Spring Boot database configuration guides
-- BCrypt password encryption tutorials
-- ChatGPT for code examples and troubleshooting</p>
-<p><strong>Applied Knowledge:</strong>
-- Integrated PostgreSQL database into existing Spring Boot application
-- Created complete user management system with secure password handling
-- Implemented comprehensive REST API for user operations
+- <strong>REST API Development</strong>: Built UserController with CRUD operations. Clean separation of concerns.
+- <strong>Password Security</strong>: Used BCrypt for password encryption. Never store plain text passwords!
+- <strong>Database Testing</strong>: Created automated testing scripts. Makes sure everything works.
+- <strong>Redis TTL-based Caching</strong>: Redis caching with Time To Live. Speeds things up and automatically expires old data.
+- <strong>Elasticsearch Search/Filter</strong>: Search services with filters (exact matches) and queries (relevance scoring). Full-text search is powerful.
+- <strong>Qdrant Vector Operations</strong>: Vector insert/search for similarity search. Useful for AI/ML stuff.
+- <strong>Multi-Database Integration</strong>: Got PostgreSQL, Redis, Elasticsearch, and Qdrant all working together. Each has its purpose.</p>
+<p><strong>What I Did:</strong>
+- Integrated PostgreSQL into the Spring Boot app
+- Built a complete user management system with secure password handling
+- Created a REST API for user operations
 - Added Docker Compose setup for easy database deployment
 - Created automated testing scripts for database functionality
-- Documented complete database setup and usage guide
-- <strong>Successfully tested all database operations</strong> with 100% test pass rate
-- <strong>Verified user creation, retrieval, statistics, and password verification</strong>
+- Documented the complete database setup and usage
+- Tested all database operations - 100% pass rate!
+- Verified user creation, retrieval, statistics, and password verification</p>
+<p><strong>Resources:</strong> Spring Data JPA docs, PostgreSQL docs, Spring Boot config guides, BCrypt tutorials, ChatGPT when I got stuck
 - <strong>Confirmed admin and regular user roles working correctly</strong>
 - <strong>Database integration fully operational and production-ready</strong>
 - <strong>Implemented Redis TTL-based caching</strong> for performance optimization
